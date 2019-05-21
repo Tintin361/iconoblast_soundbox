@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application colors -->
+    <color name="colorPrimary">#3e068f</color>
+    <color name="colorPrimaryDark">#2b0462</color>
+    <color name="colorAccent">#ffffbb33</color>
+
+    <!-- Saint Valentin colors -->
+    <color name="colorPrimarySaintValantin">#dd117e</color>
+    <color name="colorPrimaryDarkSaintValantin">#931056</color>
+
+    <!-- Dark theme colors -->
+    <color name="darkColorPrimary">#282828</color>
+    <color name="darkColorPrimaryDark">#0D0D0D</color>
+    <color name="darkColorAccent">#ffffff</color>
+
+    <!-- Green theme colors -->
+    <color name="gColorPrimary">#97C181</color>
+    <color name="gColorPrimaryDark">#6f8c5f</color>
+    <color name="gColorAccent">#ffffbb33</color>
+
+    <!-- Color for Button -->
+    <color name="white">#ffffff</color>
+    <color name="blue">#2600ff</color>
+    <color name="colorDarkPrimary">#282828</color>
+    <color name="colorDarkPrimaryDark">#0D0D0D</color>
+    <color name="Black">#000000</color>
+    <color name="Gray">#C4C4C4</color>
+    <color name="Green">#00ff21</color>
+    <color name="Green2">#6ee25d</color>
+    <color name="Red1">#ff4f4f</color>
+    <color name="orange1">#ff924f</color>
+    <color name="yellow1">#e8f74a</color>
+    <color name="green3">#98f74a</color>
+    <color name="green4">#4af7ac</color>
+    <color name="blue1">#4af7d4</color>
+    <color name="blue2">#4ae8f7</color>
+    <color name="blue3">#4ac9f7</color>
+    <color name="blue4">#3c8ffc</color>
+    <color name="blue5">#3b65f9</color>
+    <color name="darkBlue">#743bf9</color>
+    <color name="purple">#993bf7</color>
+    <color name="purple2">#d43bf7</color>
+    <color name="pink1">#f43ac0</color>
+    <color name="pink2">#f43a88</color>
+    <color name="red2">#f23a5b</color>
+    <color name="red3">#f23a3a</color>
+    <color name="orange2">#FF7F27</color>
+    <color name="pink3">#ffd4ef</color>
+
+    <!-- Dark Color for Button -->
+    <color name="dPurple">#d13693</color>
+    <color name="dPurple2">#bf32c1</color>
+    <color name="dBlue">#7732c1</color>
+    <color name="dBlue2">#3239c1</color>
+    <color name="dBlue3">#327ac1</color>
+    <color name="dBlue4">#2da5af</color>
+    <color name="dGreen">#2daf9c</color>
+    <color name="dGreen2">#2dad68</color>
+    <color name="dGreen3">#2dad35</color>
+    <color name="dGreen4">#62ad2d</color>
+    <color name="dYellow">#bcb132</color>
+    <color name="dOrange">#ea9341</color>
+    <color name="dRed">#ea4141</color>
+    <color name="dRed2">#d83a3a</color>
+    <color name="dPurple3">#d83a62</color>
+
+    <!-- Background color -->
+    <color name="mgt">#D30809</color>
+    <color name="ascuns">#4EA384</color>
+    <color name="ddlc">#FFBEE1</color>
+    <color name="zelda">#35C9F4</color>
+
+    <!-- Dark Background color -->
+    <color name="dmgt">#313131</color>
+    <color name="dascuns">#313131</color>
+    <color name="dddlc">#313131</color>
+    <color name="dzelda">#313131</color>
+
+
+</resources>

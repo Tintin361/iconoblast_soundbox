@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.papple.iconoblast">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/iconoblast_icon"
+        android:roundIcon="@mipmap/iconoblast_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".InfosActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/info" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+
+        <activity
+            android:name=".secret"
+            android:configChanges="orientation|screenSize"
+            android:fitsSystemWindows="true"
+            android:label="@string/easter"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+
+        <activity
+            android:name=".theme"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/themes" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".newsecret_activity"
+            android:configChanges="orientation|screenSize" >
+        </activity>
+
+    </application>
+
+</manifest>

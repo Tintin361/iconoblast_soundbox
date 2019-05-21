@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/drawer_group"
+        android:checkableBehavior="single">
+
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_acceuil"
+                android:title="@string/acceuil"
+                android:icon="@drawable/ic_home"/>
+            <item
+                android:id="@+id/versionId"
+                android:checkable="false"
+                android:title="@string/versiond"
+                android:icon="@drawable/ic_new" />
+        </group>
+
+        <item android:title="@string/icob">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_ddlc"
+                        android:title="@string/ddlc"
+                        android:icon="@drawable/ic_game" />
+                    <item
+                        android:id="@+id/nav_mgt"
+                        android:title="@string/mgt"
+                        android:icon="@drawable/ic_game" />
+                    <item
+                        android:id="@+id/nav_yoshi"
+                        android:checkable="false"
+                        android:title="@string/yoshi"
+                        android:icon="@drawable/ic_game" />
+                    <item
+                        android:id="@+id/nav_bloodborn"
+                        android:checkable="false"
+                        android:title="@string/bloodborn"
+                        android:icon="@drawable/ic_game" />
+                    <item
+                        android:id="@+id/nav_amour"
+                        android:checkable="false"
+                        android:title="@string/amour"
+                        android:icon="@drawable/ic_game" />
+                    <item
+                        android:id="@+id/nav_marioMaker"
+                        android:checkable="false"
+                        android:title="@string/marioMaker"
+                        android:icon="@drawable/ic_game" />
+                    <item
+                        android:id="@+id/nav_sonic"
+                        android:checkable="false"
+                        android:title="@string/sonic"
+                        android:icon="@drawable/ic_game" />
+                    <item
+                        android:id="@+id/nav_pokemon"
+                        android:checkable="false"
+                        android:title="@string/pokemon"
+                        android:icon="@drawable/ic_game" />
+                    <item
+                        android:id="@+id/nav_versus"
+                        android:checkable="false"
+                        android:title="@string/versus"
+                        android:icon="@drawable/ic_group" />
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="@string/icoc">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_zelda"
+                        android:title="@string/zelda"
+                        android:icon="@drawable/ic_game" />
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="@string/other">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_ascuns"
+                        android:title="@string/ascuns"
+                        android:icon="@drawable/ic_video" />
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="@string/communicate">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/report"
+                        android:checkable="false"
+                        android:title="@string/bug"
+                        android:icon="@drawable/ic_feedback"/>
+                </group>
+            </menu>
+        </item>
+
+    </group>
+
+</menu>

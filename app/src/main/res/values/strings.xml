@@ -1,0 +1,99 @@
+<resources>
+    <!-- Application -->
+    <string name="app_name">Iconoblast !</string>
+    <string name="app">APPLICATION</string>
+    <string name="icob">ICONOBLAST !</string>
+    <string name="icoc">ICONOCLASTE</string>
+    <string name="other">AUTRES</string>
+    <string name="communicate">COMMUNIQUER</string>
+    <string name="version">Version 0.14</string>
+    <string name="versiond">Version 0.14</string>
+    <string name="easter">Easter Egg</string>
+    <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
+
+    <!-- Activity main -->
+    <string name="text">COUCOU LES COPAINS ET LES COPINES !</string>
+    <string name="text2">Bienvenue sur cette application soundbox Iconoblast non officielle (sans liens affiliés Instant Gaming).</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="search_toolbar">No available</string>
+
+    <!-- Toolbar -->
+    <string name="themes">Éditeur de Thème</string>
+    <string name="search">Rechercher</string>
+    <string name="info">Informations</string>
+
+    <!-- Drawer -->
+    <string name="acceuil">Accueil</string>
+    <string name="ddlc">Doki Doki Litterature Club</string>
+    <string name="sDdlc">DDLC</string>
+    <string name="mgt">Mad Games Tycoon</string>
+    <string name="sMgt">MGT</string>
+    <string name="yoshi">Yoshi\'s Island</string>
+    <string name="bloodborn">Bloodborn</string>
+    <string name="amour">Amour Sucré</string>
+    <string name="marioMaker">Super Mario Maker</string>
+    <string name="sonic">Sonic the Hedgehog</string>
+    <string name="pokemon">Pokémon Let\s Go Pikachu</string>
+    <string name="versus">Iconoblast ! - Versus</string>
+    <string name="zelda">Zelda</string>
+    <string name="ascuns">Ascuns</string>
+    <string name="bug">Signaler un Bug</string>
+
+    <!-- DDLC Activity -->
+    <string name="ken1">C\'est parce que j\'veux ken !!! (Étagère)</string>
+    <string name="tete">MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)</string>
+    <string name="haha">HAHA !!! (Étagère)</string>
+    <string name="baka">BAAAAKA !!! (Ico)</string>
+    <string name="cailloux">CAILOOOOOUUUXXX !!! (encore Ico…)</string>
+    <string name="censuré">Actuellement, je pense encore à… (Ico)</string>
+    <string name="censuré2">Donc tu devais peut-être… (Étagèrito)</string>
+    <string name="morceaumdr">CRACHE LE MORCEAU, ENCULÉ !!! (Ico)</string>
+    <string name="attention">Hey ! Fait attention… (Étagère)</string>
+    <string name="etagere">Étagere_sound.ogg</string>
+    <string name="ico">Iconoclaste_sound.ogg</string>
+    <string name="mmm">MMMMMMH !!! (Étagère)</string>
+    <string name="genial">GÉNIAL !!! (Étagère)</string>
+    <string name="non">Non ! NOOOOOON !!! (Ico)</string>
+    <string name="supers">SUPER !!! (Étagère)</string>
+    <string name="experimenters">Tu ne devrai pas avoir peur d\'expérimenter ! (Étagère.exe)</string>
+    <string name="pardons">(Censuré) oh pardon, c\'est sorti tout seul ! (Ico)</string>
+    <string name="rires">Rire (pas) diabolique (Grand Étagère)</string>
+    <string name="baisers">Pour baiser ! POUR BAISER ! (Ico)</string>
+    <string name="merdes">Tu dis que de la merde ! SUPER ! (Ico et Étagère)</string>
+
+    <!-- Mag Games Tycoon Activity -->
+    <string name="degueulasse">Mais c\'est dégueulasse Addictio&#8230;(Ico)</string>
+    <string name="gueule">Mais ta gueule !!! (Ico)</string>
+    <string name="branleur">C\'est un immense branleur ! (Étagère)</string>
+    <string name="mais">Maaaaiiis, où c\'est qui vont aller se masturber ? (Étagère)</string>
+    <string name="doigt">Lui, il fait des doigts d\'honneur devant les portes ! (Étagère)</string>
+    <string name="baises">Tu vois là, on est baisés ! (Ico)</string>
+    <string name="cock">TOUCH MY COCK !!! (Ico et Étagère)</string>
+
+    <!-- Zelda Activity -->
+    <string name="zeldabutton">ZELDA !!! (Ico)</string>
+    <string name="chanson1">Chanson Ico et Étagère</string>
+
+    <!-- Ascuns Activity -->
+    <string name="salut">SALUUUUUUUUUTTT !!!!! (Ico)</string>
+
+    <!-- Infos Activity -->
+    <string name="creation">Application créée et développée par: *Tintin !</string>
+    <string name="sound">Téléchargement et regroupement des sons par: DouleurTulipe38 !</string>
+    <string name="descriptionTintin">Photo du compte Google de *Tintin</string>
+    <string name="descriptionLulu">Photo du compte Xbox de DouleurTulipe38</string>
+    <string name="tintin">*Tintin</string>
+    <string name="lulu">DouleurTulipe38</string>
+    <string name="lulu2">N\'a pas de réseaux sociaux.</string>
+
+    <!-- Thème Activity -->
+    <string name="themen">Thème de Base</string>
+    <string name="theme2">Thème Dark et Désabusé !</string>
+    <string name="theme3">Thème Vert</string>
+
+    <!-- Easter Egg Activity -->
+    <string name="code">Entrez un code secret</string>
+    <string name="check">Valider</string>
+
+</resources>
