@@ -27,6 +27,7 @@ public class DdlcFragment extends Fragment {
 
         // Remember choice
         editor.putBoolean("aFrag", false);
+        editor.putBoolean("sFrag", false);
         editor.putBoolean("dFrag", true);
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", false);

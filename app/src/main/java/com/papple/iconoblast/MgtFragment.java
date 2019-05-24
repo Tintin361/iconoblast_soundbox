@@ -27,6 +27,7 @@ public class MgtFragment extends Fragment {
 
         // Remember choice
         editor.putBoolean("aFrag", false);
+        editor.putBoolean("sFrag", false);
         editor.putBoolean("dFrag", false);
         editor.putBoolean("mFrag", true);
         editor.putBoolean("zFrag", false);

@@ -8,13 +8,13 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Icon;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawer;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
 
         SharedPreferences settings = getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -68,9 +68,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setAction("LOCATION_SHORTCUT")
                     .putExtra("receive", "mgt");
 
-            Intent ZeldaIntent = new Intent(this, MainActivity.class).setAction("LOCATION_SHORTCUT").putExtra("receive", "zelda");
+            Intent ZeldaIntent = new Intent(this, MainActivity.class)
+                    .setAction("LOCATION_SHORTCUT")
+                    .putExtra("receive", "zelda");
 
-            Intent AscunsIntent = new Intent(this, MainActivity.class).setAction("LOCATION_SHORTCUT").putExtra("receive", "ascuns");
+            Intent AscunsIntent = new Intent(this, MainActivity.class)
+                    .setAction("LOCATION_SHORTCUT")
+                    .putExtra("receive", "ascuns");
 
             // Création des raccourcis + Annonce
             ShortcutInfo shortcut = new ShortcutInfo.Builder(this, "ddlc")
@@ -114,39 +118,49 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             String string = getIntent().getStringExtra("receive");
 
             if (string != null) {
-                if (string.equals("ddlc")) {
-                    editor.putBoolean("aFrag", false);
-                    editor.putBoolean("dFrag", true);
-                    editor.putBoolean("mFrag", false);
-                    editor.putBoolean("zFrag", false);
-                    editor.putBoolean("asFrag", false);
-                    editor.apply();
-                } else if (string.equals("mgt")) {
-                    editor.putBoolean("aFrag", false);
-                    editor.putBoolean("dFrag", false);
-                    editor.putBoolean("mFrag", true);
-                    editor.putBoolean("zFrag", false);
-                    editor.putBoolean("asFrag", false);
-                    editor.apply();
-                } else if (string.equals("zelda")) {
-                    editor.putBoolean("aFrag", false);
-                    editor.putBoolean("dFrag", false);
-                    editor.putBoolean("mFrag", false);
-                    editor.putBoolean("zFrag", true);
-                    editor.putBoolean("asFrag", false);
-                    editor.apply();
-                } else if (string.equals("ascuns")) {
-                    editor.putBoolean("aFrag", false);
-                    editor.putBoolean("dFrag", false);
-                    editor.putBoolean("mFrag", false);
-                    editor.putBoolean("zFrag", false);
-                    editor.putBoolean("asFrag", true);
-                    editor.apply();
+                switch (string) {
+                    case "ddlc":
+                        editor.putBoolean("aFrag", false);
+                        editor.putBoolean("sFrag", false);
+                        editor.putBoolean("dFrag", true);
+                        editor.putBoolean("mFrag", false);
+                        editor.putBoolean("zFrag", false);
+                        editor.putBoolean("asFrag", false);
+                        editor.apply();
+                        break;
+                    case "mgt":
+                        editor.putBoolean("aFrag", false);
+                        editor.putBoolean("sFrag", false);
+                        editor.putBoolean("dFrag", false);
+                        editor.putBoolean("mFrag", true);
+                        editor.putBoolean("zFrag", false);
+                        editor.putBoolean("asFrag", false);
+                        editor.apply();
+                        break;
+                    case "zelda":
+                        editor.putBoolean("aFrag", false);
+                        editor.putBoolean("sFrag", false);
+                        editor.putBoolean("dFrag", false);
+                        editor.putBoolean("mFrag", false);
+                        editor.putBoolean("zFrag", true);
+                        editor.putBoolean("asFrag", false);
+                        editor.apply();
+                        break;
+                    case "ascuns":
+                        editor.putBoolean("aFrag", false);
+                        editor.putBoolean("sFrag", false);
+                        editor.putBoolean("dFrag", false);
+                        editor.putBoolean("mFrag", false);
+                        editor.putBoolean("zFrag", false);
+                        editor.putBoolean("asFrag", true);
+                        editor.apply();
+                        break;
                 }
             }
         }
 
         boolean acceuilFrag = settings.getBoolean("aFrag", false);
+        boolean statFrag = settings.getBoolean("sFrag", false);
         boolean ddlcFrag = settings.getBoolean("dFrag", false);
         boolean mgtFrag = settings.getBoolean("mFrag", false);
         boolean zeldaFrag = settings.getBoolean("zFrag", false);
@@ -167,6 +181,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (acceuilFrag) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AcceuilFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_acceuil);
+        } else if (statFrag) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new StatFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_stat);
         } else {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AcceuilFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_acceuil);
@@ -280,6 +297,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AcceuilFragment()).commit();
                 item.setChecked(true);
                 break;
+            case R.id.nav_stat:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new StatFragment()).commit();
+                item.setChecked(true);
+                break;
             case R.id.nav_ddlc:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DdlcFragment()).commit();
                 item.setChecked(true);
@@ -381,4 +402,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
 }

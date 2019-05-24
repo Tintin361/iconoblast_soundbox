@@ -18,6 +18,10 @@
                 android:checkable="false"
                 android:title="@string/versiond"
                 android:icon="@drawable/ic_new" />
+            <item
+                android:id="@+id/nav_stat"
+                android:title="@string/stat"
+                android:icon="@drawable/ic_stat" />
         </group>
 
         <item android:title="@string/icob">

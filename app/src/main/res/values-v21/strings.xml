@@ -2,7 +2,8 @@
 <resources>
 
     <!-- Application -->
-    <string name="versiond"><font color="#ffffbb33">Version 0.14</font></string>
+    <string name="versiond"><font color="#ffffbb33">Version 0.15</font></string>
+    <string name="gift">Récompense journalière</string>
 
     <!-- Drawer -->
     <string name="bug"><font color="#ff1500">Signaler un Bug</font></string>

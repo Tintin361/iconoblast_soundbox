@@ -6,10 +6,11 @@
     <string name="icoc">ICONOCLASTE</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version">Version 0.14</string>
-    <string name="versiond">Version 0.14</string>
+    <string name="version">Version 0.15</string>
+    <string name="versiond">Version 0.15</string>
     <string name="easter">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
+    <string name="stat">Statistiques</string>
 
     <!-- Activity main -->
     <string name="text">COUCOU LES COPAINS ET LES COPINES !</string>
@@ -95,5 +96,12 @@
     <!-- Easter Egg Activity -->
     <string name="code">Entrez un code secret</string>
     <string name="check">Valider</string>
+
+    <!-- Stat Fragment -->
+    <string name="gift">Récompense quoditienne</string>
+    <string name="giftButton">Check In</string>
+    <string name="time">Temps restant:</string>
+    <string name="Vtime">69H 12M 42S</string>
+    <string name="nbPoint">Nombre de points</string>
 
 </resources>

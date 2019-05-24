@@ -24,6 +24,7 @@ public class AcceuilFragment extends Fragment {
 
         // Remember choice
         editor.putBoolean("aFrag", true);
+        editor.putBoolean("sFrag", false);
         editor.putBoolean("dFrag", false);
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", false);
