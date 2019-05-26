@@ -63,6 +63,7 @@ public class StatFragment extends Fragment {
                             @Override
                             public void run() {
                                 update();
+                                colorChange();
                             }
                         });
                     }
@@ -129,4 +130,24 @@ public class StatFragment extends Fragment {
             editor.apply();
         }
     }
+
+    public void colorChange() {
+
+        if(getActivity() == null)
+            return;
+
+        Button check = getActivity().findViewById(R.id.giftButton);
+
+        Calendar calendar = Calendar.getInstance();
+        int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
+        SharedPreferences timePref = getActivity().getSharedPreferences("Time", 0);
+        int lastDay = timePref.getInt("day",0);
+
+        if (lastDay != currentDay){
+            check.setTextColor(getResources().getColor(R.color.dGreen));
+        } else {
+            check.setTextColor(getResources().getColor(R.color.white));
+        }
+    }
+
 }

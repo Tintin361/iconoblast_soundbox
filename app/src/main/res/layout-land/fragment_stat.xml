@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/giftButton"
                 android:textSize="@dimen/text"
-                android:textColor="@color/white"
+                android:textColor="@color/dGreen"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_marginLeft="64dp"

@@ -17,7 +17,7 @@ public class Dialog_class extends DialogFragment {
             return new AlertDialog.Builder(getActivity())
                     .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.15)</font>"))
                     .setMessage("- Changement dans les string.\n" +
-                                "- Ajout d'un fragment Statistiques.\n" +
+                                "- Ajout d'un catégorie Statistiques.\n" +
                                 "- Ajout d'une récompense quotidienne.\n")
                     .setPositiveButton(Html.fromHtml("<font color='#dd117e'>OK</font>"), new DialogInterface.OnClickListener() {
                         @Override
