@@ -48,7 +48,7 @@ public class StatFragment extends Fragment {
             public void onClick(View v) {
                 SharedPreferences timePref = getActivity().getSharedPreferences("Time", 0);
                 int value = timePref.getInt("value", 0);
-                Toast.makeText(getActivity(), "Vous avez " + value + " coins.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Vous avez " + value + " coin(s).", Toast.LENGTH_SHORT).show();
             }
         });
 
