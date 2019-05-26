@@ -101,7 +101,6 @@
     <string name="gift">Récompense quoditienne</string>
     <string name="giftButton">Check In</string>
     <string name="time">Temps restant:</string>
-    <string name="Vtime">69H 12M 42S</string>
-    <string name="nbPoint">Nombre de points</string>
+    <string name="Vtime">69:12:42</string>
 
 </resources>

@@ -29,22 +29,15 @@
 
             <Button
                 android:id="@+id/giftButton"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/giftButton"
                 android:textSize="@dimen/text"
                 android:textColor="@color/dGreen"
                 android:gravity="center"
-                android:layout_gravity="center" />
-
-            <Button
-                android:id="@+id/pointButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/nbPoint"
-                android:textColor="@color/dGreen"
-                android:textSize="@dimen/text" />
+                android:layout_gravity="center"
+                android:layout_marginLeft="64dp"
+                android:layout_marginRight="64dp"/>
 
         </LinearLayout>
 
@@ -58,15 +51,8 @@
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:id="@+id/progress"
-            android:max="100"
-            android:progress="40"
-            android:indeterminateOnly="true"
-            android:layout_marginBottom="8dp" />
-
         <TextView
+            android:id="@+id/timeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Vtime"
