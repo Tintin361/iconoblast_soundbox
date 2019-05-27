@@ -24,6 +24,10 @@ public class AscunsFragment extends Fragment {
 
         final View view = inflater.inflate(R.layout.fragment_ascuns, container, false);
 
+        if (getActivity() == null) {
+            return view;
+        }
+
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
 

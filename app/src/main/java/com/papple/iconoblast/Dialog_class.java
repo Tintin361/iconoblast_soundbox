@@ -14,11 +14,14 @@ public class Dialog_class extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+
+        if (super.getActivity() != null) {
             return new AlertDialog.Builder(getActivity())
-                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.15)</font>"))
+                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.15.1)</font>"))
                     .setMessage("- Changement dans les string.\n" +
-                                "- Ajout d'un catégorie Statistiques.\n" +
-                                "- Ajout d'une récompense quotidienne.\n")
+                            "- Ajout d'un catégorie Statistiques.\n" +
+                            "- Ajout d'une récompense quotidienne.\n" +
+                            "- Correction de bugs 'Activity = null'.\n")
                     .setPositiveButton(Html.fromHtml("<font color='#dd117e'>OK</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -27,5 +30,9 @@ public class Dialog_class extends DialogFragment {
                     })
                     .create();
 
+        } else {
+            throw new RuntimeException("null returned from getActivity()");
+        }
     }
+
 }

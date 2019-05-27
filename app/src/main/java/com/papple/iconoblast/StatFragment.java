@@ -2,7 +2,6 @@ package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,13 +15,14 @@ import android.widget.Toast;
 import java.util.Calendar;
 
 public class StatFragment extends Fragment {
-    private TextView timeTextView;
-    private CountDownTimer countDownTimer;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View v= inflater.inflate(R.layout.fragment_stat, container, false);
+
+        if (getActivity() == null)
+            return v;
 
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -113,6 +113,11 @@ public class StatFragment extends Fragment {
     }
 
     public void timeDay() {
+
+        if (getActivity() != null) {
+            return;
+        }
+
         Calendar calendar = Calendar.getInstance();
         int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
         SharedPreferences timePref = getActivity().getSharedPreferences("Time", 0);

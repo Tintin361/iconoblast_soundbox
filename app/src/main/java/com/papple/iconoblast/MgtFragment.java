@@ -22,6 +22,10 @@ public class MgtFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view2 = inflater.inflate(R.layout.fragment_mgt, container, false);
 
+        if (getActivity() == null) {
+            return view2;
+        }
+
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
 
