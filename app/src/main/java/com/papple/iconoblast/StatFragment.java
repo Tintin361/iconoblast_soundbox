@@ -48,6 +48,28 @@ public class StatFragment extends Fragment {
             }
         });
 
+        TextView ddlcText = v.findViewById(R.id.valueDdlc);
+        TextView mgtText = v.findViewById(R.id.valueMgt);
+        TextView zeldaText = v.findViewById(R.id.valueZelda);
+        TextView ascunsText = v.findViewById(R.id.valueAscuns);
+
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("Number", 0);
+        int ddlcNumber = sharedPreferences.getInt("ddlc", 0);
+        String ddlcString = String.valueOf(ddlcNumber);
+        ddlcText.setText(ddlcString);
+
+        int mgtNumber = sharedPreferences.getInt("mgt", 0);
+        String mgtString = String.valueOf(mgtNumber);
+        mgtText.setText(mgtString);
+
+        int zeldaNumber = sharedPreferences.getInt("zelda", 0);
+        String zeldaString = String.valueOf(zeldaNumber);
+        zeldaText.setText(zeldaString);
+
+        int ascunsNumber = sharedPreferences.getInt("ascuns", 0);
+        String ascunsString = String.valueOf(ascunsNumber);
+        ascunsText.setText(ascunsString);
+
         final Thread thread = new Thread() {
 
             @Override

@@ -75,11 +75,54 @@
             android:text="@string/stat"
             android:textColor="@color/orange1"
             android:textSize="@dimen/titleText"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/cardView1"
+        android:id="@+id/cardView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="@dimen/marginBottomSize"
+        app:cardCornerRadius="4dp"
+        app:elevation="4dp">
+
+        <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="start"
+                android:text="@string/statDdlc"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/text" />
+
+            <TextView
+                android:id="@+id/valueDdlc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:text="@string/value"
+                android:textAlignment="textEnd"
+                android:textColor="@color/dGreen"
+                android:textSize="@dimen/text"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
@@ -88,27 +131,118 @@
             app:cardCornerRadius="4dp"
             app:elevation="4dp">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="@string/statDdlc"
-                    android:textColor="@color/ddlc"
+                    android:gravity="start"
+                    android:text="@string/statMGT"
+                    android:layout_alignParentStart="true"
                     android:textSize="@dimen/text" />
 
                 <TextView
-                    android:id="@+id/valueDdlc"
+                    android:id="@+id/valueMgt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="8dp"
                     android:text="@string/value"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/dGreen"
+                    android:textSize="@dimen/text"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="4dp"
+            app:elevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:text="@string/statZelda"
+                    android:layout_alignParentStart="true"
                     android:textSize="@dimen/text" />
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/valueZelda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/value"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/dGreen"
+                    android:textSize="@dimen/text"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="4dp"
+            app:elevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:text="@string/statAscuns"
+                    android:layout_alignParentStart="true"
+                    android:textSize="@dimen/text" />
+
+                <TextView
+                    android:id="@+id/valueAscuns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/value"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/dGreen"
+                    android:textSize="@dimen/text"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
 
         </android.support.v7.widget.CardView>
 
