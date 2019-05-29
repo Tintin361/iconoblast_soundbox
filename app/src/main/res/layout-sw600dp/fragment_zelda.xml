@@ -7,33 +7,33 @@
     android:layout_height="match_parent"
     android:background="@color/zelda" >
 
-    <TableLayout
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="vertical">
+  <TableLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:orientation="vertical">
 
-        <Button
-            android:id="@+id/zeldab"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/zeldabutton"
-            android:textAllCaps="false"
-            android:textColor="@color/Black"
-            android:textSize="@dimen/buttonDefault"
-            android:layout_marginBottom="@dimen/marginBottomDefault"
-            app:backgroundTint="@color/Red1" />
+    <Button
+        android:id="@+id/zeldab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/zeldabutton"
+        android:textAllCaps="false"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/buttonDefault"
+        android:layout_marginBottom="@dimen/marginBottomDefault"
+        app:backgroundTint="@color/Red1" />
 
-        <Button
-            android:id="@+id/chansonb"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/chanson1"
-            android:textColor="@color/Black"
-            android:textSize="@dimen/buttonDefault"
-            android:layout_marginBottom="@dimen/marginBottomDefault"
-            app:backgroundTint="@color/orange1" />
+    <Button
+        android:id="@+id/chansonb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/chanson1"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/buttonDefault"
+        android:layout_marginBottom="@dimen/marginBottomDefault"
+        app:backgroundTint="@color/orange1" />
 
-    </TableLayout>
+  </TableLayout>
 
 </ScrollView>

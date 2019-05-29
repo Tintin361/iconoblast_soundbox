@@ -24,6 +24,7 @@ public class TintinFragment extends Fragment {
         final ImageView twImage = v.findViewById(R.id.twImageView);
         final ImageView igImage = v.findViewById(R.id.igImageView);
         final ImageView ytImage = v.findViewById(R.id.ytImageView);
+        final ImageView diImage = v.findViewById(R.id.diImageView);
 
         fcImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +63,16 @@ public class TintinFragment extends Fragment {
                 Intent ytIntent = new Intent(Intent.ACTION_VIEW);
                 ytIntent.setData(Uri.parse(yt));
                 startActivity(ytIntent);
+            }
+        });
+
+        diImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String dis = "https://www.discord.gg/w9x3s8x";
+                Intent disIntent = new Intent(Intent.ACTION_VIEW);
+                disIntent.setData(Uri.parse(dis));
+                startActivity(disIntent);
             }
         });
 

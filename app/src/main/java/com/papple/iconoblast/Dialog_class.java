@@ -17,11 +17,11 @@ public class Dialog_class extends DialogFragment {
 
         if (super.getActivity() != null) {
             return new AlertDialog.Builder(getActivity())
-                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.15.1)</font>"))
+                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.16)</font>"))
                     .setMessage("- Changement dans les string.\n" +
-                            "- Ajout d'un catégorie Statistiques.\n" +
-                            "- Ajout d'une récompense quotidienne.\n" +
-                            "- Correction de bugs 'Activity = null'.\n")
+                                "- Ajout d'un catégorie Statistiques.\n" +
+                                "- Màj des outils de développement Android.\n" +
+                                "- Correction de warning.\n")
                     .setPositiveButton(Html.fromHtml("<font color='#dd117e'>OK</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

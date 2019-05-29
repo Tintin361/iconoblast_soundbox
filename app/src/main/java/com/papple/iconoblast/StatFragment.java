@@ -21,8 +21,7 @@ public class StatFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View v= inflater.inflate(R.layout.fragment_stat, container, false);
 
-        if (getActivity() == null)
-            return v;
+        if(getActivity() == null) return v;
 
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -42,9 +41,10 @@ public class StatFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 timeDay();
-                SharedPreferences timePref = getActivity().getSharedPreferences("Time", 0);
-                int value = timePref.getInt("value", 0);
-                Toast.makeText(getActivity(), "Vous avez " + value + " coin(s).", Toast.LENGTH_LONG).show();
+                if (getActivity() == null) return;
+                    SharedPreferences timePref = getActivity().getSharedPreferences("Time", 0);
+                    int value = timePref.getInt("value", 0);
+                    Toast.makeText(getActivity(), "Vous avez " + value + " coin(s).", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -56,8 +56,7 @@ public class StatFragment extends Fragment {
                     while (!isInterrupted()) {
                         Thread.sleep(1000);
 
-                        if(getActivity() == null)
-                            return;
+                        if(getActivity() == null) return;
 
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
@@ -114,7 +113,7 @@ public class StatFragment extends Fragment {
 
     public void timeDay() {
 
-        if (getActivity() != null) {
+        if (getActivity() == null) {
             return;
         }
 

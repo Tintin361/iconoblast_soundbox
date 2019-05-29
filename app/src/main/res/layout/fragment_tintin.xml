@@ -33,7 +33,7 @@
                     android:layout_width="145dp"
                     android:layout_height="145dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/pikachu2" />
+                    android:src="@drawable/pp_tintin" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -73,6 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/des"
                     android:focusable="true"
                     android:src="@drawable/youtube2" />
 
@@ -131,6 +132,15 @@
                         android:focusable="true"
                         android:src="@drawable/ig_logo" />
 
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/diImageView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:focusable="true"
+                        android:src="@drawable/discord_logo" />
                 </LinearLayout>
 
             </HorizontalScrollView>

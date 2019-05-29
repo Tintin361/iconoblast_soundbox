@@ -1,3 +1,5 @@
+<?xml version="1.0"?>
+
 <resources>
 
     <!-- Base application theme. -->
@@ -27,9 +29,12 @@
     </style>
 
     <style name="AppTheme.Green" parent="AppTheme">
+
         <item name="colorPrimary">@color/gColorPrimary</item>
         <item name="colorPrimaryDark">@color/gColorPrimaryDark</item>
         <item name="colorAccent">@color/gColorAccent</item>
         <item name="windowActionBar">false</item>
+
     </style>
+
 </resources>

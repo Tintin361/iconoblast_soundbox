@@ -6,10 +6,11 @@
     <string name="icoc">ICONOCLASTE</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version">Version 0.15.1</string>
-    <string name="versiond">Version 0.15.1</string>
+    <string name="version">Version 0.16</string>
+    <string name="versiond">Version 0.16</string>
     <string name="easter">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
+    <string name="des">Logo Youtube</string>
     <string name="stat">Statistiques</string>
 
     <!-- Activity main -->
@@ -86,6 +87,7 @@
     <string name="descriptionLulu">Photo du compte Xbox de DouleurTulipe38</string>
     <string name="tintin">*Tintin</string>
     <string name="lulu">DouleurTulipe38</string>
+    <string name="goster">Goster_</string>
     <string name="lulu2">N\'a pas de réseaux sociaux.</string>
 
     <!-- Thème Activity -->
@@ -102,5 +104,10 @@
     <string name="giftButton">Check In</string>
     <string name="time">Temps restant:</string>
     <string name="Vtime">69:12:42</string>
+    <string name="statDdlc">Doki Doki Litterature Club:</string>
+    <string name="statMGT">Mad Games Tycoon:</string>
+    <string name="statZelda">Zelda:</string>
+    <string name="statAscuns">Ascuns:</string>
+    <string name="value">1</string>
 
 </resources>
