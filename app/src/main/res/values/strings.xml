@@ -1,63 +1,63 @@
 <resources>
     <!-- Application -->
     <string name="app_name">Iconoblast !</string>
-    <string name="app">APPLICATION</string>
-    <string name="icob">ICONOBLAST !</string>
-    <string name="icoc">ICONOCLASTE</string>
+    <string name="app" translatable="false">APPLICATION</string>
+    <string name="icob" translatable="false">ICONOBLAST !</string>
+    <string name="icoc" translatable="false">ICONOCLASTE</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version">Version 0.16</string>
-    <string name="versiond">Version 0.16</string>
-    <string name="easter">Easter Egg</string>
+    <string name="version" translatable="false">Version 0.16</string>
+    <string name="versiond" translatable="false">Version 0.16</string>
+    <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
-    <string name="des">Logo Youtube</string>
+    <string name="des" translatable="false">Logo Youtube</string>
     <string name="stat">Statistiques</string>
 
     <!-- Activity main -->
     <string name="text">COUCOU LES COPAINS ET LES COPINES !</string>
     <string name="text2">Bienvenue sur cette application soundbox Iconoblast non officielle (sans liens affiliés Instant Gaming).</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="search_toolbar">No available</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="search_toolbar" translatable="false">No available</string>
 
     <!-- Toolbar -->
     <string name="themes">Éditeur de Thème</string>
     <string name="search">Rechercher</string>
-    <string name="info">Informations</string>
+    <string name="info" translatable="false">Informations</string>
 
     <!-- Drawer -->
     <string name="acceuil">Accueil</string>
-    <string name="ddlc">Doki Doki Litterature Club</string>
-    <string name="sDdlc">DDLC</string>
-    <string name="mgt">Mad Games Tycoon</string>
-    <string name="sMgt">MGT</string>
-    <string name="yoshi">Yoshi\'s Island</string>
-    <string name="bloodborn">Bloodborn</string>
-    <string name="amour">Amour Sucré</string>
-    <string name="marioMaker">Super Mario Maker</string>
-    <string name="sonic">Sonic the Hedgehog</string>
-    <string name="pokemon">Pokémon Let\s Go Pikachu</string>
-    <string name="versus">Iconoblast ! - Versus</string>
-    <string name="zelda">Zelda</string>
-    <string name="ascuns">Ascuns</string>
+    <string name="ddlc" translatable="false">Doki Doki Litterature Club</string>
+    <string name="sDdlc" translatable="false">DDLC</string>
+    <string name="mgt" translatable="false">Mad Games Tycoon</string>
+    <string name="sMgt" translatable="false">MGT</string>
+    <string name="yoshi" translatable="false">Yoshi\'s Island</string>
+    <string name="bloodborn" translatable="false">Bloodborn</string>
+    <string name="amour" translatable="false">Amour Sucré</string>
+    <string name="marioMaker" translatable="false">Super Mario Maker</string>
+    <string name="sonic" translatable="false">Sonic the Hedgehog</string>
+    <string name="pokemon" translatable="false">Pokémon Let\s Go Pikachu</string>
+    <string name="versus" translatable="false">Iconoblast ! - Versus</string>
+    <string name="zelda" translatable="false">Zelda</string>
+    <string name="ascuns" translatable="false">Ascuns</string>
     <string name="bug">Signaler un Bug</string>
 
     <!-- DDLC Activity -->
     <string name="ken1">C\'est parce que j\'veux ken !!! (Étagère)</string>
     <string name="tete">MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)</string>
-    <string name="haha">HAHA !!! (Étagère)</string>
-    <string name="baka">BAAAAKA !!! (Ico)</string>
+    <string name="haha" translatable="false">HAHA !!! (Étagère)</string>
+    <string name="baka" translatable="false">BAAAAKA !!! (Ico)</string>
     <string name="cailloux">CAILOOOOOUUUXXX !!! (encore Ico…)</string>
     <string name="censuré">Actuellement, je pense encore à… (Ico)</string>
     <string name="censuré2">Donc tu devais peut-être… (Étagèrito)</string>
     <string name="morceaumdr">CRACHE LE MORCEAU, ENCULÉ !!! (Ico)</string>
     <string name="attention">Hey ! Fait attention… (Étagère)</string>
-    <string name="etagere">Étagere_sound.ogg</string>
-    <string name="ico">Iconoclaste_sound.ogg</string>
-    <string name="mmm">MMMMMMH !!! (Étagère)</string>
+    <string name="etagere" translatable="false">Étagere_sound.ogg</string>
+    <string name="ico" translatable="false">Iconoclaste_sound.ogg</string>
+    <string name="mmm" translatable="false">MMMMMMH !!! (Étagère)</string>
     <string name="genial">GÉNIAL !!! (Étagère)</string>
-    <string name="non">Non ! NOOOOOON !!! (Ico)</string>
-    <string name="supers">SUPER !!! (Étagère)</string>
+    <string name="non" translatable="false">Non ! NOOOOOON !!! (Ico)</string>
+    <string name="supers" translatable="false">SUPER !!! (Étagère)</string>
     <string name="experimenters">Tu ne devrai pas avoir peur d\'expérimenter ! (Étagère.exe)</string>
     <string name="pardons">(Censuré) oh pardon, c\'est sorti tout seul ! (Ico)</string>
     <string name="rires">Rire (pas) diabolique (Grand Étagère)</string>
@@ -74,7 +74,7 @@
     <string name="cock">TOUCH MY COCK !!! (Ico et Étagère)</string>
 
     <!-- Zelda Activity -->
-    <string name="zeldabutton">ZELDA !!! (Ico)</string>
+    <string name="zeldabutton" translatable="false">ZELDA !!! (Ico)</string>
     <string name="chanson1">Chanson Ico et Étagère</string>
 
     <!-- Ascuns Activity -->
@@ -85,9 +85,9 @@
     <string name="sound">Téléchargement et regroupement des sons par: DouleurTulipe38 !</string>
     <string name="descriptionTintin">Photo du compte Google de *Tintin</string>
     <string name="descriptionLulu">Photo du compte Xbox de DouleurTulipe38</string>
-    <string name="tintin">*Tintin</string>
-    <string name="lulu">DouleurTulipe38</string>
-    <string name="goster">Goster_</string>
+    <string name="tintin" translatable="false">*Tintin</string>
+    <string name="lulu" translatable="false">DouleurTulipe38</string>
+    <string name="goster" translatable="false">Goster_</string>
     <string name="lulu2">N\'a pas de réseaux sociaux.</string>
 
     <!-- Thème Activity -->
@@ -101,13 +101,13 @@
 
     <!-- Stat Fragment -->
     <string name="gift">Récompense quoditienne</string>
-    <string name="giftButton">Check In</string>
+    <string name="giftButton" translatable="false">Check In</string>
     <string name="time">Temps restant:</string>
-    <string name="Vtime">69:12:42</string>
-    <string name="statDdlc">Doki Doki Litterature Club:</string>
-    <string name="statMGT">Mad Games Tycoon:</string>
-    <string name="statZelda">Zelda:</string>
-    <string name="statAscuns">Ascuns:</string>
-    <string name="value">1</string>
+    <string name="Vtime" translatable="false">69:12:42</string>
+    <string name="statDdlc" translatable="false">Doki Doki Litterature Club:</string>
+    <string name="statMGT" translatable="false">Mad Games Tycoon:</string>
+    <string name="statZelda" translatable="false">Zelda:</string>
+    <string name="statAscuns" translatable="false">Ascuns:</string>
+    <string name="value" translatable="false">1</string>
 
 </resources>
