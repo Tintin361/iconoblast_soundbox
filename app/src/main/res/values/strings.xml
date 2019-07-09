@@ -90,6 +90,11 @@
     <string name="tintin" translatable="false">*Tintin</string>
     <string name="lulu" translatable="false">DouleurTulipe38</string>
     <string name="goster" translatable="false">Goster_</string>
+    <string name="licences">Licences</string>
+    <string name="gif">android-gif-drawable</string>
+    <string name="material">MaterialSearchView</string>
+    <string name="opus">opuscodec</string>
+    <string name="statusbar">StatusBarUtil</string>
     <string name="lulu2">N\'a pas de réseaux sociaux.</string>
 
     <!-- Thème Activity -->

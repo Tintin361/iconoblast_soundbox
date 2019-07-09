@@ -45,12 +45,12 @@ public class InfosActivity extends AppCompatActivity {
         if (answerA) {
 
             // For Text
-            int[][] state = new int[][] {
-                    new int[] {-android.R.attr.state_checked}, // unchecked
-                    new int[] { android.R.attr.state_checked}  // checked
+            int[][] state = new int[][]{
+                    new int[]{-android.R.attr.state_checked}, // unchecked
+                    new int[]{android.R.attr.state_checked}  // checked
             };
 
-            int[] color = new int[] {
+            int[] color = new int[]{
                     Color.parseColor("#757575"),
                     Color.parseColor("#3e068f")
             };
@@ -63,12 +63,12 @@ public class InfosActivity extends AppCompatActivity {
         } else if (answerB) {
 
             // For Text
-            int[][] state = new int[][] {
-                    new int[] {-android.R.attr.state_checked}, // unchecked
-                    new int[] { android.R.attr.state_checked}  // checked
+            int[][] state = new int[][]{
+                    new int[]{-android.R.attr.state_checked}, // unchecked
+                    new int[]{android.R.attr.state_checked}  // checked
             };
 
-            int[] color = new int[] {
+            int[] color = new int[]{
                     Color.parseColor("#BCBCBC"),
                     Color.parseColor("#4ac9f7")
             };
@@ -82,12 +82,12 @@ public class InfosActivity extends AppCompatActivity {
 
 
             // For Text
-            int[][] state = new int[][] {
-                    new int[] {-android.R.attr.state_checked}, // unchecked
-                    new int[] { android.R.attr.state_checked}  // checked
+            int[][] state = new int[][]{
+                    new int[]{-android.R.attr.state_checked}, // unchecked
+                    new int[]{android.R.attr.state_checked}  // checked
             };
 
-            int[] color = new int[] {
+            int[] color = new int[]{
                     Color.parseColor("#757575"),
                     Color.parseColor("#3e068f")
             };
@@ -118,9 +118,16 @@ public class InfosActivity extends AppCompatActivity {
                 case R.id.nav_iconoblast:
                     selectedFragment = new IcoFragment();
                     break;
+                case R.id.nav_licences:
+                    selectedFragment = new LicencesFragment();
+                    break;
             }
 
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_info, selectedFragment).commit();
+
+            if (selectedFragment != null) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_info, selectedFragment).commit();
+                return true;
+            }
             return true;
         }
     };
