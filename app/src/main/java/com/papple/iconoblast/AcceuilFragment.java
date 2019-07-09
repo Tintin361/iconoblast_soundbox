@@ -33,6 +33,7 @@ public class AcceuilFragment extends Fragment {
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", false);
         editor.putBoolean("asFrag", false);
+        editor.putBoolean("deltaFrag", false);
 
         editor.apply();
 

@@ -37,7 +37,6 @@
                     <item
                         android:id="@+id/nav_delta"
                         android:title="@string/delta"
-                        android:checkable="false"
                         android:icon="@drawable/ic_game" />
                     <item
                         android:id="@+id/nav_yoshi"

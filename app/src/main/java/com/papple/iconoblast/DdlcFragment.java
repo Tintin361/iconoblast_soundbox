@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.ScrollView;
 
 public class DdlcFragment extends Fragment {
-    public MediaPlayer darakaPlayer;
+    public MediaPlayer jaimeLesPlayer;
 
     @Nullable
     @Override
@@ -36,6 +36,7 @@ public class DdlcFragment extends Fragment {
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", false);
         editor.putBoolean("asFrag", false);
+        editor.putBoolean("deltaFrag", false);
 
         editor.apply();
 
@@ -271,11 +272,11 @@ public class DdlcFragment extends Fragment {
     }
 
     public void playSound(int redId) {
-        if (darakaPlayer != null) {
-            darakaPlayer.stop();
-            darakaPlayer.release();
+        if (jaimeLesPlayer != null) {
+            jaimeLesPlayer.stop();
+            jaimeLesPlayer.release();
         }
-        darakaPlayer = MediaPlayer.create(getContext(), redId);
-        darakaPlayer.start();
+        jaimeLesPlayer = MediaPlayer.create(getContext(), redId);
+        jaimeLesPlayer.start();
     }
 }

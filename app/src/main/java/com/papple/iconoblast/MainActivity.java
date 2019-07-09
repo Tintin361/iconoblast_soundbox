@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setShortLabel("Deltarune")
                     .setLongLabel("Deltarune")
                     .setDisabledMessage("Ce raccourci est désactivé.")
+                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_deltarune))
                     .setRank(5)
                     .setIntent(DeltaIntent)
                     .build();
@@ -134,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editor.putBoolean("aFrag", false);
                         editor.putBoolean("sFrag", false);
                         editor.putBoolean("dFrag", true);
+                        editor.putBoolean("deltaFrag", false);
                         editor.putBoolean("mFrag", false);
                         editor.putBoolean("zFrag", false);
                         editor.putBoolean("asFrag", false);
@@ -143,6 +145,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editor.putBoolean("aFrag", false);
                         editor.putBoolean("sFrag", false);
                         editor.putBoolean("dFrag", false);
+                        editor.putBoolean("deltaFrag", false);
                         editor.putBoolean("mFrag", true);
                         editor.putBoolean("zFrag", false);
                         editor.putBoolean("asFrag", false);
@@ -153,6 +156,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editor.putBoolean("sFrag", false);
                         editor.putBoolean("dFrag", false);
                         editor.putBoolean("mFrag", false);
+                        editor.putBoolean("deltaFrag", false);
                         editor.putBoolean("zFrag", true);
                         editor.putBoolean("asFrag", false);
                         editor.apply();
@@ -162,11 +166,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editor.putBoolean("sFrag", false);
                         editor.putBoolean("dFrag", false);
                         editor.putBoolean("mFrag", false);
+                        editor.putBoolean("deltaFrag", false);
                         editor.putBoolean("zFrag", false);
                         editor.putBoolean("asFrag", true);
                         editor.apply();
                         break;
                     case "deltarune":
+                        editor.putBoolean("aFrag", false);
+                        editor.putBoolean("sFrag", false);
+                        editor.putBoolean("dFrag", false);
+                        editor.putBoolean("mFrag", false);
+                        editor.putBoolean("deltaFrag", true);
+                        editor.putBoolean("zFrag", false);
+                        editor.putBoolean("asFrag", false);
+                        editor.apply();
+                        break;
 
                 }
             }
@@ -176,6 +190,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         boolean statFrag = settings.getBoolean("sFrag", false);
         boolean ddlcFrag = settings.getBoolean("dFrag", false);
         boolean mgtFrag = settings.getBoolean("mFrag", false);
+        boolean deltaFrag = settings.getBoolean("deltaFrag", false);
         boolean zeldaFrag = settings.getBoolean("zFrag", false);
         boolean ascunsfrag = settings.getBoolean("asFrag", false);
 
@@ -185,6 +200,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (mgtFrag) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MgtFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_mgt);
+        } else if (deltaFrag) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DeltaruneFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_delta);
         } else if (zeldaFrag) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ZeldaFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_zelda);
@@ -329,7 +347,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 editor1.putInt("mgt", mgtNumber);
                 break;
             case R.id.nav_delta:
-                Toast.makeText(this, "Guerrier Delta !", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DeltaruneFragment()).commit();
+                item.setChecked(true);
+                int deltaNumber = sharedPreferences.getInt("deltarune", 0);
+                deltaNumber = deltaNumber + 1;
+                editor1.putInt("deltarune", deltaNumber);
                 break;
             case R.id.nav_yoshi:
                 Toast.makeText(this, "Bébé de MERDE !!!", Toast.LENGTH_SHORT).show();

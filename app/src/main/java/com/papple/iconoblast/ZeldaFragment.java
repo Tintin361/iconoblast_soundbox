@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ScrollView;
 
 public class ZeldaFragment extends Fragment {
-    public MediaPlayer weinozPlayer;
+    public MediaPlayer jaimeLesPlayer;
 
     @Nullable
     @Override
@@ -36,6 +36,7 @@ public class ZeldaFragment extends Fragment {
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", true);
         editor.putBoolean("asFrag", false);
+        editor.putBoolean("deltaFrag", false);
 
         editor.apply();
 
@@ -77,11 +78,11 @@ public class ZeldaFragment extends Fragment {
     }
 
     public void playSound(int redId) {
-        if (weinozPlayer != null) {
-            weinozPlayer.stop();
-            weinozPlayer.release();
+        if (jaimeLesPlayer != null) {
+            jaimeLesPlayer.stop();
+            jaimeLesPlayer.release();
         }
-        weinozPlayer = MediaPlayer.create(getContext(), redId);
-        weinozPlayer.start();
+        jaimeLesPlayer = MediaPlayer.create(getContext(), redId);
+        jaimeLesPlayer.start();
     }
 }

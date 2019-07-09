@@ -63,7 +63,7 @@ public class StatFragment extends Fragment {
         String mgtString = String.valueOf(mgtNumber);
         mgtText.setText(mgtString);
 
-        int deltaNumber = sharedPreferences.getInt("delta", 0);
+        int deltaNumber = sharedPreferences.getInt("deltarune", 0);
         String deltaString = String.valueOf(deltaNumber);
         deltaText.setText(deltaString);
 

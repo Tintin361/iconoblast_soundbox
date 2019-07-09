@@ -71,12 +71,14 @@
     <color name="ascuns">#4EA384</color>
     <color name="ddlc">#FFBEE1</color>
     <color name="zelda">#35C9F4</color>
+    <color name="deltarune">#1EAAC5</color>
 
     <!-- Dark Background color -->
     <color name="dmgt">#313131</color>
     <color name="dascuns">#313131</color>
     <color name="dddlc">#313131</color>
     <color name="dzelda">#313131</color>
+    <color name="ddelarune">#075788</color>
 
 
 </resources>

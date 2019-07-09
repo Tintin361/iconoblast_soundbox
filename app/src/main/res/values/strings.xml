@@ -113,4 +113,7 @@
     <string name="statDELTA">Deltarune:</string>
     <string name="value" translatable="false">0</string>
 
+    <!-- Deltarune Fragment -->
+    <string name="guerrierdelta">Guerriers Delta !!!</string>
+
 </resources>
