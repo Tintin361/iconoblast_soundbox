@@ -33,7 +33,7 @@
                     android:layout_width="145dp"
                     android:layout_height="145dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/pp_tintin" />
+                    android:src="@drawable/kana_pp" />
 
                 <TextView
                     android:id="@+id/textView"

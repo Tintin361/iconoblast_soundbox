@@ -4,14 +4,16 @@
     <string name="app" translatable="false">APPLICATION</string>
     <string name="icob" translatable="false">ICONOBLAST !</string>
     <string name="icoc" translatable="false">ICONOCLASTE</string>
+    <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 0.16</string>
-    <string name="versiond" translatable="false">Version 0.16</string>
+    <string name="version" translatable="false">Version 0.17</string>
+    <string name="versiond" translatable="false">Version 0.17</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
     <string name="stat">Statistiques</string>
+    <string name="delta">Deltarune</string>
 
     <!-- Activity main -->
     <string name="text">COUCOU LES COPAINS ET LES COPINES !</string>
@@ -34,7 +36,7 @@
     <string name="yoshi" translatable="false">Yoshi\'s Island</string>
     <string name="bloodborn" translatable="false">Bloodborn</string>
     <string name="amour" translatable="false">Amour Sucré</string>
-    <string name="marioMaker" translatable="false">Super Mario Maker</string>
+    <string name="marioMaker" translatable="false">Super Mario Maker 1 et 2</string>
     <string name="sonic" translatable="false">Sonic the Hedgehog</string>
     <string name="pokemon" translatable="false">Pokémon Let\s Go Pikachu</string>
     <string name="versus" translatable="false">Iconoblast ! - Versus</string>
@@ -108,6 +110,7 @@
     <string name="statMGT" translatable="false">Mad Games Tycoon:</string>
     <string name="statZelda" translatable="false">Zelda:</string>
     <string name="statAscuns" translatable="false">Ascuns:</string>
-    <string name="value" translatable="false">1</string>
+    <string name="statDELTA">Deltarune:</string>
+    <string name="value" translatable="false">0</string>
 
 </resources>

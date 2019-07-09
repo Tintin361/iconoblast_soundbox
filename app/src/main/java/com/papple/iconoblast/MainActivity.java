@@ -6,6 +6,7 @@ import android.content.pm.ShortcutInfo;
 import android.content.pm.ShortcutManager;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.Icon;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,12 +19,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
+    TextView iconotextview;
+    Typeface myfont;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -315,6 +319,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 mgtNumber = mgtNumber + 1;
                 editor1.putInt("mgt", mgtNumber);
                 break;
+            case R.id.nav_delta:
+                Toast.makeText(this, "Guerrier Delta !", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.nav_yoshi:
                 Toast.makeText(this, "Bébé de MERDE !!!", Toast.LENGTH_SHORT).show();
                 break;
@@ -398,6 +405,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
+
         } else {
             super.onBackPressed();
         }

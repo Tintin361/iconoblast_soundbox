@@ -2,6 +2,7 @@ package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -40,7 +41,6 @@ public class StatFragment extends Fragment {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                timeDay();
                 if (getActivity() == null) return;
                     SharedPreferences timePref = getActivity().getSharedPreferences("Time", 0);
                     int value = timePref.getInt("value", 0);
@@ -52,6 +52,7 @@ public class StatFragment extends Fragment {
         TextView mgtText = v.findViewById(R.id.valueMgt);
         TextView zeldaText = v.findViewById(R.id.valueZelda);
         TextView ascunsText = v.findViewById(R.id.valueAscuns);
+        TextView deltaText = v.findViewById(R.id.valueDelta);
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("Number", 0);
         int ddlcNumber = sharedPreferences.getInt("ddlc", 0);
@@ -62,6 +63,10 @@ public class StatFragment extends Fragment {
         String mgtString = String.valueOf(mgtNumber);
         mgtText.setText(mgtString);
 
+        int deltaNumber = sharedPreferences.getInt("delta", 0);
+        String deltaString = String.valueOf(deltaNumber);
+        deltaText.setText(deltaString);
+
         int zeldaNumber = sharedPreferences.getInt("zelda", 0);
         String zeldaString = String.valueOf(zeldaNumber);
         zeldaText.setText(zeldaString);
@@ -70,110 +75,7 @@ public class StatFragment extends Fragment {
         String ascunsString = String.valueOf(ascunsNumber);
         ascunsText.setText(ascunsString);
 
-        final Thread thread = new Thread() {
-
-            @Override
-            public void run() {
-                try {
-                    while (!isInterrupted()) {
-                        Thread.sleep(1000);
-
-                        if(getActivity() == null) return;
-
-                        getActivity().runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                update();
-                                colorChange();
-                            }
-                        });
-                    }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-
-        thread.start();
-
         return v;
-    }
-
-    public void update() {
-        Calendar c = Calendar.getInstance();
-        int hours = c.get(Calendar.HOUR_OF_DAY);
-        int minutes = c.get(Calendar.MINUTE);
-        int seconds = c.get(Calendar.SECOND);
-
-        hours = 24 - hours;
-        minutes = 60 - minutes;
-        seconds = 60 - seconds;
-
-        String heure = String.valueOf(hours);
-        String minute = String.valueOf(minutes);
-        String seconde = String.valueOf(seconds);
-
-        if (hours < 10) {
-            heure = "0" + hours;
-
-        } if (minutes < 10) {
-            minute = "0" + minutes;
-
-        } if (seconds < 10) {
-            seconde = "0" + seconds;
-        }
-
-
-        String string = heure + ":" + minute + ":" + seconde;
-
-        if(getActivity() == null)
-            return;
-
-        TextView textView = getActivity().findViewById(R.id.timeTextView);
-        textView.setText(string);
-    }
-
-    public void timeDay() {
-
-        if (getActivity() == null) {
-            return;
-        }
-
-        Calendar calendar = Calendar.getInstance();
-        int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
-        SharedPreferences timePref = getActivity().getSharedPreferences("Time", 0);
-        int lastDay = timePref.getInt("day",0);
-
-        if (lastDay != currentDay){
-            SharedPreferences.Editor editor = timePref.edit();
-            editor.putInt("day", currentDay);
-            editor.apply();
-
-            // Code
-            int value = timePref.getInt("value", 0);
-            value = value + 1;
-            editor.putInt("value", value);
-            editor.apply();
-        }
-    }
-
-    public void colorChange() {
-
-        if(getActivity() == null)
-            return;
-
-        Button check = getActivity().findViewById(R.id.giftButton);
-
-        Calendar calendar = Calendar.getInstance();
-        int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
-        SharedPreferences timePref = getActivity().getSharedPreferences("Time", 0);
-        int lastDay = timePref.getInt("day",0);
-
-        if (lastDay != currentDay){
-            check.setTextColor(getResources().getColor(R.color.dGreen));
-        } else {
-            check.setTextColor(getResources().getColor(R.color.white));
-        }
     }
 
 }
