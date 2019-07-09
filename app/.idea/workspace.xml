@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="pixel" />
+        <device id="Nexus 10" />
+        <target>android-Q</target>
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="774e7c5a-c9fd-4c76-9c22-59ffa86088e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/papple/iconoblast/Dialog_class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/papple/iconoblast/Dialog_class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/papple/iconoblast/StatFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/papple/iconoblast/StatFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/papple/iconoblast/TintinFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/papple/iconoblast/TintinFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/papple/iconoblast/theme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/papple/iconoblast/theme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/icon_ahri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/pikachu2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/tintin_new_photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-hdpi/youtube1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-ldpi/icon_ahri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-ldpi/pikachu2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-ldpi/tintin_new_photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-mdpi/icon_ahri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-mdpi/pikachu2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-mdpi/tintin_new_photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-tvdpi/icon_ahri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-tvdpi/pikachu2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-tvdpi/tintin_new_photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/icon_ahri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/pikachu2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/tintin_new_photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/icon_ahri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/pikachu2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/tintin_new_photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/icon_ahri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/pikachu2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/tintin_new_photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/announcement_black.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/announcement_black.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_feedback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_feedback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_game.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_game.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_group.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_group.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_info_black.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_info_black.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_foreground_game1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_foreground_game1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_news.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_news.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_person.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_person.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_search.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_settings_black.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_settings_black.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_video.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_video.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout-land/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout-land/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout-land/fragment_acceuil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout-land/fragment_acceuil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout-land/fragment_ddlc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout-land/fragment_ddlc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_ascuns.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_ascuns.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_ddlc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_ddlc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_mgt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_mgt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_zelda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_zelda.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_infos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_infos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_secret.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_secret.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_splash.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_theme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_theme.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_acceuil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_acceuil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_ascuns.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_ascuns.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_ddlc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_ddlc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_ico.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_ico.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_lulu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_lulu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_mgt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_mgt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_stat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_stat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_tintin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_tintin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_zelda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_zelda.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/list_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/list_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/menu/bottom_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/menu/bottom_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/menu/toolbar_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/menu/toolbar_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ascuns.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ascuns.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ascuns_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ascuns_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ddlc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ddlc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ddlc_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ddlc_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_mgt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_mgt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_mgt_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_mgt_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-hdpi/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-hdpi/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-ldpi/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-ldpi/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-mdpi/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-mdpi/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-sw600dp/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-sw600dp/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-v21/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-v21/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-v21/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-v21/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-xhdpi/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-xhdpi/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-xxxhdpi/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-xxxhdpi/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/ic_launcher_background_mgt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/ic_launcher_background_mgt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/styles.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/..">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/..">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/papple/iconoblast/LuluFragment.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Tintin361 &lt;30444189+tintin361@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/res/drawable-v24/ic_launcher_foreground.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_foreground_game1.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/ic_new.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/ic_news.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/ic_person.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/ic_search.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/ic_settings.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/ic_settings_black.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/ic_video.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout-land/activity_main.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_secret.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_splash.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_theme.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_acceuil.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout-land/fragment_acceuil.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_ascuns.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_ascuns.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_ddlc.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout-land/fragment_ddlc.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_ddlc.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_mgt.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_mgt.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_zelda.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_zelda.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ascuns.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ascuns_round.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ddlc.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ddlc_round.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_mgt.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_mgt_round.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_zelda.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_zelda_round.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/ic_launcher_background_ascuns.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/ic_launcher_background_ddlc.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/ic_launcher_background_game1.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/ic_launcher_background_mgt.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/ic_launcher_background_zelda.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values-hdpi/dimens.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values-ldpi/dimens.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values-mdpi/dimens.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values-tvdpi/dimens.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values-xhdpi/dimens.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values-xxhdpi/dimens.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values-xxxhdpi/dimens.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values-sw600dp/dimens.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values-sw720dp/dimens.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/papple/iconoblast/theme.java" />
+        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="571" />
+    <option name="y" value="-8" />
+    <option name="width" value="980" />
+    <option name="height" value="513" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="new Android" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="new Android" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="new Android" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="iconoblast" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$/build/outputs/apk/debug/Non ! (Mario Édition).apk" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="device.picker.selection" value="ad081603190a6cb24b" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build/outputs/apk/debug/Non ! (Mario Édition).apk" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.papple.iconoblast" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\new Android\app\src\main\res\layout" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.app [build]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="774e7c5a-c9fd-4c76-9c22-59ffa86088e4" name="Default Changelist" comment="" />
+      <created>1558463345848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558463345848</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Yo">
+      <created>1558726141951</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558726141952</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Yo">
+      <created>1558902564848</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558902564848</updated>
+    </task>
+    <task id="LOCAL-00003" summary="New">
+      <created>1558910188015</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558910188015</updated>
+    </task>
+    <task id="LOCAL-00004" summary="New for Real">
+      <created>1558910896623</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558910896624</updated>
+    </task>
+    <task id="LOCAL-00005" summary="New for Real Now MY GODSFZFZF">
+      <created>1558994260836</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558994260836</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Captures" order="0" sideWeight="0.50138503" side_tool="true" weight="0.32995737" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49945828" visible="true" weight="0.19083156" />
+      <window_info id="Structure" order="2" sideWeight="0.5005417" side_tool="true" weight="0.19083156" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="Resources Explorer" order="7" sideWeight="0.49861497" weight="0.32995737" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.1924307" side_tool="true" weight="0.21776815" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.26868907" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.8075693" visible="true" weight="0.3347779" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" weight="0.32936078" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.32936078" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.32995737" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Preview" order="5" weight="0.38859275" />
+    </layout>
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Yo" />
+    <MESSAGE value="New" />
+    <MESSAGE value="New for Real" />
+    <MESSAGE value="New for Real Now MY GODSFZFZF" />
+    <option name="LAST_COMMIT_MESSAGE" value="New for Real Now MY GODSFZFZF" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout-land/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_theme.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="74" column="15" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
+          <folding>
+            <element signature="e#1227#1243#0" expanded="true" />
+            <element signature="e#1273#1297#0" expanded="true" />
+            <element signature="e#1886#1902#0" expanded="true" />
+            <element signature="e#1932#1956#0" expanded="true" />
+            <element signature="e#2545#2561#0" expanded="true" />
+            <element signature="e#2591#2615#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_acceuil.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding>
+            <element signature="e#777#791#0" expanded="true" />
+            <element signature="e#926#944#0" expanded="true" />
+            <element signature="e#1387#1402#0" expanded="true" />
+            <element signature="e#1477#1490#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout-land/fragment_acceuil.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding>
+            <element signature="e#587#601#0" expanded="true" />
+            <element signature="e#724#742#0" expanded="true" />
+            <element signature="e#1141#1156#0" expanded="true" />
+            <element signature="e#1223#1236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_ascuns.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="e#649#664#0" expanded="true" />
+            <element signature="e#731#753#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/menu/drawer_menu.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/nav_header.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <folding>
+            <element signature="e#584#607#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_ddlc.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="216" column="13" selection-start-line="216" selection-start-column="13" selection-end-line="216" selection-end-column="13" />
+          <folding>
+            <element signature="e#676#690#0" expanded="true" />
+            <element signature="e#1035#1049#0" expanded="true" />
+            <element signature="e#1401#1419#0" expanded="true" />
+            <element signature="e#1772#1791#0" expanded="true" />
+            <element signature="e#2141#2158#0" expanded="true" />
+            <element signature="e#2504#2517#0" expanded="true" />
+            <element signature="e#2865#2881#0" expanded="true" />
+            <element signature="e#3228#3244#0" expanded="true" />
+            <element signature="e#3598#3621#0" expanded="true" />
+            <element signature="e#3967#3982#0" expanded="true" />
+            <element signature="e#4328#4342#0" expanded="true" />
+            <element signature="e#4691#4705#0" expanded="true" />
+            <element signature="e#5056#5074#0" expanded="true" />
+            <element signature="e#5425#5442#0" expanded="true" />
+            <element signature="e#5792#5812#0" expanded="true" />
+            <element signature="e#6157#6170#0" expanded="true" />
+            <element signature="e#6514#6527#0" expanded="true" />
+            <element signature="e#6874#6891#0" expanded="true" />
+            <element signature="e#7241#7258#0" expanded="true" />
+            <element signature="e#7607#7623#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_ddlc.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="229" column="23" selection-start-line="229" selection-start-column="23" selection-end-line="229" selection-end-column="23" />
+          <folding>
+            <element signature="e#646#660#0" expanded="true" />
+            <element signature="e#763#785#0" expanded="true" />
+            <element signature="e#822#850#0" expanded="true" />
+            <element signature="e#1050#1064#0" expanded="true" />
+            <element signature="e#1167#1189#0" expanded="true" />
+            <element signature="e#1226#1254#0" expanded="true" />
+            <element signature="e#1461#1479#0" expanded="true" />
+            <element signature="e#1582#1604#0" expanded="true" />
+            <element signature="e#1641#1669#0" expanded="true" />
+            <element signature="e#1877#1896#0" expanded="true" />
+            <element signature="e#1999#2021#0" expanded="true" />
+            <element signature="e#2058#2086#0" expanded="true" />
+            <element signature="e#2291#2308#0" expanded="true" />
+            <element signature="e#2411#2433#0" expanded="true" />
+            <element signature="e#2470#2498#0" expanded="true" />
+            <element signature="e#2699#2712#0" expanded="true" />
+            <element signature="e#2815#2837#0" expanded="true" />
+            <element signature="e#2874#2902#0" expanded="true" />
+            <element signature="e#3105#3121#0" expanded="true" />
+            <element signature="e#3224#3246#0" expanded="true" />
+            <element signature="e#3283#3311#0" expanded="true" />
+            <element signature="e#3513#3529#0" expanded="true" />
+            <element signature="e#3632#3654#0" expanded="true" />
+            <element signature="e#3691#3719#0" expanded="true" />
+            <element signature="e#3928#3951#0" expanded="true" />
+            <element signature="e#4054#4076#0" expanded="true" />
+            <element signature="e#4113#4141#0" expanded="true" />
+            <element signature="e#4342#4357#0" expanded="true" />
+            <element signature="e#4460#4482#0" expanded="true" />
+            <element signature="e#4519#4547#0" expanded="true" />
+            <element signature="e#4748#4762#0" expanded="true" />
+            <element signature="e#4865#4887#0" expanded="true" />
+            <element signature="e#4924#4952#0" expanded="true" />
+            <element signature="e#5156#5170#0" expanded="true" />
+            <element signature="e#5273#5295#0" expanded="true" />
+            <element signature="e#5332#5360#0" expanded="true" />
+            <element signature="e#5566#5584#0" expanded="true" />
+            <element signature="e#5687#5709#0" expanded="true" />
+            <element signature="e#5746#5774#0" expanded="true" />
+            <element signature="e#5980#5997#0" expanded="true" />
+            <element signature="e#6059#6081#0" expanded="true" />
+            <element signature="e#6159#6187#0" expanded="true" />
+            <element signature="e#6392#6412#0" expanded="true" />
+            <element signature="e#6515#6537#0" expanded="true" />
+            <element signature="e#6574#6602#0" expanded="true" />
+            <element signature="e#6802#6815#0" expanded="true" />
+            <element signature="e#6918#6940#0" expanded="true" />
+            <element signature="e#6977#7005#0" expanded="true" />
+            <element signature="e#7204#7217#0" expanded="true" />
+            <element signature="e#7320#7342#0" expanded="true" />
+            <element signature="e#7379#7407#0" expanded="true" />
+            <element signature="e#7609#7626#0" expanded="true" />
+            <element signature="e#7729#7751#0" expanded="true" />
+            <element signature="e#7788#7816#0" expanded="true" />
+            <element signature="e#8021#8038#0" expanded="true" />
+            <element signature="e#8141#8163#0" expanded="true" />
+            <element signature="e#8200#8228#0" expanded="true" />
+            <element signature="e#8432#8448#0" expanded="true" />
+            <element signature="e#8551#8573#0" expanded="true" />
+            <element signature="e#8610#8638#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout-land/fragment_ddlc.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="178" column="44" selection-start-line="178" selection-start-column="44" selection-end-line="178" selection-end-column="44" />
+          <folding>
+            <element signature="e#676#690#0" expanded="true" />
+            <element signature="e#805#827#0" expanded="true" />
+            <element signature="e#1051#1065#0" expanded="true" />
+            <element signature="e#1180#1202#0" expanded="true" />
+            <element signature="e#1433#1451#0" expanded="true" />
+            <element signature="e#1566#1588#0" expanded="true" />
+            <element signature="e#1820#1839#0" expanded="true" />
+            <element signature="e#1954#1976#0" expanded="true" />
+            <element signature="e#2205#2222#0" expanded="true" />
+            <element signature="e#2337#2359#0" expanded="true" />
+            <element signature="e#2584#2597#0" expanded="true" />
+            <element signature="e#2712#2734#0" expanded="true" />
+            <element signature="e#2961#2977#0" expanded="true" />
+            <element signature="e#3092#3114#0" expanded="true" />
+            <element signature="e#3340#3356#0" expanded="true" />
+            <element signature="e#3471#3493#0" expanded="true" />
+            <element signature="e#3726#3749#0" expanded="true" />
+            <element signature="e#3864#3886#0" expanded="true" />
+            <element signature="e#4111#4126#0" expanded="true" />
+            <element signature="e#4241#4263#0" expanded="true" />
+            <element signature="e#4488#4502#0" expanded="true" />
+            <element signature="e#4617#4639#0" expanded="true" />
+            <element signature="e#4867#4881#0" expanded="true" />
+            <element signature="e#4996#5018#0" expanded="true" />
+            <element signature="e#5248#5266#0" expanded="true" />
+            <element signature="e#5381#5403#0" expanded="true" />
+            <element signature="e#5633#5650#0" expanded="true" />
+            <element signature="e#5720#5742#0" expanded="true" />
+            <element signature="e#6016#6036#0" expanded="true" />
+            <element signature="e#6151#6173#0" expanded="true" />
+            <element signature="e#6397#6410#0" expanded="true" />
+            <element signature="e#6525#6547#0" expanded="true" />
+            <element signature="e#6770#6783#0" expanded="true" />
+            <element signature="e#6898#6920#0" expanded="true" />
+            <element signature="e#7146#7163#0" expanded="true" />
+            <element signature="e#7278#7300#0" expanded="true" />
+            <element signature="e#7529#7546#0" expanded="true" />
+            <element signature="e#7661#7683#0" expanded="true" />
+            <element signature="e#7911#7927#0" expanded="true" />
+            <element signature="e#8042#8064#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_ascuns.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="e#664#692#0" expanded="true" />
+            <element signature="e#714#729#0" expanded="true" />
+            <element signature="e#796#818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_splash.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_mgt.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
+          <folding>
+            <element signature="e#721#739#0" expanded="true" />
+            <element signature="e#854#876#0" expanded="true" />
+            <element signature="e#1101#1115#0" expanded="true" />
+            <element signature="e#1230#1252#0" expanded="true" />
+            <element signature="e#1480#1495#0" expanded="true" />
+            <element signature="e#1610#1632#0" expanded="true" />
+            <element signature="e#1866#1887#0" expanded="true" />
+            <element signature="e#2002#2024#0" expanded="true" />
+            <element signature="e#2252#2268#0" expanded="true" />
+            <element signature="e#2383#2405#0" expanded="true" />
+            <element signature="e#2633#2649#0" expanded="true" />
+            <element signature="e#2764#2786#0" expanded="true" />
+            <element signature="e#3011#3025#0" expanded="true" />
+            <element signature="e#3140#3162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_mgt.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
+          <folding>
+            <element signature="e#687#705#0" expanded="true" />
+            <element signature="e#767#789#0" expanded="true" />
+            <element signature="e#826#854#0" expanded="true" />
+            <element signature="e#1055#1069#0" expanded="true" />
+            <element signature="e#1131#1153#0" expanded="true" />
+            <element signature="e#1190#1218#0" expanded="true" />
+            <element signature="e#1422#1437#0" expanded="true" />
+            <element signature="e#1499#1521#0" expanded="true" />
+            <element signature="e#1558#1586#0" expanded="true" />
+            <element signature="e#1796#1817#0" expanded="true" />
+            <element signature="e#1879#1901#0" expanded="true" />
+            <element signature="e#1938#1966#0" expanded="true" />
+            <element signature="e#2170#2186#0" expanded="true" />
+            <element signature="e#2248#2270#0" expanded="true" />
+            <element signature="e#2307#2335#0" expanded="true" />
+            <element signature="e#2539#2555#0" expanded="true" />
+            <element signature="e#2617#2639#0" expanded="true" />
+            <element signature="e#2676#2704#0" expanded="true" />
+            <element signature="e#2905#2919#0" expanded="true" />
+            <element signature="e#2981#3003#0" expanded="true" />
+            <element signature="e#3040#3068#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_zelda.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="e#680#701#0" expanded="true" />
+            <element signature="e#816#838#0" expanded="true" />
+            <element signature="e#1056#1074#0" expanded="true" />
+            <element signature="e#1149#1171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-tvdpi/iconoblast_icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-hdpi/iconoblast_icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_zelda_round.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground_zelda.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout-sw600dp/fragment_zelda.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding>
+            <element signature="e#650#671#0" expanded="true" />
+            <element signature="e#774#796#0" expanded="true" />
+            <element signature="e#833#861#0" expanded="true" />
+            <element signature="e#1055#1073#0" expanded="true" />
+            <element signature="e#1140#1162#0" expanded="true" />
+            <element signature="e#1199#1227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ascuns.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ascuns_round.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ddlc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_ddlc_round.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_mgt.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_mgt_round.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_zelda.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_zelda_round.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/ic_launcher_background_ddlc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/ic_launcher_background_game1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/ic_launcher_background_ascuns.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/ic_launcher_background_mgt.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/ic_launcher_background_zelda.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-hdpi/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-ldpi/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-mdpi/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-tvdpi/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-xxhdpi/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-xxxhdpi/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-sw600dp/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-xhdpi/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/papple/iconoblast/theme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="95" column="28" lean-forward="true" selection-start-line="94" selection-start-column="64" selection-end-line="95" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-sw720dp/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_secret.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/papple/iconoblast/AscunsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-hdpi/discord_logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-hdpi/camilla_normal.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="56" column="53" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/papple/iconoblast/LuluFragment.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
