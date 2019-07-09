@@ -22,7 +22,10 @@ public class Dialog_class extends DialogFragment {
             return new AlertDialog.Builder(getActivity())
                     .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.17)</font>"))
                     .setMessage("- Changement dans les string.\n" +
-                                "- Change de l'icône du Drawer.\n")
+                                "- Change de la bannière du Drawer.\n" +
+                                "- Changement de la police d'écriture.\n" +
+                                "- Ajout de la page Deltarune ainsi que de nouveaux sons.\n" +
+                                "- Correction du toast quand l'utilisateur change de thème.")
                     .setPositiveButton(Html.fromHtml("<font color='#dd117e'>OK</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

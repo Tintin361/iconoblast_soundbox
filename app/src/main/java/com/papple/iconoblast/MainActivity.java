@@ -18,7 +18,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridLayout;
 import android.widget.Toast;
+
+import com.jaeger.library.StatusBarUtil;
+
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (answerA) {
             setTheme(R.style.AppTheme_NoActionBar2);
         } else if (answerB) {
-            setTheme(R.style.DarkTheme);
+            setTheme(R.style.DarkTheme2);
         } else {
             setTheme(R.style.AppTheme_NoActionBar2);
         }
@@ -85,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Doki Doki Litterature Club")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_ddlc))
-                    .setRank(5)
+                    .setRank(1)
                     .setIntent(DdlcIntent)
                     .build();
 
@@ -94,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Mad Games Tycoon")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_mgt))
-                    .setRank(4)
+                    .setRank(2)
                     .setIntent(MgtIntent)
                     .build();
 
@@ -103,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Zelda")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_zelda))
-                    .setRank(2)
+                    .setRank(4)
                     .setIntent(ZeldaIntent)
                     .build();
 
@@ -112,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Ascuns")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_ascuns))
-                    .setRank(1)
+                    .setRank(5)
                     .setIntent(AscunsIntent)
                     .build();
 
@@ -125,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setIntent(DeltaIntent)
                     .build();
 
-            sManager.setDynamicShortcuts(Arrays.asList(shortcut, shortcut2, shortcut3, shortcut5));
+            sManager.setDynamicShortcuts(Arrays.asList(shortcut, shortcut2, shortcut3, shortcut4, shortcut5));
 
             String string = getIntent().getStringExtra("receive");
 

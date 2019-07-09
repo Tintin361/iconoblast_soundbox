@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,63 +13,80 @@
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <RadioGroup
-        android:id="@+id/radiogroup"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="10dp">
+        android:layout_below="@id/toolbar2">
 
-        <RadioButton
-            android:id="@+id/radiobox_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:gravity="center"
-            android:onClick="onClick"
-            android:text="@string/themen"
-            android:textSize="@dimen/radioButtonText"
-            android:textStyle="bold" />
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
 
-        <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:orientation="horizontal"
-            android:visibility="gone"/>
+                <RadioButton
+                    android:id="@+id/radiobox_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/themen"
+                    android:textSize="@dimen/radioButtonText"
+                    android:textStyle="bold" />
 
-        <RadioButton
-            android:id="@+id/radiobox_3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:gravity="center"
-            android:onClick="onClick"
-            android:text="@string/theme3"
-            android:textSize="@dimen/radioButtonText"
-            android:textStyle="bold"
-            android:visibility="gone"/>
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:orientation="horizontal" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:orientation="horizontal" />
+                <RadioButton
+                    android:id="@+id/radiobox_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/theme2"
+                    android:textSize="@dimen/radioButtonText"
+                    android:textStyle="bold" />
 
-        <RadioButton
-            android:id="@+id/radiobox_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:gravity="center"
-            android:onClick="onClick"
-            android:text="@string/theme2"
-            android:textSize="@dimen/radioButtonText"
-            android:textStyle="bold" />
+                <LinearLayout
+                    android:id="@+id/linearlayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal" />
 
-    </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/maj"
+                    android:textColor="@color/ascuns"
+                    android:textSize="@dimen/titleText"
+                    android:textStyle="bold" />
 
-</LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:orientation="horizontal" />
+
+                <Button
+                    android:id="@+id/gDriveButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="@string/gdrive"
+                    android:textSize="@dimen/buttonDefault" />
+
+            </RadioGroup>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -27,6 +27,7 @@
         <activity
             android:name=".InfosActivity"
             android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/info" />
 
         <meta-data
@@ -37,6 +38,7 @@
             android:name=".secret"
             android:configChanges="orientation|screenSize"
             android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/easter"
             android:screenOrientation="portrait" />
 
@@ -47,7 +49,8 @@
         <activity
             android:name=".theme"
             android:configChanges="orientation|screenSize"
-            android:label="@string/themes" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/settings" />
 
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
@@ -56,7 +59,7 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar2" />
 
         <activity
             android:name=".newsecret_activity"

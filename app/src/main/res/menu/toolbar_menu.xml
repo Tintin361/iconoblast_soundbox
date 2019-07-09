@@ -6,15 +6,22 @@
     <item
         android:id="@+id/theme"
         android:icon="@drawable/ic_settings"
-        android:orderInCategory="3"
-        android:title="@string/themes"
+        android:orderInCategory="2"
+        android:title="@string/settings"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/infos"
         android:icon="@drawable/ic_info"
-        android:orderInCategory="2"
+        android:orderInCategory="1"
         android:title="@string/info"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search"
+        android:orderInCategory="3"
+        android:title="@string/search"
+        android:visible="false"/>
 
 </menu>
