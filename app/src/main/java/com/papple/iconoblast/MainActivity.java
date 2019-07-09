@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Doki Doki Litterature Club")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_ddlc))
-                    .setRank(4)
+                    .setRank(5)
                     .setIntent(DdlcIntent)
                     .build();
 
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Mad Games Tycoon")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_mgt))
-                    .setRank(3)
+                    .setRank(4)
                     .setIntent(MgtIntent)
                     .build();
 
@@ -121,11 +121,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Deltarune")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_deltarune))
-                    .setRank(5)
+                    .setRank(3)
                     .setIntent(DeltaIntent)
                     .build();
 
-            sManager.setDynamicShortcuts(Arrays.asList(shortcut, shortcut2, shortcut3, shortcut4));
+            sManager.setDynamicShortcuts(Arrays.asList(shortcut, shortcut2, shortcut3, shortcut5));
 
             String string = getIntent().getStringExtra("receive");
 
