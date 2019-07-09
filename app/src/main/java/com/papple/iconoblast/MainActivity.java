@@ -6,7 +6,6 @@ import android.content.pm.ShortcutInfo;
 import android.content.pm.ShortcutManager;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.graphics.drawable.Icon;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,15 +18,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
-    TextView iconotextview;
-    Typeface myfont;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -80,6 +75,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setAction("LOCATION_SHORTCUT")
                     .putExtra("receive", "ascuns");
 
+            Intent DeltaIntent = new Intent(this, MainActivity.class)
+                    .setAction("LOCATION_SHORTCUT")
+                    .putExtra("receive", "deltarune");
+
             // Création des raccourcis + Annonce
             ShortcutInfo shortcut = new ShortcutInfo.Builder(this, "ddlc")
                     .setShortLabel("Doki Doki Litterature Club")
@@ -115,6 +114,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_ascuns))
                     .setRank(1)
                     .setIntent(AscunsIntent)
+                    .build();
+
+            ShortcutInfo shortcut5 = new ShortcutInfo.Builder(this, "deltarune")
+                    .setShortLabel("Deltarune")
+                    .setLongLabel("Deltarune")
+                    .setDisabledMessage("Ce raccourci est désactivé.")
+                    .setRank(5)
+                    .setIntent(DeltaIntent)
                     .build();
 
             sManager.setDynamicShortcuts(Arrays.asList(shortcut, shortcut2, shortcut3, shortcut4));
@@ -159,6 +166,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editor.putBoolean("asFrag", true);
                         editor.apply();
                         break;
+                    case "deltarune":
+
                 }
             }
         }
