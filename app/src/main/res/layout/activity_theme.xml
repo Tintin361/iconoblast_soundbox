@@ -85,6 +85,29 @@
                     android:text="@string/gdrive"
                     android:textSize="@dimen/buttonDefault" />
 
+                <LinearLayout
+                    android:id="@+id/linearlayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/apk"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:textColor="@color/dGreen3"
+                    android:text="@string/apkname"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"/>
+
             </RadioGroup>
 
     </ScrollView>

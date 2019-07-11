@@ -7,8 +7,8 @@
     <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 0.17</string>
-    <string name="versiond" translatable="false">Version 0.17</string>
+    <string name="version" translatable="false">Version 0.17.1</string>
+    <string name="versiond" translatable="false">Version 0.17.1</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
@@ -95,6 +95,7 @@
     <string name="material">MaterialSearchView</string>
     <string name="opus">opuscodec</string>
     <string name="statusbar">StatusBarUtil</string>
+    <string name="click">Cliquez sur le texte pour afficher la licence correspondante.</string>
     <string name="lulu2">N\'a pas de réseaux sociaux.</string>
 
     <!-- Thème Activity -->
@@ -102,6 +103,8 @@
     <string name="theme2">Thème Dark et Désabusé !</string>
     <string name="maj">Vérifier les Mise à Jour</string>
     <string name="gdrive">Google Drive</string>
+    <string name="apk">Nom de cet APK:</string>
+    <string name="apkname">Tiki 2 - Le Retour</string>
 
     <!-- Easter Egg Activity -->
     <string name="code">Entrez un code secret</string>
@@ -121,5 +124,6 @@
 
     <!-- Deltarune Fragment -->
     <string name="guerrierdelta">Guerriers Delta !!! (Ico et Étagère)</string>
+    <string name="kris">KRISEUH ! (Ico)</string>
 
 </resources>

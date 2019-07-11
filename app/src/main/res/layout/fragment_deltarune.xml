@@ -20,7 +20,16 @@
         android:text="@string/guerrierdelta"
         android:textColor="@color/Black"
         android:textSize="@dimen/buttonDefault"
-        app:backgroundTint="@color/Green2" />
+        app:backgroundTint="@color/blue3" />
+
+    <Button
+        android:id="@+id/krisb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/kris"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/buttonDefault"
+        app:backgroundTint="@color/blue4"/>
 
   </TableLayout>
 

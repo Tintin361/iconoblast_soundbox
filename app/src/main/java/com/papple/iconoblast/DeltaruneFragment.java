@@ -55,15 +55,26 @@ public class DeltaruneFragment extends Fragment {
             }
         });
 
+        Button krisButton = view.findViewById(R.id.krisb);
+        krisButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playSound(R.raw.kris_sound);
+            }
+        });
+
         if (answerA) {
             sView.setBackgroundColor(getResources().getColor(R.color.deltarune));
-            ViewCompat.setBackgroundTintList(guerrierButton, ColorStateList.valueOf(getResources().getColor(R.color.Green2)));
+            ViewCompat.setBackgroundTintList(guerrierButton, ColorStateList.valueOf(getResources().getColor(R.color.blue3)));
+            ViewCompat.setBackgroundTintList(krisButton, ColorStateList.valueOf(getResources().getColor(R.color.blue4)));
         } else if (answerB) {
             sView.setBackgroundColor(getResources().getColor(R.color.ddelarune));
-            ViewCompat.setBackgroundTintList(guerrierButton, ColorStateList.valueOf(getResources().getColor(R.color.dGreen)));
+            ViewCompat.setBackgroundTintList(guerrierButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue3)));
+            ViewCompat.setBackgroundTintList(krisButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue4)));
         } else {
             sView.setBackgroundColor(getResources().getColor(R.color.deltarune));
-            ViewCompat.setBackgroundTintList(guerrierButton, ColorStateList.valueOf(getResources().getColor(R.color.Green2)));
+            ViewCompat.setBackgroundTintList(guerrierButton, ColorStateList.valueOf(getResources().getColor(R.color.blue4)));
+            ViewCompat.setBackgroundTintList(krisButton, ColorStateList.valueOf(getResources().getColor(R.color.blue4)));
         }
 
         return view;
