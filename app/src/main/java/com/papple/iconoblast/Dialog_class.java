@@ -30,7 +30,9 @@ public class Dialog_class extends DialogFragment {
                                 "Version 0.17.1\n" +
                                 "- Correction de bugs.\n" +
                                 "- Ajout d'un nouveau son: 'Kriseuh'.\n" +
-                                "- MàJ des outils de developpement Android.")
+                                "- MàJ des outils de developpement Android.\n" +
+                                "Version 0.17.2\n" +
+                                "- Correction de bugs sur les strings.\n")
                     .setPositiveButton(Html.fromHtml("<font color='#dd117e'>OK</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
