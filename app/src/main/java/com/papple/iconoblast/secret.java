@@ -137,11 +137,6 @@ public class secret extends AppCompatActivity {
                     rain.setData(Uri.parse(rUrl));
                     startActivity(rain);
 
-                } else if (editText.getText().toString().equals("secret, oui")) {
-
-                    Intent i = new Intent(secret.this, newsecret_activity.class);
-                    startActivity(i);
-
                 } else if (editText.getText().toString().equals("Camillia's Bongo")) {
 
                     gImageView.setBackgroundResource(R.drawable.camilla_normal);

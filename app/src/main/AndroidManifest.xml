@@ -61,10 +61,6 @@
             android:configChanges="orientation|screenSize"
             android:theme="@style/AppTheme.NoActionBar2" />
 
-        <activity
-            android:name=".newsecret_activity"
-            android:configChanges="orientation|screenSize" />
-
     </application>
 
 </manifest>

@@ -20,19 +20,8 @@ public class Dialog_class extends DialogFragment {
 
         if (super.getActivity() != null) {
             return new AlertDialog.Builder(getActivity())
-                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.17)</font>"))
-                    .setMessage("- Changement dans les string.\n" +
-                                "- Change de la bannière du Drawer.\n" +
-                                "- Changement de la police d'écriture.\n" +
-                                "- Ajout de la page Deltarune ainsi que de nouveaux sons.\n" +
-                                "- Correction du toast quand l'utilisateur change de thème.\n" +
-                                "- Modification de la bottom nav bar dans Informations.\n" +
-                                "Version 0.17.1\n" +
-                                "- Correction de bugs.\n" +
-                                "- Ajout d'un nouveau son: 'Kriseuh'.\n" +
-                                "- MàJ des outils de developpement Android.\n" +
-                                "Version 0.17.2\n" +
-                                "- Correction de bugs sur les strings.\n")
+                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.18)</font>"))
+                    .setMessage("Nothing")
                     .setPositiveButton(Html.fromHtml("<font color='#dd117e'>OK</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
