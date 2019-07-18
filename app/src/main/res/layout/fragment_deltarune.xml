@@ -1,36 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:id="@+id/ScrollDEL"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ScrollDEL"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/deltarune">
 
-  <TableLayout
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:gravity="center"
-      android:orientation="vertical">
-
-    <Button
-        android:id="@+id/guerriersb"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/guerrierdelta"
-        android:textColor="@color/Black"
-        android:textSize="@dimen/buttonDefault"
-        app:backgroundTint="@color/blue3" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/krisb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/kris"
-        android:textColor="@color/Black"
-        android:textSize="@dimen/buttonDefault"
-        app:backgroundTint="@color/blue4"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layoutManager="android.support.v7.widget.GridLayoutManager">
 
-  </TableLayout>
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
 
 </ScrollView>
