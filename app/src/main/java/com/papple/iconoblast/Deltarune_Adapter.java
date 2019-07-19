@@ -16,7 +16,7 @@ public class Deltarune_Adapter extends RecyclerView.Adapter<Deltarune_Adapter.de
 
 
     interface OnItemClickListener {
-        void onItemClick(int position);
+        void onItemClick(View v, int position);
     }
 
     void setOnItemClickListener(OnItemClickListener listener) {
@@ -38,7 +38,7 @@ public class Deltarune_Adapter extends RecyclerView.Adapter<Deltarune_Adapter.de
                     if (mListener != null) {
                         int position = getAdapterPosition();
                         if (position != RecyclerView.NO_POSITION) {
-                            mListener.onItemClick(position);
+                            mListener.onItemClick(v, position);
                         }
                     }
                 }

@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -88,7 +89,7 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
     }
 
     @Override
-    public void onItemClick(int position) {
+    public void onItemClick(View v, int position) {
 
     }
 }
