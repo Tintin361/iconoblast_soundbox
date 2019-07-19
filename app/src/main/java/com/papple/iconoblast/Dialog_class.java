@@ -20,8 +20,8 @@ public class Dialog_class extends DialogFragment {
 
         if (super.getActivity() != null) {
             return new AlertDialog.Builder(getActivity())
-                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.18)</font>"))
-                    .setMessage("Nothing")
+                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.18.0.1)</font>"))
+                    .setMessage("- Le nouveau design se déploie petit à petit.")
                     .setPositiveButton(Html.fromHtml("<font color='#dd117e'>OK</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

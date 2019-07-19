@@ -1,38 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:id="@+id/ScrollDEL"
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/deltarune">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LayoutNew"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
 
-  <TableLayout
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:gravity="center"
-      android:orientation="vertical">
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/recyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:padding="4dp"
+      android:scrollbars="vertical"/>
 
-    <Button
-        android:id="@+id/ascunsb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/marginBottomDefault"
-        android:text="@string/guerrierdelta"
-        android:textColor="@color/Black"
-        android:textSize="@dimen/buttonDefault"
-        app:backgroundTint="@color/blue3" />
-
-    <Button
-        android:id="@+id/krisb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/marginBottomDefault"
-        android:text="@string/kris"
-        android:textColor="@color/Black"
-        android:textSize="@dimen/buttonDefault"
-        app:backgroundTint="@color/blue4"/>
-
-  </TableLayout>
-
-</ScrollView>
+</RelativeLayout>

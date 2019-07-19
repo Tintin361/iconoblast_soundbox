@@ -14,11 +14,13 @@
     <style name="AppTheme.NoActionBar2">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/sniglet_regular</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/sniglet_regular</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -30,6 +32,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/sniglet_regular</item>
     </style>
 
     <style name="DarkTheme2" parent="Theme.AppCompat.NoActionBar">
@@ -38,6 +41,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/sniglet_regular</item>
     </style>
 
 </resources>
