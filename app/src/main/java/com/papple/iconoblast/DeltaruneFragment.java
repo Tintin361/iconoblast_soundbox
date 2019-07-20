@@ -1,5 +1,6 @@
 package com.papple.iconoblast;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -13,15 +14,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnItemClickListener {
     public MediaPlayer warmeurPlayer;
-    private RecyclerView mRecyclerView;
-    private Deltarune_Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
+    RecyclerView mRecyclerView;
+    Deltarune_Adapter mAdapter;
+    RecyclerView.LayoutManager mLayoutManager;
     public RelativeLayout relativeLayout;
 
     @Nullable
@@ -90,6 +90,10 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
 
     @Override
     public void onItemClick(View v, int position) {
-
+        if (position == 0) {
+            playSound(R.raw.guerrierdeltat);
+        } else if (position == 1) {
+            playSound(R.raw.kris_sound);
+        }
     }
 }
