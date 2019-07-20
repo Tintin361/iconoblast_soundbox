@@ -18,97 +18,151 @@
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar2">
 
-            <RadioGroup
-                android:id="@+id/radiogroup"
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <RadioButton
+                android:id="@+id/radiobox_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/themen"
+                android:textSize="@dimen/radioButtonText"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:orientation="horizontal" />
+
+            <RadioButton
+                android:id="@+id/radiobox_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/theme2"
+                android:textSize="@dimen/radioButtonText"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearlayout4"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/design"
+                android:textColor="@color/ascuns"
+                android:textSize="@dimen/titleText"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:orientation="horizontal" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
                 android:orientation="vertical"
-                android:paddingTop="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <RadioButton
-                    android:id="@+id/radiobox_1"
+                    android:id="@+id/radiobox_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:onClick="onShowClick"
+                    android:text="@string/list"
+                    android:textSize="@dimen/textCardSize"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radiobox_4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:gravity="center"
-                    android:onClick="onClick"
-                    android:text="@string/themen"
-                    android:textSize="@dimen/radioButtonText"
+                    android:onClick="onShowClick"
+                    android:text="@string/grille"
+                    android:textSize="@dimen/textCardSize"
                     android:textStyle="bold" />
-
-                <LinearLayout
-                    android:id="@+id/linearLayout2"
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:orientation="horizontal" />
-
-                <RadioButton
-                    android:id="@+id/radiobox_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:gravity="center"
-                    android:onClick="onClick"
-                    android:text="@string/theme2"
-                    android:textSize="@dimen/radioButtonText"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:id="@+id/linearlayout4"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="@string/maj"
-                    android:textColor="@color/ascuns"
-                    android:textSize="@dimen/titleText"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:id="@+id/linearLayout5"
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:orientation="horizontal" />
-
-                <Button
-                    android:id="@+id/gDriveButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
-                    android:text="@string/gdrive"
-                    android:textSize="@dimen/buttonDefault" />
-
-                <LinearLayout
-                    android:id="@+id/linearlayout5"
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:orientation="horizontal" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:text="@string/apk"
-                    android:textSize="@dimen/text"
-                    android:gravity="center"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:textColor="@color/dGreen3"
-                    android:text="@string/apkname"
-                    android:textSize="@dimen/text"
-                    android:gravity="center"/>
 
             </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/maj"
+                android:textColor="@color/ascuns"
+                android:textSize="@dimen/titleText"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:orientation="horizontal" />
+
+            <Button
+                android:id="@+id/gDriveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:text="@string/gdrive"
+                android:textSize="@dimen/buttonDefault" />
+
+            <LinearLayout
+                android:id="@+id/linearlayout5"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="@string/apk"
+                android:textSize="@dimen/text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="@string/apkname"
+                android:textColor="@color/dGreen3"
+                android:textSize="@dimen/text" />
+
+        </RadioGroup>
 
     </ScrollView>
 

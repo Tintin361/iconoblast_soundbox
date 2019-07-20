@@ -1,6 +1,5 @@
 package com.papple.iconoblast;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -51,6 +50,8 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
+        boolean answerC = settings.getBoolean("questionC", false);
+        boolean answerD = settings.getBoolean("questionD", false);
 
         if (answerA) {
             relativeLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
@@ -60,20 +61,39 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
             relativeLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
         }
 
-        ArrayList<Deltarune_Item_List> deltaList = new ArrayList<>();
-        deltaList.add(new Deltarune_Item_List(R.drawable.guerriers_delta, "Guerriers Delta !!! (Ico et Étagère)"));
-        deltaList.add(new Deltarune_Item_List(R.drawable.kriseuh, "KRISEUH ! (Ico)"));
+        if (answerC) {
 
-        mRecyclerView = view.findViewById(R.id.recyclerView);
-        mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(getContext());
-        mAdapter = new Deltarune_Adapter(deltaList);
+            ArrayList<Deltarune_Item_List_ListVersion> deltaList = new ArrayList<>();
+            deltaList.add(new Deltarune_Item_List_ListVersion( "Guerriers Delta !!! (Ico et Étagère)"));
+            deltaList.add(new Deltarune_Item_List_ListVersion("KRISEUH ! (Ico)"));
 
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter(mAdapter);
-        mAdapter.setOnItemClickListener(DeltaruneFragment.this);
+            mRecyclerView = view.findViewById(R.id.recyclerView);
+            mRecyclerView.setHasFixedSize(true);
+            mLayoutManager = new LinearLayoutManager(getContext());
+            mAdapter = new Deltarune_Adapter_List(deltaList);
 
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+            mRecyclerView.setLayoutManager(mLayoutManager);
+            mRecyclerView.setAdapter(mAdapter);
+            mAdapter.setOnItemClickListener(DeltaruneFragment.this);
+
+        } else if (answerD) {
+
+            ArrayList<Deltarune_Item_List> deltaList = new ArrayList<>();
+            deltaList.add(new Deltarune_Item_List(R.drawable.guerriers_delta, "Guerriers Delta !!! (Ico et Étagère)"));
+            deltaList.add(new Deltarune_Item_List(R.drawable.kriseuh, "KRISEUH ! (Ico)"));
+
+            mRecyclerView = view.findViewById(R.id.recyclerView);
+            mRecyclerView.setHasFixedSize(true);
+            mLayoutManager = new LinearLayoutManager(getContext());
+            mAdapter = new Deltarune_Adapter(deltaList);
+
+            mRecyclerView.setLayoutManager(mLayoutManager);
+            mRecyclerView.setAdapter(mAdapter);
+            mAdapter.setOnItemClickListener(DeltaruneFragment.this);
+
+            mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+
+        }
 
         return view;
 
