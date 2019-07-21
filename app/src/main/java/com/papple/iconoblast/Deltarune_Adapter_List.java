@@ -17,7 +17,7 @@ public class Deltarune_Adapter_List extends RecyclerView.Adapter<Deltarune_Adapt
     private RecyclerView mRecyclerView;
     private OnItemClickListener mListener;
     private Context context;
-    private Adapter mAdapter;
+    private Adapter nAdapter;
     View view;
 
     interface OnItemClickListener {
@@ -56,7 +56,7 @@ public class Deltarune_Adapter_List extends RecyclerView.Adapter<Deltarune_Adapt
     @NonNull
     @Override
     public deltaruneViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_deltarune_listVersion, parent, false);
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_deltarune_listversion, parent, false);
         return new deltaruneViewHolder(view);
     }
 

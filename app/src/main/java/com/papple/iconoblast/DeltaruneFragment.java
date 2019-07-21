@@ -16,10 +16,11 @@ import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
-public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnItemClickListener {
+public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnItemClickListener, Deltarune_Adapter_List.OnItemClickListener  {
     public MediaPlayer warmeurPlayer;
     RecyclerView mRecyclerView;
     Deltarune_Adapter mAdapter;
+    Deltarune_Adapter_List dAdapter;
     RecyclerView.LayoutManager mLayoutManager;
     public RelativeLayout relativeLayout;
 
@@ -70,11 +71,11 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
             mRecyclerView = view.findViewById(R.id.recyclerView);
             mRecyclerView.setHasFixedSize(true);
             mLayoutManager = new LinearLayoutManager(getContext());
-            mAdapter = new Deltarune_Adapter_List(deltaList);
+            dAdapter = new Deltarune_Adapter_List(deltaList);
 
             mRecyclerView.setLayoutManager(mLayoutManager);
-            mRecyclerView.setAdapter(mAdapter);
-            mAdapter.setOnItemClickListener(DeltaruneFragment.this);
+            mRecyclerView.setAdapter(dAdapter);
+            dAdapter.setOnItemClickListener(this);
 
         } else if (answerD) {
 

@@ -25,6 +25,16 @@
             android:orientation="vertical"
             android:paddingTop="10dp">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/themes"
+                android:textColor="@color/ascuns"
+                android:textSize="@dimen/titleText"
+                android:textStyle="bold" />
+
             <RadioButton
                 android:id="@+id/radiobox_1"
                 android:layout_width="match_parent"
