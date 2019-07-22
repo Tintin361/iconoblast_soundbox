@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
     android:gravity="center"
-    android:textAllCaps="false"
     android:text="@string/guerrierdelta"
+    android:textAllCaps="false"
     android:textColor="@android:color/black"
     android:textSize="@dimen/buttonDefault" />

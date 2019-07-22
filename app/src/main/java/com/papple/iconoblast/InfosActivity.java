@@ -3,6 +3,7 @@ package com.papple.iconoblast;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,10 +11,8 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.MenuItem;
-import android.widget.TextView;
-import android.widget.Toast;
+import static maes.tech.intentanim.CustomIntent.customType;
 
 public class InfosActivity extends AppCompatActivity {
 
@@ -36,10 +35,19 @@ public class InfosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infos);
 
-        Toolbar toolbar4 = findViewById(R.id.toolbar3);
-        setSupportActionBar(toolbar4);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Toolbar toolbar4 = findViewById(R.id.toolbar3);
+            setSupportActionBar(toolbar4);
+            if (getSupportActionBar() != null) {
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+                getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow);
+            }
+        } else {
+            Toolbar toolbar4 = findViewById(R.id.toolbar3);
+            setSupportActionBar(toolbar4);
+            if (getSupportActionBar() != null) {
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            }
         }
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
@@ -138,6 +146,13 @@ public class InfosActivity extends AppCompatActivity {
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
+        customType(this, "left-to-right");
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        customType(this, "left-to-right");
     }
 }

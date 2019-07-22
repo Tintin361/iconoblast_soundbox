@@ -19,6 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+import static maes.tech.intentanim.CustomIntent.customType;
 
 import java.util.Arrays;
 
@@ -413,10 +414,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.infos:
                 Intent infoIntent = new Intent(MainActivity.this, InfosActivity.class);
                 startActivity(infoIntent);
+                customType(this, "right-to-left");
                 break;
             case R.id.theme:
                 Intent intent = new Intent(MainActivity.this, theme.class);
                 startActivity(intent);
+                customType(this, "left-to-right");
                 break;
         }
 

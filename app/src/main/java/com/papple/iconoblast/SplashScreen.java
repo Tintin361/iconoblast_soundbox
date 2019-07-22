@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.os.Handler;
 import android.app.Activity;
+import static maes.tech.intentanim.CustomIntent.customType;
 
 public class SplashScreen extends Activity{
 
@@ -17,6 +18,7 @@ public class SplashScreen extends Activity{
             public void run() {
                 Intent intent = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(intent);
+                customType(SplashScreen.this,"up-to-bottom");
                 finish();
             }
         }, SPLASH_TIME_OUT);
