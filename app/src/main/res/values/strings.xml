@@ -7,8 +7,8 @@
     <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 0.18.2</string>
-    <string name="versiond" translatable="false">Version 0.18.2</string>
+    <string name="version" translatable="false">Version 0.18.3</string>
+    <string name="versiond" translatable="false">Version 0.18.3</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
@@ -108,7 +108,7 @@
     <string name="maj">Vérifier les Mise à Jour</string>
     <string name="gdrive">Google Drive</string>
     <string name="apk">Nom de cet APK:</string>
-    <string name="apkname">JESUISUNKONNARDANIMÉ</string>
+    <string name="apkname">JESUISUNKONNARDANIMÉ2</string>
     <string name="design">Affichage</string>
 
     <!-- Easter Egg Activity -->

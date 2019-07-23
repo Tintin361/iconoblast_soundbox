@@ -3,7 +3,7 @@
     android:id="@+id/deltaruneButton"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/selectableItemBackground"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
     android:layout_marginBottom="10dp"
     android:gravity="center"
     android:text="@string/guerrierdelta"

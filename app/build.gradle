@@ -7,9 +7,8 @@ android {
         minSdkVersion 17
         targetSdkVersion 28
         versionCode 2
-        versionName "0.18.2"
+        versionName "0.18.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        versionNameSuffix = 'DDDDDD'
     }
     buildTypes {
         release {

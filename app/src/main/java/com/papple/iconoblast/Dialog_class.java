@@ -20,7 +20,7 @@ public class Dialog_class extends DialogFragment {
 
         if (super.getActivity() != null) {
             return new AlertDialog.Builder(getActivity())
-                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.18.2)</font>"))
+                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.18.3)</font>"))
                     .setMessage("- Le nouveau design se déploie petit à petit.\n" +
                                 "- Une option pour revenir au design en liste est disponible dans les paramètres.\n" +
                                 "- Nouvelles animations !\n" +
