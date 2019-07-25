@@ -25,11 +25,11 @@ public class InfosActivity extends AppCompatActivity {
         boolean answerB = settings.getBoolean("questionB", false);
 
         if (answerA) {
-            setTheme(R.style.AppTheme);
+            setTheme(R.style.AppTheme_NoActionBar);
         } else if (answerB) {
             setTheme(R.style.DarkTheme);
         } else {
-            setTheme(R.style.AppTheme);
+            setTheme(R.style.AppTheme_NoActionBar);
         }
 
         super.onCreate(savedInstanceState);

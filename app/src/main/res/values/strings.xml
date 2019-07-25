@@ -7,8 +7,8 @@
     <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 0.18.3</string>
-    <string name="versiond" translatable="false">Version 0.18.3</string>
+    <string name="version" translatable="false">Version 0.19</string>
+    <string name="versiond" translatable="false">Version 0.19</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
@@ -92,7 +92,6 @@
     <string name="goster" translatable="false">Goster_</string>
     <string name="licences">Licences</string>
     <string name="gif">android-gif-drawable</string>
-    <string name="material">MaterialSearchView</string>
     <string name="opus">opuscodec</string>
     <string name="statusbar">StatusBarUtil</string>
     <string name="intent">intent animation</string>

@@ -16,7 +16,7 @@ import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
-public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnItemClickListener, Deltarune_Adapter_List.OnItemClickListener  {
+public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnItemClickListener, Deltarune_Adapter_List.OnItemClickListener {
     public MediaPlayer warmeurPlayer;
     RecyclerView mRecyclerView;
     Deltarune_Adapter mAdapter;

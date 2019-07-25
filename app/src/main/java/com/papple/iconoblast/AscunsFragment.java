@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ScrollView;
+import static maes.tech.intentanim.CustomIntent.customType;
 
 public class AscunsFragment extends Fragment {
     public MediaPlayer jaimeLesPlayer;
@@ -60,6 +61,7 @@ public class AscunsFragment extends Fragment {
             public boolean onLongClick(View v) {
                 Intent intentR = new Intent(getActivity(), secret.class);
                 startActivity(intentR);
+                customType(getActivity(), "bottom-to-up");
                 return true;
             }
         });

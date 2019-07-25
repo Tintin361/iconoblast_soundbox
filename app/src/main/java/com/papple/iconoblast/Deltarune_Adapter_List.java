@@ -2,7 +2,9 @@ package com.papple.iconoblast;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +31,7 @@ public class Deltarune_Adapter_List extends RecyclerView.Adapter<Deltarune_Adapt
     }
 
     class deltaruneViewHolder extends RecyclerView.ViewHolder {
-        Button mButton;
+        AppCompatButton mButton;
 
         deltaruneViewHolder(View itemView) {
             super(itemView);
@@ -74,20 +76,20 @@ public class Deltarune_Adapter_List extends RecyclerView.Adapter<Deltarune_Adapt
 
         if (position == 0) {
             if (answerA) {
-                deltaruneViewHolder.mButton.setBackgroundColor(deltaruneViewHolder.itemView.getResources().getColor(R.color.blue3));
+                deltaruneViewHolder.mButton.setSupportBackgroundTintList(deltaruneViewHolder.itemView.getResources().getColorStateList(R.color.blue3));
             } else if (answerB) {
-                deltaruneViewHolder.mButton.setBackgroundColor(deltaruneViewHolder.itemView.getResources().getColor(R.color.dBlue3));
+                deltaruneViewHolder.mButton.setSupportBackgroundTintList(deltaruneViewHolder.itemView.getResources().getColorStateList(R.color.dBlue3));
             } else {
-                deltaruneViewHolder.mButton.setBackgroundColor(deltaruneViewHolder.itemView.getResources().getColor(R.color.blue3));
+                deltaruneViewHolder.mButton.setSupportBackgroundTintList(deltaruneViewHolder.itemView.getResources().getColorStateList(R.color.blue3));
             }
 
         } else if (position == 1) {
             if (answerA) {
-                deltaruneViewHolder.mButton.setBackgroundColor(deltaruneViewHolder.itemView.getResources().getColor(R.color.blue4));
+                deltaruneViewHolder.mButton.setSupportBackgroundTintList(deltaruneViewHolder.itemView.getResources().getColorStateList(R.color.blue4));
             } else if (answerB) {
-                deltaruneViewHolder.mButton.setBackgroundColor(deltaruneViewHolder.itemView.getResources().getColor(R.color.dBlue4));
+                deltaruneViewHolder.mButton.setSupportBackgroundTintList(deltaruneViewHolder.itemView.getResources().getColorStateList(R.color.dBlue4));
             } else {
-                deltaruneViewHolder.mButton.setBackgroundColor(deltaruneViewHolder.itemView.getResources().getColor(R.color.blue4));
+                deltaruneViewHolder.mButton.setSupportBackgroundTintList(deltaruneViewHolder.itemView.getResources().getColorStateList(R.color.blue4));
             }
         }
     }

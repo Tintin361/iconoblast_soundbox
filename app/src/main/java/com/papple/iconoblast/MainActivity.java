@@ -16,15 +16,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
+
 import static maes.tech.intentanim.CustomIntent.customType;
 
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
+    private long backPressedTime;
+    private Toast toaster;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -421,6 +426,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 customType(this, "left-to-right");
                 break;
+            case R.id.search:
+                Intent searchIntent = new Intent(MainActivity.this, Search_Activity.class);
+                startActivity(searchIntent);
+                customType(this, "bottom-to-up");
         }
 
         return super.onOptionsItemSelected(item);
@@ -440,9 +449,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-
         } else {
-            super.onBackPressed();
+            if (backPressedTime + 2000 > System.currentTimeMillis()) {
+                toaster.cancel();
+                super.onBackPressed();
+            } else {
+                toaster = Toast.makeText(getBaseContext(), "Appuyez une seconde fois pour quitter.", Toast.LENGTH_SHORT);
+                TextView view = toaster.getView().findViewById(android.R.id.message);
+                if (view != null) view.setGravity(Gravity.CENTER);
+                toaster.show();
+            }
+            backPressedTime = System.currentTimeMillis();
         }
     }
 
