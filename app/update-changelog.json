@@ -1,0 +1,15 @@
+{
+  "latestVersion": "0.19.0",
+  "latestVersionCode": 2,
+  "url": "https://github.com/Tintin361/iconoblast_soundbox",
+  "releaseNotes": [
+    "- Le nouveau design se déploie petit à petit." +
+    "- Nouveau menu de recherche !"+
+    "- Nouvelles animations !\n" +
+    "- Correction d'un bug sur l'affichage en liste dans la catégorie Deltarune.\n" +
+    "- Correction de bugs.\n" +
+    "- Changement dans les Strings.\n" +
+    "- Certaines animations sont plus rapide.\n" +
+    "- Modifications mineures.\n")
+  ]
+}
