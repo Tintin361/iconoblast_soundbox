@@ -17,12 +17,12 @@ public class Dialog_class extends DialogFragment {
 
         if (super.getActivity() != null) {
             return new AlertDialog.Builder(getActivity())
-                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.20)</font>"))
+                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.20.1)</font>"))
                     .setMessage("- Le nouveau design se déploie petit à petit.\n" +
                                 "- Nouveau menu de recherche !\n"+
                                 "- Nouvelles animations !\n" +
                                 "- Correction d'un bug sur l'affichage en liste dans la catégorie Deltarune.\n" +
-                                "- Correction de bugs.\n" +
+                            "- Correction de bugs sur le système de MàJ.\n" +
                                 "- Changement dans les Strings.\n" +
                                 "- Système de Màj via GitHub.\n" +
                                 "- Certaines animations sont plus rapide.\n" +

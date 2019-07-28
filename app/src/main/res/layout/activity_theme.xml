@@ -182,7 +182,6 @@
                     android:layout_marginRight="20dp"
                     android:gravity="center"
                     android:onClick="onCheckboxClick"
-                    android:checked="true"
                     android:text="@string/manuel"
                     android:textSize="@dimen/textCardSize"
                     android:textStyle="bold" />
