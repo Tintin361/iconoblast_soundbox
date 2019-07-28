@@ -22,6 +22,10 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.javiersantos.appupdater.AppUpdater;
+import com.github.javiersantos.appupdater.enums.Display;
+import com.github.javiersantos.appupdater.enums.UpdateFrom;
+
 import static maes.tech.intentanim.CustomIntent.customType;
 
 import java.util.Arrays;
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawer;
     private long backPressedTime;
     private Toast toaster;
+    private int maj = 20;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
+        boolean autoMajBoolean = settings.getBoolean("automaj", false);
 
         if (answerA) {
             setTheme(R.style.AppTheme_NoActionBar2);
@@ -46,6 +52,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             setTheme(R.style.DarkTheme2);
         } else {
             setTheme(R.style.AppTheme_NoActionBar2);
+        }
+
+        if (autoMajBoolean) {
+            AppUpdater app = new AppUpdater(MainActivity.this)
+                    .setUpdateFrom(UpdateFrom.GITHUB)
+                    .setGitHubUserAndRepo("Tintin361", "iconoblast_soundbox")
+                    .setDisplay(Display.NOTIFICATION);
+            app.start();
         }
 
         super.onCreate(savedInstanceState);
@@ -61,7 +75,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
             ShortcutManager sManager = getSystemService(ShortcutManager.class);
@@ -322,6 +335,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             navigationView.setItemTextColor(csl);
             navigationView.setItemIconTintList(cls1);
+
         }
     }
 
@@ -462,5 +476,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             backPressedTime = System.currentTimeMillis();
         }
     }
-
 }

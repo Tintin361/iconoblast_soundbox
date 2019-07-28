@@ -13,19 +13,17 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Filter;
-import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
 import static maes.tech.intentanim.CustomIntent.customType;
 
-public class Search_Activity extends AppCompatActivity implements Search_Adapter_List.OnItemClickListener{
+public class Search_Activity extends AppCompatActivity implements Search_Adapter_List.OnItemClickListener {
     public MediaPlayer warmeurPlayer;
     RecyclerView mRecyclerView;
     Search_Adapter_List sAdapter;
     RecyclerView.LayoutManager mLayoutManager;
-    RelativeLayout rLayout;
+    ArrayList<Search_Item_List_ListVersion> searchList;
 
 
     @Override
@@ -47,7 +45,7 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
 
         setContentView(R.layout.activity_search);
 
-        Toolbar tBar = findViewById(R.id.toolbar_search);
+        final Toolbar tBar = findViewById(R.id.toolbar_search);
         setSupportActionBar(tBar);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && getSupportActionBar() != null) {
@@ -60,33 +58,34 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
 
 
         // Liste des Array
-        ArrayList<Search_Item_List_ListVersion> searchList = new ArrayList<>();
+        searchList = new ArrayList<>();
 
+        searchList.add(new Search_Item_List_ListVersion("COUCOU LES COPAAAIIIINS !!! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("C'est parce que j'veux ken !!! (Étagère)"));
-        searchList.add(new Search_Item_List_ListVersion("MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("HAHA !!! (Étagère)"));
-        searchList.add(new Search_Item_List_ListVersion("BAAAAKA !!! (Ico)"));
-        searchList.add(new Search_Item_List_ListVersion("CAILOOOOOUUUXXX !!! (encore Ico…)"));
-        searchList.add(new Search_Item_List_ListVersion("Actuellement, je pense encore à… (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("Donc tu devais peut-être… (Étagèrito)"));
-        searchList.add(new Search_Item_List_ListVersion("CRACHE LE MORCEAU, ENCULÉ !!! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("Hey ! Fait attention… (Étagère)"));
-        searchList.add(new Search_Item_List_ListVersion("Étagere_sound.ogg"));
-        searchList.add(new Search_Item_List_ListVersion("Iconoclaste_sound.ogg"));
+        searchList.add(new Search_Item_List_ListVersion("Étagère_sound.ogg"));
         searchList.add(new Search_Item_List_ListVersion("MMMMMMH !!! (Étagère)"));
         searchList.add(new Search_Item_List_ListVersion("GÉNIAL !!! (Étagère)"));
-        searchList.add(new Search_Item_List_ListVersion("Non ! NOOOOOON !!! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("SUPER !!! (Étagère)"));
         searchList.add(new Search_Item_List_ListVersion("Tu ne devrai pas avoir peur d'expérimenter ! (Étagère.exe)"));
-        searchList.add(new Search_Item_List_ListVersion("(Censuré) oh pardon, c'est sorti tout seul ! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("Rire (pas) diabolique (Grand Étagère)"));
+        searchList.add(new Search_Item_List_ListVersion("MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)"));
+        searchList.add(new Search_Item_List_ListVersion("BAAAAKA !!! (Ico)"));
+        searchList.add(new Search_Item_List_ListVersion("Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)"));
+        searchList.add(new Search_Item_List_ListVersion("Actuellement, je pense encore à… (Ico)"));
+        searchList.add(new Search_Item_List_ListVersion("CRACHE LE MORCEAU, ENCULÉ !!! (Ico)"));
+        searchList.add(new Search_Item_List_ListVersion("Iconoclaste_sound.ogg"));
+        searchList.add(new Search_Item_List_ListVersion("Non ! NOOOOOON !!! (Ico)"));
+        searchList.add(new Search_Item_List_ListVersion("(Censuré) oh pardon, c'est sorti tout seul ! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("Pour baiser ! POUR BAISER ! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("Tu dis que de la merde ! SUPER ! (Ico et Étagère)"));
-        searchList.add(new Search_Item_List_ListVersion("Mais c'est dégueulasse Addictio(Ico)"));
-        searchList.add(new Search_Item_List_ListVersion("Mais ta gueule !!! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("C'est un immense branleur ! (Étagère)"));
         searchList.add(new Search_Item_List_ListVersion("Maaaaiiis, où c'est qui vont aller se masturber ? (Étagère)"));
-        searchList.add(new Search_Item_List_ListVersion("Lui, il fait des doigts d\\'honneur devant les portes ! (Étagère)"));
+        searchList.add(new Search_Item_List_ListVersion("Lui, il fait des doigts d'honneur devant les portes ! (Étagère)"));
+        searchList.add(new Search_Item_List_ListVersion("Mais c'est dégueulasse Addictio... (Ico)"));
+        searchList.add(new Search_Item_List_ListVersion("Mais ta gueule !!! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("Tu vois là, on est baisés ! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("TOUCH MY COCK !!! (Ico et Étagère)"));
         searchList.add(new Search_Item_List_ListVersion("Guerriers Delta !!! (Ico et Étagère)"));
@@ -109,12 +108,10 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
         eText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -148,5 +145,109 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
 
     @Override
     public void onItemClick(View v, int position) {
+        Search_Item_List_ListVersion currentItem = searchList.get(position);
+        switch (currentItem.getText()) {
+            case "COUCOU LES COPAAAIIIINS !!! (Ico)":
+                playSound(R.raw.coucou_sound);
+                break;
+            case "C'est parce que j'veux ken !!! (Étagère)":
+                playSound(R.raw.ken_sound);
+                break;
+            case "HAHA !!! (Étagère)":
+                playSound(R.raw.haha_sound);
+                break;
+            case "Donc tu devais peut-être… (Étagèrito)":
+                playSound(R.raw.censure2_sound);
+                break;
+            case "Hey ! Fait attention… (Étagère)":
+                playSound(R.raw.attention_sound);
+                break;
+            case "Étagère_sound.ogg":
+                playSound(R.raw.etagere_sound);
+                break;
+            case "MMMMMMH !!! (Étagère)":
+                playSound(R.raw.mmm_sound);
+                break;
+            case "GÉNIAL !!! (Étagère)":
+                playSound(R.raw.genial_sound);
+                break;
+            case "SUPER !!! (Étagère)":
+                playSound(R.raw.super_sound);
+                break;
+            case "Tu ne devrai pas avoir peur d'expérimenter ! (Étagère.exe)":
+                playSound(R.raw.experimenter_sound);
+                break;
+            case "Rire (pas) diabolique (Grand Étagère)":
+                playSound(R.raw.rire_sound);
+                break;
+            case "MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)":
+                playSound(R.raw.tete_sound);
+                break;
+            case "BAAAAKA !!! (Ico)":
+                playSound(R.raw.baka_sound);
+                break;
+            case "Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)":
+                playSound(R.raw.cailloux_sound);
+                break;
+            case "Actuellement, je pense encore à… (Ico)":
+                playSound(R.raw.censure_sound);
+                break;
+            case "CRACHE LE MORCEAU, ENCULÉ !!! (Ico)":
+                playSound(R.raw.morceau_sound);
+                break;
+            case "Iconoclaste_sound.ogg":
+                playSound(R.raw.ico_sound);
+                break;
+            case "Non ! NOOOOOON !!! (Ico)":
+                playSound(R.raw.non_sound);
+                break;
+            case "(Censuré) oh pardon, c'est sorti tout seul ! (Ico)":
+                playSound(R.raw.pardon_sound);
+                break;
+            case "Pour baiser ! POUR BAISER ! (Ico)":
+                playSound(R.raw.baiser_sound);
+                break;
+            case "Tu dis que de la merde ! SUPER ! (Ico et Étagère)":
+                playSound(R.raw.merde_sound);
+                break;
+            case "C'est un immense branleur ! (Étagère)":
+                playSound(R.raw.branleur);
+                break;
+            case "Maaaaiiis, où c'est qui vont aller se masturber ? (Étagère)":
+                playSound(R.raw.masturber);
+                break;
+            case "Lui, il fait des doigts d'honneur devant les portes ! (Étagère)":
+                playSound(R.raw.doigt);
+                break;
+            case "Mais c'est dégueulasse Addictio... (Ico)":
+                playSound(R.raw.degeu_sound);
+                break;
+            case "Mais ta gueule !!! (Ico)":
+                playSound(R.raw.gueule_sound);
+                break;
+            case "Tu vois là, on est baisés ! (Ico)":
+                playSound(R.raw.baises);
+                break;
+            case "TOUCH MY COCK !!! (Ico et Étagère)":
+                playSound(R.raw.cock);
+                break;
+            case "Guerriers Delta !!! (Ico et Étagère)":
+                playSound(R.raw.guerrierdeltat);
+                break;
+            case "KRISEUH ! (Ico)":
+                playSound(R.raw.kris_sound);
+                break;
+            case "ZELDA !!! (Ico)":
+                playSound(R.raw.zelda_sound);
+                break;
+            case "Chanson Ico et Étagère":
+                playSound(R.raw.chanson_zelda_sound);
+                break;
+            case "SALUUUUUUUUUTTT !!!!! (Ico)":
+                playSound(R.raw.salut_sound);
+                break;
+
+        }
     }
+
 }

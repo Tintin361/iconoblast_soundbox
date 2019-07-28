@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -10,17 +11,25 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary">
 
-        <EditText
-            android:id="@+id/searchEditText"
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:id="@+id/linearLayout10"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@null"
-            android:gravity="center"
-            android:hint="@string/search"
-            android:textColorHint="@android:color/white"
-            android:lines="1"
-            tools:ignore="Autofill"
-            android:inputType="text"/>
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColorHint="@android:color/white"
+                tools:ignore="Autofill"/>
+
+        </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>
 
@@ -28,9 +37,7 @@
         android:id="@+id/searchRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_below="@id/toolbar_search"/>
+        android:layout_below="@id/toolbar_search"
+        android:scrollbars="vertical" />
 
 </RelativeLayout>

@@ -9,6 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Adapter;
 import android.widget.Button;
 
@@ -20,6 +22,7 @@ public class Deltarune_Adapter_List extends RecyclerView.Adapter<Deltarune_Adapt
     private OnItemClickListener mListener;
     private Context context;
     private Adapter nAdapter;
+    private int lastPosition = -1;
     View view;
 
     interface OnItemClickListener {
@@ -92,6 +95,12 @@ public class Deltarune_Adapter_List extends RecyclerView.Adapter<Deltarune_Adapt
                 deltaruneViewHolder.mButton.setSupportBackgroundTintList(deltaruneViewHolder.itemView.getResources().getColorStateList(R.color.blue4));
             }
         }
+
+        Animation animation = AnimationUtils.loadAnimation(context,
+                (position > lastPosition) ? R.anim.up_from_bottom2
+                        : R.anim.down_from_top2);
+        deltaruneViewHolder.itemView.startAnimation(animation);
+        lastPosition = position;
     }
 
     @Override

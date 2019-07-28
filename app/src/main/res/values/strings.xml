@@ -7,8 +7,8 @@
     <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 0.19</string>
-    <string name="versiond" translatable="false">Version 0.19</string>
+    <string name="version" translatable="false">Version 0.20</string>
+    <string name="versiond" translatable="false">Version 0.20</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
@@ -24,7 +24,7 @@
 
     <!-- Toolbar -->
     <string name="settings">Paramètres</string>
-    <string name="search">Rechercher</string>
+    <string name="search">Rechercher&#8230;</string>
     <string name="info" translatable="false">Informations</string>
 
     <!-- Drawer -->
@@ -67,7 +67,7 @@
     <string name="merdes">Tu dis que de la merde ! SUPER ! (Ico et Étagère)</string>
 
     <!-- Mag Games Tycoon Activity -->
-    <string name="degueulasse">Mais c\'est dégueulasse Addictio&#8230;(Ico)</string>
+    <string name="degueulasse">Mais c\'est dégueulasse Addictio&#8230; (Ico)</string>
     <string name="gueule">Mais ta gueule !!! (Ico)</string>
     <string name="branleur">C\'est un immense branleur ! (Étagère)</string>
     <string name="mais">Maaaaiiis, où c\'est qui vont aller se masturber ? (Étagère)</string>
@@ -97,6 +97,7 @@
     <string name="intent">intent animation</string>
     <string name="click">Cliquez sur le texte pour afficher la licence correspondante.</string>
     <string name="lulu2">N\'a pas de réseaux sociaux.</string>
+    <string name="majLicence">AppUpdater</string>
 
     <!-- Thème Activity -->
     <string name="themes">Thèmes</string>
@@ -105,10 +106,10 @@
     <string name="list">Liste</string>
     <string name="grille">Grille</string>
     <string name="maj">Vérifier les Mise à Jour</string>
-    <string name="gdrive">Google Drive</string>
-    <string name="apk">Nom de cet APK:</string>
-    <string name="apkname">JESUISUNKONNARDANIMÉ2</string>
+    <string name="gdrive">Vérifier sur GitHub !</string>
     <string name="design">Affichage</string>
+    <string name="auto">Vérifier automatiquement</string>
+    <string name="manuel">Vérifier manuellement</string>
 
     <!-- Easter Egg Activity -->
     <string name="code">Entrez un code secret</string>
@@ -129,5 +130,8 @@
     <!-- Deltarune Fragment -->
     <string name="guerrierdelta">Guerriers Delta !!! (Ico et Étagère)</string>
     <string name="kris">KRISEUH ! (Ico)</string>
+
+    <!-- Search Activity -->
+    <string name="nothing">Impossible de trouver ce son&#8230; &#128549;</string>
 
 </resources>

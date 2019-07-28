@@ -66,8 +66,8 @@ public class ZeldaFragment extends Fragment {
             ViewCompat.setBackgroundTintList(chansonButton, ColorStateList.valueOf(getResources().getColor(R.color.orange1)));
         } else if (answerB) {
             sView.setBackgroundColor(getResources().getColor(R.color.dzelda));
-            ViewCompat.setBackgroundTintList(zeldaButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue3)));
-            ViewCompat.setBackgroundTintList(chansonButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue4)));
+            ViewCompat.setBackgroundTintList(zeldaButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue)));
+            ViewCompat.setBackgroundTintList(chansonButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue2)));
         } else {
             sView.setBackgroundColor(getResources().getColor(R.color.zelda));
             ViewCompat.setBackgroundTintList(zeldaButton, ColorStateList.valueOf(getResources().getColor(R.color.Red1)));

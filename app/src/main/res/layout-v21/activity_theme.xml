@@ -89,9 +89,9 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup2"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/radiobox_3"
@@ -142,36 +142,52 @@
                 android:orientation="horizontal" />
 
             <Button
-                android:id="@+id/gDriveButton"
+                android:id="@+id/majButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:text="@string/gdrive"
-                android:textSize="@dimen/buttonDefault" />
+                android:textAllCaps="false"
+                android:textSize="@dimen/buttonDefault"
+                android:textStyle="bold" />
 
             <LinearLayout
-                android:id="@+id/linearlayout5"
+                android:id="@+id/linearLayout22"
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_height="15dp"
                 android:orientation="horizontal" />
 
-            <TextView
+            <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:gravity="center"
-                android:text="@string/apk"
-                android:textSize="@dimen/text" />
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:gravity="center"
-                android:text="@string/apkname"
-                android:textColor="@color/dGreen3"
-                android:textSize="@dimen/text" />
+                <RadioButton
+                    android:id="@+id/radiobox_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:onClick="onCheckboxClick"
+                    android:text="@string/auto"
+                    android:textSize="@dimen/textCardSize"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radiobox_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:onClick="onCheckboxClick"
+                    android:text="@string/manuel"
+                    android:textSize="@dimen/textCardSize"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
 
         </RadioGroup>
 
