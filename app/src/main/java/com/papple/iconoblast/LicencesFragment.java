@@ -285,7 +285,7 @@ public class LicencesFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 AlertDialog dialog = new AlertDialog.Builder(getActivity())
-                        .setTitle("Licence StatusBarUtil")
+                        .setTitle("Licence AppUpdater")
                         .setMessage("Apache License\n" +
                                 "\n" +
                                 "Version 2.0, January 2004\n" +
