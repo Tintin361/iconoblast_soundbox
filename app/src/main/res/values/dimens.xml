@@ -19,6 +19,6 @@
 
     <!-- CardView -->
     <dimen name="marginBottomSize">8dp</dimen>
-    <dimen name="textCardSize">25sp</dimen>
+    <dimen name="textCardSize">20sp</dimen>
 
 </resources>

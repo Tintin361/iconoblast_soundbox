@@ -17,4 +17,7 @@
     <!-- Button -->
     <dimen name="buttonDefault">40sp</dimen>
     <dimen name="marginBottomDefault">14sp</dimen>
+
+    <!-- CardView -->
+    <dimen name="textCardSize">30sp</dimen>
 </resources>

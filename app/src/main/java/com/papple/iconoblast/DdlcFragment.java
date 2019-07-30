@@ -1,26 +1,35 @@
 package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
-import android.content.res.ColorStateList;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewCompat;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ScrollView;
+import android.widget.RelativeLayout;
 
-public class DdlcFragment extends Fragment {
+import java.util.ArrayList;
+
+public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemClickListener, Ddlc_Adapter.OnItemClickListener {
     public MediaPlayer jaimeLesPlayer;
+    RecyclerView mRecyclerView;
+    Ddlc_Adapter_List dAdapter;
+    Ddlc_Adapter dAdapter2;
+    RecyclerView.LayoutManager mLayoutManager;
+    public RelativeLayout relativeLayout;
+    ArrayList<Ddlc_Item_List_ListVersion> ddlcList;
+    ArrayList<Ddlc_Item_List> ddlcList2;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_ddlc, container, false);
+        final View view = inflater.inflate(R.layout.fragment_ddlc, container, false);
 
         if (getActivity() == null) {
             return view;
@@ -28,6 +37,8 @@ public class DdlcFragment extends Fragment {
 
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
+
+        RelativeLayout rLayout = view.findViewById(R.id.relativeLayout2);
 
         // Remember choice
         editor.putBoolean("aFrag", false);
@@ -43,228 +54,84 @@ public class DdlcFragment extends Fragment {
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
-
-        ScrollView sView = view.findViewById(R.id.scrollView2);
-
-        Button kenButton = view.findViewById(R.id.kenb);
-        kenButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.ken_sound);
-            }
-        });
-
-        Button hahaButton = view.findViewById(R.id.hahab);
-        hahaButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.haha_sound);
-            }
-        });
-
-        Button censure2Button = view.findViewById(R.id.censure2b);
-        censure2Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { playSound(R.raw.censure2_sound);
-            }
-        });
-
-        Button attentionButton = view.findViewById(R.id.attentionb);
-        attentionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { playSound(R.raw.attention_sound);
-            }
-        });
-
-        Button etagereButton = view.findViewById(R.id.etagereb);
-        etagereButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { playSound(R.raw.etagere_sound);
-            }
-        });
-
-        Button mmmButton = view.findViewById(R.id.mmmb);
-        mmmButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.mmm_sound);
-            }
-        });
-
-        Button genialButton = view.findViewById(R.id.genialb);
-        genialButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.genial_sound);
-            }
-        });
-
-        Button superButton = view.findViewById(R.id.superb);
-        superButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.super_sound);
-            }
-        });
-
-        Button experimenterButton = view.findViewById(R.id.experimenterb);
-        experimenterButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { playSound(R.raw.experimenter_sound);
-            }
-        });
-
-        Button rireButton = view.findViewById(R.id.rireb);
-        rireButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.rire_sound);
-            }
-        });
-
-        Button teteButton = view.findViewById(R.id.teteb);
-        teteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.tete_sound);
-            }
-        });
-
-        Button bakaButton = view.findViewById(R.id.bakab);
-        bakaButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.baka_sound);
-            }
-        });
-
-        Button caillouxButton = view.findViewById(R.id.caillouxb);
-        caillouxButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { playSound(R.raw.cailloux_sound);
-            }
-        });
-
-        Button censureButton = view.findViewById(R.id.censureb);
-        censureButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { playSound(R.raw.censure_sound);
-            }
-        });
-
-        Button morceauButton = view.findViewById(R.id.morceaub);
-        morceauButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { playSound(R.raw.morceau_sound);
-            }
-        });
-
-        Button icoButton = view.findViewById(R.id.icob);
-        icoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.ico_sound);
-            }
-        });
-
-        Button nonButton = view.findViewById(R.id.nonb);
-        nonButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.non_sound);
-            }
-        });
-
-        Button pardonButton = view.findViewById(R.id.pardonb);
-        pardonButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.pardon_sound);
-            }
-        });
-
-        Button baiserButton = view.findViewById(R.id.baiserb);
-        baiserButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.baiser_sound);
-            }
-        });
-
-        Button merdeButton = view.findViewById(R.id.merdeb);
-        merdeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.merde_sound);
-            }
-        });
+        boolean answerC = settings.getBoolean("questionC", false);
+        boolean answerD = settings.getBoolean("questionD", false);
 
         if (answerA) {
-            sView.setBackgroundColor(getResources().getColor(R.color.ddlc));
-            ViewCompat.setBackgroundTintList(kenButton, ColorStateList.valueOf(getResources().getColor(R.color.Red1)));
-            ViewCompat.setBackgroundTintList(hahaButton, ColorStateList.valueOf(getResources().getColor(R.color.orange1)));
-            ViewCompat.setBackgroundTintList(censure2Button, ColorStateList.valueOf(getResources().getColor(R.color.yellow1)));
-            ViewCompat.setBackgroundTintList(attentionButton, ColorStateList.valueOf(getResources().getColor(R.color.green3)));
-            ViewCompat.setBackgroundTintList(etagereButton, ColorStateList.valueOf(getResources().getColor(R.color.green4)));
-            ViewCompat.setBackgroundTintList(mmmButton, ColorStateList.valueOf(getResources().getColor(R.color.blue1)));
-            ViewCompat.setBackgroundTintList(genialButton, ColorStateList.valueOf(getResources().getColor(R.color.blue2)));
-            ViewCompat.setBackgroundTintList(superButton, ColorStateList.valueOf(getResources().getColor(R.color.blue3)));
-            ViewCompat.setBackgroundTintList(experimenterButton, ColorStateList.valueOf(getResources().getColor(R.color.blue4)));
-            ViewCompat.setBackgroundTintList(rireButton, ColorStateList.valueOf(getResources().getColor(R.color.blue5)));
-            ViewCompat.setBackgroundTintList(teteButton, ColorStateList.valueOf(getResources().getColor(R.color.darkBlue)));
-            ViewCompat.setBackgroundTintList(bakaButton, ColorStateList.valueOf(getResources().getColor(R.color.purple)));
-            ViewCompat.setBackgroundTintList(caillouxButton, ColorStateList.valueOf(getResources().getColor(R.color.purple2)));
-            ViewCompat.setBackgroundTintList(censureButton, ColorStateList.valueOf(getResources().getColor(R.color.pink1)));
-            ViewCompat.setBackgroundTintList(morceauButton, ColorStateList.valueOf(getResources().getColor(R.color.pink2)));
-            ViewCompat.setBackgroundTintList(icoButton, ColorStateList.valueOf(getResources().getColor(R.color.red2)));
-            ViewCompat.setBackgroundTintList(nonButton, ColorStateList.valueOf(getResources().getColor(R.color.red3)));
-            ViewCompat.setBackgroundTintList(pardonButton, ColorStateList.valueOf(getResources().getColor(R.color.orange2)));
-            ViewCompat.setBackgroundTintList(baiserButton, ColorStateList.valueOf(getResources().getColor(R.color.yellow1)));
-            ViewCompat.setBackgroundTintList(merdeButton, ColorStateList.valueOf(getResources().getColor(R.color.green3)));
+            rLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
         } else if (answerB) {
-            sView.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            ViewCompat.setBackgroundTintList(kenButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple)));
-            ViewCompat.setBackgroundTintList(hahaButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple2)));
-            ViewCompat.setBackgroundTintList(censure2Button, ColorStateList.valueOf(getResources().getColor(R.color.dBlue)));
-            ViewCompat.setBackgroundTintList(attentionButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue2)));
-            ViewCompat.setBackgroundTintList(etagereButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue3)));
-            ViewCompat.setBackgroundTintList(mmmButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue4)));
-            ViewCompat.setBackgroundTintList(genialButton, ColorStateList.valueOf(getResources().getColor(R.color.dGreen)));
-            ViewCompat.setBackgroundTintList(superButton, ColorStateList.valueOf(getResources().getColor(R.color.dGreen2)));
-            ViewCompat.setBackgroundTintList(experimenterButton, ColorStateList.valueOf(getResources().getColor(R.color.dGreen3)));
-            ViewCompat.setBackgroundTintList(rireButton, ColorStateList.valueOf(getResources().getColor(R.color.dGreen4)));
-            ViewCompat.setBackgroundTintList(teteButton, ColorStateList.valueOf(getResources().getColor(R.color.dYellow)));
-            ViewCompat.setBackgroundTintList(bakaButton, ColorStateList.valueOf(getResources().getColor(R.color.dOrange)));
-            ViewCompat.setBackgroundTintList(caillouxButton, ColorStateList.valueOf(getResources().getColor(R.color.dRed)));
-            ViewCompat.setBackgroundTintList(censureButton, ColorStateList.valueOf(getResources().getColor(R.color.dRed2)));
-            ViewCompat.setBackgroundTintList(morceauButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple3)));
-            ViewCompat.setBackgroundTintList(icoButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple)));
-            ViewCompat.setBackgroundTintList(nonButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple2)));
-            ViewCompat.setBackgroundTintList(pardonButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue)));
-            ViewCompat.setBackgroundTintList(baiserButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue2)));
-            ViewCompat.setBackgroundTintList(merdeButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue3)));
+            rLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
         } else {
-            sView.setBackgroundColor(getResources().getColor(R.color.ddlc));
-            ViewCompat.setBackgroundTintList(kenButton, ColorStateList.valueOf(getResources().getColor(R.color.Red1)));
-            ViewCompat.setBackgroundTintList(hahaButton, ColorStateList.valueOf(getResources().getColor(R.color.orange1)));
-            ViewCompat.setBackgroundTintList(censure2Button, ColorStateList.valueOf(getResources().getColor(R.color.yellow1)));
-            ViewCompat.setBackgroundTintList(attentionButton, ColorStateList.valueOf(getResources().getColor(R.color.green3)));
-            ViewCompat.setBackgroundTintList(etagereButton, ColorStateList.valueOf(getResources().getColor(R.color.green4)));
-            ViewCompat.setBackgroundTintList(mmmButton, ColorStateList.valueOf(getResources().getColor(R.color.blue1)));
-            ViewCompat.setBackgroundTintList(genialButton, ColorStateList.valueOf(getResources().getColor(R.color.blue2)));
-            ViewCompat.setBackgroundTintList(superButton, ColorStateList.valueOf(getResources().getColor(R.color.blue3)));
-            ViewCompat.setBackgroundTintList(experimenterButton, ColorStateList.valueOf(getResources().getColor(R.color.blue4)));
-            ViewCompat.setBackgroundTintList(rireButton, ColorStateList.valueOf(getResources().getColor(R.color.blue5)));
-            ViewCompat.setBackgroundTintList(teteButton, ColorStateList.valueOf(getResources().getColor(R.color.darkBlue)));
-            ViewCompat.setBackgroundTintList(bakaButton, ColorStateList.valueOf(getResources().getColor(R.color.purple)));
-            ViewCompat.setBackgroundTintList(caillouxButton, ColorStateList.valueOf(getResources().getColor(R.color.purple2)));
-            ViewCompat.setBackgroundTintList(censureButton, ColorStateList.valueOf(getResources().getColor(R.color.pink1)));
-            ViewCompat.setBackgroundTintList(morceauButton, ColorStateList.valueOf(getResources().getColor(R.color.pink2)));
-            ViewCompat.setBackgroundTintList(icoButton, ColorStateList.valueOf(getResources().getColor(R.color.red2)));
-            ViewCompat.setBackgroundTintList(nonButton, ColorStateList.valueOf(getResources().getColor(R.color.red3)));
-            ViewCompat.setBackgroundTintList(pardonButton, ColorStateList.valueOf(getResources().getColor(R.color.orange2)));
-            ViewCompat.setBackgroundTintList(baiserButton, ColorStateList.valueOf(getResources().getColor(R.color.yellow1)));
-            ViewCompat.setBackgroundTintList(merdeButton, ColorStateList.valueOf(getResources().getColor(R.color.green3)));
+            rLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
+        }
+
+        if (answerC) {
+
+            ddlcList = new ArrayList<>();
+            ddlcList.add(new Ddlc_Item_List_ListVersion("C'est parce que j'veux ken !!! (Étagère)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("HAHA !!! (Étagère)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Donc tu devais peut-être… (Étagèrito)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Hey ! Fait attention… (Étagère)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Étagère_sound.ogg"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("MMMMMMH !!! (Étagère)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("GÉNIAL !!! (Étagère)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("SUPER !!! (Étagère)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Tu ne devrai pas avoir peur d'expérimenter ! (Étagère.exe)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Rire (pas) diabolique (Grand Étagère)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("BAAAAKA !!! (Ico)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Actuellement, je pense encore à… (Ico)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("CRACHE LE MORCEAU, ENCULÉ !!! (Ico)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Iconoclaste_sound.ogg"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Non ! NOOOOOON !!! (Ico)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("(Censuré) oh pardon, c'est sorti tout seul ! (Ico)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Pour baiser ! POUR BAISER ! (Ico)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Tu dis que de la merde ! SUPER ! (Ico et Étagère)"));
+
+            mRecyclerView = view.findViewById(R.id.lunetteRecyclerView);
+            mRecyclerView.setHasFixedSize(true);
+            mLayoutManager = new LinearLayoutManager(getContext());
+            dAdapter = new Ddlc_Adapter_List(ddlcList);
+
+            mRecyclerView.setLayoutManager(mLayoutManager);
+            mRecyclerView.setAdapter(dAdapter);
+            dAdapter.setOnItemClickListener(this);
+
+        } else if (answerD) {
+
+            ddlcList2 = new ArrayList<>();
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.ken_image, "C'est parce que j'veux ken !!! (Étagère)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.haha_image, "HAHA !!! (Étagère)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.nue_image, "Donc tu devais peut-être… (Étagèrito)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.atttntion_image, "Hey ! Fait attention… (Étagère)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.etagere_image, "Étagère_sound.ogg"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.mhh_image, "MMMMMMH !!! (Étagère)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.genial_image, "GÉNIAL !!! (Étagère)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.super_image, "SUPER !!! (Étagère)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.experimenter_image, "Tu ne devrai pas avoir peur d'expérimenter ! (Étagère.exe)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.rire_image, "Rire (pas) diabolique (Grand Étagère)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.tete_image, "MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.baka_image, "BAAAAKA !!! (Ico)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.caillioux_image, "Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.m_image, "Actuellement, je pense encore à… (Ico)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.morceau_image, "CRACHE LE MORCEAU, ENCULÉ !!! (Ico)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.ico_image, "Iconoclaste_sound.ogg"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.non_image, "Non ! NOOOOOON !!! (Ico)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.ohoh_image, "(Censuré) oh pardon, c'est sorti tout seul ! (Ico)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.baiser_image, "Pour baiser ! POUR BAISER ! (Ico)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.merde_image, "Tu dis que de la merde ! SUPER ! (Ico et Étagère)"));
+
+            mRecyclerView = view.findViewById(R.id.lunetteRecyclerView);
+            mRecyclerView.setHasFixedSize(true);
+            mLayoutManager = new LinearLayoutManager(getContext());
+            dAdapter2 = new Ddlc_Adapter(ddlcList2);
+
+            mRecyclerView.setLayoutManager(mLayoutManager);
+            mRecyclerView.setAdapter(dAdapter2);
+            dAdapter2.setOnItemClickListener(this);
+
+            mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         }
 
         return view;
@@ -278,5 +145,146 @@ public class DdlcFragment extends Fragment {
         }
         jaimeLesPlayer = MediaPlayer.create(getContext(), redId);
         jaimeLesPlayer.start();
+    }
+
+    @Override
+    public void onItemClick(View v, int position) {
+
+        if (getActivity() != null) {
+            SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
+
+            boolean answerC = settings.getBoolean("questionC", false);
+            boolean answerD = settings.getBoolean("questionD", false);
+
+            if (answerC) {
+                Ddlc_Item_List_ListVersion currentItem = ddlcList.get(position);
+                switch (currentItem.getText()) {
+                    case "C'est parce que j'veux ken !!! (Étagère)":
+                        playSound(R.raw.ken_sound);
+                        break;
+                    case "HAHA !!! (Étagère)":
+                        playSound(R.raw.haha_sound);
+                        break;
+                    case "Donc tu devais peut-être… (Étagèrito)":
+                        playSound(R.raw.censure2_sound);
+                        break;
+                    case "Hey ! Fait attention… (Étagère)":
+                        playSound(R.raw.attention_sound);
+                        break;
+                    case "Étagère_sound.ogg":
+                        playSound(R.raw.etagere_sound);
+                        break;
+                    case "MMMMMMH !!! (Étagère)":
+                        playSound(R.raw.mmm_sound);
+                        break;
+                    case "GÉNIAL !!! (Étagère)":
+                        playSound(R.raw.genial_sound);
+                        break;
+                    case "SUPER !!! (Étagère)":
+                        playSound(R.raw.super_sound);
+                        break;
+                    case "Tu ne devrai pas avoir peur d'expérimenter ! (Étagère.exe)":
+                        playSound(R.raw.experimenter_sound);
+                        break;
+                    case "Rire (pas) diabolique (Grand Étagère)":
+                        playSound(R.raw.rire_sound);
+                        break;
+                    case "MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)":
+                        playSound(R.raw.tete_sound);
+                        break;
+                    case "BAAAAKA !!! (Ico)":
+                        playSound(R.raw.baka_sound);
+                        break;
+                    case "Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)":
+                        playSound(R.raw.cailloux_sound);
+                        break;
+                    case "Actuellement, je pense encore à… (Ico)":
+                        playSound(R.raw.censure_sound);
+                        break;
+                    case "CRACHE LE MORCEAU, ENCULÉ !!! (Ico)":
+                        playSound(R.raw.morceau_sound);
+                        break;
+                    case "Iconoclaste_sound.ogg":
+                        playSound(R.raw.ico_sound);
+                        break;
+                    case "Non ! NOOOOOON !!! (Ico)":
+                        playSound(R.raw.non_sound);
+                        break;
+                    case "(Censuré) oh pardon, c'est sorti tout seul ! (Ico)":
+                        playSound(R.raw.pardon_sound);
+                        break;
+                    case "Pour baiser ! POUR BAISER ! (Ico)":
+                        playSound(R.raw.baiser_sound);
+                        break;
+                    case "Tu dis que de la merde ! SUPER ! (Ico et Étagère)":
+                        playSound(R.raw.merde_sound);
+                        break;
+                }
+            } else if (answerD) {
+                Ddlc_Item_List currentItem = ddlcList2.get(position);
+                switch (currentItem.getDdlcText()) {
+                    case "C'est parce que j'veux ken !!! (Étagère)":
+                        playSound(R.raw.ken_sound);
+                        break;
+                    case "HAHA !!! (Étagère)":
+                        playSound(R.raw.haha_sound);
+                        break;
+                    case "Donc tu devais peut-être… (Étagèrito)":
+                        playSound(R.raw.censure2_sound);
+                        break;
+                    case "Hey ! Fait attention… (Étagère)":
+                        playSound(R.raw.attention_sound);
+                        break;
+                    case "Étagère_sound.ogg":
+                        playSound(R.raw.etagere_sound);
+                        break;
+                    case "MMMMMMH !!! (Étagère)":
+                        playSound(R.raw.mmm_sound);
+                        break;
+                    case "GÉNIAL !!! (Étagère)":
+                        playSound(R.raw.genial_sound);
+                        break;
+                    case "SUPER !!! (Étagère)":
+                        playSound(R.raw.super_sound);
+                        break;
+                    case "Tu ne devrai pas avoir peur d'expérimenter ! (Étagère.exe)":
+                        playSound(R.raw.experimenter_sound);
+                        break;
+                    case "Rire (pas) diabolique (Grand Étagère)":
+                        playSound(R.raw.rire_sound);
+                        break;
+                    case "MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)":
+                        playSound(R.raw.tete_sound);
+                        break;
+                    case "BAAAAKA !!! (Ico)":
+                        playSound(R.raw.baka_sound);
+                        break;
+                    case "Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)":
+                        playSound(R.raw.cailloux_sound);
+                        break;
+                    case "Actuellement, je pense encore à… (Ico)":
+                        playSound(R.raw.censure_sound);
+                        break;
+                    case "CRACHE LE MORCEAU, ENCULÉ !!! (Ico)":
+                        playSound(R.raw.morceau_sound);
+                        break;
+                    case "Iconoclaste_sound.ogg":
+                        playSound(R.raw.ico_sound);
+                        break;
+                    case "Non ! NOOOOOON !!! (Ico)":
+                        playSound(R.raw.non_sound);
+                        break;
+                    case "(Censuré) oh pardon, c'est sorti tout seul ! (Ico)":
+                        playSound(R.raw.pardon_sound);
+                        break;
+                    case "Pour baiser ! POUR BAISER ! (Ico)":
+                        playSound(R.raw.baiser_sound);
+                        break;
+                    case "Tu dis que de la merde ! SUPER ! (Ico et Étagère)":
+                        playSound(R.raw.merde_sound);
+                        break;
+                }
+            }
+        }
     }
 }

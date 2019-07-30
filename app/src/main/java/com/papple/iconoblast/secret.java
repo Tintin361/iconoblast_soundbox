@@ -132,10 +132,6 @@ public class secret extends AppCompatActivity {
                     rain.setData(Uri.parse(rUrl));
                     startActivity(rain);
 
-                } else if (editText.getText().toString().equals("Reach for my hand")) {
-
-                    playSound(R.raw.reach_sound);
-
                 } else if (editText.getText().toString().equals("Donald Trump")) {
 
                     View decorView = getWindow().getDecorView();

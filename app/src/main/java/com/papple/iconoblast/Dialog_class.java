@@ -17,16 +17,12 @@ public class Dialog_class extends DialogFragment {
 
         if (super.getActivity() != null) {
             return new AlertDialog.Builder(getActivity())
-                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.20.2)</font>"))
-                    .setMessage("- Le nouveau design se déploie petit à petit.\n" +
-                                "- Nouveau menu de recherche !\n"+
+                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.21)</font>"))
+                    .setMessage("- La catégorie DDLC est compatible avec l'affichage en grille.\n" +
+                            "- Certains textes ont changées de taille.\n" +
                                 "- Nouvelles animations !\n" +
-                                "- Correction d'un bug sur l'affichage en liste dans la catégorie Deltarune.\n" +
-                            "- Correction de bugs sur le système de MàJ.\n" +
-                                "- Changement dans les Strings.\n" +
-                                "- Système de Màj via GitHub.\n" +
-                                "- Certaines animations sont plus rapide.\n" +
-                                "- Modifications mineures.\n")
+                            "- Modifications mineures.\n" +
+                            "- Deux nouveaux sons arriveront avec la version 0.21.1")
                     .setPositiveButton(Html.fromHtml("<font color='#dd117e'>OK</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

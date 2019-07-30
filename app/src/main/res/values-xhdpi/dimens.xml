@@ -17,5 +17,5 @@
   <dimen name="buttonDefault">18sp</dimen>
 
   <!-- CardView -->
-  <dimen name="textCardSize">22sp</dimen>
+  <dimen name="textCardSize">19sp</dimen>
 </resources>

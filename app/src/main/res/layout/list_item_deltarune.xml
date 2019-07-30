@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:layout_marginLeft="3dp"
     android:layout_marginRight="3dp"
+    android:layout_marginTop="10dp"
     app:cardCornerRadius="12dp"
     android:foreground="?android:attr/selectableItemBackground"
     app:cardBackgroundColor="@color/blue4">
@@ -29,10 +30,10 @@
             android:id="@+id/deltaruneTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/text"
-            android:textColor="@android:color/black"
+            android:gravity="center"
             android:text="@string/guerrierdelta"
-            android:gravity="center"/>
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textCardSize" />
 
     </LinearLayout>
 

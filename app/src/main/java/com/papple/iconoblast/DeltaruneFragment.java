@@ -90,7 +90,7 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
 
             mRecyclerView.setLayoutManager(mLayoutManager);
             mRecyclerView.setAdapter(mAdapter);
-            mAdapter.setOnItemClickListener(DeltaruneFragment.this);
+            mAdapter.setOnItemClickListener(this);
 
             mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
