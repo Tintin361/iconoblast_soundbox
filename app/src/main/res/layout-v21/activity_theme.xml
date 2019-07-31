@@ -103,7 +103,7 @@
                     android:gravity="center"
                     android:onClick="onShowClick"
                     android:text="@string/list"
-                    android:textSize="@dimen/textCardSize"
+                    android:textSize="@dimen/radioButtonText"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -115,7 +115,7 @@
                     android:gravity="center"
                     android:onClick="onShowClick"
                     android:text="@string/grille"
-                    android:textSize="@dimen/textCardSize"
+                    android:textSize="@dimen/radioButtonText"
                     android:textStyle="bold" />
 
             </RadioGroup>
@@ -172,7 +172,7 @@
                     android:gravity="center"
                     android:onClick="onCheckboxClick"
                     android:text="@string/auto"
-                    android:textSize="@dimen/textCardSize"
+                    android:textSize="@dimen/radioButtonText"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -184,7 +184,7 @@
                     android:gravity="center"
                     android:onClick="onCheckboxClick"
                     android:text="@string/manuel"
-                    android:textSize="@dimen/textCardSize"
+                    android:textSize="@dimen/radioButtonText"
                     android:textStyle="bold" />
 
             </RadioGroup>

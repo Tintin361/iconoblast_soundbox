@@ -21,6 +21,7 @@ public class Dialog_class extends DialogFragment {
                     .setMessage("- La catégorie DDLC est compatible avec l'affichage en grille.\n" +
                             "- Certains textes ont changées de taille.\n" +
                                 "- Nouvelles animations !\n" +
+                            "- Meilleur gestion de l'affichage des images pour éviter les lags.\n" +
                             "- Modifications mineures.\n" +
                             "- Deux nouveaux sons arriveront avec la version 0.21.1")
                     .setPositiveButton(Html.fromHtml("<font color='#dd117e'>OK</font>"), new DialogInterface.OnClickListener() {

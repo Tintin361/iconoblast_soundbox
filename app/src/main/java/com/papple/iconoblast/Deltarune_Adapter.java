@@ -14,6 +14,8 @@ import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class Deltarune_Adapter extends RecyclerView.Adapter<Deltarune_Adapter.deltaruneViewHolder> {
@@ -73,7 +75,9 @@ public class Deltarune_Adapter extends RecyclerView.Adapter<Deltarune_Adapter.de
     public void onBindViewHolder(@NonNull deltaruneViewHolder deltaruneViewHolder, int position) {
         Deltarune_Item_List currentItem = mDeltaruneList.get(position);
 
-        deltaruneViewHolder.mImageView.setImageResource(currentItem.getImageRessource());
+        Picasso.get()
+                .load(currentItem.getImageRessource())
+                .into(deltaruneViewHolder.mImageView);
         deltaruneViewHolder.mTextView.setText(currentItem.getText());
 
         context = view.getContext();

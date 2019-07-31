@@ -98,6 +98,7 @@
     <string name="click">Cliquez sur le texte pour afficher la licence correspondante.</string>
     <string name="lulu2">N\'a pas de réseaux sociaux.</string>
     <string name="majLicence">AppUpdater</string>
+    <string name="picasso">Picasso</string>
 
     <!-- Thème Activity -->
     <string name="themes">Thèmes</string>

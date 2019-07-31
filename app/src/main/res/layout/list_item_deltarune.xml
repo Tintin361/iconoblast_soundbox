@@ -22,7 +22,6 @@
             android:id="@+id/deltaruneImageView"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:src="@drawable/guerriers_delta"
             android:contentDescription="@string/guerrierdelta"
             android:scaleType="centerCrop" />
 

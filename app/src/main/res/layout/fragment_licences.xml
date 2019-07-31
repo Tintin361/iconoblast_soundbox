@@ -2,9 +2,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,22 +16,22 @@
             android:id="@+id/textViewLicence"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
             android:layout_marginRight="4dp"
-            android:text="@string/click"
-            android:textSize="@dimen/iconoblastText"
             android:gravity="center"
-            android:textColor="@color/colorPrimarySaintValantin"/>
+            android:text="@string/click"
+            android:textColor="@color/colorPrimarySaintValantin"
+            android:textSize="@dimen/iconoblastText" />
 
         <android.support.v7.widget.CardView
             android:id="@+id/cardView1"
             android:layout_width="match_parent"
-            android:layout_below="@id/textViewLicence"
             android:layout_height="35dp"
+            android:layout_below="@id/textViewLicence"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="16dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
             app:cardCornerRadius="4dp"
             app:elevation="4dp">
@@ -40,11 +40,11 @@
                 android:id="@+id/gifText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/gif"
-                android:gravity="center_vertical|center_horizontal"
-                android:focusable="true"
                 android:background="?attr/selectableItemBackground"
-                android:textSize="@dimen/buttonDefault"/>
+                android:focusable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/gif"
+                android:textSize="@dimen/buttonDefault" />
 
         </android.support.v7.widget.CardView>
 
@@ -54,8 +54,8 @@
             android:layout_height="35dp"
             android:layout_below="@id/cardView1"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
             app:cardCornerRadius="4dp"
             app:elevation="4dp">
@@ -64,11 +64,11 @@
                 android:id="@+id/opusText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/opus"
-                android:gravity="center_vertical|center_horizontal"
-                android:focusable="true"
                 android:background="?attr/selectableItemBackground"
-                android:textSize="@dimen/buttonDefault"/>
+                android:focusable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/opus"
+                android:textSize="@dimen/buttonDefault" />
 
         </android.support.v7.widget.CardView>
 
@@ -78,8 +78,8 @@
             android:layout_height="35dp"
             android:layout_below="@id/cardView3"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
             app:cardCornerRadius="4dp"
             app:elevation="4dp">
@@ -88,45 +88,46 @@
                 android:id="@+id/statusText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/statusbar"
-                android:gravity="center_vertical|center_horizontal"
-                android:focusable="true"
                 android:background="?attr/selectableItemBackground"
-                android:textSize="@dimen/buttonDefault"/>
+                android:focusable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/statusbar"
+                android:textSize="@dimen/buttonDefault" />
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-        android:id="@+id/cardView5"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_below="@id/cardView4"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="@dimen/marginBottomSize"
-        app:cardCornerRadius="4dp"
-        app:elevation="4dp">
-
-        <TextView
-            android:id="@+id/intentText"
+            android:id="@+id/cardView5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/intent"
-            android:gravity="center_vertical|center_horizontal"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
-            android:textSize="@dimen/buttonDefault"/>
+            android:layout_height="35dp"
+            android:layout_below="@id/cardView4"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="4dp"
+            app:elevation="4dp">
 
-    </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/intentText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/intent"
+                android:textSize="@dimen/buttonDefault" />
+
+        </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
+            android:id="@+id/card6"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_below="@id/cardView5"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
             app:cardCornerRadius="4dp"
             app:elevation="4dp">
@@ -135,14 +136,36 @@
                 android:id="@+id/majText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/majLicence"
-                android:gravity="center_vertical|center_horizontal"
-                android:focusable="true"
                 android:background="?attr/selectableItemBackground"
-                android:textSize="@dimen/buttonDefault"/>
+                android:focusable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/majLicence"
+                android:textSize="@dimen/buttonDefault" />
 
         </android.support.v7.widget.CardView>
 
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/card6"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="4dp"
+            app:elevation="4dp">
+
+            <TextView
+                android:id="@+id/picassoText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/picasso"
+                android:textSize="@dimen/buttonDefault" />
+
+        </android.support.v7.widget.CardView>
 
     </RelativeLayout>
 

@@ -3,6 +3,7 @@ package com.papple.iconoblast;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.squareup.picasso.Picasso;
+
+import java.io.File;
 import java.util.ArrayList;
 
 public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemClickListener, Ddlc_Adapter.OnItemClickListener {
@@ -25,6 +29,7 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
     public RelativeLayout relativeLayout;
     ArrayList<Ddlc_Item_List_ListVersion> ddlcList;
     ArrayList<Ddlc_Item_List> ddlcList2;
+    Picasso.Builder builder;
 
     @Nullable
     @Override

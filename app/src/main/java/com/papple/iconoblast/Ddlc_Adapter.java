@@ -15,6 +15,11 @@ import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.LruCache;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.PicassoProvider;
+
 import java.util.ArrayList;
 
 public class Ddlc_Adapter extends RecyclerView.Adapter<Ddlc_Adapter.ddlcViewHolder> {
@@ -71,11 +76,14 @@ public class Ddlc_Adapter extends RecyclerView.Adapter<Ddlc_Adapter.ddlcViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ddlcViewHolder ddlcViewHolder, int position) {
-        Ddlc_Item_List currentItem = mDdlcList.get(position);
+    public void onBindViewHolder(@NonNull final ddlcViewHolder ddlcViewHolder, int position) {
+        final Ddlc_Item_List currentItem = mDdlcList.get(position);
 
-        ddlcViewHolder.ddlcImageView.setImageResource(currentItem.getDdlcImageRessource());
         ddlcViewHolder.ddlcTextView.setText(currentItem.getDdlcText());
+
+        Picasso.get()
+                .load(currentItem.getDdlcImageRessource())
+                .into(ddlcViewHolder.ddlcImageView);
 
         dcontext = view.getContext();
 
@@ -223,5 +231,4 @@ public class Ddlc_Adapter extends RecyclerView.Adapter<Ddlc_Adapter.ddlcViewHold
     public int getItemCount() {
         return mDdlcList.size();
     }
-
 }
