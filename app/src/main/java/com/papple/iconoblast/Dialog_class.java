@@ -20,7 +20,7 @@ public class Dialog_class extends DialogFragment {
                     .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.21)</font>"))
                     .setMessage("- La catégorie DDLC est compatible avec l'affichage en grille.\n" +
                             "- Certains textes ont changées de taille.\n" +
-                                "- Nouvelles animations !\n" +
+                            "- Nouvelles animations !\n" +
                             "- Meilleur gestion de l'affichage des images pour éviter les lags.\n" +
                             "- Modifications mineures.\n" +
                             "- Deux nouveaux sons arriveront avec la version 0.21.1")
