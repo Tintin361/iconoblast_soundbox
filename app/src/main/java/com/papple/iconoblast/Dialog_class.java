@@ -17,12 +17,9 @@ public class Dialog_class extends DialogFragment {
 
         if (super.getActivity() != null) {
             return new AlertDialog.Builder(getActivity())
-                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.21.2)</font>"))
-                    .setMessage("- La catégorie DDLC est compatible avec l'affichage en grille.\n" +
-                            "- Certains textes ont changées de taille.\n" +
-                            "- Nouvelles animations !\n" +
-                            "- Meilleur gestion de l'affichage des images pour éviter les lags.\n" +
-                            "- Modifications mineures.\n" +
+                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.21.3)</font>"))
+                    .setMessage("- Modifications mineures.\n" +
+                            "- Mise à Jour des bibliothèques Android.\n" +
                             "- Deux nouveaux sons arriveront avec la version 0.22\n" +
                             "- Correction de bugs.")
                     .setPositiveButton(Html.fromHtml("<font color='#dd117e'>OK</font>"), new DialogInterface.OnClickListener() {
