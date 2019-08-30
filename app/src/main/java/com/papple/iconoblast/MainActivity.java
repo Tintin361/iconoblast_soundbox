@@ -19,8 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private long backPressedTime;
     private Toast toaster;
     private int maj = 20;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -338,7 +336,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setItemTextColor(csl);
             navigationView.setItemIconTintList(cls1);
 
+
         }
+
     }
 
     @Override

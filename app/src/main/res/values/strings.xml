@@ -26,7 +26,6 @@
     <string name="settings">Paramètres</string>
     <string name="search">Rechercher&#8230;</string>
     <string name="info" translatable="false">Informations</string>
-    <string name="string">Test String</string>
 
     <!-- Drawer -->
     <string name="acceuil">Accueil</string>

@@ -36,11 +36,11 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
         boolean answerB = settings.getBoolean("questionB", false);
 
         if (answerA) {
-            setTheme(R.style.AppTheme_NoActionBar2);
+            setTheme(R.style.AppTheme_NoActionBar);
         } else if (answerB) {
             setTheme(R.style.DarkTheme2);
         } else {
-            setTheme(R.style.AppTheme_NoActionBar2);
+            setTheme(R.style.AppTheme_NoActionBar);
         }
 
         setContentView(R.layout.activity_search);
