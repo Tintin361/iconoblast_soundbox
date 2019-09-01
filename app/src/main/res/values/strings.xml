@@ -7,13 +7,14 @@
     <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 0.21.3</string>
-    <string name="versiond" translatable="false">Version 0.21.3</string>
+    <string name="version" translatable="false">Version 0.21.4</string>
+    <string name="versiond" translatable="false">Version 0.21.4</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
     <string name="stat">Statistiques</string>
     <string name="delta">Deltarune</string>
+    <string name="ermite">Ermite Moderne</string>
 
     <!-- Activity main -->
     <string name="text">COUCOU LES COPAINS ET LES COPINES !</string>
@@ -134,5 +135,8 @@
 
     <!-- Search Activity -->
     <string name="nothing">Impossible de trouver ce son&#8230; &#128549;</string>
+
+    <!-- Ermite Fragment -->
+    <string name="ermitem">Livin\' in the city</string>
 
 </resources>

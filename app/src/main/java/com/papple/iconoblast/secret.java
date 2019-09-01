@@ -26,7 +26,8 @@ public class secret extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
-        SharedPreferences settings = getSharedPreferences("Answers", 0);
+        final SharedPreferences settings = getSharedPreferences("Answers", 0);
+        final SharedPreferences.Editor editor = settings.edit();
 
         final boolean answerA = settings.getBoolean("questionA", false);
         final boolean answerB = settings.getBoolean("questionB", false);
@@ -146,6 +147,26 @@ public class secret extends AppCompatActivity {
                     sView.setBackgroundResource(R.drawable.image);
                     StatusBarUtil.setTranslucent(secret.this);
 
+                } else if (editText.getText().toString().equals("Livin' in the city")) {
+
+                    boolean ermite = settings.getBoolean("ermite", false);
+                    if (ermite) {
+                        Toast toaster5 = Toast.makeText(secret.this, "La catégorie Ermite moderne a déjà été débloquée !", Toast.LENGTH_SHORT);
+                        TextView view5 = toaster5.getView().findViewById(android.R.id.message);
+                        if (view5 != null) view5.setGravity(Gravity.CENTER);
+                        toaster5.show();
+                    } else {
+                        Toast toaster6 = Toast.makeText(secret.this, "La catégorie Ermite moderne est maintenant débloquée !", Toast.LENGTH_SHORT);
+                        TextView view6 = toaster6.getView().findViewById(android.R.id.message);
+                        if (view6 != null) view6.setGravity(Gravity.CENTER);
+                        toaster6.show();
+
+                        startActivity(new Intent(secret.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                        startActivity(new Intent(secret.this, secret.class));
+
+                        editor.putBoolean("ermite", true);
+                        editor.apply();
+                    }
 
                 } else if (!editText.getText().toString().equals("K/DA - POP/STARS")) {
 
@@ -155,7 +176,6 @@ public class secret extends AppCompatActivity {
                     toaster4.show();
 
                 }
-
             }
         });
     }

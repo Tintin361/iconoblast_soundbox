@@ -19,7 +19,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
         boolean autoMajBoolean = settings.getBoolean("automaj", false);
+        boolean ermite = settings.getBoolean("ermite", false);
 
         if (answerA) {
             setTheme(R.style.AppTheme_NoActionBar2);
@@ -75,6 +75,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        if (!ermite) {
+            Menu menu = navigationView.getMenu();
+            menu.findItem(R.id.nav_ermite).setVisible(false);
+        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
             ShortcutManager sManager = getSystemService(ShortcutManager.class);
@@ -416,6 +421,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.versionId:
                 openDialog();
+                break;
+            case R.id.nav_ermite:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ErmiteFragment()).commit();
+                item.setChecked(true);
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);
