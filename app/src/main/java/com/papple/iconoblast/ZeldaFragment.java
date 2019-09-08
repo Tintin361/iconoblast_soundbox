@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewCompat;
 import android.view.LayoutInflater;
@@ -13,6 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
+
+import com.jaeger.library.StatusBarUtil;
 
 public class ZeldaFragment extends Fragment {
     public MediaPlayer jaimeLesPlayer;
@@ -41,6 +44,8 @@ public class ZeldaFragment extends Fragment {
         editor.apply();
 
 
+        CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
+
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
 
@@ -61,14 +66,21 @@ public class ZeldaFragment extends Fragment {
                 playSound(R.raw.chanson_zelda_sound); }});
 
         if (answerA) {
-            sView.setBackgroundColor(getResources().getColor(R.color.zelda));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            cLayout.setBackgroundColor(getResources().getColor(R.color.zelda));
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.zelda));
             ViewCompat.setBackgroundTintList(zeldaButton, ColorStateList.valueOf(getResources().getColor(R.color.Red1)));
             ViewCompat.setBackgroundTintList(chansonButton, ColorStateList.valueOf(getResources().getColor(R.color.orange1)));
         } else if (answerB) {
-            sView.setBackgroundColor(getResources().getColor(R.color.dzelda));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dzelda));
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dzelda));
             ViewCompat.setBackgroundTintList(zeldaButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue)));
             ViewCompat.setBackgroundTintList(chansonButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue2)));
         } else {
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            cLayout.setBackgroundColor(getResources().getColor(R.color.zelda));
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.zelda));
             sView.setBackgroundColor(getResources().getColor(R.color.zelda));
             ViewCompat.setBackgroundTintList(zeldaButton, ColorStateList.valueOf(getResources().getColor(R.color.Red1)));
             ViewCompat.setBackgroundTintList(chansonButton, ColorStateList.valueOf(getResources().getColor(R.color.orange1)));

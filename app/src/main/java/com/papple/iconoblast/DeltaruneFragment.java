@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+
+import com.jaeger.library.StatusBarUtil;
 
 import java.util.ArrayList;
 
@@ -49,17 +52,25 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
 
         editor.apply();
 
+        CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
+
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
 
         if (answerA) {
-            relativeLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.deltarune));
         } else if (answerB) {
-            relativeLayout.setBackgroundColor(getResources().getColor(R.color.ddelarune));
+            getActivity().setTheme(R.style.DarkTheme2);
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
         } else {
-            relativeLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.deltarune));
         }
 
         if (answerC) {

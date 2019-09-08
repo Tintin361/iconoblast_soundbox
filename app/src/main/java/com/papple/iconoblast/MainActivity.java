@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.github.javiersantos.appupdater.AppUpdater;
 import com.github.javiersantos.appupdater.enums.Display;
 import com.github.javiersantos.appupdater.enums.UpdateFrom;
+import com.jaeger.library.StatusBarUtil;
 
 import static maes.tech.intentanim.CustomIntent.customType;
 
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private long backPressedTime;
     private Toast toaster;
     private int maj = 20;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -44,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
         boolean autoMajBoolean = settings.getBoolean("automaj", false);
-        boolean ermite = settings.getBoolean("ermite", false);
 
         if (answerA) {
             setTheme(R.style.AppTheme_NoActionBar2);
@@ -52,6 +53,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             setTheme(R.style.DarkTheme2);
         } else {
             setTheme(R.style.AppTheme_NoActionBar2);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            if (answerA) {
+                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+            } else if (answerB) {
+                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.transparent));
+            } else {
+                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+            }
         }
 
         if (autoMajBoolean) {
@@ -68,6 +79,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        if (answerA) {
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
+        } else if (answerB) {
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
+        } else {
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
+        }
+
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -75,11 +94,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        if (!ermite) {
-            Menu menu = navigationView.getMenu();
-            menu.findItem(R.id.nav_ermite).setVisible(false);
-        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
             ShortcutManager sManager = getSystemService(ShortcutManager.class);
@@ -421,10 +435,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.versionId:
                 openDialog();
-                break;
-            case R.id.nav_ermite:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ErmiteFragment()).commit();
-                item.setChecked(true);
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

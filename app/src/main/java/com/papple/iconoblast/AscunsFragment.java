@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewCompat;
 import android.view.LayoutInflater;
@@ -14,6 +15,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ScrollView;
+
+import com.jaeger.library.StatusBarUtil;
+
 import static maes.tech.intentanim.CustomIntent.customType;
 
 public class AscunsFragment extends Fragment {
@@ -43,6 +47,8 @@ public class AscunsFragment extends Fragment {
 
         editor.apply();
 
+        CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
+
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
@@ -67,13 +73,19 @@ public class AscunsFragment extends Fragment {
         });
 
         if (answerA) {
-            sView.setBackgroundColor(getResources().getColor(R.color.ascuns));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.ascuns));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ascuns));
             ViewCompat.setBackgroundTintList(ascunsButton, ColorStateList.valueOf(getResources().getColor(R.color.Green2)));
         } else if (answerB) {
-            sView.setBackgroundColor(getResources().getColor(R.color.dascuns));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dascuns));
+            getActivity().setTheme(R.style.DarkTheme2);
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dascuns));
             ViewCompat.setBackgroundTintList(ascunsButton, ColorStateList.valueOf(getResources().getColor(R.color.dGreen)));
         } else {
-            sView.setBackgroundColor(getResources().getColor(R.color.ascuns));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.ascuns));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ascuns));
             ViewCompat.setBackgroundTintList(ascunsButton, ColorStateList.valueOf(getResources().getColor(R.color.Green2)));
         }
 

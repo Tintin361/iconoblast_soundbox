@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.jaeger.library.StatusBarUtil;
 
 import java.util.Calendar;
 
@@ -34,6 +37,25 @@ public class StatFragment extends Fragment {
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", false);
         editor.putBoolean("asFrag", false);
+
+        CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
+
+        boolean answerA = settings.getBoolean("questionA", false);
+        boolean answerB = settings.getBoolean("questionB", false);
+
+        if (answerA) {
+            cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
+        } else if (answerB) {
+            getActivity().setTheme(R.style.DarkTheme2);
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+        } else {
+            cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
+        }
 
         editor.apply();
 

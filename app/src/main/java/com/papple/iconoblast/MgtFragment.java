@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewCompat;
 import android.view.LayoutInflater;
@@ -13,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ScrollView;
+
+import com.jaeger.library.StatusBarUtil;
 
 public class MgtFragment extends Fragment {
     public MediaPlayer jaimeLesPlayer;
@@ -28,6 +31,8 @@ public class MgtFragment extends Fragment {
 
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
+
+        CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
 
         // Remember choice
         editor.putBoolean("aFrag", false);
@@ -103,7 +108,9 @@ public class MgtFragment extends Fragment {
         });
 
         if (answerA) {
-            sView.setBackgroundColor(getResources().getColor(R.color.mgt));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
             // Change Background Tint
             ViewCompat.setBackgroundTintList(bButton, ColorStateList.valueOf(getResources().getColor(R.color.Red1)));
             ViewCompat.setBackgroundTintList(mButton, ColorStateList.valueOf(getResources().getColor(R.color.orange1)));
@@ -113,7 +120,9 @@ public class MgtFragment extends Fragment {
             ViewCompat.setBackgroundTintList(baButton, ColorStateList.valueOf(getResources().getColor(R.color.blue1)));
             ViewCompat.setBackgroundTintList(cButton, ColorStateList.valueOf(getResources().getColor(R.color.blue2)));
         } else if (answerB) {
-            sView.setBackgroundColor(getResources().getColor(R.color.dmgt));
+            getActivity().setTheme(R.style.DarkTheme2);
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dmgt));
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dmgt));
             // Change Background Tint
             ViewCompat.setBackgroundTintList(bButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple)));
             ViewCompat.setBackgroundTintList(mButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple2)));
@@ -124,7 +133,9 @@ public class MgtFragment extends Fragment {
             ViewCompat.setBackgroundTintList(cButton, ColorStateList.valueOf(getResources().getColor(R.color.dGreen)));
 
         } else {
-            sView.setBackgroundColor(getResources().getColor(R.color.mgt));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
             // Change Background Tint
             ViewCompat.setBackgroundTintList(bButton, ColorStateList.valueOf(getResources().getColor(R.color.Red1)));
             ViewCompat.setBackgroundTintList(mButton, ColorStateList.valueOf(getResources().getColor(R.color.orange1)));

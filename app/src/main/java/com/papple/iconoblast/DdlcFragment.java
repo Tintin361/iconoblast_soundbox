@@ -3,10 +3,11 @@ package com.papple.iconoblast;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,9 +16,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.jaeger.library.StatusBarUtil;
 import com.squareup.picasso.Picasso;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemClickListener, Ddlc_Adapter.OnItemClickListener {
@@ -43,8 +44,6 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
 
-        RelativeLayout rLayout = view.findViewById(R.id.relativeLayout2);
-
         // Remember choice
         editor.putBoolean("aFrag", false);
         editor.putBoolean("sFrag", false);
@@ -56,6 +55,7 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
 
         editor.apply();
 
+        CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
@@ -63,11 +63,17 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
         boolean answerD = settings.getBoolean("questionD", false);
 
         if (answerA) {
-            rLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ddlc));
         } else if (answerB) {
-            rLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            getActivity().setTheme(R.style.DarkTheme2);
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
         } else {
-            rLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ddlc));
         }
 
         if (answerC) {

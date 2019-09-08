@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.papple.iconoblast"
-        minSdkVersion 17
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 2
         versionName "0.21.4"

@@ -20,6 +20,9 @@
     <color name="gColorPrimaryDark">#6f8c5f</color>
     <color name="gColorAccent">#ffffbb33</color>
 
+    <!-- Toolbar -->
+    <color name="toolbardark">#323337</color>
+
     <!-- Color for Button -->
     <color name="white">#ffffff</color>
     <color name="blue">#2600ff</color>
@@ -74,11 +77,11 @@
     <color name="deltarune">#1EAAC5</color>
 
     <!-- Dark Background color -->
-    <color name="dmgt">#313131</color>
-    <color name="dascuns">#313131</color>
-    <color name="dddlc">#313131</color>
-    <color name="dzelda">#313131</color>
-    <color name="ddelarune">#313131</color>
+    <color name="dmgt">#000000</color>
+    <color name="dascuns">#000000</color>
+    <color name="dddlc">#000000</color>
+    <color name="dzelda">#000000</color>
+    <color name="ddelarune">#000000</color>
 
 
 </resources>
