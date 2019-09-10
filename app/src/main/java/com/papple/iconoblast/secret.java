@@ -27,7 +27,6 @@ public class secret extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         final SharedPreferences settings = getSharedPreferences("Answers", 0);
-        final SharedPreferences.Editor editor = settings.edit();
 
         final boolean answerA = settings.getBoolean("questionA", false);
         final boolean answerB = settings.getBoolean("questionB", false);
@@ -62,36 +61,9 @@ public class secret extends AppCompatActivity {
             public void onClick(View v) {
                 GifImageView gImageView = findViewById(R.id.gifImageView);
 
-                if (editText.getText().toString().equals("K/DA - POP/STARS")) {
-
-                    Intent kda = new Intent(Intent.ACTION_VIEW);
-                    String kUrl = "https://www.youtube.com/watch?v=UOxkGD8qRB4";
-                    kda.setData(Uri.parse(kUrl));
-                    startActivity(kda);
-
-                } else if (editText.getText().toString().equals("Endless Starlight")) {
-
-                    Intent guardian = new Intent(Intent.ACTION_VIEW);
-                    String url = "https://www.youtube.com/watch?v=eaesCFhFpGU";
-                    guardian.setData(Uri.parse(url));
-                    startActivity(guardian);
-
-                } else if (editText.getText().toString().equals("666")) {
+                if (editText.getText().toString().equals("666")) {
 
                     Toast.makeText(secret.this, "" + ("\ud83d\udd25"), Toast.LENGTH_SHORT).show();
-
-                } else if (editText.getText().toString().equals("Jimmy")) {
-
-                    Toast.makeText(secret.this, "" + ("\ud83d\udca3") + " " + ("\uD83D\uDCA5"), Toast.LENGTH_SHORT).show();
-
-                    View decorView = getWindow().getDecorView();
-                    int visibility = View.SYSTEM_UI_FLAG_FULLSCREEN;
-                    decorView.setSystemUiVisibility(visibility);
-
-                    playSound(R.raw.bomb_sound);
-                    toolbar3.setVisibility(View.GONE);
-                    editText.setVisibility(View.GONE);
-                    button.setVisibility(View.GONE);
 
                 } else if (editText.getText().toString().isEmpty()) {
 
@@ -117,21 +89,6 @@ public class secret extends AppCompatActivity {
                     TextView view3 = toast3.getView().findViewById(android.R.id.message);
                     if (view3 != null) view3.setGravity(Gravity.CENTER);
                     toast3.show();
-
-                } else if (editText.getText().toString().equals("Lucina")) {
-
-                    gImageView.setBackgroundResource(R.drawable.lucina);
-
-                } else if (editText.getText().toString().equals("Tiki")) {
-
-                    gImageView.setBackgroundResource(R.drawable.faketiki);
-
-                } else if (editText.getText().toString().equals("Struck by the Rain")) {
-
-                    Intent rain = new Intent(Intent.ACTION_VIEW);
-                    String rUrl = "https://www.youtube.com/watch?v=b6fqlTB-nSo";
-                    rain.setData(Uri.parse(rUrl));
-                    startActivity(rain);
 
                 } else if (editText.getText().toString().equals("Donald Trump")) {
 
