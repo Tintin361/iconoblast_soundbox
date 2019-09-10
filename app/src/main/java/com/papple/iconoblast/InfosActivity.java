@@ -29,28 +29,31 @@ public class InfosActivity extends AppCompatActivity {
 
         if (answerA) {
             setTheme(R.style.AppTheme_NoActionBar);
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
         } else if (answerB) {
             setTheme(R.style.DarkTheme);
+            StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
         } else {
             setTheme(R.style.AppTheme_NoActionBar);
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
         }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infos);
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Toolbar toolbar4 = findViewById(R.id.toolbar3);
-            setSupportActionBar(toolbar4);
-            if (getSupportActionBar() != null) {
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-                getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow);
-            }
+        Toolbar toolbar = findViewById(R.id.toolbar3);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow);
+        }
+
+        if (answerA) {
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
+        } else if (answerB) {
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
         } else {
-            Toolbar toolbar4 = findViewById(R.id.toolbar3);
-            setSupportActionBar(toolbar4);
-            if (getSupportActionBar() != null) {
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            }
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
         }
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);

@@ -17,13 +17,8 @@ public class Dialog_class extends DialogFragment {
 
         if (super.getActivity() != null) {
             return new AlertDialog.Builder(getActivity())
-                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - Debug(0.21.4)</font>"))
-                    .setMessage("- Modifications mineures.\n" +
-                            "- Mise à Jour des bibliothèques Android.\n" +
-                            "- Deux nouveaux sons arriveront avec la version 0.22.\n" +
-                            "- Ajout d'un Easter egg en rapport avec l'ermite moderne.\n" +
-                            "- L'application peut etre deplacée sur la carte SD.\n" +
-                            "- Correction de bugs.")
+                    .setTitle(Html.fromHtml("<font color='#00ff21'>WHAT'S UP ? - 1.0</font>"))
+                    .setMessage("")
                     .setPositiveButton(Html.fromHtml("<font color='#dd117e'>OK</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

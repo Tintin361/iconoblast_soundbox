@@ -14,6 +14,8 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 
+import com.jaeger.library.StatusBarUtil;
+
 import java.util.ArrayList;
 
 import static maes.tech.intentanim.CustomIntent.customType;
@@ -37,25 +39,32 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
 
         if (answerA) {
             setTheme(R.style.AppTheme_NoActionBar);
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
         } else if (answerB) {
             setTheme(R.style.DarkTheme2);
+            StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
         } else {
             setTheme(R.style.AppTheme_NoActionBar);
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
         }
 
         setContentView(R.layout.activity_search);
 
-        final Toolbar tBar = findViewById(R.id.toolbar_search);
-        setSupportActionBar(tBar);
+        final Toolbar toolbar = findViewById(R.id.toolbar_search);
+        setSupportActionBar(toolbar);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_upward);
-        } else if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP && getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back);
+        if (answerA) {
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
+        } else if (answerB) {
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
+        } else {
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
         }
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_upward);
+        }
 
         // Liste des Array
         searchList = new ArrayList<>();

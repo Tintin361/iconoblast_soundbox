@@ -6,9 +6,11 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewCompat;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,8 +50,6 @@ public class MgtFragment extends Fragment {
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
 
-
-        ScrollView sView = view2.findViewById(R.id.scrollMGT);
 
         Button bButton = view2.findViewById(R.id.branleurb);
         bButton.setOnClickListener(new View.OnClickListener() {

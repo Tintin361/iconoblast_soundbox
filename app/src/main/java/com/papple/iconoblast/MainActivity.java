@@ -49,20 +49,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (answerA) {
             setTheme(R.style.AppTheme_NoActionBar2);
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
         } else if (answerB) {
             setTheme(R.style.DarkTheme2);
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.transparent));
         } else {
             setTheme(R.style.AppTheme_NoActionBar2);
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            if (answerA) {
-                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-            } else if (answerB) {
-                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.transparent));
-            } else {
-                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-            }
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
         }
 
         if (autoMajBoolean) {
