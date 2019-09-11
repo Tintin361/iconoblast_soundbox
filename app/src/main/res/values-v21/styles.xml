@@ -16,14 +16,14 @@
     </style>
 
     <style name="DarkTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:colorBackground">#202125</item>
+        <item name="android:colorBackground">@color/dddlc</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="DarkTheme2" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:colorBackground">#202125</item>
+        <item name="android:colorBackground">@color/dddlc</item>
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="colorAccent">@color/colorAccent</item>
