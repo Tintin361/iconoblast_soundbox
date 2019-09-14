@@ -13,6 +13,7 @@
 
     <!-- ThemeActivity -->
     <dimen name="radioButtonText">45sp</dimen>
+    <dimen name="radioButtonText2">40sp</dimen>
 
     <!-- Button -->
     <dimen name="buttonDefault">40sp</dimen>

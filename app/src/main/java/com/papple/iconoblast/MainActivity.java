@@ -1,5 +1,7 @@
 package com.papple.iconoblast;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ShortcutInfo;
@@ -7,6 +9,7 @@ import android.content.pm.ShortcutManager;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Icon;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -45,7 +48,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
+        boolean answerC = settings.getBoolean("questionC", false);
+        boolean answerD = settings.getBoolean("questionD", false);
         boolean autoMajBoolean = settings.getBoolean("automaj", false);
+
+        if (!answerA && !answerB) {
+            editor.putBoolean("questionA", true).apply();
+        }
 
         if (answerA) {
             setTheme(R.style.AppTheme_NoActionBar2);
@@ -53,9 +62,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (answerB) {
             setTheme(R.style.DarkTheme2);
             StatusBarUtil.setColor(this, getResources().getColor(android.R.color.transparent));
-        } else {
-            setTheme(R.style.AppTheme_NoActionBar2);
-            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+        }
+
+        if (!answerC && !answerD) {
+            editor.putBoolean("questionC", true).apply();
         }
 
         if (autoMajBoolean) {
@@ -347,10 +357,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             navigationView.setItemTextColor(csl);
             navigationView.setItemIconTintList(cls1);
-
-
         }
-
     }
 
     @Override
@@ -449,7 +456,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(infoIntent);
                 customType(this, "right-to-left");
                 break;
-            case R.id.theme:
+            case R.id.first_theme:
                 Intent intent = new Intent(MainActivity.this, theme.class);
                 startActivity(intent);
                 customType(this, "left-to-right");
@@ -464,8 +471,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void openDialog() {
-        Dialog_class dialog = new Dialog_class();
-        dialog.show(getSupportFragmentManager(), "dialog_class");
+        String url = "https://github.com/Tintin361/iconoblast_soundbox/releases";
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
     }
 
     public void openContactDialog() {

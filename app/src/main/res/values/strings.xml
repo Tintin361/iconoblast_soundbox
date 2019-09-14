@@ -7,8 +7,8 @@
     <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 1.0</string>
-    <string name="versiond" translatable="false">Version 1.0</string>
+    <string name="version" translatable="false">Version 1.0.0.1_beta01</string>
+    <string name="versiond" translatable="false">Version 1.0.0.1_beta01</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
@@ -107,11 +107,11 @@
     <string name="theme2">Thème Dark et Désabusé !</string>
     <string name="list">Liste</string>
     <string name="grille">Grille</string>
-    <string name="maj">Vérifier les Mise à Jour</string>
+    <string name="maj">Mise à Jour</string>
     <string name="gdrive">Vérifier sur GitHub !</string>
     <string name="design">Affichage</string>
-    <string name="auto">Vérifier automatiquement</string>
-    <string name="manuel">Vérifier manuellement</string>
+    <string name="auto">Automatiquement</string>
+    <string name="manuel">Manuellement</string>
 
     <!-- Easter Egg Activity -->
     <string name="code">Entrez un code secret</string>

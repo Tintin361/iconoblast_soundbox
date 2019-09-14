@@ -86,7 +86,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="@dimen/marginBottomSize"
-        app:cardCornerRadius="4dp"
+            app:cardCornerRadius="16dp"
         app:elevation="4dp">
 
         <RelativeLayout
@@ -128,7 +128,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="4dp"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <RelativeLayout
@@ -170,7 +170,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="4dp"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <RelativeLayout
@@ -212,7 +212,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="4dp"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <RelativeLayout
@@ -254,7 +254,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="4dp"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <RelativeLayout

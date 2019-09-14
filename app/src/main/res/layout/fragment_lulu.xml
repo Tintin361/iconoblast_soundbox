@@ -20,7 +20,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="32dp"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <LinearLayout
@@ -58,7 +58,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="32dp"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <TextView
