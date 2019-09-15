@@ -7,7 +7,7 @@
       "type": "MAIN",
       "splits": [],
       "versionCode": 2,
-      "versionName": "0.21.4",
+      "versionName": "1.0.0.2_beta02",
       "enabled": true,
       "outputFile": "app-release.apk",
       "fullName": "release",

@@ -3,13 +3,14 @@ package com.papple.iconoblast;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
+import android.view.animation.AnimationUtils;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
@@ -19,6 +20,8 @@ import android.widget.Toast;
 import com.jaeger.library.StatusBarUtil;
 
 import pl.droidsonroids.gif.GifImageView;
+
+import static maes.tech.intentanim.CustomIntent.customType;
 
 public class secret extends AppCompatActivity {
     public MediaPlayer mPlayer = null;
@@ -33,23 +36,32 @@ public class secret extends AppCompatActivity {
 
         if (answerA) {
             setTheme(R.style.AppTheme_NoActionBar2);
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
         } else if (answerB) {
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.transparent));
             setTheme(R.style.DarkTheme);
-        } else {
-            setTheme(R.style.AppTheme_NoActionBar2);
         }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secret);
 
-        final Toolbar toolbar3 = findViewById(R.id.toolbar2);
+        final Toolbar toolbar3 = findViewById(R.id.toolbar5);
         setSupportActionBar(toolbar3);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
+        if (answerA) {
+            toolbar3.setBackgroundResource(R.drawable.rounded_toolbar);
+        } else if (answerB) {
+            toolbar3.setBackgroundResource(R.drawable.rounded_toolbar_dark);
+        } else {
+            toolbar3.setBackgroundResource(R.drawable.rounded_toolbar);
+        }
+
         final EditText editText = findViewById(R.id.editText);
         final Button button = findViewById(R.id.checkButton);
+        final ScrollView scrollView = findViewById(R.id.secretLayout);
 
         SharedPreferences prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
 
@@ -104,6 +116,10 @@ public class secret extends AppCompatActivity {
                     sView.setBackgroundResource(R.drawable.image);
                     StatusBarUtil.setTranslucent(secret.this);
 
+                } else if (editText.getText().toString().equals("Claude")) {
+
+                    scrollView.setRotation(-180);
+
                 } else if (!editText.getText().toString().equals("K/DA - POP/STARS")) {
 
                     Toast toaster4 = Toast.makeText(secret.this, "Le code secret n'est pas correct, veuillez réessayer !", Toast.LENGTH_SHORT);
@@ -139,11 +155,17 @@ public class secret extends AppCompatActivity {
     }
 
     public void playSound(int redId) {
-        if(mPlayer != null) {
+        if (mPlayer != null) {
             mPlayer.stop();
             mPlayer.release();
         }
         mPlayer = MediaPlayer.create(this, redId);
         mPlayer.start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        customType(this, "up-to-bottom");
     }
 }
