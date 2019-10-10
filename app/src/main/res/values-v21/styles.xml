@@ -3,6 +3,7 @@
 <resources>
 
     <style name="AppTheme.NoActionBar">
+        <item name="android:colorBackground">@color/white</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
@@ -10,6 +11,7 @@
     </style>
 
     <style name="AppTheme.NoActionBar2">
+        <item name="android:colorBackground">@color/white</item>
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="android:navigationBarColor">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>

@@ -6,11 +6,15 @@ import android.content.pm.ShortcutInfo;
 import android.content.pm.ShortcutManager;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.Icon;
+import android.graphics.drawable.ShapeDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.shape.MaterialShapeDrawable;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -125,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Doki Doki Litterature Club")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_ddlc))
-                    .setRank(1)
+                    .setRank(5)
                     .setIntent(DdlcIntent)
                     .build();
 
@@ -134,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Mad Games Tycoon")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_mgt))
-                    .setRank(2)
+                    .setRank(4)
                     .setIntent(MgtIntent)
                     .build();
 
@@ -143,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Zelda")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_zelda))
-                    .setRank(4)
+                    .setRank(2)
                     .setIntent(ZeldaIntent)
                     .build();
 
@@ -152,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Ascuns")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_ascuns))
-                    .setRank(5)
+                    .setRank(1)
                     .setIntent(AscunsIntent)
                     .build();
 

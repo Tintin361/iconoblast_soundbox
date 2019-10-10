@@ -3,11 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="115dp"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/rounded_drawer"
     android:fitsSystemWindows="false"
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="16dp"
+    android:layout_margin="8dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <TextView

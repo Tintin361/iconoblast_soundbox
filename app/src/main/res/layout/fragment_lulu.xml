@@ -33,8 +33,9 @@
                     android:layout_width="145dp"
                     android:layout_height="130dp"
                     android:layout_gravity="center"
+                    android:scaleType="centerCrop"
                     android:contentDescription="@string/descriptionLulu"
-                    android:src="@drawable/lucina" />
+                    android:src="@drawable/avatar_lulu" />
 
                 <TextView
                     android:id="@+id/textView"

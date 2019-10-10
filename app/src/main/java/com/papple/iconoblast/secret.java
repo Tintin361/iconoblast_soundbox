@@ -9,17 +9,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
-import android.view.animation.AnimationUtils;
-import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jaeger.library.StatusBarUtil;
-
-import pl.droidsonroids.gif.GifImageView;
 
 import static maes.tech.intentanim.CustomIntent.customType;
 
@@ -71,7 +68,7 @@ public class secret extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GifImageView gImageView = findViewById(R.id.gifImageView);
+                ImageView imageView = findViewById(R.id.imageView);
 
                 if (editText.getText().toString().equals("666")) {
 
@@ -119,6 +116,10 @@ public class secret extends AppCompatActivity {
                 } else if (editText.getText().toString().equals("Claude")) {
 
                     scrollView.setRotation(-180);
+
+                } else if (editText.getText().toString().equals("Tiki")) {
+
+                    imageView.setBackgroundResource(R.drawable.faketiki);
 
                 } else if (!editText.getText().toString().equals("K/DA - POP/STARS")) {
 

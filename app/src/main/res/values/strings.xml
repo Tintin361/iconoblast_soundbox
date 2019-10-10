@@ -7,8 +7,8 @@
     <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 1.0.0.2_beta02</string>
-    <string name="versiond" translatable="false">Version 1.0.0.2_beta02</string>
+    <string name="version" translatable="false">Version 1.0.0.3_beta03</string>
+    <string name="versiond" translatable="false">Version 1.0.0.3_beta03</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
@@ -85,7 +85,7 @@
 
     <!-- Infos Activity -->
     <string name="creation">Application créée et développée par: *Tintin !</string>
-    <string name="sound">Téléchargement et regroupement des sons par: DouleurTulipe38 !</string>
+    <string name="sound">Téléchargement et regroupement des sons par: Kor1 !</string>
     <string name="descriptionTintin">Photo du compte Google de *Tintin</string>
     <string name="descriptionLulu">Photo du compte Xbox de DouleurTulipe38</string>
     <string name="tintin" translatable="false">*Tintin</string>
@@ -100,6 +100,7 @@
     <string name="lulu2">N\'a pas de réseaux sociaux.</string>
     <string name="majLicence">AppUpdater</string>
     <string name="picasso">Picasso</string>
+    <string name="animatoo">Animatoo</string>
 
     <!-- Thème Activity -->
     <string name="themes">Thèmes</string>

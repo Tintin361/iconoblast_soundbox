@@ -12,13 +12,13 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.papple.iconoblast"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 2
-        versionName "1.0.0.2"
+        versionName "1.0.0.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.key
-        versionNameSuffix = '_beta02'
+        versionNameSuffix = '_beta03'
     }
     buildTypes {
         release {
@@ -49,6 +49,7 @@ dependencies {
     implementation 'com.android.support:gridlayout-v7:28.0.0'
     implementation 'com.github.martoreto:opuscodec:v1.2.1.2'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.mohammadatif:Animatoo:master'
     implementation project(path: ':libraries:intentanim')
     implementation project(path: ':libraries:appupdate')
 }
