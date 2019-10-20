@@ -2,22 +2,19 @@ package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.jaeger.library.StatusBarUtil;
@@ -26,7 +23,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemClickListener, Ddlc_Adapter.OnItemClickListener {
-    public MediaPlayer jaimeLesPlayer;
+    private MediaPlayer jaimeLesPlayer;
     RecyclerView mRecyclerView;
     Ddlc_Adapter_List dAdapter;
     Ddlc_Adapter dAdapter2;
@@ -60,29 +57,40 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
         editor.apply();
 
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
-        FrameLayout fLayout = getActivity().findViewById(R.id.fragment_container);
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
 
-        if (answerA) {
-            cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ddlc));
-        } else if (answerB) {
-            getActivity().setTheme(R.style.DarkTheme2);
-            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+        if (Build.VERSION.SDK_INT >= 21) {
+            if (answerA) {
+                cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ddlc));
+            } else if (answerB) {
+                getActivity().setTheme(R.style.DarkTheme2);
+                cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+            } else {
+                cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ddlc));
+            }
         } else {
-            cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ddlc));
+            if (answerA) {
+                cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            } else if (answerB) {
+                getActivity().setTheme(R.style.DarkTheme2);
+                cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            } else {
+                cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            }
         }
 
         if (answerC) {
-
             ddlcList = new ArrayList<>();
             ddlcList.add(new Ddlc_Item_List_ListVersion("C'est parce que j'veux ken !!! (Étagère)"));
             ddlcList.add(new Ddlc_Item_List_ListVersion("HAHA !!! (Étagère)"));
@@ -115,7 +123,6 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
             dAdapter.setOnItemClickListener(this);
 
         } else if (answerD) {
-
             ddlcList2 = new ArrayList<>();
             ddlcList2.add(new Ddlc_Item_List(R.drawable.ken_image, "C'est parce que j'veux ken !!! (Étagère)"));
             ddlcList2.add(new Ddlc_Item_List(R.drawable.haha_image, "HAHA !!! (Étagère)"));
@@ -154,7 +161,7 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
 
     }
 
-    public void playSound(int redId) {
+    private void playSound(int redId) {
         if (jaimeLesPlayer != null) {
             jaimeLesPlayer.stop();
             jaimeLesPlayer.release();

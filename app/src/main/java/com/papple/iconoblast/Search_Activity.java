@@ -4,15 +4,17 @@ import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 
 import com.jaeger.library.StatusBarUtil;
 
@@ -37,21 +39,34 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
 
-        if (answerA) {
-            setTheme(R.style.AppTheme_NoActionBar);
-            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-        } else if (answerB) {
-            setTheme(R.style.DarkTheme2);
-            StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
-        } else {
-            setTheme(R.style.AppTheme_NoActionBar);
-            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+        if (Build.VERSION.SDK_INT >= 21) {
+            if (answerA) {
+                setTheme(R.style.AppTheme_NoActionBar);
+                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+            } else if (answerB) {
+                setTheme(R.style.DarkTheme2);
+                StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
+            } else {
+                setTheme(R.style.AppTheme_NoActionBar);
+                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+            }
         }
 
         setContentView(R.layout.activity_search);
 
         final Toolbar toolbar = findViewById(R.id.toolbar_search);
         setSupportActionBar(toolbar);
+
+        RelativeLayout relativeLayout = findViewById(R.id.searchRelativeLayout);
+        if (Build.VERSION.SDK_INT <= 19) {
+            if (answerA) {
+                relativeLayout.setBackgroundColor(getResources().getColor(R.color.white));
+            } else if (answerB) {
+                relativeLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            } else {
+                relativeLayout.setBackgroundColor(getResources().getColor(R.color.white));
+            }
+        }
 
         if (answerA) {
             toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
@@ -60,6 +75,7 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
         } else {
             toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
         }
+
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

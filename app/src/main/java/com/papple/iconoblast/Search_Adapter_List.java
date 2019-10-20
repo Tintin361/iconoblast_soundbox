@@ -3,9 +3,10 @@ package com.papple.iconoblast;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,7 +52,6 @@ public class Search_Adapter_List extends RecyclerView.Adapter<Search_Adapter_Lis
                     }
                 }
             });
-
         }
     }
 
@@ -310,7 +310,6 @@ public class Search_Adapter_List extends RecyclerView.Adapter<Search_Adapter_Lis
                 filtredList.addAll(listFull);
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
-
                 for (Search_Item_List_ListVersion item : listFull) {
                     if (item.getText().toLowerCase().contains(filterPattern)) {
                         filtredList.add(item);

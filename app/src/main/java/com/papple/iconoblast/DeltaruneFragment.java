@@ -2,16 +2,16 @@ package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,12 +22,12 @@ import com.jaeger.library.StatusBarUtil;
 import java.util.ArrayList;
 
 public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnItemClickListener, Deltarune_Adapter_List.OnItemClickListener {
-    public MediaPlayer warmeurPlayer;
-    RecyclerView mRecyclerView;
-    Deltarune_Adapter mAdapter;
-    Deltarune_Adapter_List dAdapter;
-    RecyclerView.LayoutManager mLayoutManager;
-    public RelativeLayout relativeLayout;
+    private MediaPlayer warmeurPlayer;
+    private RecyclerView mRecyclerView;
+    private Deltarune_Adapter mAdapter;
+    private Deltarune_Adapter_List dAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private RelativeLayout relativeLayout;
 
     @Nullable
     @Override
@@ -61,22 +61,34 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
 
-        if (answerA) {
-            cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.deltarune));
-        } else if (answerB) {
-            getActivity().setTheme(R.style.DarkTheme2);
-            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+        if (Build.VERSION.SDK_INT >= 21) {
+            if (answerA) {
+                cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.deltarune));
+            } else if (answerB) {
+                getActivity().setTheme(R.style.DarkTheme2);
+                cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+            } else {
+                cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.deltarune));
+            }
         } else {
-            cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.deltarune));
+            if (answerA) {
+                cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            } else if (answerB) {
+                getActivity().setTheme(R.style.DarkTheme2);
+                cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            } else {
+                cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            }
         }
 
         if (answerC) {
-
             ArrayList<Deltarune_Item_List_ListVersion> deltaList = new ArrayList<>();
             deltaList.add(new Deltarune_Item_List_ListVersion( "Guerriers Delta !!! (Ico et Étagère)"));
             deltaList.add(new Deltarune_Item_List_ListVersion("KRISEUH ! (Ico)"));
@@ -91,7 +103,6 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
             dAdapter.setOnItemClickListener(this);
 
         } else if (answerD) {
-
             ArrayList<Deltarune_Item_List> deltaList = new ArrayList<>();
             deltaList.add(new Deltarune_Item_List(R.drawable.guerriers_delta, "Guerriers Delta !!! (Ico et Étagère)"));
             deltaList.add(new Deltarune_Item_List(R.drawable.kriseuh, "KRISEUH ! (Ico)"));
@@ -106,14 +117,13 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
             mAdapter.setOnItemClickListener(this);
 
             mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-
         }
 
         return view;
 
     }
 
-    public void playSound(int redId) {
+    private void playSound(int redId) {
         if (warmeurPlayer != null) {
             warmeurPlayer.stop();
             warmeurPlayer.release();

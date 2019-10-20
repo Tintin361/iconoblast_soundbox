@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -71,56 +71,55 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:gravity="center"
             android:text="@string/stat"
             android:textColor="@color/orange1"
             android:textSize="@dimen/titleText"
-            android:textStyle="bold"
-            android:layout_marginBottom="12dp"/>
+            android:textStyle="bold" />
 
-        <android.support.v7.widget.CardView
-        android:id="@+id/cardView1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="16dp"
-        app:elevation="4dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="@dimen/marginBottomSize"
+            app:elevation="4dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:gravity="start"
-                android:text="@string/statDdlc"
-                android:layout_alignParentStart="true"
-                android:textSize="@dimen/text" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/valueDdlc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="8dp"
-                android:text="@string/value"
-                android:textAlignment="textEnd"
-                android:textColor="@color/dGreen"
-                android:textSize="@dimen/text"
-                tools:ignore="RelativeOverlap" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:text="@string/statDdlc"
+                    android:textSize="@dimen/text" />
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/valueDdlc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="end"
+                    android:text="@string/value"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/dGreen"
+                    android:textSize="@dimen/text"
+                    tools:ignore="RelativeOverlap" />
 
-    </android.support.v7.widget.CardView>
+            </RelativeLayout>
 
-        <android.support.v7.widget.CardView
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:id="@+id/cardView2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -128,7 +127,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <RelativeLayout
@@ -139,19 +137,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
                     android:layout_marginStart="8dp"
                     android:gravity="start"
                     android:text="@string/statMGT"
-                    android:layout_alignParentStart="true"
                     android:textSize="@dimen/text" />
 
                 <TextView
                     android:id="@+id/valueMgt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="end"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="8dp"
+                    android:gravity="end"
                     android:text="@string/value"
                     android:textAlignment="textEnd"
                     android:textColor="@color/dGreen"
@@ -160,9 +158,9 @@
 
             </RelativeLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/cardView5"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -170,7 +168,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <RelativeLayout
@@ -181,19 +178,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
                     android:layout_marginStart="8dp"
                     android:gravity="start"
                     android:text="@string/statDELTA"
-                    android:layout_alignParentStart="true"
                     android:textSize="@dimen/text" />
 
                 <TextView
                     android:id="@+id/valueDelta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="end"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="8dp"
+                    android:gravity="end"
                     android:text="@string/value"
                     android:textAlignment="textEnd"
                     android:textColor="@color/dGreen"
@@ -202,9 +199,9 @@
 
             </RelativeLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/cardView3"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -212,7 +209,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <RelativeLayout
@@ -223,19 +219,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
                     android:layout_marginStart="8dp"
                     android:gravity="start"
                     android:text="@string/statZelda"
-                    android:layout_alignParentStart="true"
                     android:textSize="@dimen/text" />
 
                 <TextView
                     android:id="@+id/valueZelda"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="end"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="8dp"
+                    android:gravity="end"
                     android:text="@string/value"
                     android:textAlignment="textEnd"
                     android:textColor="@color/dGreen"
@@ -244,9 +240,9 @@
 
             </RelativeLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/cardView4"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -254,7 +250,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <RelativeLayout
@@ -265,19 +260,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
                     android:layout_marginStart="8dp"
                     android:gravity="start"
                     android:text="@string/statAscuns"
-                    android:layout_alignParentStart="true"
                     android:textSize="@dimen/text" />
 
                 <TextView
                     android:id="@+id/valueAscuns"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="end"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="8dp"
+                    android:gravity="end"
                     android:text="@string/value"
                     android:textAlignment="textEnd"
                     android:textColor="@color/dGreen"
@@ -286,8 +281,8 @@
 
             </RelativeLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
     </TableLayout>
 
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>

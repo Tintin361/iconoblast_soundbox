@@ -7,14 +7,13 @@
     <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 1.0.0.3_beta03</string>
-    <string name="versiond" translatable="false">Version 1.0.0.3_beta03</string>
+    <string name="version" translatable="false">Version 1.0.0.6</string>
+    <string name="versiond" translatable="false">Version 1.0.0.6</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
     <string name="stat">Statistiques</string>
     <string name="delta">Deltarune</string>
-    <string name="ermite">Ermite Moderne</string>
 
     <!-- Activity main -->
     <string name="text">COUCOU LES COPAINS ET LES COPINES !</string>
@@ -97,7 +96,7 @@
     <string name="statusbar">StatusBarUtil</string>
     <string name="intent">intent animation</string>
     <string name="click">Cliquez sur le texte pour afficher la licence correspondante.</string>
-    <string name="lulu2">N\'a pas de réseaux sociaux.</string>
+    <string name="lulu2">N\'a pas de réseaux sociaux et vous emmerde (c\'est lui qui m\'a dit de mettre ça) !</string>
     <string name="majLicence">AppUpdater</string>
     <string name="picasso">Picasso</string>
     <string name="animatoo">Animatoo</string>

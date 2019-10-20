@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:id="@+id/ScrollASC"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-  <TableLayout
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:gravity="center"
-      android:orientation="vertical">
-
-    <Button
-        android:id="@+id/ascunsb"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ascunsRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/salut"
-        android:textColor="@color/Black"
-        android:textSize="@dimen/buttonDefault"
-        app:backgroundTint="@color/Green2" />
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
 
-  </TableLayout>
-
-</ScrollView>
+</RelativeLayout>

@@ -5,10 +5,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AlertDialog;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
+import androidx.appcompat.app.AlertDialog;
 import android.text.Html;
 
 public class contact_dialog extends DialogFragment {
@@ -34,7 +35,7 @@ public class contact_dialog extends DialogFragment {
                     .setNegativeButton(Html.fromHtml("<font color='#1DA1F2'>Twitter</font>"), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            String url = "https://twitter.com/Tintin361YT/";
+                            String url = "https://twitter.com/papple_studio";
                             Intent web = new Intent(Intent.ACTION_VIEW);
                             web.setData(Uri.parse(url));
                             startActivity(web);

@@ -1,14 +1,13 @@
 package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +16,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jaeger.library.StatusBarUtil;
-
-import java.util.Calendar;
 
 public class StatFragment extends Fragment {
 
@@ -45,18 +42,31 @@ public class StatFragment extends Fragment {
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
 
-        if (answerA) {
-            cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
-        } else if (answerB) {
-            getActivity().setTheme(R.style.DarkTheme2);
-            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+        if (Build.VERSION.SDK_INT >= 21) {
+            if (answerA) {
+                cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+                StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
+            } else if (answerB) {
+                getActivity().setTheme(R.style.DarkTheme2);
+                cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+            } else {
+                cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+                StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
+            }
         } else {
-            cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
+            if (answerA) {
+                cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            } else if (answerB) {
+                getActivity().setTheme(R.style.DarkTheme2);
+                cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            } else {
+                cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            }
         }
 
         editor.apply();
@@ -101,5 +111,4 @@ public class StatFragment extends Fragment {
 
         return v;
     }
-
 }

@@ -1,26 +1,28 @@
 package com.papple.iconoblast;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ShortcutInfo;
 import android.content.pm.ShortcutManager;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.Icon;
-import android.graphics.drawable.ShapeDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.shape.MaterialShapeDrawable;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+import androidx.browser.customtabs.CustomTabsIntent;
+
+import com.google.android.material.navigation.NavigationView;
+
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -58,12 +60,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             editor.putBoolean("questionA", true).apply();
         }
 
-        if (answerA) {
-            setTheme(R.style.AppTheme_NoActionBar2);
-            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-        } else if (answerB) {
-            setTheme(R.style.DarkTheme2);
-            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.transparent));
+        if (Build.VERSION.SDK_INT >= 21) {
+            if (answerA) {
+                setTheme(R.style.AppTheme_NoActionBar2);
+                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+            } else if (answerB) {
+                setTheme(R.style.DarkTheme2);
+                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.transparent));
+            }
+        } else {
+            if (answerA) {
+                setTheme(R.style.AppTheme_NoActionBar2);
+            } else if (answerB) {
+                setTheme(R.style.DarkTheme2);
+            }
         }
 
         if (!answerC && !answerD) {
@@ -225,7 +235,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editor.putBoolean("asFrag", false);
                         editor.apply();
                         break;
-
                 }
             }
         }
@@ -473,10 +482,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void openDialog() {
-        String url = "https://github.com/Tintin361/iconoblast_soundbox/releases";
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(url));
-        startActivity(intent);
+        new AlertDialog.Builder(this)
+                .setTitle("Redirection sur Github")
+                .setMessage("Vous allez être redirigé(e) sur Github, la page va s'ouvrir dans l'application (uniquement pour les appareils compatibles).")
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        launchTabs();
+                    }
+                })
+                .setNegativeButton("Annuler", null)
+                .show();
     }
 
     public void openContactDialog() {
@@ -500,5 +516,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
             backPressedTime = System.currentTimeMillis();
         }
+    }
+
+    public void launchTabs() {
+        String url = "https://github.com/Tintin361/iconoblast_soundbox/releases";
+        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+        CustomTabsIntent customTabsIntent = builder.build();
+        customTabsIntent.launchUrl(MainActivity.this, Uri.parse(url));
     }
 }

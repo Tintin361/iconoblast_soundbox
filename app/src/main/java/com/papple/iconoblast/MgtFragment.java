@@ -3,19 +3,18 @@ package com.papple.iconoblast;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewCompat;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.fragment.app.Fragment;
+import androidx.core.view.ViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ScrollView;
 
 import com.jaeger.library.StatusBarUtil;
 
@@ -107,11 +106,34 @@ public class MgtFragment extends Fragment {
             }
         });
 
+        if (Build.VERSION.SDK_INT >= 21) {
+            if (answerA) {
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+                cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
+                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
+            } else if (answerB) {
+                getActivity().setTheme(R.style.DarkTheme2);
+                cLayout.setBackgroundColor(getResources().getColor(R.color.dmgt));
+                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dmgt));
+            } else {
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+                cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
+                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
+            }
+        } else {
+            if (answerA) {
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+                cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
+            } else if (answerB) {
+                getActivity().setTheme(R.style.DarkTheme2);
+                cLayout.setBackgroundColor(getResources().getColor(R.color.dmgt));
+            } else {
+                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+                cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
+            }
+        }
+
         if (answerA) {
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
-            // Change Background Tint
             ViewCompat.setBackgroundTintList(bButton, ColorStateList.valueOf(getResources().getColor(R.color.Red1)));
             ViewCompat.setBackgroundTintList(mButton, ColorStateList.valueOf(getResources().getColor(R.color.orange1)));
             ViewCompat.setBackgroundTintList(dButton, ColorStateList.valueOf(getResources().getColor(R.color.yellow1)));
@@ -120,10 +142,6 @@ public class MgtFragment extends Fragment {
             ViewCompat.setBackgroundTintList(baButton, ColorStateList.valueOf(getResources().getColor(R.color.blue1)));
             ViewCompat.setBackgroundTintList(cButton, ColorStateList.valueOf(getResources().getColor(R.color.blue2)));
         } else if (answerB) {
-            getActivity().setTheme(R.style.DarkTheme2);
-            cLayout.setBackgroundColor(getResources().getColor(R.color.dmgt));
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dmgt));
-            // Change Background Tint
             ViewCompat.setBackgroundTintList(bButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple)));
             ViewCompat.setBackgroundTintList(mButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple2)));
             ViewCompat.setBackgroundTintList(dButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue)));
@@ -131,12 +149,7 @@ public class MgtFragment extends Fragment {
             ViewCompat.setBackgroundTintList(gueuleButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue3)));
             ViewCompat.setBackgroundTintList(baButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue4)));
             ViewCompat.setBackgroundTintList(cButton, ColorStateList.valueOf(getResources().getColor(R.color.dGreen)));
-
         } else {
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
-            // Change Background Tint
             ViewCompat.setBackgroundTintList(bButton, ColorStateList.valueOf(getResources().getColor(R.color.Red1)));
             ViewCompat.setBackgroundTintList(mButton, ColorStateList.valueOf(getResources().getColor(R.color.orange1)));
             ViewCompat.setBackgroundTintList(dButton, ColorStateList.valueOf(getResources().getColor(R.color.yellow1)));
@@ -145,7 +158,6 @@ public class MgtFragment extends Fragment {
             ViewCompat.setBackgroundTintList(baButton, ColorStateList.valueOf(getResources().getColor(R.color.blue1)));
             ViewCompat.setBackgroundTintList(cButton, ColorStateList.valueOf(getResources().getColor(R.color.blue2)));
         }
-
 
         return view2;
     }

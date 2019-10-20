@@ -2,7 +2,6 @@ package com.papple.iconoblast;
 
 import android.content.Context;
 
-import java.util.List;
 import java.util.logging.Filter;
 
 public class Search_Item_List_ListVersion {

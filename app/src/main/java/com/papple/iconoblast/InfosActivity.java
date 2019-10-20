@@ -5,13 +5,17 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.RelativeLayout;
 
 import com.jaeger.library.StatusBarUtil;
 
@@ -27,20 +31,45 @@ public class InfosActivity extends AppCompatActivity {
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
 
-        if (answerA) {
-            setTheme(R.style.AppTheme_NoActionBar);
-            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-        } else if (answerB) {
-            setTheme(R.style.DarkTheme);
-            StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
+        if (Build.VERSION.SDK_INT >= 21) {
+            if (answerA) {
+                setTheme(R.style.AppTheme_NoActionBar);
+                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+            } else if (answerB) {
+                setTheme(R.style.DarkTheme);
+                StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
+            } else {
+                setTheme(R.style.AppTheme_NoActionBar);
+                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+            }
         } else {
-            setTheme(R.style.AppTheme_NoActionBar);
-            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+            if (answerA) {
+                setTheme(R.style.AppTheme_NoActionBar);
+            } else if (answerB) {
+                setTheme(R.style.DarkTheme);
+            } else {
+                setTheme(R.style.AppTheme_NoActionBar);
+            }
         }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infos);
 
+        RelativeLayout rLayout = findViewById(R.id.infoRelativeLayout);
+        BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
+
+        if (Build.VERSION.SDK_INT <= 19) {
+            if (answerA) {
+                rLayout.setBackgroundColor(getResources().getColor(R.color.white));
+                bottomNav.setBackgroundColor(getResources().getColor(R.color.white));
+            } else if (answerB) {
+                rLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+                bottomNav.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            } else {
+                rLayout.setBackgroundColor(getResources().getColor(R.color.white));
+                bottomNav.setBackgroundColor(getResources().getColor(R.color.white));
+            }
+        }
         Toolbar toolbar = findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
@@ -56,7 +85,6 @@ public class InfosActivity extends AppCompatActivity {
             toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
         }
 
-        BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
         if (answerA) {

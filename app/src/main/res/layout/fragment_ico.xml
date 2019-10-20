@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -12,7 +12,7 @@
         android:orientation="vertical"
         tools:context=".IcoFragment">
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/cardView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,7 +20,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <LinearLayout
@@ -28,7 +27,7 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <android.support.v7.widget.AppCompatImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/imageView"
                     android:layout_width="125dp"
                     android:layout_height="120dp"
@@ -48,9 +47,9 @@
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/cardView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,7 +57,6 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <HorizontalScrollView
@@ -71,7 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <android.support.v7.widget.AppCompatImageView
+                    <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/fbImageView"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
@@ -81,7 +79,7 @@
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:focusable="true" />
 
-                    <android.support.v7.widget.AppCompatImageView
+                    <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/twImageView"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
@@ -91,7 +89,7 @@
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:focusable="true" />
 
-                    <android.support.v7.widget.AppCompatImageView
+                    <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/tcImageView"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
@@ -105,9 +103,9 @@
 
             </HorizontalScrollView>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/cardView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -115,7 +113,6 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <LinearLayout
@@ -135,9 +132,9 @@
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
 
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>
 

@@ -3,10 +3,12 @@ package com.papple.iconoblast;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -31,12 +33,25 @@ public class secret extends AppCompatActivity {
         final boolean answerA = settings.getBoolean("questionA", false);
         final boolean answerB = settings.getBoolean("questionB", false);
 
-        if (answerA) {
-            setTheme(R.style.AppTheme_NoActionBar2);
-            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-        } else if (answerB) {
-            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.transparent));
-            setTheme(R.style.DarkTheme);
+        if (Build.VERSION.SDK_INT >= 21) {
+            if (answerA) {
+                setTheme(R.style.AppTheme_NoActionBar2);
+                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+            } else if (answerB) {
+                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.transparent));
+                setTheme(R.style.DarkTheme);
+            } else {
+                setTheme(R.style.AppTheme_NoActionBar2);
+                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+            }
+        } else {
+            if (answerA) {
+                setTheme(R.style.AppTheme_NoActionBar2);
+            } else if (answerB) {
+                setTheme(R.style.DarkTheme);
+            } else {
+                setTheme(R.style.AppTheme_NoActionBar2);
+            }
         }
 
         super.onCreate(savedInstanceState);
