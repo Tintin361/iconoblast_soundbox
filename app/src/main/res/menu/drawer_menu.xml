@@ -7,7 +7,6 @@
     <group
         android:id="@+id/drawer_group"
         android:checkableBehavior="single">
-
         <group android:checkableBehavior="single">
             <item
                 android:id="@+id/nav_acceuil"
@@ -23,6 +22,11 @@
                 android:id="@+id/nav_stat"
                 android:icon="@drawable/ic_stat"
                 android:title="@string/stat" />
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/ic_share"
+                android:title="@string/share"
+                android:checkable="false" />
         </group>
 
         <item android:title="@string/icob">

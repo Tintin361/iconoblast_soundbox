@@ -23,6 +23,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import android.text.Html;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -447,6 +449,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.versionId:
                 openDialog();
                 break;
+            case R.id.share:
+                shareMenu();
+                break;
         }
         drawer.closeDrawer(GravityCompat.START);
         editor1.apply();
@@ -523,5 +528,38 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
         CustomTabsIntent customTabsIntent = builder.build();
         customTabsIntent.launchUrl(MainActivity.this, Uri.parse(url));
+    }
+
+    public void shareMenu() {
+        new AlertDialog.Builder(this)
+                .setTitle(Html.fromHtml("<font color='#ff1500'>Partager l'application</font>"))
+                .setMessage("Vous pouvez partager l'application Iconoblast! avec vos amis via Google Drive ou Github.")
+                .setPositiveButton(Html.fromHtml("<font color='#18A462'>Google Drive</font>"), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String url = "https://drive.google.com/drive/folders/1_YurNp0Pzzck8gWpGLNeD9GH0IBYK0LL?usp=sharing";
+
+                        Intent sharringIntent = new Intent(Intent.ACTION_SEND);
+                        sharringIntent.putExtra(Intent.EXTRA_TEXT, url);
+                        startActivity(Intent.createChooser(sharringIntent, "Partager l'application"));
+                    }
+                })
+                .setNegativeButton(Html.fromHtml("<font color='#F15135'>Github</font>"), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String url = "https://github.com/Tintin361/iconoblast_soundbox/releases";
+
+                        Intent sharringIntent = new Intent(Intent.ACTION_SEND);
+                        sharringIntent.putExtra(Intent.EXTRA_TEXT, url);
+                        startActivity(Intent.createChooser(sharringIntent, "Partager l'application"));
+                    }
+                })
+                .setNeutralButton("Annuler", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                })
+                .show();
     }
 }
