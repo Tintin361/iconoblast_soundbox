@@ -541,6 +541,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                         Intent sharringIntent = new Intent(Intent.ACTION_SEND);
                         sharringIntent.putExtra(Intent.EXTRA_TEXT, url);
+                        sharringIntent.setType("text/plain");
                         startActivity(Intent.createChooser(sharringIntent, "Partager l'application"));
                     }
                 })
@@ -551,6 +552,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                         Intent sharringIntent = new Intent(Intent.ACTION_SEND);
                         sharringIntent.putExtra(Intent.EXTRA_TEXT, url);
+                        sharringIntent.setType("text/plain");
                         startActivity(Intent.createChooser(sharringIntent, "Partager l'application"));
                     }
                 })
