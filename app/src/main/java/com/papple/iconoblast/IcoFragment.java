@@ -6,13 +6,11 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-
-import pl.droidsonroids.gif.GifImageView;
 
 public class IcoFragment extends Fragment {
 
@@ -21,10 +19,10 @@ public class IcoFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.fragment_ico, container, false);
 
-        ImageView fcImage = v.findViewById(R.id.fbImageView);
-        final ImageView twImage = v.findViewById(R.id.twImageView);
-        ImageView tcImage = v.findViewById(R.id.tcImageView);
-        final GifImageView ytImage = v.findViewById(R.id.ytImageView);
+        AppCompatImageView fcImage = v.findViewById(R.id.fbImageView);
+        final AppCompatImageView twImage = v.findViewById(R.id.twImageView);
+        AppCompatImageView tcImage = v.findViewById(R.id.tcImageView);
+        final AppCompatImageView ytImage = v.findViewById(R.id.ytImageView);
 
         fcImage.setOnClickListener(new View.OnClickListener() {
             @Override

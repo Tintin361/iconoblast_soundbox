@@ -28,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <pl.droidsonroids.gif.GifImageView
+                <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="145dp"
                     android:layout_height="130dp"
