@@ -96,6 +96,7 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
         searchList.add(new Search_Item_List_ListVersion("SUPER !!! (Étagère)"));
         searchList.add(new Search_Item_List_ListVersion("Tu ne devrai pas avoir peur d'expérimenter ! (Étagère.exe)"));
         searchList.add(new Search_Item_List_ListVersion("Rire (pas) diabolique (Grand Étagère)"));
+        searchList.add(new Search_Item_List_ListVersion("Tu as un cul énorme. (Étagère)"));
         searchList.add(new Search_Item_List_ListVersion("MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("BAAAAKA !!! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)"));
@@ -105,7 +106,10 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
         searchList.add(new Search_Item_List_ListVersion("Non ! NOOOOOON !!! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("(Censuré) oh pardon, c'est sorti tout seul ! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("Pour baiser ! POUR BAISER ! (Ico)"));
+        searchList.add(new Search_Item_List_ListVersion("EEEAAAAAARG ! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("Tu dis que de la merde ! SUPER ! (Ico et Étagère)"));
+        searchList.add(new Search_Item_List_ListVersion("L'Étagère sonne creux... (Ico et Étagère)"));
+        searchList.add(new Search_Item_List_ListVersion("Etemaaaaaaaaath !! (Ico et Étagère)"));
         searchList.add(new Search_Item_List_ListVersion("C'est un immense branleur ! (Étagère)"));
         searchList.add(new Search_Item_List_ListVersion("Maaaaiiis, où c'est qui vont aller se masturber ? (Étagère)"));
         searchList.add(new Search_Item_List_ListVersion("Lui, il fait des doigts d'honneur devant les portes ! (Étagère)"));
@@ -205,6 +209,9 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
             case "Rire (pas) diabolique (Grand Étagère)":
                 playSound(R.raw.rire_sound);
                 break;
+            case "Tu as un cul énorme. (Étagère)":
+                playSound(R.raw.cul_sound);
+                break;
             case "MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)":
                 playSound(R.raw.tete_sound);
                 break;
@@ -232,8 +239,17 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
             case "Pour baiser ! POUR BAISER ! (Ico)":
                 playSound(R.raw.baiser_sound);
                 break;
+            case "EEEAAAAAARG ! (Ico)":
+                playSound(R.raw.eeeaaaaaarg_sound);
+                break;
             case "Tu dis que de la merde ! SUPER ! (Ico et Étagère)":
                 playSound(R.raw.merde_sound);
+                break;
+            case "L'Étagère sonne creux... (Ico et Étagère)":
+                playSound(R.raw.letagere);
+                break;
+            case "Etemaaaaaaaaath !! (Ico et Étagère)":
+                playSound(R.raw.etemath_sound);
                 break;
             case "C'est un immense branleur ! (Étagère)":
                 playSound(R.raw.branleur);

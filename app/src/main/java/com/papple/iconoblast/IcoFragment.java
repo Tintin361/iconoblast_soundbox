@@ -19,20 +19,14 @@ public class IcoFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.fragment_ico, container, false);
 
-        AppCompatImageView fcImage = v.findViewById(R.id.fbImageView);
         final AppCompatImageView twImage = v.findViewById(R.id.twImageView);
         AppCompatImageView tcImage = v.findViewById(R.id.tcImageView);
         final AppCompatImageView ytImage = v.findViewById(R.id.ytImageView);
+        AppCompatImageView igImage = v.findViewById(R.id.igImageView);
+        AppCompatImageView discordImage = v.findViewById(R.id.discordImageView);
+        AppCompatImageView IcoImage = v.findViewById(R.id.IcoImageView);
+        AppCompatImageView etaImage = v.findViewById(R.id.EtaImageView);
 
-        fcImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String fb = "https://www.facebook.com/liconoclaste";
-                Intent fbIntent = new Intent(Intent.ACTION_VIEW);
-                fbIntent.setData(Uri.parse(fb));
-                startActivity(fbIntent);
-            }
-        });
 
         twImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +55,46 @@ public class IcoFragment extends Fragment {
                 Intent ytIntent = new Intent(Intent.ACTION_VIEW);
                 ytIntent.setData(Uri.parse(yt));
                 startActivity(ytIntent);
+            }
+        });
+
+        igImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String ig = "https://www.instagram.com/iconoclaste_insta/";
+                Intent igIntent = new Intent(Intent.ACTION_VIEW);
+                igIntent.setData(Uri.parse(ig));
+                startActivity(igIntent);
+            }
+        });
+
+        discordImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String discord = "https://discordapp.com/invite/QhCsv3X";
+                Intent discordIntent = new Intent(Intent.ACTION_VIEW);
+                discordIntent.setData(Uri.parse(discord));
+                startActivity(discordIntent);
+            }
+        });
+
+        IcoImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String ico = "https://www.youtube.com/channel/UCeVpI1jEdMUfboWOtl_Bq6g";
+                Intent icoIntent = new Intent(Intent.ACTION_VIEW);
+                icoIntent.setData(Uri.parse(ico));
+                startActivity(icoIntent);
+            }
+        });
+
+        etaImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String etagere = "https://www.youtube.com/channel/UCUbxzOacavHOAyLlHigrXFw";
+                Intent etaIntent = new Intent(Intent.ACTION_VIEW);
+                etaIntent.setData(Uri.parse(etagere));
+                startActivity(etaIntent);
             }
         });
 

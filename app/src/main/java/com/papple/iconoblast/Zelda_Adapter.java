@@ -108,14 +108,13 @@ public class Zelda_Adapter extends RecyclerView.Adapter<Zelda_Adapter.zeldaViewH
                     zeldaViewHolder.zeldaCardView.setCardBackgroundColor(ColorStateList.valueOf(zeldaViewHolder.zeldaCardView.getResources().getColor(R.color.dBlue2)));
                     break;
             }
-
-            Animation animation = AnimationUtils.loadAnimation(zcontext,
-                    (position > lastPosition) ? R.anim.up_from_bottom2
-                            : R.anim.down_from_top2);
-            zeldaViewHolder.itemView.startAnimation(animation);
-            lastPosition = position;
         }
 
+        Animation animation = AnimationUtils.loadAnimation(zcontext,
+                (position > lastPosition) ? R.anim.up_from_bottom2
+                        : R.anim.down_from_top2);
+        zeldaViewHolder.itemView.startAnimation(animation);
+        lastPosition = position;
     }
 
     @Override

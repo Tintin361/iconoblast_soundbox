@@ -102,6 +102,7 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
             ddlcList.add(new Ddlc_Item_List_ListVersion("SUPER !!! (Étagère)"));
             ddlcList.add(new Ddlc_Item_List_ListVersion("Tu ne devrai pas avoir peur d'expérimenter ! (Étagère.exe)"));
             ddlcList.add(new Ddlc_Item_List_ListVersion("Rire (pas) diabolique (Grand Étagère)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Tu as un cul énorme. (Étagère)"));
             ddlcList.add(new Ddlc_Item_List_ListVersion("MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)"));
             ddlcList.add(new Ddlc_Item_List_ListVersion("BAAAAKA !!! (Ico)"));
             ddlcList.add(new Ddlc_Item_List_ListVersion("Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)"));
@@ -111,7 +112,10 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
             ddlcList.add(new Ddlc_Item_List_ListVersion("Non ! NOOOOOON !!! (Ico)"));
             ddlcList.add(new Ddlc_Item_List_ListVersion("(Censuré) oh pardon, c'est sorti tout seul ! (Ico)"));
             ddlcList.add(new Ddlc_Item_List_ListVersion("Pour baiser ! POUR BAISER ! (Ico)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("EEEAAAAAARG ! (Ico)"));
             ddlcList.add(new Ddlc_Item_List_ListVersion("Tu dis que de la merde ! SUPER ! (Ico et Étagère)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("L'Étagère sonne creux... (Ico et Étagère)"));
+            ddlcList.add(new Ddlc_Item_List_ListVersion("Etemaaaaaaaaath !! (Ico et Étagère)"));
 
             mRecyclerView = view.findViewById(R.id.lunetteRecyclerView);
             mRecyclerView.setHasFixedSize(true);
@@ -134,6 +138,7 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
             ddlcList2.add(new Ddlc_Item_List(R.drawable.super_image, "SUPER !!! (Étagère)"));
             ddlcList2.add(new Ddlc_Item_List(R.drawable.experimenter_image, "Tu ne devrai pas avoir peur d'expérimenter ! (Étagère.exe)"));
             ddlcList2.add(new Ddlc_Item_List(R.drawable.rire_image, "Rire (pas) diabolique (Grand Étagère)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.cul_image, "Tu as un cul énorme. (Étagère)"));
             ddlcList2.add(new Ddlc_Item_List(R.drawable.tete_image, "MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)"));
             ddlcList2.add(new Ddlc_Item_List(R.drawable.baka_image, "BAAAAKA !!! (Ico)"));
             ddlcList2.add(new Ddlc_Item_List(R.drawable.caillioux_image, "Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)"));
@@ -143,7 +148,10 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
             ddlcList2.add(new Ddlc_Item_List(R.drawable.non_image, "Non ! NOOOOOON !!! (Ico)"));
             ddlcList2.add(new Ddlc_Item_List(R.drawable.ohoh_image, "(Censuré) oh pardon, c'est sorti tout seul ! (Ico)"));
             ddlcList2.add(new Ddlc_Item_List(R.drawable.baiser_image, "Pour baiser ! POUR BAISER ! (Ico)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.eeeaaaaaarg_image, "EEEAAAAAARG ! (Ico)"));
             ddlcList2.add(new Ddlc_Item_List(R.drawable.merde_image, "Tu dis que de la merde ! SUPER ! (Ico et Étagère)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.letagere_image, "L'Étagère sonne creux... (Ico et Étagère)"));
+            ddlcList2.add(new Ddlc_Item_List(R.drawable.etemath_image, "Etemaaaaaaaaath !! (Ico et Étagère)"));
 
             mRecyclerView = view.findViewById(R.id.lunetteRecyclerView);
             mRecyclerView.setHasFixedSize(true);
@@ -212,6 +220,9 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
                     case "Rire (pas) diabolique (Grand Étagère)":
                         playSound(R.raw.rire_sound);
                         break;
+                    case "Tu as un cul énorme. (Étagère)":
+                        playSound(R.raw.cul_sound);
+                        break;
                     case "MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)":
                         playSound(R.raw.tete_sound);
                         break;
@@ -239,8 +250,17 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
                     case "Pour baiser ! POUR BAISER ! (Ico)":
                         playSound(R.raw.baiser_sound);
                         break;
+                    case "EEEAAAAAARG ! (Ico)":
+                        playSound(R.raw.eeeaaaaaarg_sound);
+                        break;
                     case "Tu dis que de la merde ! SUPER ! (Ico et Étagère)":
                         playSound(R.raw.merde_sound);
+                        break;
+                    case "L'Étagère sonne creux... (Ico et Étagère)":
+                        playSound(R.raw.letagere);
+                        break;
+                    case "Etemaaaaaaaaath !! (Ico et Étagère)":
+                        playSound(R.raw.etemath_sound);
                         break;
                 }
             } else if (answerD) {
@@ -276,6 +296,9 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
                     case "Rire (pas) diabolique (Grand Étagère)":
                         playSound(R.raw.rire_sound);
                         break;
+                    case "Tu as un cul énorme. (Étagère)":
+                        playSound(R.raw.cul_sound);
+                        break;
                     case "MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)":
                         playSound(R.raw.tete_sound);
                         break;
@@ -303,8 +326,17 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
                     case "Pour baiser ! POUR BAISER ! (Ico)":
                         playSound(R.raw.baiser_sound);
                         break;
+                    case "EEEAAAAAARG ! (Ico)":
+                        playSound(R.raw.eeeaaaaaarg_sound);
+                        break;
                     case "Tu dis que de la merde ! SUPER ! (Ico et Étagère)":
                         playSound(R.raw.merde_sound);
+                        break;
+                    case "L'Étagère sonne creux... (Ico et Étagère)":
+                        playSound(R.raw.letagere);
+                        break;
+                    case "Etemaaaaaaaaath !! (Ico et Étagère)":
+                        playSound(R.raw.etemath_sound);
                         break;
                 }
             }

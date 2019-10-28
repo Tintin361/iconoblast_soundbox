@@ -121,35 +121,47 @@ public class Ddlc_Adapter extends RecyclerView.Adapter<Ddlc_Adapter.ddlcViewHold
                 case "Rire (pas) diabolique (Grand Étagère)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.blue5)));
                     break;
-                case "MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)":
+                case "Tu as un cul énorme. (Étagère)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.darkBlue)));
                     break;
-                case "BAAAAKA !!! (Ico)":
+                case "MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.purple)));
                     break;
-                case "Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)":
+                case "BAAAAKA !!! (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.purple2)));
                     break;
-                case "Actuellement, je pense encore à… (Ico)":
+                case "Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.pink1)));
                     break;
-                case "CRACHE LE MORCEAU, ENCULÉ !!! (Ico)":
+                case "Actuellement, je pense encore à… (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.pink2)));
                     break;
-                case "Iconoclaste_sound.ogg":
+                case "CRACHE LE MORCEAU, ENCULÉ !!! (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.red2)));
                     break;
-                case "Non ! NOOOOOON !!! (Ico)":
+                case "Iconoclaste_sound.ogg":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.red3)));
                     break;
-                case "(Censuré) oh pardon, c'est sorti tout seul ! (Ico)":
+                case "Non ! NOOOOOON !!! (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.orange2)));
                     break;
-                case "Pour baiser ! POUR BAISER ! (Ico)":
+                case "(Censuré) oh pardon, c'est sorti tout seul ! (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.yellow1)));
                     break;
-                case "Tu dis que de la merde ! SUPER ! (Ico et Étagère)":
+                case "Pour baiser ! POUR BAISER ! (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.green3)));
+                    break;
+                case "EEEAAAAAARG ! (Ico)":
+                    ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.green4)));
+                    break;
+                case "Tu dis que de la merde ! SUPER ! (Ico et Étagère)":
+                    ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.blue1)));
+                    break;
+                case "L'Étagère sonne creux... (Ico et Étagère)":
+                    ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.blue2)));
+                    break;
+                case "Etemaaaaaaaaath !! (Ico et Étagère)":
+                    ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.blue3)));
                     break;
             }
 
@@ -185,35 +197,47 @@ public class Ddlc_Adapter extends RecyclerView.Adapter<Ddlc_Adapter.ddlcViewHold
                 case "Rire (pas) diabolique (Grand Étagère)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dGreen4)));
                     break;
-                case "MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)":
+                case "Tu as un cul énorme. (Étagère)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dYellow)));
                     break;
-                case "BAAAAKA !!! (Ico)":
+                case "MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dOrange)));
                     break;
-                case "Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)":
+                case "BAAAAKA !!! (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dRed)));
                     break;
-                case "Actuellement, je pense encore à… (Ico)":
+                case "Cailoux, CAILOOOOOUUUXXX !!! (encore Ico…)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dRed2)));
                     break;
-                case "CRACHE LE MORCEAU, ENCULÉ !!! (Ico)":
+                case "Actuellement, je pense encore à… (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dPurple3)));
                     break;
-                case "Iconoclaste_sound.ogg":
+                case "CRACHE LE MORCEAU, ENCULÉ !!! (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dPurple)));
                     break;
-                case "Non ! NOOOOOON !!! (Ico)":
+                case "Iconoclaste_sound.ogg":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dPurple2)));
                     break;
-                case "(Censuré) oh pardon, c'est sorti tout seul ! (Ico)":
+                case "Non ! NOOOOOON !!! (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dBlue)));
                     break;
-                case "Pour baiser ! POUR BAISER ! (Ico)":
+                case "(Censuré) oh pardon, c'est sorti tout seul ! (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dBlue2)));
                     break;
-                case "Tu dis que de la merde ! SUPER ! (Ico et Étagère)":
+                case "Pour baiser ! POUR BAISER ! (Ico)":
                     ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dBlue3)));
+                    break;
+                case "EEEAAAAAARG ! (Ico)":
+                    ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dBlue4)));
+                    break;
+                case "Tu dis que de la merde ! SUPER ! (Ico et Étagère)":
+                    ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dGreen)));
+                    break;
+                case "L'Étagère sonne creux... (Ico et Étagère)":
+                    ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dGreen2)));
+                    break;
+                case "Etemaaaaaaaaath !! (Ico et Étagère)":
+                    ddlcViewHolder.ddlcCardView.setCardBackgroundColor(ColorStateList.valueOf(ddlcViewHolder.ddlcCardView.getResources().getColor(R.color.dGreen3)));
                     break;
             }
         }
