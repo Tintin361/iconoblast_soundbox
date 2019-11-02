@@ -2,13 +2,13 @@
 <resources>
 
     <!-- Application colors -->
-    <color name="colorPrimaryN">#3e068f</color>
-    <color name="colorPrimaryDarkN">#190238</color>
+    <color name="colorPrimary">#3e068f</color>
+    <color name="colorPrimaryDark">#190238</color>
     <color name="colorAccent">#ffffbb33</color>
 
     <!-- Halloween colors -->
-    <color name="colorPrimary">#FF9C3C</color>
-    <color name="colorPrimaryDark">#c97a30</color>
+    <color name="colorPrimaryHalloween">#FF9C3C</color>
+    <color name="colorPrimaryDarkHalloween">#c97a30</color>
 
     <!-- Saint Valentin colors -->
     <color name="colorPrimarySaintValantin">#dd117e</color>

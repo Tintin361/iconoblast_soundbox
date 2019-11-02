@@ -78,7 +78,6 @@
                                     android:layout_gravity="center"
                                     android:layout_marginBottom="8dp"
                                     android:scaleType="centerCrop"
-                                    android:visibility="gone"
                                     android:src="@drawable/pas_sombre"
                                     tools:ignore="contentdescription" />
 
@@ -120,7 +119,6 @@
                                     android:layout_marginBottom="8dp"
                                     android:scaleType="centerCrop"
                                     android:src="@drawable/sombre"
-                                    android:visibility="gone"
                                     tools:ignore="contentdescription" />
 
                                 <RadioButton

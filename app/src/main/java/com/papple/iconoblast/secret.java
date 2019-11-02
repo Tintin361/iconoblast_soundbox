@@ -136,13 +136,20 @@ public class secret extends AppCompatActivity {
 
                     imageView.setBackgroundResource(R.drawable.faketiki);
 
+                } else if (editText.getText().toString().equals("Marc-André") || editText.getText().toString().equals("Pigeon")) {
+
+                    imageView.setBackgroundResource(R.drawable.smic);
+
+                } else if (editText.getText().toString().equals("Halloween")) {
+
+                    Toast.makeText(secret.this, "WIP", Toast.LENGTH_LONG).show();
+
                 } else if (!editText.getText().toString().equals("K/DA - POP/STARS")) {
 
                     Toast toaster4 = Toast.makeText(secret.this, "Le code secret n'est pas correct, veuillez réessayer !", Toast.LENGTH_SHORT);
                     TextView view4 = toaster4.getView().findViewById(android.R.id.message);
                     if (view4 != null) view4.setGravity(Gravity.CENTER);
                     toaster4.show();
-
                 }
             }
         });
