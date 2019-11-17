@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawer;
     private long backPressedTime;
     private Toast toaster;
-    private int maj = 20;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,25 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         boolean answerD = settings.getBoolean("questionD", false);
         boolean autoMajBoolean = settings.getBoolean("automaj", false);
 
-        if (!answerA && !answerB) {
-            editor.putBoolean("questionA", true).apply();
-        }
-
-        if (Build.VERSION.SDK_INT >= 21) {
-            if (answerA) {
-                setTheme(R.style.AppTheme_NoActionBar2);
-                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-            } else if (answerB) {
-                setTheme(R.style.DarkTheme2);
-                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.transparent));
-            }
-        } else {
-            if (answerA) {
-                setTheme(R.style.AppTheme_NoActionBar2);
-            } else if (answerB) {
-                setTheme(R.style.DarkTheme2);
-            }
-        }
+        MainActivity.this.setTheme(R.style.AppTheme_NoActionBar);
 
         if (!answerC && !answerD) {
             editor.putBoolean("questionC", true).apply();
@@ -95,14 +76,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        if (answerA) {
-            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
-        } else if (answerB) {
-            toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
-        } else {
-            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
-        }
 
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -333,37 +306,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             int[] colors = new int[]{
                     Color.parseColor("#BDBDBD"),
                     Color.parseColor("#4ac9f7")
-            };
-
-            ColorStateList cls1 = new ColorStateList(states, colors);
-
-            navigationView.setItemTextColor(csl);
-            navigationView.setItemIconTintList(cls1);
-
-        } else {
-
-            // For Text
-            int[][] state = new int[][]{
-                    new int[]{-android.R.attr.state_checked}, // unchecked
-                    new int[]{android.R.attr.state_checked}  // checked
-            };
-
-            int[] color = new int[]{
-                    Color.BLACK,
-                    Color.parseColor("#3e068f"),
-            };
-            // ou -checked (unchecked), un pour le texte et un pour l'icon puis un int[] pour les couleurs, une ColorStateList
-            ColorStateList csl = new ColorStateList(state, color);
-
-            // For Item
-            int[][] states = new int[][]{
-                    new int[]{-android.R.attr.state_checked}, // unchecked
-                    new int[]{android.R.attr.state_checked}  // checked
-            };
-
-            int[] colors = new int[]{
-                    Color.parseColor("#777777"),
-                    Color.parseColor("#3e068f")
             };
 
             ColorStateList cls1 = new ColorStateList(states, colors);

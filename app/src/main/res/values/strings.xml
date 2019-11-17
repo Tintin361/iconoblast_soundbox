@@ -7,8 +7,7 @@
     <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 1.0.0.11</string>
-    <string name="versiond" translatable="false">Version 1.0.0.11</string>
+    <string name="version" translatable="false">Version 1.0.0.20</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
@@ -96,7 +95,7 @@
     <string name="opus">opuscodec</string>
     <string name="statusbar">StatusBarUtil</string>
     <string name="intent">intent animation</string>
-    <string name="click">Cliquez sur le texte pour afficher la licence correspondante.</string>
+    <string name="click">Voici les plugins utilisés dans l\'application. Ils sont tous sous Apache Licence 2.0 (utilisation gratuite)</string>
     <string name="lulu2">N\'a pas de réseaux sociaux et vous emmerde (c\'est lui qui m\'a dit de mettre ça) !</string>
     <string name="majLicence">AppUpdater</string>
     <string name="picasso">Picasso</string>
@@ -113,6 +112,7 @@
     <string name="design">Affichage</string>
     <string name="auto">Automatiquement</string>
     <string name="manuel">Manuellement</string>
+    <string name="wip">Les thèmes seront bientôt de retour !</string>
 
     <!-- Easter Egg Activity -->
     <string name="code">Entrez un code secret</string>

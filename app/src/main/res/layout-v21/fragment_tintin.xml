@@ -34,7 +34,7 @@
                     android:layout_height="145dp"
                     android:layout_gravity="center"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/theresa_2_pp" />
+                    android:src="@drawable/theresa_skin3_pp" />
 
                 <TextView
                     android:id="@+id/textView"

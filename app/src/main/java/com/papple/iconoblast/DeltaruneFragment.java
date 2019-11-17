@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -17,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
 
 import java.util.ArrayList;
@@ -40,6 +42,15 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
             return view;
         }
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.deltarune));
+        }
+
+        Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
+        AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+        params.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP_MARGINS | AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS);
+        toolbar.setLayoutParams(params);
+
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
 
@@ -55,38 +66,12 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
         editor.apply();
 
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
+        cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
-
-        if (Build.VERSION.SDK_INT >= 21) {
-            if (answerA) {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.deltarune));
-            } else if (answerB) {
-                getActivity().setTheme(R.style.DarkTheme2);
-                cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
-            } else {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.deltarune));
-            }
-        } else {
-            if (answerA) {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            } else if (answerB) {
-                getActivity().setTheme(R.style.DarkTheme2);
-                cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            } else {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            }
-        }
 
         if (answerC) {
             ArrayList<Deltarune_Item_List_ListVersion> deltaList = new ArrayList<>();

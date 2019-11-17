@@ -31,58 +31,23 @@ public class InfosActivity extends AppCompatActivity {
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
 
-        if (Build.VERSION.SDK_INT >= 21) {
-            if (answerA) {
-                setTheme(R.style.AppTheme_NoActionBar);
-                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-            } else if (answerB) {
-                setTheme(R.style.DarkTheme);
-                StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
-            } else {
-                setTheme(R.style.AppTheme_NoActionBar);
-                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-            }
-        } else {
-            if (answerA) {
-                setTheme(R.style.AppTheme_NoActionBar);
-            } else if (answerB) {
-                setTheme(R.style.DarkTheme);
-            } else {
-                setTheme(R.style.AppTheme_NoActionBar);
-            }
-        }
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infos);
+
+        this.setTheme(R.style.AppTheme_NoActionBar2);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+        }
 
         RelativeLayout rLayout = findViewById(R.id.infoRelativeLayout);
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
 
-        if (Build.VERSION.SDK_INT <= 19) {
-            if (answerA) {
-                rLayout.setBackgroundColor(getResources().getColor(R.color.white));
-                bottomNav.setBackgroundColor(getResources().getColor(R.color.white));
-            } else if (answerB) {
-                rLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-                bottomNav.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            } else {
-                rLayout.setBackgroundColor(getResources().getColor(R.color.white));
-                bottomNav.setBackgroundColor(getResources().getColor(R.color.white));
-            }
-        }
         Toolbar toolbar = findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow);
-        }
-
-        if (answerA) {
-            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
-        } else if (answerB) {
-            toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
-        } else {
-            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
         }
 
         bottomNav.setOnNavigationItemSelectedListener(navListener);
@@ -123,29 +88,8 @@ public class InfosActivity extends AppCompatActivity {
             bottomNav.setItemTextColor(cls);
             bottomNav.setItemIconTintList(cls);
 
-        } else {
-
-
-            // For Text
-            int[][] state = new int[][]{
-                    new int[]{-android.R.attr.state_checked}, // unchecked
-                    new int[]{android.R.attr.state_checked}  // checked
-            };
-
-            int[] color = new int[]{
-                    Color.parseColor("#757575"),
-                    Color.parseColor("#3e068f")
-            };
-
-            ColorStateList cls = new ColorStateList(state, color);
-
-            bottomNav.setItemTextColor(cls);
-            bottomNav.setItemIconTintList(cls);
-
         }
-
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_info, new TintinFragment()).commit();
-
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {

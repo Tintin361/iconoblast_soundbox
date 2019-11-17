@@ -17,8 +17,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/wip"
+                android:textSize="@dimen/titleText"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textColor="@color/blue4" />
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewTheme1"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"

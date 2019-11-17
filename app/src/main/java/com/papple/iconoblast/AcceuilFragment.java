@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,10 +15,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
 
 public class AcceuilFragment extends Fragment {
-    public MediaPlayer jaimeLesPlayer; // Oui, bon le manque d'inspi ça arrive à tout le monde...
+    MediaPlayer jaimeLesPlayer; // Oui, bon le manque d'inspi ça arrive à tout le monde...
 
     @Nullable
     @Override
@@ -27,6 +29,16 @@ public class AcceuilFragment extends Fragment {
         if (getActivity() == null) {
             return view;
         }
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
+        }
+
+        Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
+        AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+        params.setScrollFlags(0);
+        toolbar.setLayoutParams(params);
 
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -44,38 +56,7 @@ public class AcceuilFragment extends Fragment {
 
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
 
-        boolean answerA = settings.getBoolean("questionA", false);
-        boolean answerB = settings.getBoolean("questionB", false);
-
-        if (getActivity() != null) {
-            if (Build.VERSION.SDK_INT >= 21) {
-                if (answerA) {
-                    cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
-                    getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                    StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
-                } else if (answerB) {
-                    getActivity().setTheme(R.style.DarkTheme2);
-                    cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-                    StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
-                } else {
-                    cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
-                    getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                    StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
-                }
-            } else {
-                if (answerA) {
-                    cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
-                    getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                } else if (answerB) {
-                    getActivity().setTheme(R.style.DarkTheme2);
-                    cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-                } else {
-                    cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
-                    getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                }
-            }
-        }
-
+        cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
 
         TextView text = view.findViewById(R.id.textView1);
         text.setOnClickListener(new View.OnClickListener() {

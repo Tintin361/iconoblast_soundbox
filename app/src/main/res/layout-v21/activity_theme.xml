@@ -17,6 +17,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/textViewWip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/wip"
+                android:textSize="@dimen/titleText"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textColor="@color/blue4" />
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewTheme1"
                 android:layout_width="match_parent"
@@ -25,6 +35,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="8dp"
                 android:elevation="4dp"
+                android:visibility="gone"
                 app:cardCornerRadius="16dp">
 
                 <RadioGroup
@@ -146,7 +157,7 @@
                 android:id="@+id/linearL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cardViewTheme1"
+                android:layout_below="@id/textViewWip"
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="8dp"
                 android:weightSum="2">

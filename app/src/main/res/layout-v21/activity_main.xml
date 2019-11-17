@@ -48,7 +48,6 @@
                     android:layout_marginBottom="4dp"
                     android:background="@drawable/rounded_toolbar"
                     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                    app:layout_scrollFlags="scroll|enterAlways|snapMargins|snap"
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
             </com.google.android.material.appbar.AppBarLayout>

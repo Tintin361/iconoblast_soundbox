@@ -17,7 +17,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.Toolbar;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
 import com.squareup.picasso.Picasso;
 
@@ -43,6 +45,15 @@ public class AscunsFragment extends Fragment implements Ascuns_Adapter_List.OnIt
             return view;
         }
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ascuns));
+        }
+
+        androidx.appcompat.widget.Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
+        AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+        params.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP_MARGINS | AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS);
+        toolbar.setLayoutParams(params);
+
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
 
@@ -58,38 +69,10 @@ public class AscunsFragment extends Fragment implements Ascuns_Adapter_List.OnIt
         editor.apply();
 
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
-
-        boolean answerA = settings.getBoolean("questionA", false);
-        boolean answerB = settings.getBoolean("questionB", false);
+        cLayout.setBackgroundColor(getResources().getColor(R.color.ascuns));
+        
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
-
-        if (Build.VERSION.SDK_INT >= 21) {
-            if (answerA) {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.ascuns));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ascuns));
-            } else if (answerB) {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.dascuns));
-                getActivity().setTheme(R.style.DarkTheme2);
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dascuns));
-            } else {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.ascuns));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ascuns));
-            }
-        } else {
-            if (answerA) {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.ascuns));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            } else if (answerB) {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.dascuns));
-                getActivity().setTheme(R.style.DarkTheme2);
-            } else {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.ascuns));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            }
-        }
 
         if (answerC) {
             ascunsList = new ArrayList<>();

@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.core.view.ViewCompat;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
 
 public class MgtFragment extends Fragment {
@@ -30,10 +32,20 @@ public class MgtFragment extends Fragment {
             return view2;
         }
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
+        }
+
+        Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
+        AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+        params.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP_MARGINS | AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS);
+        toolbar.setLayoutParams(params);
+
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
 
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
+        cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
 
         // Remember choice
         editor.putBoolean("aFrag", false);
@@ -105,33 +117,6 @@ public class MgtFragment extends Fragment {
                 playSound(R.raw.cock);
             }
         });
-
-        if (Build.VERSION.SDK_INT >= 21) {
-            if (answerA) {
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
-            } else if (answerB) {
-                getActivity().setTheme(R.style.DarkTheme2);
-                cLayout.setBackgroundColor(getResources().getColor(R.color.dmgt));
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dmgt));
-            } else {
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
-            }
-        } else {
-            if (answerA) {
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
-            } else if (answerB) {
-                getActivity().setTheme(R.style.DarkTheme2);
-                cLayout.setBackgroundColor(getResources().getColor(R.color.dmgt));
-            } else {
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
-            }
-        }
 
         if (answerA) {
             ViewCompat.setBackgroundTintList(bButton, ColorStateList.valueOf(getResources().getColor(R.color.Red1)));

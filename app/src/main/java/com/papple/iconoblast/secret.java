@@ -33,27 +33,6 @@ public class secret extends AppCompatActivity {
         final boolean answerA = settings.getBoolean("questionA", false);
         final boolean answerB = settings.getBoolean("questionB", false);
 
-        if (Build.VERSION.SDK_INT >= 21) {
-            if (answerA) {
-                setTheme(R.style.AppTheme_NoActionBar2);
-                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-            } else if (answerB) {
-                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.transparent));
-                setTheme(R.style.DarkTheme);
-            } else {
-                setTheme(R.style.AppTheme_NoActionBar2);
-                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-            }
-        } else {
-            if (answerA) {
-                setTheme(R.style.AppTheme_NoActionBar2);
-            } else if (answerB) {
-                setTheme(R.style.DarkTheme);
-            } else {
-                setTheme(R.style.AppTheme_NoActionBar2);
-            }
-        }
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secret);
 

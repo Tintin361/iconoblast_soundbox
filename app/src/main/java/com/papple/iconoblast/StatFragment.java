@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
 
 public class StatFragment extends Fragment {
@@ -25,6 +27,15 @@ public class StatFragment extends Fragment {
         final View v= inflater.inflate(R.layout.fragment_stat, container, false);
 
         if(getActivity() == null) return v;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
+        }
+
+        Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
+        AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+        params.setScrollFlags(0);
+        toolbar.setLayoutParams(params);
 
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -41,34 +52,6 @@ public class StatFragment extends Fragment {
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
-
-        if (Build.VERSION.SDK_INT >= 21) {
-            if (answerA) {
-                cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
-            } else if (answerB) {
-                getActivity().setTheme(R.style.DarkTheme2);
-                cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
-            } else {
-                cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
-            }
-        } else {
-            if (answerA) {
-                cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            } else if (answerB) {
-                getActivity().setTheme(R.style.DarkTheme2);
-                cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            } else {
-                cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            }
-        }
-
         editor.apply();
 
         Button check = v.findViewById(R.id.giftButton);

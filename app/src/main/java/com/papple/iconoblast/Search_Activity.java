@@ -39,43 +39,16 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
 
-        if (Build.VERSION.SDK_INT >= 21) {
-            if (answerA) {
-                setTheme(R.style.AppTheme_NoActionBar);
-                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-            } else if (answerB) {
-                setTheme(R.style.DarkTheme2);
-                StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
-            } else {
-                setTheme(R.style.AppTheme_NoActionBar);
-                StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-            }
-        }
-
         setContentView(R.layout.activity_search);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+        }
 
         final Toolbar toolbar = findViewById(R.id.toolbar_search);
         setSupportActionBar(toolbar);
 
         RelativeLayout relativeLayout = findViewById(R.id.searchRelativeLayout);
-        if (Build.VERSION.SDK_INT <= 19) {
-            if (answerA) {
-                relativeLayout.setBackgroundColor(getResources().getColor(R.color.white));
-            } else if (answerB) {
-                relativeLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            } else {
-                relativeLayout.setBackgroundColor(getResources().getColor(R.color.white));
-            }
-        }
-
-        if (answerA) {
-            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
-        } else if (answerB) {
-            toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
-        } else {
-            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
-        }
-
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

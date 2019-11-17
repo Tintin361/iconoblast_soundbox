@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -17,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
 import com.squareup.picasso.Picasso;
 
@@ -42,6 +44,15 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
             return view;
         }
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ddlc));
+        }
+
+        Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
+        AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+        params.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP_MARGINS | AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS);
+        toolbar.setLayoutParams(params);
+
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
 
@@ -57,38 +68,12 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
         editor.apply();
 
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
+        cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
-
-        if (Build.VERSION.SDK_INT >= 21) {
-            if (answerA) {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ddlc));
-            } else if (answerB) {
-                getActivity().setTheme(R.style.DarkTheme2);
-                cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
-            } else {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-                StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ddlc));
-            }
-        } else {
-            if (answerA) {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            } else if (answerB) {
-                getActivity().setTheme(R.style.DarkTheme2);
-                cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            } else {
-                cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
-                getActivity().setTheme(R.style.AppTheme_NoActionBar2);
-            }
-        }
 
         if (answerC) {
             ddlcList = new ArrayList<>();
