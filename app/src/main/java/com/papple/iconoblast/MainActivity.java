@@ -63,6 +63,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             editor.putBoolean("questionC", true).apply();
         }
 
+        editor.putBoolean("questionA", true);
+        editor.putBoolean("questionB", false);
+        editor.apply();
+
         if (autoMajBoolean) {
             AppUpdater app = new AppUpdater(MainActivity.this)
                     .setUpdateFrom(UpdateFrom.GITHUB)
