@@ -2,7 +2,6 @@ package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +19,7 @@ import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
 
 public class AcceuilFragment extends Fragment {
-    MediaPlayer jaimeLesPlayer; // Oui, bon le manque d'inspi ça arrive à tout le monde...
+    private MediaPlayer jaimeLesPlayer; // Oui, bon le manque d'inspi ça arrive à tout le monde...
 
     @Nullable
     @Override
@@ -30,18 +30,16 @@ public class AcceuilFragment extends Fragment {
             return view;
         }
 
+        SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
+        SharedPreferences.Editor editor = settings.edit();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
-        }
+        boolean answerA = settings.getBoolean("questionA", false);
+        boolean answerB = settings.getBoolean("questionB", false);
 
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
         AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
         params.setScrollFlags(0);
         toolbar.setLayoutParams(params);
-
-        SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
-        SharedPreferences.Editor editor = settings.edit();
 
         // Remember choice
         editor.putBoolean("aFrag", true);
@@ -51,12 +49,19 @@ public class AcceuilFragment extends Fragment {
         editor.putBoolean("zFrag", false);
         editor.putBoolean("asFrag", false);
         editor.putBoolean("deltaFrag", false);
-
         editor.apply();
 
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
 
-        cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
+        if (answerA) {
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
+        } else if (answerB) {
+            getActivity().setTheme(R.style.DarkTheme2);
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+        }
 
         TextView text = view.findViewById(R.id.textView1);
         text.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +73,7 @@ public class AcceuilFragment extends Fragment {
         return view;
     }
 
-    public void playSound(int redId) {
+    private void playSound(int redId) {
         if (jaimeLesPlayer != null) {
             jaimeLesPlayer.stop();
             jaimeLesPlayer.release();

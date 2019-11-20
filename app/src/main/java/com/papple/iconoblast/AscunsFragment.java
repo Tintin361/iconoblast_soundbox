@@ -16,12 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
-import android.widget.Toolbar;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -31,10 +28,8 @@ public class AscunsFragment extends Fragment implements Ascuns_Adapter_List.OnIt
     Ascuns_Adapter_List aAdapter;
     Ascuns_Adapter aAdapter2;
     RecyclerView.LayoutManager mLayoutManager;
-    public RelativeLayout relativeLayout;
     ArrayList<Ascuns_Item_List_ListVersion> ascunsList;
     ArrayList<Ascuns_Item_List> ascunsList2;
-    Picasso.Builder builder;
 
     @Nullable
     @Override
@@ -43,10 +38,6 @@ public class AscunsFragment extends Fragment implements Ascuns_Adapter_List.OnIt
 
         if (getActivity() == null) {
             return view;
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ascuns));
         }
 
         androidx.appcompat.widget.Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
@@ -69,10 +60,22 @@ public class AscunsFragment extends Fragment implements Ascuns_Adapter_List.OnIt
         editor.apply();
 
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
-        cLayout.setBackgroundColor(getResources().getColor(R.color.ascuns));
-        
+
+        boolean answerA = settings.getBoolean("questionA", false);
+        boolean answerB = settings.getBoolean("questionB", false);
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
+
+        if (answerA) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ascuns));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.ascuns));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+
+        } else if (answerB) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            getActivity().setTheme(R.style.DarkTheme2);
+        }
 
         if (answerC) {
             ascunsList = new ArrayList<>();
@@ -86,6 +89,7 @@ public class AscunsFragment extends Fragment implements Ascuns_Adapter_List.OnIt
             mRecyclerView.setLayoutManager(mLayoutManager);
             mRecyclerView.setAdapter(aAdapter);
             aAdapter.setOnItemClickListener(this);
+
         } else if (answerD) {
             ascunsList2 = new ArrayList<>();
             ascunsList2.add(new Ascuns_Item_List(R.drawable.salut_image, "SALUUUUUUT !!!!! (Ico)"));

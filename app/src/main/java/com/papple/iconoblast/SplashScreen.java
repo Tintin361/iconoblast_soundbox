@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.jaeger.library.StatusBarUtil;
-
 import static maes.tech.intentanim.CustomIntent.customType;
 
 public class SplashScreen extends Activity{
@@ -31,7 +30,7 @@ public class SplashScreen extends Activity{
                     | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
 
-        int SPLASH_TIME_OUT = 300;
+        int SPLASH_TIME_OUT = 275;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -43,6 +42,7 @@ public class SplashScreen extends Activity{
                 finish();
             }
         }, SPLASH_TIME_OUT);
+
     }
 
 }

@@ -2,7 +2,6 @@ package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
@@ -29,21 +27,15 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
     private Deltarune_Adapter mAdapter;
     private Deltarune_Adapter_List dAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private RelativeLayout relativeLayout;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         final View view = inflater.inflate(R.layout.fragment_deltarune, container, false);
-        relativeLayout = view.findViewById(R.id.LayoutNew);
 
         if (getActivity() == null) {
             return view;
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.deltarune));
         }
 
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
@@ -66,12 +58,22 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
         editor.apply();
 
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
-        cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
+
+        if (answerA) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.deltarune));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+
+        } else if (answerB) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            getActivity().setTheme(R.style.DarkTheme2);
+        }
 
         if (answerC) {
             ArrayList<Deltarune_Item_List_ListVersion> deltaList = new ArrayList<>();
@@ -105,7 +107,6 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
         }
 
         return view;
-
     }
 
     private void playSound(int redId) {

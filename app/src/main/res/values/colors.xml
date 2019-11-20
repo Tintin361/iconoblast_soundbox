@@ -87,5 +87,8 @@
     <color name="dzelda">#000000</color>
     <color name="ddelarune">#000000</color>
 
+    <!-- CardView Colors -->
+    <color name="cardViewColor">#424242</color>
+
 
 </resources>

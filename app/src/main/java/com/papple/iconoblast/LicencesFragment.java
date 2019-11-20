@@ -1,10 +1,12 @@
 package com.papple.iconoblast;
 
 import android.app.AlertDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +19,38 @@ public class LicencesFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.fragment_licences, container, false);
+
+        SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
+
+        boolean answerA = settings.getBoolean("questionA", false);
+        boolean answerB = settings.getBoolean("questionB", false);
+
+        CardView cardView = v.findViewById(R.id.licenceCardView1);
+        CardView cardView2 = v.findViewById(R.id.licenceCardView2);
+        CardView cardView3 = v.findViewById(R.id.licenceCardView3);
+        CardView cardView4 = v.findViewById(R.id.licenceCardView4);
+        CardView cardView5 = v.findViewById(R.id.licenceCardView5);
+        CardView cardView6 = v.findViewById(R.id.licenceCardView6);
+        CardView cardView7 = v.findViewById(R.id.licenceCardView7);
+
+        if (answerA) {
+            cardView.setCardBackgroundColor(getResources().getColor(android.R.color.white));
+            cardView2.setCardBackgroundColor(getResources().getColor(android.R.color.white));
+            cardView3.setCardBackgroundColor(getResources().getColor(android.R.color.white));
+            cardView4.setCardBackgroundColor(getResources().getColor(android.R.color.white));
+            cardView5.setCardBackgroundColor(getResources().getColor(android.R.color.white));
+            cardView6.setCardBackgroundColor(getResources().getColor(android.R.color.white));
+            cardView7.setCardBackgroundColor(getResources().getColor(android.R.color.white));
+
+        } else if (answerB) {
+            cardView.setCardBackgroundColor(getResources().getColor(R.color.cardViewColor));
+            cardView2.setCardBackgroundColor(getResources().getColor(R.color.cardViewColor));
+            cardView3.setCardBackgroundColor(getResources().getColor(R.color.cardViewColor));
+            cardView4.setCardBackgroundColor(getResources().getColor(R.color.cardViewColor));
+            cardView5.setCardBackgroundColor(getResources().getColor(R.color.cardViewColor));
+            cardView6.setCardBackgroundColor(getResources().getColor(R.color.cardViewColor));
+            cardView7.setCardBackgroundColor(getResources().getColor(R.color.cardViewColor));
+        }
 
         TextView textView = v.findViewById(R.id.gifText);
         textView.setOnClickListener(new View.OnClickListener() {
@@ -476,8 +510,23 @@ public class LicencesFragment extends Fragment {
             }
         });
 
-
-
+        if (answerA) {
+            textView.setTextColor(getResources().getColor(android.R.color.black));
+            textView3.setTextColor(getResources().getColor(android.R.color.black));
+            textView4.setTextColor(getResources().getColor(android.R.color.black));
+            textView5.setTextColor(getResources().getColor(android.R.color.black));
+            textView55.setTextColor(getResources().getColor(android.R.color.black));
+            textView56.setTextColor(getResources().getColor(android.R.color.black));
+            textView96.setTextColor(getResources().getColor(android.R.color.black));
+        } else if (answerB) {
+            textView.setTextColor(getResources().getColor(android.R.color.white));
+            textView3.setTextColor(getResources().getColor(android.R.color.white));
+            textView4.setTextColor(getResources().getColor(android.R.color.white));
+            textView5.setTextColor(getResources().getColor(android.R.color.white));
+            textView55.setTextColor(getResources().getColor(android.R.color.white));
+            textView56.setTextColor(getResources().getColor(android.R.color.white));
+            textView96.setTextColor(getResources().getColor(android.R.color.white));
+        }
 
         return v;
     }

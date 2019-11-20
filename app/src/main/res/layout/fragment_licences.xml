@@ -16,16 +16,16 @@
             android:id="@+id/textViewLicence"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginRight="4dp"
+            android:layout_marginRight="8dp"
             android:gravity="center"
             android:text="@string/click"
-            android:textColor="@color/colorPrimarySaintValantin"
+            android:textColor="@color/blue3"
             android:textSize="@dimen/text" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView1"
+            android:id="@+id/licenceCardView1"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_below="@id/textViewLicence"
@@ -33,6 +33,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <TextView
@@ -48,14 +49,15 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView3"
+            android:id="@+id/licenceCardView2"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_below="@id/cardView1"
+            android:layout_below="@id/licenceCardView1"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <TextView
@@ -71,14 +73,15 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView4"
+            android:id="@+id/licenceCardView3"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_below="@id/cardView3"
+            android:layout_below="@id/licenceCardView2"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <TextView
@@ -94,14 +97,15 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView5"
+            android:id="@+id/licenceCardView4"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_below="@id/cardView4"
+            android:layout_below="@id/licenceCardView3"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <TextView
@@ -117,14 +121,15 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card6"
+            android:id="@+id/licenceCardView5"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_below="@id/cardView5"
+            android:layout_below="@id/licenceCardView4"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <TextView
@@ -140,14 +145,15 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card7"
+            android:id="@+id/licenceCardView6"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_below="@id/card6"
+            android:layout_below="@id/licenceCardView5"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <TextView
@@ -163,13 +169,15 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/licenceCardView7"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_below="@id/card7"
+            android:layout_below="@id/licenceCardView6"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="16dp"
             app:elevation="4dp">
 
             <TextView

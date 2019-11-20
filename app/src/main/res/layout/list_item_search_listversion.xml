@@ -9,4 +9,5 @@
     android:text="@string/guerrierdelta"
     android:textAllCaps="false"
     android:textColor="@android:color/black"
-    android:textSize="@dimen/buttonDefault" />
+    android:textSize="@dimen/buttonDefault"
+    android:elevation="4dp" />

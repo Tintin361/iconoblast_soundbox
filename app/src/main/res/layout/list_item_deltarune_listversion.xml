@@ -3,11 +3,12 @@
     android:id="@+id/deltaruneButton"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center"
     android:focusable="true"
+    android:gravity="center"
     android:layout_marginRight="4dp"
     android:layout_marginLeft="4dp"
     android:text="@string/guerrierdelta"
     android:textAllCaps="false"
     android:textColor="@android:color/black"
-    android:textSize="@dimen/buttonDefault" />
+    android:textSize="@dimen/buttonDefault"
+    android:elevation="4dp" />

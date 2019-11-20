@@ -2,8 +2,6 @@ package com.papple.iconoblast;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -23,7 +21,6 @@ import com.jaeger.library.StatusBarUtil;
 import static maes.tech.intentanim.CustomIntent.customType;
 
 public class secret extends AppCompatActivity {
-    public MediaPlayer mPlayer = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,10 +41,10 @@ public class secret extends AppCompatActivity {
 
         if (answerA) {
             toolbar3.setBackgroundResource(R.drawable.rounded_toolbar);
+            this.setTheme(R.style.AppTheme_NoActionBar);
         } else if (answerB) {
             toolbar3.setBackgroundResource(R.drawable.rounded_toolbar_dark);
-        } else {
-            toolbar3.setBackgroundResource(R.drawable.rounded_toolbar);
+            this.setTheme(R.style.DarkTheme);
         }
 
         final EditText editText = findViewById(R.id.editText);
@@ -154,15 +151,6 @@ public class secret extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
-    }
-
-    public void playSound(int redId) {
-        if (mPlayer != null) {
-            mPlayer.stop();
-            mPlayer.release();
-        }
-        mPlayer = MediaPlayer.create(this, redId);
-        mPlayer.start();
     }
 
     @Override

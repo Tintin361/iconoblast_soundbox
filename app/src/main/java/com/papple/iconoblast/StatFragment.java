@@ -1,7 +1,6 @@
 package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,9 +11,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
@@ -26,11 +23,7 @@ public class StatFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View v= inflater.inflate(R.layout.fragment_stat, container, false);
 
-        if(getActivity() == null) return v;
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
-        }
+        if (getActivity() == null) return v;
 
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
         AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
@@ -47,29 +40,29 @@ public class StatFragment extends Fragment {
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", false);
         editor.putBoolean("asFrag", false);
+        editor.apply();
 
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
-        editor.apply();
-
-        Button check = v.findViewById(R.id.giftButton);
-        check.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (getActivity() == null) return;
-                    SharedPreferences timePref = getActivity().getSharedPreferences("Time", 0);
-                    int value = timePref.getInt("value", 0);
-                    Toast.makeText(getActivity(), "Vous avez " + value + " coin(s).", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         TextView ddlcText = v.findViewById(R.id.valueDdlc);
         TextView mgtText = v.findViewById(R.id.valueMgt);
         TextView zeldaText = v.findViewById(R.id.valueZelda);
         TextView ascunsText = v.findViewById(R.id.valueAscuns);
         TextView deltaText = v.findViewById(R.id.valueDelta);
+
+        if (answerA) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
+            cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+
+        } else if (answerB) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            getActivity().setTheme(R.style.DarkTheme2);
+        }
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("Number", 0);
         int ddlcNumber = sharedPreferences.getInt("ddlc", 0);

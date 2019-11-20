@@ -3,7 +3,6 @@ package com.papple.iconoblast;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -31,17 +30,16 @@ public class InfosActivity extends AppCompatActivity {
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_infos);
-
-        this.setTheme(R.style.AppTheme_NoActionBar2);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (answerA) {
             StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+            setTheme(R.style.AppTheme_NoActionBar);
+        } else if (answerB) {
+            StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
+            setTheme(R.style.AppTheme_NoActionBar2);
         }
 
-        RelativeLayout rLayout = findViewById(R.id.infoRelativeLayout);
-        BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_infos);
 
         Toolbar toolbar = findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar);
@@ -50,7 +48,22 @@ public class InfosActivity extends AppCompatActivity {
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow);
         }
 
+        RelativeLayout rLayout = findViewById(R.id.infoRelativeLayout);
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
+
+        if (answerA) {
+            rLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.colorPrimary));
+
+        } else if (answerB) {
+            rLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
+            bottomNav.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.dddlc));
+        }
 
         if (answerA) {
 

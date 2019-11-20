@@ -10,6 +10,8 @@
     android:layout_marginRight="3dp"
     android:layout_marginTop="10dp"
     app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
     app:cardBackgroundColor="@color/blue4">
 
     <LinearLayout

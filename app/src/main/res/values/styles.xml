@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-
 <resources>
 
     <!-- Base application theme. -->
@@ -9,24 +8,47 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
-        <item name="android:colorBackground">@color/white</item>
     </style>
 
-    <style name="AppTheme.NoActionBar2" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme.NoActionBar2">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:colorBackground">@color/white</item>
     </style>
 
-    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:colorBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <style name="DarkTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorBackground">@color/dddlc</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/sniglet_regular</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="DarkTheme2" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorBackground">@color/dddlc</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/sniglet_regular</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 
 </resources>

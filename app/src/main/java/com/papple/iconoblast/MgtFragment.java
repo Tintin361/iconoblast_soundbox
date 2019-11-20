@@ -3,7 +3,6 @@ package com.papple.iconoblast;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -21,7 +20,7 @@ import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
 
 public class MgtFragment extends Fragment {
-    public MediaPlayer jaimeLesPlayer;
+    private MediaPlayer jaimeLesPlayer;
 
     @Nullable
     @Override
@@ -30,10 +29,6 @@ public class MgtFragment extends Fragment {
 
         if (getActivity() == null) {
             return view2;
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
         }
 
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
@@ -61,6 +56,15 @@ public class MgtFragment extends Fragment {
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
 
+        if (answerA) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+        } else if (answerB) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            getActivity().setTheme(R.style.DarkTheme2);
+        }
 
         Button bButton = view2.findViewById(R.id.branleurb);
         bButton.setOnClickListener(new View.OnClickListener() {
@@ -126,6 +130,7 @@ public class MgtFragment extends Fragment {
             ViewCompat.setBackgroundTintList(gueuleButton, ColorStateList.valueOf(getResources().getColor(R.color.green4)));
             ViewCompat.setBackgroundTintList(baButton, ColorStateList.valueOf(getResources().getColor(R.color.blue1)));
             ViewCompat.setBackgroundTintList(cButton, ColorStateList.valueOf(getResources().getColor(R.color.blue2)));
+
         } else if (answerB) {
             ViewCompat.setBackgroundTintList(bButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple)));
             ViewCompat.setBackgroundTintList(mButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple2)));
@@ -134,20 +139,11 @@ public class MgtFragment extends Fragment {
             ViewCompat.setBackgroundTintList(gueuleButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue3)));
             ViewCompat.setBackgroundTintList(baButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue4)));
             ViewCompat.setBackgroundTintList(cButton, ColorStateList.valueOf(getResources().getColor(R.color.dGreen)));
-        } else {
-            ViewCompat.setBackgroundTintList(bButton, ColorStateList.valueOf(getResources().getColor(R.color.Red1)));
-            ViewCompat.setBackgroundTintList(mButton, ColorStateList.valueOf(getResources().getColor(R.color.orange1)));
-            ViewCompat.setBackgroundTintList(dButton, ColorStateList.valueOf(getResources().getColor(R.color.yellow1)));
-            ViewCompat.setBackgroundTintList(degeuButton, ColorStateList.valueOf(getResources().getColor(R.color.green3)));
-            ViewCompat.setBackgroundTintList(gueuleButton, ColorStateList.valueOf(getResources().getColor(R.color.green4)));
-            ViewCompat.setBackgroundTintList(baButton, ColorStateList.valueOf(getResources().getColor(R.color.blue1)));
-            ViewCompat.setBackgroundTintList(cButton, ColorStateList.valueOf(getResources().getColor(R.color.blue2)));
         }
-
         return view2;
     }
 
-    public void playSound(int redId) {
+    private void playSound(int redId) {
         if (jaimeLesPlayer != null) {
             jaimeLesPlayer.stop();
             jaimeLesPlayer.release();

@@ -2,7 +2,6 @@ package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -28,27 +27,43 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
     Search_Adapter_List sAdapter;
     RecyclerView.LayoutManager mLayoutManager;
     ArrayList<Search_Item_List_ListVersion> searchList;
+    SharedPreferences settings;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SharedPreferences settings = getSharedPreferences("Answers", 0);
+        settings = getSharedPreferences("Answers", 0);
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
 
         setContentView(R.layout.activity_search);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-        }
-
         final Toolbar toolbar = findViewById(R.id.toolbar_search);
         setSupportActionBar(toolbar);
 
         RelativeLayout relativeLayout = findViewById(R.id.searchRelativeLayout);
+
+        if (answerA) {
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
+            relativeLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
+            this.setTheme(R.style.AppTheme_NoActionBar);
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.colorPrimary));
+
+        } else if (answerB) {
+            StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
+            relativeLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            this.setTheme(R.style.DarkTheme);
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.dddlc));
+        }
+
+        if (answerA) {
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
+        } else if (answerB) {
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
+        }
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

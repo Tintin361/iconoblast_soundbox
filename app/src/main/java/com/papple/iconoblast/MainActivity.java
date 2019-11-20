@@ -17,6 +17,7 @@ import androidx.browser.customtabs.CustomTabsIntent;
 
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -34,7 +35,6 @@ import android.widget.Toast;
 import com.github.javiersantos.appupdater.AppUpdater;
 import com.github.javiersantos.appupdater.enums.Display;
 import com.github.javiersantos.appupdater.enums.UpdateFrom;
-import com.jaeger.library.StatusBarUtil;
 
 import static maes.tech.intentanim.CustomIntent.customType;
 
@@ -57,15 +57,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         boolean answerD = settings.getBoolean("questionD", false);
         boolean autoMajBoolean = settings.getBoolean("automaj", false);
 
-        MainActivity.this.setTheme(R.style.AppTheme_NoActionBar);
+        if (!answerA && !answerB) {
+            editor.putBoolean("questionA", true);
+            editor.putBoolean("questionB", false);
+            editor.apply();
+        }
 
         if (!answerC && !answerD) {
             editor.putBoolean("questionC", true).apply();
         }
-
-        editor.putBoolean("questionA", true);
-        editor.putBoolean("questionB", false);
-        editor.apply();
 
         if (autoMajBoolean) {
             AppUpdater app = new AppUpdater(MainActivity.this)
@@ -84,6 +84,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        if (answerA) {
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
+            this.setTheme(R.style.AppTheme_NoActionBar2);
+            navigationView.setBackgroundColor(getResources().getColor(android.R.color.white));
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.colorPrimary));
+
+        } else if (answerB) {
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
+            this.setTheme(R.style.DarkTheme2);
+            navigationView.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.dddlc));
+        }
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -460,7 +473,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 toaster.cancel();
                 super.onBackPressed();
             } else {
-                toaster = Toast.makeText(getBaseContext(), "Appuyez une seconde fois pour quitter.", Toast.LENGTH_SHORT);
+                toaster = Toast.makeText(getBaseContext(), "Faites retour une seconde fois pour quitter.", Toast.LENGTH_SHORT);
                 TextView view = toaster.getView().findViewById(android.R.id.message);
                 if (view != null) view.setGravity(Gravity.CENTER);
                 toaster.show();

@@ -8,75 +8,18 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:gravity="center"
-            android:text="@string/gift"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/titleText"
-            android:textStyle="bold"
-            android:visibility="gone" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <Button
-                android:id="@+id/giftButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="64dp"
-                android:layout_marginRight="64dp"
-                android:gravity="center"
-                android:text="@string/giftButton"
-                android:textColor="@color/dGreen"
-                android:textSize="@dimen/text"
-                android:visibility="gone" />
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:gravity="center"
-            android:text="@string/time"
-            android:textColor="@color/dGreen"
-            android:textSize="@dimen/text"
-            android:textStyle="bold"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/timeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:gravity="center"
-            android:text="@string/Vtime"
-            android:textColor="@color/dGreen"
-            android:textSize="@dimen/text"
-            android:textStyle="bold"
-            android:visibility="gone" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
             android:gravity="center"
             android:text="@string/stat"
             android:textColor="@color/orange1"
             android:textSize="@dimen/titleText"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView1"
@@ -86,7 +29,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:elevation="4dp">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -96,19 +40,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_marginStart="8dp"
                     android:gravity="start"
                     android:text="@string/statDdlc"
+                    android:layout_alignParentStart="true"
                     android:textSize="@dimen/text" />
 
                 <TextView
                     android:id="@+id/valueDdlc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="8dp"
-                    android:gravity="end"
                     android:text="@string/value"
                     android:textAlignment="textEnd"
                     android:textColor="@color/dGreen"
@@ -127,7 +71,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:elevation="4dp">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -137,19 +82,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_marginStart="8dp"
                     android:gravity="start"
                     android:text="@string/statMGT"
+                    android:layout_alignParentStart="true"
                     android:textSize="@dimen/text" />
 
                 <TextView
                     android:id="@+id/valueMgt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="8dp"
-                    android:gravity="end"
                     android:text="@string/value"
                     android:textAlignment="textEnd"
                     android:textColor="@color/dGreen"
@@ -168,7 +113,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:elevation="4dp">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -178,19 +124,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_marginStart="8dp"
                     android:gravity="start"
                     android:text="@string/statDELTA"
+                    android:layout_alignParentStart="true"
                     android:textSize="@dimen/text" />
 
                 <TextView
                     android:id="@+id/valueDelta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="8dp"
-                    android:gravity="end"
                     android:text="@string/value"
                     android:textAlignment="textEnd"
                     android:textColor="@color/dGreen"
@@ -209,7 +155,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:elevation="4dp">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -219,19 +166,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_marginStart="8dp"
                     android:gravity="start"
                     android:text="@string/statZelda"
+                    android:layout_alignParentStart="true"
                     android:textSize="@dimen/text" />
 
                 <TextView
                     android:id="@+id/valueZelda"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="8dp"
-                    android:gravity="end"
                     android:text="@string/value"
                     android:textAlignment="textEnd"
                     android:textColor="@color/dGreen"
@@ -250,7 +197,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/marginBottomSize"
-            app:elevation="4dp">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -260,19 +208,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_marginStart="8dp"
                     android:gravity="start"
                     android:text="@string/statAscuns"
+                    android:layout_alignParentStart="true"
                     android:textSize="@dimen/text" />
 
                 <TextView
                     android:id="@+id/valueAscuns"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="8dp"
-                    android:gravity="end"
                     android:text="@string/value"
                     android:textAlignment="textEnd"
                     android:textColor="@color/dGreen"

@@ -5,7 +5,7 @@
     android:layout_height="115dp"
     android:background="@drawable/rounded_drawer"
     android:fitsSystemWindows="false"
-    android:gravity="bottom"
+    android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp"
     android:layout_margin="8dp"

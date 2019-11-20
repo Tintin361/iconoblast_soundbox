@@ -2,7 +2,6 @@ package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,11 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -31,10 +28,8 @@ public class ZeldaFragment extends Fragment implements Zelda_Adapter.OnItemClick
     Zelda_Adapter_List aAdapter;
     Zelda_Adapter aAdapter2;
     RecyclerView.LayoutManager mLayoutManager;
-    public RelativeLayout relativeLayout;
-    ArrayList<Zelda_Item_List_ListVersion> zeldaList;
-    ArrayList<Zelda_Item_List> zeldaList2;
-    Picasso.Builder builder;
+    private ArrayList<Zelda_Item_List_ListVersion> zeldaList;
+    private ArrayList<Zelda_Item_List> zeldaList2;
 
     @Nullable
     @Override
@@ -43,10 +38,6 @@ public class ZeldaFragment extends Fragment implements Zelda_Adapter.OnItemClick
 
         if (getActivity() == null) {
             return view;
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.zelda));
         }
 
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
@@ -75,6 +66,17 @@ public class ZeldaFragment extends Fragment implements Zelda_Adapter.OnItemClick
         boolean answerB = settings.getBoolean("questionB", false);
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
+
+        if (answerA) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.zelda));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.zelda));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+
+        } else if (answerB) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            getActivity().setTheme(R.style.DarkTheme2);
+        }
 
         if (answerC) {
             zeldaList = new ArrayList<>();
@@ -105,7 +107,6 @@ public class ZeldaFragment extends Fragment implements Zelda_Adapter.OnItemClick
 
             mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         }
-
         return view;
     }
 

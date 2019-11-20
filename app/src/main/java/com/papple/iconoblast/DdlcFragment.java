@@ -2,7 +2,6 @@ package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,11 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -30,10 +27,8 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
     Ddlc_Adapter_List dAdapter;
     Ddlc_Adapter dAdapter2;
     RecyclerView.LayoutManager mLayoutManager;
-    public RelativeLayout relativeLayout;
     ArrayList<Ddlc_Item_List_ListVersion> ddlcList;
     ArrayList<Ddlc_Item_List> ddlcList2;
-    Picasso.Builder builder;
 
     @Nullable
     @Override
@@ -42,10 +37,6 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
 
         if (getActivity() == null) {
             return view;
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ddlc));
         }
 
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
@@ -74,6 +65,17 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
         boolean answerB = settings.getBoolean("questionB", false);
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
+
+        if (answerA) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ddlc));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
+            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+
+        } else if (answerB) {
+            StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+            cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            getActivity().setTheme(R.style.DarkTheme2);
+        }
 
         if (answerC) {
             ddlcList = new ArrayList<>();
