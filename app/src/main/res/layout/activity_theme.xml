@@ -63,6 +63,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginRight="4dp"
                             android:layout_weight="1"
+                            android:gravity="bottom"
                             app:cardCornerRadius="16dp"
                             app:cardElevation="0dp">
 
@@ -76,12 +77,15 @@
                                 android:orientation="vertical">
 
                                 <ImageView
+                                    android:id="@+id/i1"
                                     android:layout_width="150dp"
                                     android:layout_height="150dp"
                                     android:layout_gravity="center"
                                     android:layout_marginBottom="8dp"
+                                    android:layout_marginTop="8dp"
                                     android:scaleType="centerCrop"
-                                    android:src="@drawable/pas_sombre"
+                                    android:src="@drawable/screen_light"
+                                    android:background="@drawable/round_image"
                                     tools:ignore="contentdescription" />
 
                                 <RadioButton
@@ -91,7 +95,8 @@
                                     android:layout_marginStart="4dp"
                                     android:gravity="center"
                                     android:text="@string/themen"
-                                    android:textSize="@dimen/radioButtonText2" />
+                                    android:textSize="@dimen/radioButtonText2"
+                                    android:buttonTint="@color/colorAccent" />
 
                             </LinearLayout>
 
@@ -117,12 +122,15 @@
                                 android:orientation="vertical">
 
                                 <ImageView
+                                    android:id="@+id/i2"
                                     android:layout_width="150dp"
                                     android:layout_height="150dp"
-                                    android:layout_gravity="center"
                                     android:layout_marginBottom="8dp"
+                                    android:layout_gravity="center"
                                     android:scaleType="centerCrop"
-                                    android:src="@drawable/sombre"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/round_image"
+                                    android:src="@drawable/screen_dark"
                                     tools:ignore="contentdescription" />
 
                                 <RadioButton
@@ -132,7 +140,8 @@
                                     android:layout_marginStart="4dp"
                                     android:gravity="center"
                                     android:text="@string/theme2"
-                                    android:textSize="@dimen/radioButtonText2" />
+                                    android:textSize="@dimen/radioButtonText2"
+                                    android:buttonTint="@color/colorAccent" />
 
                             </LinearLayout>
 
@@ -193,7 +202,8 @@
                                 android:gravity="center"
                                 android:text="@string/grille"
                                 android:onClick="onShowClick"
-                                android:textSize="@dimen/radioButtonText" />
+                                android:textSize="@dimen/radioButtonText"
+                                android:buttonTint="@color/colorAccent" />
 
                             <RadioButton
                                 android:id="@+id/list"
@@ -204,7 +214,8 @@
                                 android:gravity="center"
                                 android:text="@string/list"
                                 android:onClick="onShowClick"
-                                android:textSize="@dimen/radioButtonText" />
+                                android:textSize="@dimen/radioButtonText"
+                                android:buttonTint="@color/colorAccent" />
 
                         </RadioGroup>
 
@@ -254,7 +265,8 @@
                                 android:gravity="center"
                                 android:text="@string/auto"
                                 android:layout_marginStart="4dp"
-                                android:textSize="@dimen/radioButtonText2" />
+                                android:textSize="@dimen/radioButtonText2"
+                                android:buttonTint="@color/colorAccent" />
 
                             <RadioButton
                                 android:id="@+id/manuel"
@@ -265,7 +277,8 @@
                                 android:gravity="center"
                                 android:text="@string/manuel"
                                 android:layout_marginStart="4dp"
-                                android:textSize="@dimen/radioButtonText2" />
+                                android:textSize="@dimen/radioButtonText2"
+                                android:buttonTint="@color/colorAccent" />
 
                         </RadioGroup>
 

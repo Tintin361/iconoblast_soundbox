@@ -80,6 +80,8 @@ public class ZeldaFragment extends Fragment implements Zelda_Adapter.OnItemClick
 
         if (answerC) {
             zeldaList = new ArrayList<>();
+            zeldaList.add(new Zelda_Item_List_ListVersion("Non, et tu t'amuse !!! (Ico)"));
+            zeldaList.add(new Zelda_Item_List_ListVersion("Qu'est-ce que j'aimerais ... (Ico)"));
             zeldaList.add(new Zelda_Item_List_ListVersion("ZELDA !!! (Ico)"));
             zeldaList.add(new Zelda_Item_List_ListVersion("Chanson Ico et Étagère"));
 
@@ -93,8 +95,11 @@ public class ZeldaFragment extends Fragment implements Zelda_Adapter.OnItemClick
             aAdapter.setOnItemClickListener(this);
         } else if (answerD) {
             zeldaList2 = new ArrayList<>();
+            zeldaList2.add(new Zelda_Item_List(R.drawable.amuse_image, "Non, et tu t'amuse !!! (Ico)"));
+            zeldaList2.add(new Zelda_Item_List(R.drawable.main_image, "Qu'est-ce que j'aimerais ... (Ico)"));
             zeldaList2.add(new Zelda_Item_List(R.drawable.zelda_image, "ZELDA !!! (Ico)"));
             zeldaList2.add(new Zelda_Item_List(R.drawable.chanson_zelda_image, "Chanson Ico et Étagère"));
+
 
             mRecyclerView = view.findViewById(R.id.zeldaRecyclerView);
             mRecyclerView.setHasFixedSize(true);
@@ -131,6 +136,12 @@ public class ZeldaFragment extends Fragment implements Zelda_Adapter.OnItemClick
             if (answerC) {
                 Zelda_Item_List_ListVersion currentItem = zeldaList.get(position);
                 switch (currentItem.getText()) {
+                    case "Non, et tu t'amuse !!! (Ico)":
+                        playSound(R.raw.amuse_sound);
+                        break;
+                    case "Qu'est-ce que j'aimerais ... (Ico)":
+                        playSound(R.raw.main_sound);
+                        break;
                     case "ZELDA !!! (Ico)":
                         playSound(R.raw.zelda_sound);
                         break;
@@ -141,6 +152,12 @@ public class ZeldaFragment extends Fragment implements Zelda_Adapter.OnItemClick
             } else if (answerD) {
                 Zelda_Item_List currentItem = zeldaList2.get(position);
                 switch (currentItem.getZeldaText()) {
+                    case "Non, et tu t'amuse !!! (Ico)":
+                        playSound(R.raw.amuse_sound);
+                        break;
+                    case "Qu'est-ce que j'aimerais ... (Ico)":
+                        playSound(R.raw.main_sound);
+                        break;
                     case "ZELDA !!! (Ico)":
                         playSound(R.raw.zelda_sound);
                         break;

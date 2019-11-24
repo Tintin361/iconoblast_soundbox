@@ -17,7 +17,6 @@ import androidx.browser.customtabs.CustomTabsIntent;
 
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -448,7 +447,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void openDialog() {
         new AlertDialog.Builder(this)
                 .setTitle("Redirection sur Github")
-                .setMessage("Vous allez être redirigé(e) sur Github, la page va s'ouvrir dans l'application (uniquement pour les appareils compatibles).")
+                .setMessage("Vous allez être redirigé(e) sur Github, la page va s'ouvrir dans l'application.")
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

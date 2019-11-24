@@ -3,9 +3,9 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         key {
-            storeFile file('H:\\new Android\\key\\keystore2.jks')
+            storeFile file('H:\\new Android\\key\\keystore.jks')
             storePassword 'looloo21'
-            keyAlias = 'iamkey'
+            keyAlias = 'imakey'
             keyPassword 'looloo21'
         }
     }
@@ -14,8 +14,8 @@ android {
         applicationId "com.papple.iconoblast"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 2
-        versionName "1.0.0.30"
+        versionCode 5
+        versionName "1.0.0.50"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.key
         multiDexEnabled true

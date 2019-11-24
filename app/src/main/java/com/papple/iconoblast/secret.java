@@ -90,20 +90,6 @@ public class secret extends AppCompatActivity {
                     if (view3 != null) view3.setGravity(Gravity.CENTER);
                     toast3.show();
 
-                } else if (editText.getText().toString().equals("Donald Trump")) {
-
-                    View decorView = getWindow().getDecorView();
-                    int visibility = View.SYSTEM_UI_FLAG_FULLSCREEN;
-                    decorView.setSystemUiVisibility(visibility);
-
-                    toolbar3.setVisibility(View.GONE);
-                    editText.setVisibility(View.GONE);
-                    button.setVisibility(View.GONE);
-
-                    ScrollView sView = findViewById(R.id.secretLayout);
-                    sView.setBackgroundResource(R.drawable.image);
-                    StatusBarUtil.setTranslucent(secret.this);
-
                 } else if (editText.getText().toString().equals("Claude")) {
 
                     scrollView.setRotation(-180);
@@ -115,10 +101,6 @@ public class secret extends AppCompatActivity {
                 } else if (editText.getText().toString().equals("Marc-André") || editText.getText().toString().equals("Pigeon")) {
 
                     imageView.setBackgroundResource(R.drawable.smic);
-
-                } else if (editText.getText().toString().equals("Halloween")) {
-
-                    Toast.makeText(secret.this, "WIP", Toast.LENGTH_LONG).show();
 
                 } else if (!editText.getText().toString().equals("K/DA - POP/STARS")) {
 

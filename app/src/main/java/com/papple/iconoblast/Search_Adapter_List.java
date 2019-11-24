@@ -183,11 +183,17 @@ public class Search_Adapter_List extends RecyclerView.Adapter<Search_Adapter_Lis
                 case "KRISEUH ! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.blue4)));
                     break;
-                case "ZELDA !!! (Ico)":
+                case "Non, et tu t'amuse !!! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.Red1)));
                     break;
-                case "Chanson Ico et Étagère":
+                case "Qu'est-ce que j'aimerais ... (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.orange1)));
+                    break;
+                case "ZELDA !!! (Ico)":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.yellow1)));
+                    break;
+                case "Chanson Ico et Étagère":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.green3)));
                     break;
                 case "SALUUUUUUUUUTTT !!!!! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.Green2)));
@@ -297,11 +303,17 @@ public class Search_Adapter_List extends RecyclerView.Adapter<Search_Adapter_Lis
                 case "KRISEUH ! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dBlue4)));
                     break;
-                case "ZELDA !!! (Ico)":
+                case "Non, et tu t'amuse !!! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dBlue)));
                     break;
-                case "Chanson Ico et Étagère":
+                case "Qu'est-ce que j'aimerais ... (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dBlue2)));
+                    break;
+                case "ZELDA !!! (Ico)":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dBlue3)));
+                    break;
+                case "Chanson Ico et Étagère":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dBlue4)));
                     break;
                 case "SALUUUUUUUUUTTT !!!!! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dGreen)));

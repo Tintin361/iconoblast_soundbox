@@ -107,6 +107,8 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
         searchList.add(new Search_Item_List_ListVersion("TOUCH MY COCK !!! (Ico et Étagère)"));
         searchList.add(new Search_Item_List_ListVersion("Guerriers Delta !!! (Ico et Étagère)"));
         searchList.add(new Search_Item_List_ListVersion("KRISEUH ! (Ico)"));
+        searchList.add(new Search_Item_List_ListVersion("Non, et tu t'amuse !!! (Ico)"));
+        searchList.add(new Search_Item_List_ListVersion("Qu'est-ce que j'aimerais ... (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("ZELDA !!! (Ico)"));
         searchList.add(new Search_Item_List_ListVersion("Chanson Ico et Étagère"));
         searchList.add(new Search_Item_List_ListVersion("SALUUUUUUUUUTTT !!!!! (Ico)"));
@@ -265,6 +267,12 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
                 break;
             case "KRISEUH ! (Ico)":
                 playSound(R.raw.kris_sound);
+                break;
+            case "Non, et tu t'amuse !!! (Ico)":
+                playSound(R.raw.amuse_sound);
+                break;
+            case "Qu'est-ce que j'aimerais ... (Ico)":
+                playSound(R.raw.main_sound);
                 break;
             case "ZELDA !!! (Ico)":
                 playSound(R.raw.zelda_sound);

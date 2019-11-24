@@ -27,7 +27,7 @@
     <!-- Toolbar -->
     <color name="toolbardark">#323337</color>
 
-    <!-- Color for Button -->
+    <!-- Color for Sound -->
     <color name="white">#ffffff</color>
     <color name="blue">#2600ff</color>
     <color name="colorDarkPrimary">#282828</color>
@@ -56,7 +56,7 @@
     <color name="orange2">#FF7F27</color>
     <color name="pink3">#ffd4ef</color>
 
-    <!-- Dark Color for Button -->
+    <!-- Dark Color for Sound -->
     <color name="dPurple">#d13693</color>
     <color name="dPurple2">#bf32c1</color>
     <color name="dBlue">#7732c1</color>

@@ -91,21 +91,33 @@ public class Zelda_Adapter extends RecyclerView.Adapter<Zelda_Adapter.zeldaViewH
 
         if (answerA) {
             switch (currentItem.getZeldaText()) {
-                case "ZELDA !!! (Ico)":
+                case "Non, et tu t'amuse !!! (Ico)":
                     zeldaViewHolder.zeldaCardView.setCardBackgroundColor(ColorStateList.valueOf(zeldaViewHolder.zeldaCardView.getResources().getColor(R.color.Red1)));
                     break;
-                case "Chanson Ico et Étagère":
+                case "Qu'est-ce que j'aimerais ... (Ico)":
                     zeldaViewHolder.zeldaCardView.setCardBackgroundColor(ColorStateList.valueOf(zeldaViewHolder.zeldaCardView.getResources().getColor(R.color.orange1)));
+                    break;
+                case "ZELDA !!! (Ico)":
+                    zeldaViewHolder.zeldaCardView.setCardBackgroundColor(ColorStateList.valueOf(zeldaViewHolder.zeldaCardView.getResources().getColor(R.color.yellow1)));
+                    break;
+                case "Chanson Ico et Étagère":
+                    zeldaViewHolder.zeldaCardView.setCardBackgroundColor(ColorStateList.valueOf(zeldaViewHolder.zeldaCardView.getResources().getColor(R.color.green3)));
                     break;
             }
 
         } else if (answerB) {
             switch (currentItem.getZeldaText()) {
-                case "ZELDA !!! (Ico)":
+                case "Non, et tu t'amuse !!! (Ico)":
                     zeldaViewHolder.zeldaCardView.setCardBackgroundColor(ColorStateList.valueOf(zeldaViewHolder.zeldaCardView.getResources().getColor(R.color.dBlue)));
                     break;
-                case "Chanson Ico et Étagère":
+                case "Qu'est-ce que j'aimerais ... (Ico)":
                     zeldaViewHolder.zeldaCardView.setCardBackgroundColor(ColorStateList.valueOf(zeldaViewHolder.zeldaCardView.getResources().getColor(R.color.dBlue2)));
+                    break;
+                case "ZELDA !!! (Ico)":
+                    zeldaViewHolder.zeldaCardView.setCardBackgroundColor(ColorStateList.valueOf(zeldaViewHolder.zeldaCardView.getResources().getColor(R.color.dBlue3)));
+                    break;
+                case "Chanson Ico et Étagère":
+                    zeldaViewHolder.zeldaCardView.setCardBackgroundColor(ColorStateList.valueOf(zeldaViewHolder.zeldaCardView.getResources().getColor(R.color.dBlue4)));
                     break;
             }
         }

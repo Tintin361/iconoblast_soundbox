@@ -79,29 +79,41 @@ public class Zelda_Adapter_List extends RecyclerView.Adapter<Zelda_Adapter_List.
 
         if (answerA) {
             switch (currentItem.getText()) {
-                case "ZELDA !!! (Ico)":
+                case "Non, et tu t'amuse !!! (Ico)":
                     zeldaViewHolder.mButton.setSupportBackgroundTintList(ColorStateList.valueOf(zeldaViewHolder.mButton.getResources().getColor(R.color.Red1)));
                     break;
-                case "Chanson Ico et Étagère":
+                case "Qu'est-ce que j'aimerais ... (Ico)":
                     zeldaViewHolder.mButton.setSupportBackgroundTintList(ColorStateList.valueOf(zeldaViewHolder.mButton.getResources().getColor(R.color.orange1)));
+                    break;
+                case "ZELDA !!! (Ico)":
+                    zeldaViewHolder.mButton.setSupportBackgroundTintList(ColorStateList.valueOf(zeldaViewHolder.mButton.getResources().getColor(R.color.yellow1)));
+                    break;
+                case "Chanson Ico et Étagère":
+                    zeldaViewHolder.mButton.setSupportBackgroundTintList(ColorStateList.valueOf(zeldaViewHolder.mButton.getResources().getColor(R.color.green3)));
                     break;
             }
         } else if (answerB) {
             switch (currentItem.getText()) {
-                case "ZELDA !!! (Ico)":
+                case "Non, et tu t'amuse !!! (Ico)":
                     zeldaViewHolder.mButton.setSupportBackgroundTintList(ColorStateList.valueOf(zeldaViewHolder.mButton.getResources().getColor(R.color.dBlue)));
                     break;
-                case "Chanson Ico et Étagère":
+                case "Qu'est-ce que j'aimerais ... (Ico)":
                     zeldaViewHolder.mButton.setSupportBackgroundTintList(ColorStateList.valueOf(zeldaViewHolder.mButton.getResources().getColor(R.color.dBlue2)));
                     break;
+                case "ZELDA !!! (Ico)":
+                    zeldaViewHolder.mButton.setSupportBackgroundTintList(ColorStateList.valueOf(zeldaViewHolder.mButton.getResources().getColor(R.color.dBlue3)));
+                    break;
+                case "Chanson Ico et Étagère":
+                    zeldaViewHolder.mButton.setSupportBackgroundTintList(ColorStateList.valueOf(zeldaViewHolder.mButton.getResources().getColor(R.color.dBlue4)));
+                    break;
             }
-
-            Animation animation = AnimationUtils.loadAnimation(zcontext,
-                    (position > lastPosition) ? R.anim.up_from_bottom2
-                            : R.anim.down_from_top2);
-            zeldaViewHolder.itemView.startAnimation(animation);
-            lastPosition = position;
         }
+
+        Animation animation = AnimationUtils.loadAnimation(zcontext,
+                (position > lastPosition) ? R.anim.up_from_bottom2
+                        : R.anim.down_from_top2);
+        zeldaViewHolder.itemView.startAnimation(animation);
+        lastPosition = position;
 
     }
 

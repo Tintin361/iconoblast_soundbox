@@ -15,6 +15,7 @@
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:colorBackground">@color/white</item>
+        <item name="checkboxStyle"></item>
     </style>
 
     <style name="AppTheme.NoActionBar">

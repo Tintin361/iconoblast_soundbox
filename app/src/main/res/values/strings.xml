@@ -7,7 +7,7 @@
     <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 1.0.0.30</string>
+    <string name="version" translatable="false">Version 1.0.0.50</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
@@ -112,7 +112,6 @@
     <string name="design">Affichage</string>
     <string name="auto">Automatiquement</string>
     <string name="manuel">Manuellement</string>
-    <string name="wip">Les thèmes seront bientôt de retour !</string>
 
     <!-- Easter Egg Activity -->
     <string name="code">Entrez un code secret</string>
@@ -129,8 +128,5 @@
     <!-- Deltarune Fragment -->
     <string name="guerrierdelta">Guerriers Delta !!! (Ico et Étagère)</string>
     <string name="kris">KRISEUH ! (Ico)</string>
-
-    <!-- Search Activity -->
-    <string name="nothing">Impossible de trouver ce son&#8230; &#128549;</string>
 
 </resources>
