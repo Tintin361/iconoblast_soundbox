@@ -39,6 +39,12 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
 
+        if (answerA) {
+            setTheme(R.style.AppTheme_NoActionBar);
+        } else if (answerB) {
+            setTheme(R.style.DarkTheme);
+        }
+
         setContentView(R.layout.activity_search);
 
         final Toolbar toolbar = findViewById(R.id.toolbar_search);
@@ -48,20 +54,10 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
 
         if (answerA) {
             StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
-            relativeLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
-            this.setTheme(R.style.AppTheme_NoActionBar);
-            getWindow().setNavigationBarColor(getResources().getColor(R.color.colorPrimary));
+            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
 
         } else if (answerB) {
             StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
-            relativeLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            this.setTheme(R.style.DarkTheme);
-            getWindow().setNavigationBarColor(getResources().getColor(R.color.dddlc));
-        }
-
-        if (answerA) {
-            toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
-        } else if (answerB) {
             toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
         }
 

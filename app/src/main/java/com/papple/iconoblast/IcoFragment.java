@@ -1,14 +1,12 @@
 package com.papple.iconoblast;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,29 +26,6 @@ public class IcoFragment extends Fragment {
         AppCompatImageView discordImage = v.findViewById(R.id.discordImageView);
         AppCompatImageView IcoImage = v.findViewById(R.id.IcoImageView);
         AppCompatImageView etaImage = v.findViewById(R.id.EtaImageView);
-
-        SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
-
-        boolean answerA = settings.getBoolean("questionA", false);
-        boolean answerB = settings.getBoolean("questionB", false);
-
-        CardView cardView = v.findViewById(R.id.icoCardView1);
-        CardView cardView2 = v.findViewById(R.id.icoCardView2);
-        CardView cardView3 = v.findViewById(R.id.icoCardView3);
-        CardView cardView4 = v.findViewById(R.id.icoCardView4);
-
-        if (answerA) {
-            cardView.setCardBackgroundColor(getResources().getColor(android.R.color.white));
-            cardView2.setCardBackgroundColor(getResources().getColor(android.R.color.white));
-            cardView3.setCardBackgroundColor(getResources().getColor(android.R.color.white));
-            cardView4.setCardBackgroundColor(getResources().getColor(android.R.color.white));
-
-        } else if (answerB) {
-            cardView.setCardBackgroundColor(getResources().getColor(R.color.cardViewColor));
-            cardView2.setCardBackgroundColor(getResources().getColor(R.color.cardViewColor));
-            cardView3.setCardBackgroundColor(getResources().getColor(R.color.cardViewColor));
-            cardView4.setCardBackgroundColor(getResources().getColor(R.color.cardViewColor));
-        }
 
         twImage.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -70,12 +70,10 @@ public class ZeldaFragment extends Fragment implements Zelda_Adapter.OnItemClick
         if (answerA) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.zelda));
             cLayout.setBackgroundColor(getResources().getColor(R.color.zelda));
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
 
         } else if (answerB) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
             cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            getActivity().setTheme(R.style.DarkTheme2);
         }
 
         if (answerC) {

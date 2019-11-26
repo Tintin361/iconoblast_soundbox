@@ -59,11 +59,10 @@ public class MgtFragment extends Fragment {
         if (answerA) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
             cLayout.setBackgroundColor(getResources().getColor(R.color.mgt));
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+
         } else if (answerB) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
             cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            getActivity().setTheme(R.style.DarkTheme2);
         }
 
         Button bButton = view2.findViewById(R.id.branleurb);

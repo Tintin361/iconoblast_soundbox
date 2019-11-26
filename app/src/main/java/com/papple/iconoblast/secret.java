@@ -30,6 +30,12 @@ public class secret extends AppCompatActivity {
         final boolean answerA = settings.getBoolean("questionA", false);
         final boolean answerB = settings.getBoolean("questionB", false);
 
+        if (answerA) {
+            setTheme(R.style.AppTheme_NoActionBar);
+        } else if (answerB) {
+            setTheme(R.style.DarkTheme);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secret);
 
@@ -41,10 +47,10 @@ public class secret extends AppCompatActivity {
 
         if (answerA) {
             toolbar3.setBackgroundResource(R.drawable.rounded_toolbar);
-            this.setTheme(R.style.AppTheme_NoActionBar);
+            StatusBarUtil.setColor(this, getResources().getColor(android.R.color.white));
         } else if (answerB) {
             toolbar3.setBackgroundResource(R.drawable.rounded_toolbar_dark);
-            this.setTheme(R.style.DarkTheme);
+            StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
         }
 
         final EditText editText = findViewById(R.id.editText);

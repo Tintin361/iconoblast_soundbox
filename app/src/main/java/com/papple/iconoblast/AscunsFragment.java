@@ -69,12 +69,10 @@ public class AscunsFragment extends Fragment implements Ascuns_Adapter_List.OnIt
         if (answerA) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ascuns));
             cLayout.setBackgroundColor(getResources().getColor(R.color.ascuns));
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
 
         } else if (answerB) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
             cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            getActivity().setTheme(R.style.DarkTheme2);
         }
 
         if (answerC) {

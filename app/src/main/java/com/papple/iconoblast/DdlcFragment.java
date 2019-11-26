@@ -69,12 +69,10 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
         if (answerA) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.ddlc));
             cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
 
         } else if (answerB) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
             cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            getActivity().setTheme(R.style.DarkTheme2);
         }
 
         if (answerC) {

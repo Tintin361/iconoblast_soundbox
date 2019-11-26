@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.RelativeLayout;
 
 import com.jaeger.library.StatusBarUtil;
 
@@ -35,7 +34,7 @@ public class InfosActivity extends AppCompatActivity {
             setTheme(R.style.AppTheme_NoActionBar);
         } else if (answerB) {
             StatusBarUtil.setColor(this, getResources().getColor(R.color.dddlc));
-            setTheme(R.style.AppTheme_NoActionBar2);
+            setTheme(R.style.DarkTheme);
         }
 
         super.onCreate(savedInstanceState);
@@ -48,21 +47,14 @@ public class InfosActivity extends AppCompatActivity {
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow);
         }
 
-        RelativeLayout rLayout = findViewById(R.id.infoRelativeLayout);
-
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
         if (answerA) {
-            rLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
             toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
-            getWindow().setNavigationBarColor(getResources().getColor(R.color.colorPrimary));
 
         } else if (answerB) {
-            rLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
             toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
-            bottomNav.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            getWindow().setNavigationBarColor(getResources().getColor(R.color.dddlc));
         }
 
         if (answerA) {

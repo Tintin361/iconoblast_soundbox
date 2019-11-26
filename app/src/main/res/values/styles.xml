@@ -15,7 +15,7 @@
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:colorBackground">@color/white</item>
-        <item name="checkboxStyle"></item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -24,6 +24,7 @@
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:colorBackground">@color/white</item>
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -39,6 +40,7 @@
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:textColor">@android:color/white</item>
+        <item name="android:navigationBarColor">@color/dddlc</item>
     </style>
 
     <style name="DarkTheme2" parent="Theme.AppCompat.NoActionBar">
@@ -50,6 +52,7 @@
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:textColor">@android:color/white</item>
+        <item name="android:navigationBarColor">@color/dddlc</item>
     </style>
 
 </resources>

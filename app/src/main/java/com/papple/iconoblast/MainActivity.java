@@ -66,12 +66,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             editor.putBoolean("questionC", true).apply();
         }
 
+        editor.putBoolean("automaj", false);
+        editor.apply();
+
         if (autoMajBoolean) {
             AppUpdater app = new AppUpdater(MainActivity.this)
                     .setUpdateFrom(UpdateFrom.GITHUB)
                     .setGitHubUserAndRepo("Tintin361", "iconoblast_soundbox")
                     .setDisplay(Display.NOTIFICATION);
             app.start();
+        }
+
+        if (answerA) {
+            setTheme(R.style.AppTheme_NoActionBar2);
+        } else if (answerB) {
+            setTheme(R.style.DarkTheme2);
         }
 
         super.onCreate(savedInstanceState);
@@ -86,15 +95,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (answerA) {
             toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
-            this.setTheme(R.style.AppTheme_NoActionBar2);
             navigationView.setBackgroundColor(getResources().getColor(android.R.color.white));
-            getWindow().setNavigationBarColor(getResources().getColor(R.color.colorPrimary));
 
         } else if (answerB) {
             toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
-            this.setTheme(R.style.DarkTheme2);
             navigationView.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            getWindow().setNavigationBarColor(getResources().getColor(R.color.dddlc));
         }
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);

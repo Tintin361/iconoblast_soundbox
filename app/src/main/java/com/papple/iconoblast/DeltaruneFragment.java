@@ -67,12 +67,10 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
         if (answerA) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.deltarune));
             cLayout.setBackgroundColor(getResources().getColor(R.color.deltarune));
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
 
         } else if (answerB) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
             cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
-            getActivity().setTheme(R.style.DarkTheme2);
         }
 
         if (answerC) {

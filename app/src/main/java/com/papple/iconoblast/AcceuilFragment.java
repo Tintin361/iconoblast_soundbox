@@ -54,11 +54,10 @@ public class AcceuilFragment extends Fragment {
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
 
         if (answerA) {
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
             cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
             StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
+
         } else if (answerB) {
-            getActivity().setTheme(R.style.DarkTheme2);
             cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
         }

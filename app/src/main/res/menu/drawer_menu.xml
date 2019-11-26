@@ -15,7 +15,7 @@
             android:id="@+id/versionId"
             android:checkable="false"
             android:icon="@drawable/ic_new"
-            android:title="@string/versiond"
+            android:title="@string/version"
             app:itemIconTint="@color/colorAccent" />
         <item
             android:id="@+id/nav_stat"
@@ -25,8 +25,7 @@
             android:id="@+id/share"
             android:checkable="false"
             android:icon="@drawable/ic_share"
-            android:title="@string/share"
-            android:visibility="gone" />
+            android:title="@string/share" />
     </group>
 
     <item android:title="@string/icob">

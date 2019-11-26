@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Application -->
-    <string name="versiond"><font color="#ffffbb33">Version 1.0.0.50</font></string>
+    <string name="version"><font color="#ffffbb33">Version 1.0.0.51</font></string>
 
     <!-- Drawer -->
     <string name="bug"><font color="#ff1500">Signaler un Bug</font></string>

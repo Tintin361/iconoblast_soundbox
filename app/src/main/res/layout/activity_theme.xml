@@ -95,8 +95,7 @@
                                     android:layout_marginStart="4dp"
                                     android:gravity="center"
                                     android:text="@string/themen"
-                                    android:textSize="@dimen/radioButtonText2"
-                                    android:buttonTint="@color/colorAccent" />
+                                    android:textSize="@dimen/radioButtonText2" />
 
                             </LinearLayout>
 
@@ -140,8 +139,7 @@
                                     android:layout_marginStart="4dp"
                                     android:gravity="center"
                                     android:text="@string/theme2"
-                                    android:textSize="@dimen/radioButtonText2"
-                                    android:buttonTint="@color/colorAccent" />
+                                    android:textSize="@dimen/radioButtonText2" />
 
                             </LinearLayout>
 
@@ -202,8 +200,7 @@
                                 android:gravity="center"
                                 android:text="@string/grille"
                                 android:onClick="onShowClick"
-                                android:textSize="@dimen/radioButtonText"
-                                android:buttonTint="@color/colorAccent" />
+                                android:textSize="@dimen/radioButtonText" />
 
                             <RadioButton
                                 android:id="@+id/list"
@@ -214,8 +211,7 @@
                                 android:gravity="center"
                                 android:text="@string/list"
                                 android:onClick="onShowClick"
-                                android:textSize="@dimen/radioButtonText"
-                                android:buttonTint="@color/colorAccent" />
+                                android:textSize="@dimen/radioButtonText" />
 
                         </RadioGroup>
 
@@ -252,9 +248,20 @@
                             android:textColor="@color/ascuns"
                             android:textSize="@dimen/titleText" />
 
+                        <TextView
+                            android:id="@+id/majTextUpdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/buttonDefault"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/majupdate" />
+
                         <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:visibility="gone"
                             android:layout_marginTop="8dp">
 
                             <RadioButton
@@ -265,8 +272,7 @@
                                 android:gravity="center"
                                 android:text="@string/auto"
                                 android:layout_marginStart="4dp"
-                                android:textSize="@dimen/radioButtonText2"
-                                android:buttonTint="@color/colorAccent" />
+                                android:textSize="@dimen/radioButtonText2" />
 
                             <RadioButton
                                 android:id="@+id/manuel"
@@ -277,8 +283,7 @@
                                 android:gravity="center"
                                 android:text="@string/manuel"
                                 android:layout_marginStart="4dp"
-                                android:textSize="@dimen/radioButtonText2"
-                                android:buttonTint="@color/colorAccent" />
+                                android:textSize="@dimen/radioButtonText2" />
 
                         </RadioGroup>
 
