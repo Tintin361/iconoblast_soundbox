@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Doki Doki Litterature Club")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_ddlc))
-                    .setRank(5)
+                    .setRank(1)
                     .setIntent(DdlcIntent)
                     .build();
 
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Mad Games Tycoon")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_mgt))
-                    .setRank(4)
+                    .setRank(2)
                     .setIntent(MgtIntent)
                     .build();
 
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setLongLabel("Zelda")
                     .setDisabledMessage("Ce raccourci est désactivé.")
                     .setIcon(Icon.createWithResource(this, R.mipmap.ic_zelda))
-                    .setRank(2)
+                    .setRank(4)
                     .setIntent(ZeldaIntent)
                     .build();
 
@@ -161,8 +161,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setShortLabel("Ascuns")
                     .setLongLabel("Ascuns")
                     .setDisabledMessage("Ce raccourci est désactivé.")
-                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_ascuns))
-                    .setRank(1)
+                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_ascuns_icon))
+                    .setRank(5)
                     .setIntent(AscunsIntent)
                     .build();
 

@@ -20,6 +20,8 @@
         android:text="@string/branleur"
         android:textAllCaps="false"
         android:textSize="@dimen/buttonDefault"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginBottom="@dimen/marginBottomDefault"
         app:backgroundTint="@color/Red1" />
 
@@ -29,6 +31,8 @@
         android:layout_height="wrap_content"
         android:text="@string/mais"
         android:textAllCaps="false"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
         android:textSize="@dimen/buttonDefault"
         android:layout_marginBottom="@dimen/marginBottomDefault"
         app:backgroundTint="@color/orange1" />
@@ -40,6 +44,8 @@
         android:text="@string/doigt"
         android:textAllCaps="false"
         android:textSize="@dimen/buttonDefault"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginBottom="@dimen/marginBottomDefault"
         app:backgroundTint="@color/yellow1" />
 
@@ -49,6 +55,8 @@
         android:layout_height="wrap_content"
         android:text="@string/degueulasse"
         android:textAllCaps="false"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
         android:textSize="@dimen/buttonDefault"
         android:layout_marginBottom="@dimen/marginBottomDefault"
         app:backgroundTint="@color/green3" />
@@ -59,6 +67,8 @@
         android:layout_height="wrap_content"
         android:text="@string/gueule"
         android:textAllCaps="false"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
         android:textSize="@dimen/buttonDefault"
         android:layout_marginBottom="@dimen/marginBottomDefault"
         app:backgroundTint="@color/green4" />
@@ -69,6 +79,8 @@
         android:layout_height="wrap_content"
         android:text="@string/baises"
         android:textAllCaps="false"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
         android:textSize="@dimen/buttonDefault"
         android:layout_marginBottom="@dimen/marginBottomDefault"
         app:backgroundTint="@color/blue1" />
@@ -79,6 +91,8 @@
         android:layout_height="wrap_content"
         android:text="@string/cock"
         android:textAllCaps="false"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
         android:textSize="@dimen/buttonDefault"
         android:layout_marginBottom="@dimen/marginBottomDefault"
         app:backgroundTint="@color/blue2" />

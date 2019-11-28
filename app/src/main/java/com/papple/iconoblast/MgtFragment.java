@@ -33,7 +33,7 @@ public class MgtFragment extends Fragment {
 
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
         AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
-        params.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP_MARGINS | AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS);
+        params.setScrollFlags(0);
         toolbar.setLayoutParams(params);
 
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
