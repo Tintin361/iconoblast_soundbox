@@ -7,7 +7,7 @@
     <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 1.0.0.52</string>
+    <string name="version" translatable="false">Version 1.0.1</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
@@ -44,51 +44,14 @@
     <string name="ascuns" translatable="false">Ascuns</string>
     <string name="bug">Signaler un Bug</string>
 
-    <!-- DDLC Activity -->
-    <string name="ken1">C\'est parce que j\'veux ken !!! (Étagère)</string>
-    <string name="tete">MAIS BORDEL, ÇA VA PAS LA TÊTE ?! (Ico)</string>
-    <string name="haha" translatable="false">HAHA !!! (Étagère)</string>
-    <string name="baka" translatable="false">BAAAAKA !!! (Ico)</string>
-    <string name="cailloux">CAILOOOOOUUUXXX !!! (encore Ico…)</string>
-    <string name="censuré">Actuellement, je pense encore à… (Ico)</string>
-    <string name="censuré2">Donc tu devais peut-être… (Étagèrito)</string>
-    <string name="morceaumdr">CRACHE LE MORCEAU, ENCULÉ !!! (Ico)</string>
-    <string name="attention">Hey ! Fait attention… (Étagère)</string>
-    <string name="etagere" translatable="false">Étagere_sound.ogg</string>
-    <string name="ico" translatable="false">Iconoclaste_sound.ogg</string>
-    <string name="mmm" translatable="false">MMMMMMH !!! (Étagère)</string>
-    <string name="genial">GÉNIAL !!! (Étagère)</string>
-    <string name="non" translatable="false">Non ! NOOOOOON !!! (Ico)</string>
-    <string name="supers" translatable="false">SUPER !!! (Étagère)</string>
-    <string name="experimenters">Tu ne devrai pas avoir peur d\'expérimenter ! (Étagère.exe)</string>
-    <string name="pardons">(Censuré) oh pardon, c\'est sorti tout seul ! (Ico)</string>
-    <string name="rires">Rire (pas) diabolique (Grand Étagère)</string>
-    <string name="baisers">Pour baiser ! POUR BAISER ! (Ico)</string>
-    <string name="merdes">Tu dis que de la merde ! SUPER ! (Ico et Étagère)</string>
-
-    <!-- Mag Games Tycoon Activity -->
-    <string name="degueulasse">Mais c\'est dégueulasse Addictio&#8230; (Ico)</string>
-    <string name="gueule">Mais ta gueule !!! (Ico)</string>
-    <string name="branleur">C\'est un immense branleur ! (Étagère)</string>
-    <string name="mais">Maaaaiiis, où c\'est qui vont aller se masturber ? (Étagère)</string>
-    <string name="doigt">Lui, il fait des doigts d\'honneur devant les portes ! (Étagère)</string>
-    <string name="baises">Tu vois là, on est baisés ! (Ico)</string>
-    <string name="cock">TOUCH MY COCK !!! (Ico et Étagère)</string>
-
-    <!-- Zelda Activity -->
-    <string name="zeldabutton" translatable="false">ZELDA !!! (Ico)</string>
-    <string name="chanson1">Chanson Ico et Étagère</string>
-
-    <!-- Ascuns Activity -->
-    <string name="salut">SALUUUUUUUUUTTT !!!!! (Ico)</string>
-
     <!-- Infos Activity -->
     <string name="creation">Application créée et développée par: *Tintin !</string>
     <string name="sound">Téléchargement et regroupement des sons par: Kor1 !</string>
+    <string name="images">Téléchargement des images par: DarakaX !</string>
     <string name="descriptionTintin">Photo du compte Google de *Tintin</string>
     <string name="descriptionLulu">Photo du compte Xbox de DouleurTulipe38</string>
     <string name="tintin" translatable="false">*Tintin</string>
-    <string name="lulu" translatable="false">DouleurTulipe38</string>
+    <string name="lulu" translatable="false">Contributeurs</string>
     <string name="goster" translatable="false">Goster_</string>
     <string name="licences">Licences</string>
     <string name="gif">android-gif-drawable</string>

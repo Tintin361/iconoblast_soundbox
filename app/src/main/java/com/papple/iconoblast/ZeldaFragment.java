@@ -98,7 +98,6 @@ public class ZeldaFragment extends Fragment implements Zelda_Adapter.OnItemClick
             zeldaList2.add(new Zelda_Item_List(R.drawable.zelda_image, "ZELDA !!! (Ico)"));
             zeldaList2.add(new Zelda_Item_List(R.drawable.chanson_zelda_image, "Chanson Ico et Étagère"));
 
-
             mRecyclerView = view.findViewById(R.id.zeldaRecyclerView);
             mRecyclerView.setHasFixedSize(true);
             mLayoutManager = new LinearLayoutManager(getContext());

@@ -1,7 +1,6 @@
 package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
-import android.content.res.ColorStateList;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
@@ -10,17 +9,27 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
-import androidx.core.view.ViewCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.jaeger.library.StatusBarUtil;
 
-public class MgtFragment extends Fragment {
+import java.util.ArrayList;
+
+public class MgtFragment extends Fragment implements Mgt_Adapter.OnItemClickListener, Mgt_Adapter_List.OnItemClickListener {
     private MediaPlayer jaimeLesPlayer;
+    RecyclerView mRecyclerView;
+    Mgt_Adapter_List mAdapter;
+    Mgt_Adapter mAdapter2;
+    RecyclerView.LayoutManager mLayoutManager;
+    private ArrayList<Mgt_Item_List_ListVersion> mgtList;
+    private ArrayList<Mgt_Item_List> mgtList2;
 
     @Nullable
     @Override
@@ -33,7 +42,7 @@ public class MgtFragment extends Fragment {
 
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
         AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
-        params.setScrollFlags(0);
+        params.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP_MARGINS | AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS);
         toolbar.setLayoutParams(params);
 
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
@@ -55,6 +64,8 @@ public class MgtFragment extends Fragment {
 
         boolean answerA = settings.getBoolean("questionA", false);
         boolean answerB = settings.getBoolean("questionB", false);
+        boolean answerC = settings.getBoolean("questionC", false);
+        boolean answerD = settings.getBoolean("questionD", false);
 
         if (answerA) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.mgt));
@@ -65,79 +76,45 @@ public class MgtFragment extends Fragment {
             cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
         }
 
-        Button bButton = view2.findViewById(R.id.branleurb);
-        bButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.branleur);
-            }
-        });
+        if (answerC) {
+            mgtList = new ArrayList<>();
+            mgtList.add(new Mgt_Item_List_ListVersion("C'est un immense branleur ! (Étagère)"));
+            mgtList.add(new Mgt_Item_List_ListVersion("Maaaaiiis, où c'est qui vont aller se masturber ? (Étagère)"));
+            mgtList.add(new Mgt_Item_List_ListVersion("Lui, il fait des doigts d'honneur devant les portes ! (Étagère)"));
+            mgtList.add(new Mgt_Item_List_ListVersion("Mais c'est dégueulasse Addictio... (Ico)"));
+            mgtList.add(new Mgt_Item_List_ListVersion("Mais ta gueule !!! (Ico)"));
+            mgtList.add(new Mgt_Item_List_ListVersion("Tu vois là, on est baisés ! (Ico)"));
+            mgtList.add(new Mgt_Item_List_ListVersion("TOUCH MY COCK !!! (Ico et Étagère)"));
 
-        Button mButton = view2.findViewById(R.id.masseb);
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.masturber);
-            }
-        });
+            mRecyclerView = view2.findViewById(R.id.mgtRecyclerView);
+            mRecyclerView.setHasFixedSize(true);
+            mLayoutManager = new LinearLayoutManager(getContext());
+            mAdapter = new Mgt_Adapter_List(mgtList);
 
-        Button dButton = view2.findViewById(R.id.doigtb);
-        dButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.doigt);
-            }
-        });
+            mRecyclerView.setLayoutManager(mLayoutManager);
+            mRecyclerView.setAdapter(mAdapter);
+            mAdapter.setOnItemClickListener(this);
 
-        Button degeuButton = view2.findViewById(R.id.degueulasseb);
-        degeuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.degeu_sound);
-            }
-        });
+        } else if (answerD) {
+            mgtList2 = new ArrayList<>();
+            mgtList2.add(new Mgt_Item_List(R.drawable.branleur_image, "C'est un immense branleur ! (Étagère)"));
+            mgtList2.add(new Mgt_Item_List(R.drawable.mas_image, "Maaaaiiis, où c'est qui vont aller se masturber ? (Étagère)"));
+            mgtList2.add(new Mgt_Item_List(R.drawable.doigt_image, "Lui, il fait des doigts d'honneur devant les portes ! (Étagère)"));
+            mgtList2.add(new Mgt_Item_List(R.drawable.degueulasse_image, "Mais c'est dégueulasse Addictio... (Ico)"));
+            mgtList2.add(new Mgt_Item_List(R.drawable.gueule_image, "Mais ta gueule !!! (Ico)"));
+            mgtList2.add(new Mgt_Item_List(R.drawable.baise_image, "Tu vois là, on est baisés ! (Ico)"));
+            mgtList2.add(new Mgt_Item_List(R.drawable.touch_my_cock, "TOUCH MY COCK !!! (Ico et Étagère)"));
 
-        Button gueuleButton = view2.findViewById(R.id.gueuleb);
-        gueuleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.gueule_sound);
-            }
-        });
+            mRecyclerView = view2.findViewById(R.id.mgtRecyclerView);
+            mRecyclerView.setHasFixedSize(true);
+            mLayoutManager = new LinearLayoutManager(getContext());
+            mAdapter2 = new Mgt_Adapter(mgtList2);
 
-        Button baButton = view2.findViewById(R.id.baisesb);
-        baButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.baises);
-            }
-        });
+            mRecyclerView.setLayoutManager(mLayoutManager);
+            mRecyclerView.setAdapter(mAdapter2);
+            mAdapter2.setOnItemClickListener(this);
 
-        Button cButton = view2.findViewById(R.id.cockb);
-        cButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.cock);
-            }
-        });
-
-        if (answerA) {
-            ViewCompat.setBackgroundTintList(bButton, ColorStateList.valueOf(getResources().getColor(R.color.Red1)));
-            ViewCompat.setBackgroundTintList(mButton, ColorStateList.valueOf(getResources().getColor(R.color.orange1)));
-            ViewCompat.setBackgroundTintList(dButton, ColorStateList.valueOf(getResources().getColor(R.color.yellow1)));
-            ViewCompat.setBackgroundTintList(degeuButton, ColorStateList.valueOf(getResources().getColor(R.color.green3)));
-            ViewCompat.setBackgroundTintList(gueuleButton, ColorStateList.valueOf(getResources().getColor(R.color.green4)));
-            ViewCompat.setBackgroundTintList(baButton, ColorStateList.valueOf(getResources().getColor(R.color.blue1)));
-            ViewCompat.setBackgroundTintList(cButton, ColorStateList.valueOf(getResources().getColor(R.color.blue2)));
-
-        } else if (answerB) {
-            ViewCompat.setBackgroundTintList(bButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple)));
-            ViewCompat.setBackgroundTintList(mButton, ColorStateList.valueOf(getResources().getColor(R.color.dPurple2)));
-            ViewCompat.setBackgroundTintList(dButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue)));
-            ViewCompat.setBackgroundTintList(degeuButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue2)));
-            ViewCompat.setBackgroundTintList(gueuleButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue3)));
-            ViewCompat.setBackgroundTintList(baButton, ColorStateList.valueOf(getResources().getColor(R.color.dBlue4)));
-            ViewCompat.setBackgroundTintList(cButton, ColorStateList.valueOf(getResources().getColor(R.color.dGreen)));
+            mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         }
         return view2;
     }
@@ -149,5 +126,68 @@ public class MgtFragment extends Fragment {
         }
         jaimeLesPlayer = MediaPlayer.create(getContext(), redId);
         jaimeLesPlayer.start();
+    }
+
+    @Override
+    public void onItemClick(View v, int position) {
+
+        if (getActivity() != null) {
+            SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
+
+            boolean answerC = settings.getBoolean("questionC", false);
+            boolean answerD = settings.getBoolean("questionD", false);
+
+            if (answerC) {
+                Mgt_Item_List_ListVersion currentItem = mgtList.get(position);
+                switch (currentItem.getText()) {
+                    case "C'est un immense branleur ! (Étagère)":
+                        playSound(R.raw.branleur);
+                        break;
+                    case "Maaaaiiis, où c'est qui vont aller se masturber ? (Étagère)":
+                        playSound(R.raw.masturber);
+                        break;
+                    case "Lui, il fait des doigts d'honneur devant les portes ! (Étagère)":
+                        playSound(R.raw.doigt);
+                        break;
+                    case "Mais c'est dégueulasse Addictio... (Ico)":
+                        playSound(R.raw.degeu_sound);
+                        break;
+                    case "Mais ta gueule !!! (Ico)":
+                        playSound(R.raw.gueule_sound);
+                        break;
+                    case "Tu vois là, on est baisés ! (Ico)":
+                        playSound(R.raw.baises);
+                        break;
+                    case "TOUCH MY COCK !!! (Ico et Étagère)":
+                        playSound(R.raw.cock);
+                        break;
+                }
+            } else if (answerD) {
+                Mgt_Item_List currentItem = mgtList2.get(position);
+                switch (currentItem.getMgtText()) {
+                    case "C'est un immense branleur ! (Étagère)":
+                        playSound(R.raw.branleur);
+                        break;
+                    case "Maaaaiiis, où c'est qui vont aller se masturber ? (Étagère)":
+                        playSound(R.raw.masturber);
+                        break;
+                    case "Lui, il fait des doigts d'honneur devant les portes ! (Étagère)":
+                        playSound(R.raw.doigt);
+                        break;
+                    case "Mais c'est dégueulasse Addictio... (Ico)":
+                        playSound(R.raw.degeu_sound);
+                        break;
+                    case "Mais ta gueule !!! (Ico)":
+                        playSound(R.raw.gueule_sound);
+                        break;
+                    case "Tu vois là, on est baisés ! (Ico)":
+                        playSound(R.raw.baises);
+                        break;
+                    case "TOUCH MY COCK !!! (Ico et Étagère)":
+                        playSound(R.raw.cock);
+                        break;
+                }
+            }
+        }
     }
 }
