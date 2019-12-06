@@ -40,14 +40,11 @@ public class Zelda_Adapter_List extends RecyclerView.Adapter<Zelda_Adapter_List.
             super(itemView);
             mButton = view.findViewById(R.id.deltaruneButton);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (zeldaListener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            zeldaListener.onItemClick(v, position);
-                        }
+            itemView.setOnClickListener(v -> {
+                if (zeldaListener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        zeldaListener.onItemClick(v, position);
                     }
                 }
             });

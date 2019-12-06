@@ -5,7 +5,6 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -13,7 +12,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import android.view.MenuItem;
 
 import com.jaeger.library.StatusBarUtil;
 
@@ -97,33 +95,30 @@ public class InfosActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_info, new TintinFragment()).commit();
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment selectedFragment = null;
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener = item -> {
+        Fragment selectedFragment = null;
 
-            switch (item.getItemId()) {
-                case R.id.nav_tintin:
-                    selectedFragment = new TintinFragment();
-                    break;
-                case R.id.nav_lulu:
-                    selectedFragment = new LuluFragment();
-                    break;
-                case R.id.nav_iconoblast:
-                    selectedFragment = new IcoFragment();
-                    break;
-                case R.id.nav_licences:
-                    selectedFragment = new LicencesFragment();
-                    break;
-            }
+        switch (item.getItemId()) {
+            case R.id.nav_tintin:
+                selectedFragment = new TintinFragment();
+                break;
+            case R.id.nav_lulu:
+                selectedFragment = new LuluFragment();
+                break;
+            case R.id.nav_iconoblast:
+                selectedFragment = new IcoFragment();
+                break;
+            case R.id.nav_licences:
+                selectedFragment = new LicencesFragment();
+                break;
+        }
 
 
-            if (selectedFragment != null) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_info, selectedFragment).commit();
-                return true;
-            }
+        if (selectedFragment != null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_info, selectedFragment).commit();
             return true;
         }
+        return true;
     };
 
     @Override

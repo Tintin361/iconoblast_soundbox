@@ -48,14 +48,11 @@ public class Zelda_Adapter extends RecyclerView.Adapter<Zelda_Adapter.zeldaViewH
             zeldaImageView = itemView.findViewById(R.id.deltaruneImageView);
             zeldaTextView = itemView.findViewById(R.id.deltaruneTextView);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mListener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            mListener.onItemClick(v, position);
-                        }
+            itemView.setOnClickListener(v -> {
+                if (mListener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        mListener.onItemClick(v, position);
                     }
                 }
             });

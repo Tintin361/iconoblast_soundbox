@@ -27,74 +27,53 @@ public class IcoFragment extends Fragment {
         AppCompatImageView IcoImage = v.findViewById(R.id.IcoImageView);
         AppCompatImageView etaImage = v.findViewById(R.id.EtaImageView);
 
-        twImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String tw = "https://twitter.com/Iconokrew";
-                Intent twIntent = new Intent(Intent.ACTION_VIEW);
-                twIntent.setData(Uri.parse(tw));
-                startActivity(twIntent);
-            }
+        twImage.setOnClickListener(v1 -> {
+            String tw = "https://twitter.com/Iconokrew";
+            Intent twIntent = new Intent(Intent.ACTION_VIEW);
+            twIntent.setData(Uri.parse(tw));
+            startActivity(twIntent);
         });
 
-        tcImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String tc = "https://www.twitch.tv/iconoblastmissile";
-                Intent tcIntent = new Intent(Intent.ACTION_VIEW);
-                tcIntent.setData(Uri.parse(tc));
-                startActivity(tcIntent);
-            }
+        tcImage.setOnClickListener(v12 -> {
+            String tc = "https://www.twitch.tv/iconoblastmissile";
+            Intent tcIntent = new Intent(Intent.ACTION_VIEW);
+            tcIntent.setData(Uri.parse(tc));
+            startActivity(tcIntent);
         });
 
-        ytImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String yt = "https://www.youtube.com/channel/UCq-TKBeO8hBMXfzZfJ2Ua4g";
-                Intent ytIntent = new Intent(Intent.ACTION_VIEW);
-                ytIntent.setData(Uri.parse(yt));
-                startActivity(ytIntent);
-            }
+        ytImage.setOnClickListener(v13 -> {
+            String yt = "https://www.youtube.com/channel/UCq-TKBeO8hBMXfzZfJ2Ua4g";
+            Intent ytIntent = new Intent(Intent.ACTION_VIEW);
+            ytIntent.setData(Uri.parse(yt));
+            startActivity(ytIntent);
         });
 
-        igImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String ig = "https://www.instagram.com/iconoclaste_insta/";
-                Intent igIntent = new Intent(Intent.ACTION_VIEW);
-                igIntent.setData(Uri.parse(ig));
-                startActivity(igIntent);
-            }
+        igImage.setOnClickListener(view -> {
+            String ig = "https://www.instagram.com/iconoclaste_insta/";
+            Intent igIntent = new Intent(Intent.ACTION_VIEW);
+            igIntent.setData(Uri.parse(ig));
+            startActivity(igIntent);
         });
 
-        discordImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String discord = "https://discordapp.com/invite/QhCsv3X";
-                Intent discordIntent = new Intent(Intent.ACTION_VIEW);
-                discordIntent.setData(Uri.parse(discord));
-                startActivity(discordIntent);
-            }
+        discordImage.setOnClickListener(view -> {
+            String discord = "https://discordapp.com/invite/QhCsv3X";
+            Intent discordIntent = new Intent(Intent.ACTION_VIEW);
+            discordIntent.setData(Uri.parse(discord));
+            startActivity(discordIntent);
         });
 
-        IcoImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String ico = "https://www.youtube.com/channel/UCeVpI1jEdMUfboWOtl_Bq6g";
-                Intent icoIntent = new Intent(Intent.ACTION_VIEW);
-                icoIntent.setData(Uri.parse(ico));
-                startActivity(icoIntent);
-            }
+        IcoImage.setOnClickListener(view -> {
+            String ico = "https://www.youtube.com/channel/UCeVpI1jEdMUfboWOtl_Bq6g";
+            Intent icoIntent = new Intent(Intent.ACTION_VIEW);
+            icoIntent.setData(Uri.parse(ico));
+            startActivity(icoIntent);
         });
 
-        etaImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String etagere = "https://www.youtube.com/channel/UCUbxzOacavHOAyLlHigrXFw";
-                Intent etaIntent = new Intent(Intent.ACTION_VIEW);
-                etaIntent.setData(Uri.parse(etagere));
-                startActivity(etaIntent);
-            }
+        etaImage.setOnClickListener(view -> {
+            String etagere = "https://www.youtube.com/channel/UCUbxzOacavHOAyLlHigrXFw";
+            Intent etaIntent = new Intent(Intent.ACTION_VIEW);
+            etaIntent.setData(Uri.parse(etagere));
+            startActivity(etaIntent);
         });
 
         return v;

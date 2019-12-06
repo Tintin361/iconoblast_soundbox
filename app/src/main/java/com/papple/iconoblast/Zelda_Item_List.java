@@ -2,7 +2,7 @@ package com.papple.iconoblast;
 
 import android.content.Context;
 
-public class Zelda_Item_List {
+class Zelda_Item_List {
     private int zeldaImageRessource;
     private String zeldaText;
     private Context zcontext;

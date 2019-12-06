@@ -63,12 +63,7 @@ public class AcceuilFragment extends Fragment {
         }
 
         TextView text = view.findViewById(R.id.textView1);
-        text.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playSound(R.raw.coucou_sound);
-            }
-        });
+        text.setOnClickListener(v -> playSound(R.raw.coucou_sound));
         return view;
     }
 

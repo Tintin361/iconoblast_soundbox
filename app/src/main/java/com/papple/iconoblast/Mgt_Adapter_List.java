@@ -40,14 +40,11 @@ public class Mgt_Adapter_List extends RecyclerView.Adapter<Mgt_Adapter_List.mgtV
             super(itemView);
             mButton = view.findViewById(R.id.deltaruneButton);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mgtListener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            mgtListener.onItemClick(v, position);
-                        }
+            itemView.setOnClickListener(v -> {
+                if (mgtListener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        mgtListener.onItemClick(v, position);
                     }
                 }
             });

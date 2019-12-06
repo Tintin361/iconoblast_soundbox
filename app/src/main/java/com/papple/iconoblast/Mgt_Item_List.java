@@ -2,7 +2,7 @@ package com.papple.iconoblast;
 
 import android.content.Context;
 
-public class Mgt_Item_List {
+class Mgt_Item_List {
     private int mgtImageRessource;
     private String mgtText;
     private Context mcontext;
@@ -16,7 +16,7 @@ public class Mgt_Item_List {
         return mgtImageRessource;
     }
 
-    public String getMgtText() {
+    String getMgtText() {
         return mgtText;
     }
 }

@@ -40,14 +40,11 @@ public class Ascuns_Adapter_List extends RecyclerView.Adapter<Ascuns_Adapter_Lis
             super(itemView);
             mButton = view.findViewById(R.id.deltaruneButton);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (ascunsListener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            ascunsListener.onItemClick(v, position);
-                        }
+            itemView.setOnClickListener(v -> {
+                if (ascunsListener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        ascunsListener.onItemClick(v, position);
                     }
                 }
             });

@@ -52,6 +52,8 @@
             android:id="@+id/searchRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingBottom="4dp"
+            android:clipChildren="false"
             android:layout_below="@id/appbarLayout"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
             android:scrollbars="vertical" />

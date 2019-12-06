@@ -31,18 +31,13 @@ public class SplashScreen extends Activity{
         }
 
         int SPLASH_TIME_OUT = 275;
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(SplashScreen.this, MainActivity.class);
-                startActivity(intent);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    customType(SplashScreen.this,"bottom-to-up");
-                }
-                finish();
+        new Handler().postDelayed(() -> {
+            Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+            startActivity(intent);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                customType(SplashScreen.this, "bottom-to-up");
             }
+            finish();
         }, SPLASH_TIME_OUT);
-
     }
-
 }

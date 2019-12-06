@@ -175,6 +175,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setIntent(DeltaIntent)
                     .build();
 
+            assert sManager != null;
             sManager.setDynamicShortcuts(Arrays.asList(shortcut, shortcut2, shortcut3, shortcut4, shortcut5));
 
             String string = getIntent().getStringExtra("receive");
@@ -453,12 +454,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         new AlertDialog.Builder(this)
                 .setTitle("Redirection sur Github")
                 .setMessage("Vous allez être redirigé(e) sur Github, la page va s'ouvrir dans l'application.")
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        launchTabs();
-                    }
-                })
+                .setPositiveButton("Ok", (dialog, which) -> launchTabs())
                 .setNegativeButton("Annuler", null)
                 .show();
     }
@@ -497,34 +493,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         new AlertDialog.Builder(this)
                 .setTitle(Html.fromHtml("<font color='#ff1500'>Partager l'application</font>"))
                 .setMessage("Vous pouvez partager l'application Iconoblast! avec vos amis via Google Drive ou Github.")
-                .setPositiveButton(Html.fromHtml("<font color='#18A462'>Google Drive</font>"), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://drive.google.com/drive/folders/1_YurNp0Pzzck8gWpGLNeD9GH0IBYK0LL?usp=sharing";
+                .setPositiveButton(Html.fromHtml("<font color='#18A462'>Google Drive</font>"), (dialog, which) -> {
+                    String url = "https://drive.google.com/drive/folders/1_YurNp0Pzzck8gWpGLNeD9GH0IBYK0LL?usp=sharing";
 
-                        Intent sharringIntent = new Intent(Intent.ACTION_SEND);
-                        sharringIntent.putExtra(Intent.EXTRA_TEXT, url);
-                        sharringIntent.setType("text/plain");
-                        startActivity(Intent.createChooser(sharringIntent, "Partager l'application"));
-                    }
+                    Intent sharringIntent = new Intent(Intent.ACTION_SEND);
+                    sharringIntent.putExtra(Intent.EXTRA_TEXT, url);
+                    sharringIntent.setType("text/plain");
+                    startActivity(Intent.createChooser(sharringIntent, "Partager l'application"));
                 })
-                .setNegativeButton(Html.fromHtml("<font color='#F15135'>Github</font>"), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://github.com/Tintin361/iconoblast_soundbox/releases";
+                .setNegativeButton(Html.fromHtml("<font color='#F15135'>Github</font>"), (dialog, which) -> {
+                    String url = "https://github.com/Tintin361/iconoblast_soundbox/releases";
 
-                        Intent sharringIntent = new Intent(Intent.ACTION_SEND);
-                        sharringIntent.putExtra(Intent.EXTRA_TEXT, url);
-                        sharringIntent.setType("text/plain");
-                        startActivity(Intent.createChooser(sharringIntent, "Partager l'application"));
-                    }
+                    Intent sharringIntent = new Intent(Intent.ACTION_SEND);
+                    sharringIntent.putExtra(Intent.EXTRA_TEXT, url);
+                    sharringIntent.setType("text/plain");
+                    startActivity(Intent.createChooser(sharringIntent, "Partager l'application"));
                 })
-                .setNeutralButton("Annuler", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                })
+                .setNeutralButton("Annuler", (dialogInterface, i) -> dialogInterface.cancel())
                 .show();
     }
 }

@@ -47,14 +47,11 @@ public class Deltarune_Adapter extends RecyclerView.Adapter<Deltarune_Adapter.de
             mImageView = itemView.findViewById(R.id.deltaruneImageView);
             mTextView = itemView.findViewById(R.id.deltaruneTextView);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mListener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            mListener.onItemClick(v, position);
-                        }
+            itemView.setOnClickListener(v -> {
+                if (mListener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        mListener.onItemClick(v, position);
                     }
                 }
             });

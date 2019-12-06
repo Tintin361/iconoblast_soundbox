@@ -38,14 +38,11 @@ public class Deltarune_Adapter_List extends RecyclerView.Adapter<Deltarune_Adapt
             super(itemView);
             mButton = view.findViewById(R.id.deltaruneButton);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mListener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            mListener.onItemClick(v, position);
-                        }
+            itemView.setOnClickListener(v -> {
+                if (mListener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        mListener.onItemClick(v, position);
                     }
                 }
             });

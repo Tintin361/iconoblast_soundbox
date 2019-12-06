@@ -41,14 +41,11 @@ public class Search_Adapter_List extends RecyclerView.Adapter<Search_Adapter_Lis
             super(itemView);
             sButton = view.findViewById(R.id.deltaruneButton);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (sListener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            sListener.onItemClick(v, position);
-                        }
+            itemView.setOnClickListener(v -> {
+                if (sListener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        sListener.onItemClick(v, position);
                     }
                 }
             });
@@ -195,7 +192,7 @@ public class Search_Adapter_List extends RecyclerView.Adapter<Search_Adapter_Lis
                 case "Chanson Ico et Étagère":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.green3)));
                     break;
-                case "SALUUUUUUUUUTTT !!!!! (Ico)":
+                case "SALUUUUUUT !!!!! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.Green2)));
                     break;
             }
@@ -315,7 +312,7 @@ public class Search_Adapter_List extends RecyclerView.Adapter<Search_Adapter_Lis
                 case "Chanson Ico et Étagère":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dBlue4)));
                     break;
-                case "SALUUUUUUUUUTTT !!!!! (Ico)":
+                case "SALUUUUUUT !!!!! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dGreen)));
                     break;
             }

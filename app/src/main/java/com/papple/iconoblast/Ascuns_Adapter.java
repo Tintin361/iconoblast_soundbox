@@ -48,14 +48,11 @@ public class Ascuns_Adapter extends RecyclerView.Adapter<Ascuns_Adapter.ascunsVi
             ascunsImageView = itemView.findViewById(R.id.deltaruneImageView);
             ascunsTextView = itemView.findViewById(R.id.deltaruneTextView);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mListener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            mListener.onItemClick(v, position);
-                        }
+            itemView.setOnClickListener(v -> {
+                if (mListener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        mListener.onItemClick(v, position);
                     }
                 }
             });

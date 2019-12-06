@@ -40,14 +40,11 @@ public class Ddlc_Adapter_List extends RecyclerView.Adapter<Ddlc_Adapter_List.dd
             super(itemView);
             mButton = view.findViewById(R.id.deltaruneButton);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (ddlcListener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            ddlcListener.onItemClick(v, position);
-                        }
+            itemView.setOnClickListener(v -> {
+                if (ddlcListener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        ddlcListener.onItemClick(v, position);
                     }
                 }
             });
