@@ -35,7 +35,7 @@
                     android:layout_gravity="center"
                     android:scaleType="centerCrop"
                     android:contentDescription="@string/descriptionLulu"
-                    android:src="@drawable/avatar_lulu" />
+                    android:src="@drawable/avatar_korin" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -109,6 +109,61 @@
                     android:textSize="@dimen/text" />
 
             </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/luluCardView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ytImageView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:focusable="true"
+                        android:src="@drawable/youtube_icon" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/twImageView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:focusable="true"
+                        android:src="@drawable/tw_logo" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/tcImageView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:focusable="true"
+                        android:src="@drawable/tc_logo" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
 
         </androidx.cardview.widget.CardView>
 

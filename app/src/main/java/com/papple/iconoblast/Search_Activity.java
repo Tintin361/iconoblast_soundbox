@@ -360,7 +360,7 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
                 case "Chanson Ico et Étagère":
                     playSound(R.raw.chanson_zelda_sound);
                     break;
-                case "SALUUUUUUUUUTTT !!!!! (Ico)":
+                case "SALUUUUUUT !!!!! (Ico)":
                     playSound(R.raw.salut_sound);
                     break;
             }
@@ -481,7 +481,7 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
                 case "Chanson Ico et Étagère":
                     playSound(R.raw.chanson_zelda_sound);
                     break;
-                case "SALUUUUUUUUUTTT !!!!! (Ico)":
+                case "SALUUUUUUT !!!!! (Ico)":
                     playSound(R.raw.salut_sound);
                     break;
             }
