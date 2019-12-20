@@ -26,6 +26,7 @@ public class IcoFragment extends Fragment {
         AppCompatImageView discordImage = v.findViewById(R.id.discordImageView);
         AppCompatImageView IcoImage = v.findViewById(R.id.IcoImageView);
         AppCompatImageView etaImage = v.findViewById(R.id.EtaImageView);
+        AppCompatImageView vodImage = v.findViewById(R.id.VodImageView);
 
         twImage.setOnClickListener(v1 -> {
             String tw = "https://twitter.com/Iconokrew";
@@ -74,6 +75,13 @@ public class IcoFragment extends Fragment {
             Intent etaIntent = new Intent(Intent.ACTION_VIEW);
             etaIntent.setData(Uri.parse(etagere));
             startActivity(etaIntent);
+        });
+
+        vodImage.setOnClickListener(view -> {
+            String vod = "https://www.youtube.com/channel/UCcqjrGW2JgY8-ka7rksogIA";
+            Intent vodIntent = new Intent(Intent.ACTION_VIEW);
+            vodIntent.setData(Uri.parse(vod));
+            startActivity(vodIntent);
         });
 
         return v;

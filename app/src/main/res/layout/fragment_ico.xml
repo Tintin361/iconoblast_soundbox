@@ -188,6 +188,16 @@
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:focusable="true" />
 
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/VodImageView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/vodonoblast_image"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:focusable="true" />
+
                 </LinearLayout>
 
             </HorizontalScrollView>
