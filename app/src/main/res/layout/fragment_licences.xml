@@ -192,6 +192,30 @@
 
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/licenceCardView8"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/licenceCardView7"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="@dimen/marginBottomSize"
+            app:cardCornerRadius="16dp"
+            app:elevation="4dp">
+
+            <TextView
+                android:id="@+id/circleText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/circle"
+                android:textSize="@dimen/buttonDefault" />
+
+        </androidx.cardview.widget.CardView>
+
     </RelativeLayout>
 
 </androidx.core.widget.NestedScrollView>

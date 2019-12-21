@@ -3,8 +3,9 @@
     <string name="app_name">Iconoblast !</string>
     <string name="app" translatable="false">APPLICATION</string>
     <string name="icob" translatable="false">ICONOBLAST !</string>
-    <string name="icoc" translatable="false">ICONOCLASTE</string>
+    <string name="icoc" translatable="false">Iconoclaste</string>
     <string name="icoetetagere">Ico &amp; Étagère</string>
+    <string name="etagere">Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
     <string name="version" translatable="false">Version 1.0.5</string>
@@ -63,6 +64,7 @@
     <string name="majLicence">AppUpdater</string>
     <string name="picasso">Picasso</string>
     <string name="animatoo">Animatoo</string>
+    <string name="circle">RoundedImageView</string>
 
     <!-- Thème Activity -->
     <string name="themes">Thèmes</string>

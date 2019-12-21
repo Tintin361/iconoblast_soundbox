@@ -14,8 +14,8 @@ android {
         applicationId "com.papple.iconoblast"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 13
-        versionName "1.0.5"
+        versionCode 14
+        versionName "1.0.6"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.key
         multiDexEnabled true
@@ -54,7 +54,8 @@ dependencies {
     implementation 'com.github.martoreto:opuscodec:v1.2.1.2'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.mohammadatif:Animatoo:master'
-    implementation 'androidx.browser:browser:1.0.0'
+    implementation 'androidx.browser:browser:1.2.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation project(path: ':libraries:intentanim')
     implementation project(path: ':libraries:appupdate')
     implementation 'com.google.gms:google-services:4.3.3'
