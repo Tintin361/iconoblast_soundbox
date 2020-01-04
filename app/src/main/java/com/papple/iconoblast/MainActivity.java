@@ -452,9 +452,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public void openDialog() {
         new AlertDialog.Builder(this)
-                .setTitle("Redirection sur Github")
-                .setMessage("Vous allez être redirigé(e) sur Github, la page va s'ouvrir dans l'application.")
-                .setPositiveButton("Ok", (dialog, which) -> launchTabs())
+                .setTitle("Redirection sur Google Play Store")
+                .setMessage("Vous allez être redirigé(e) sur Google Play Store, la page va s'ouvrir dans l'application.")
+                .setPositiveButton("Ok", (dialog, which) -> launchPlayTabs())
                 .setNegativeButton("Annuler", null)
                 .show();
     }
@@ -482,11 +482,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    public void launchTabs() {
-        String url = "https://github.com/Tintin361/iconoblast_soundbox/releases";
-        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-        CustomTabsIntent customTabsIntent = builder.build();
-        customTabsIntent.launchUrl(MainActivity.this, Uri.parse(url));
+    public void launchPlayTabs() {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        String url = "https://play.google.com/store/apps/details?id=com.papple.iconoblast&gl=FR";
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
     }
 
     public void shareMenu() {
