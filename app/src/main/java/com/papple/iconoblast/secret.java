@@ -15,6 +15,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import com.jaeger.library.StatusBarUtil;
 
 import static maes.tech.intentanim.CustomIntent.customType;
@@ -25,9 +27,11 @@ public class secret extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         final SharedPreferences settings = getSharedPreferences("Answers", 0);
+        SharedPreferences.Editor editor = settings.edit();
 
         final boolean answerA = settings.getBoolean("questionA", false);
         final boolean answerB = settings.getBoolean("questionB", false);
+        final boolean lenvers = settings.getBoolean("lenvers", false);
 
         if (answerA) {
             setTheme(R.style.AppTheme_NoActionBar);
@@ -95,7 +99,28 @@ public class secret extends AppCompatActivity {
 
             } else if (editText.getText().toString().equals("Claude")) {
 
-                scrollView.setRotation(-180);
+                if (lenvers) {
+                    editor.putBoolean("lenvers", false);
+                    editor.apply();
+
+                    Toast toaster6 = Toast.makeText(secret.this, "ǝpnɐlɔ", Toast.LENGTH_SHORT);
+                    TextView view6 = toaster6.getView().findViewById(android.R.id.message);
+                    if (view6 != null) view6.setGravity(Gravity.CENTER);
+                    toaster6.show();
+                } else {
+                    editor.putBoolean("lenvers", true);
+                    editor.apply();
+
+                    Toast toast4 = Toast.makeText(secret.this, "Claude", Toast.LENGTH_SHORT);
+                    TextView view4 = toast4.getView().findViewById(android.R.id.message);
+                    if (view4 != null) view4.setGravity(Gravity.CENTER);
+                    toast4.show();
+                }
+
+                startActivity(new Intent(secret.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                startActivity(new Intent(secret.this, theme.class));
+                startActivity(new Intent(secret.this, secret.class));
+                Animatoo.animateZoom(this);
 
             } else if (editText.getText().toString().equals("Tiki")) {
 
@@ -111,6 +136,8 @@ public class secret extends AppCompatActivity {
                 TextView view4 = toaster4.getView().findViewById(android.R.id.message);
                 if (view4 != null) view4.setGravity(Gravity.CENTER);
                 toaster4.show();
+
+
             }
         });
     }
