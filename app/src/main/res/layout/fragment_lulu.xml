@@ -94,7 +94,7 @@
                     android:layout_height="130dp"
                     android:layout_gravity="center"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/daraka_avatar"
+                    android:src="@drawable/avatar_daraka"
                     tools:ignore="contentDescription" />
 
                 <TextView

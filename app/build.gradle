@@ -14,8 +14,8 @@ android {
         applicationId "com.papple.iconoblast"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 18
-        versionName "1.0.10"
+        versionCode 19
+        versionName "1.0.11"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.key
         multiDexEnabled true

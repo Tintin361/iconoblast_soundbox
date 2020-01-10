@@ -103,7 +103,7 @@ public class secret extends AppCompatActivity {
                     editor.putBoolean("lenvers", false);
                     editor.apply();
 
-                    Toast toaster6 = Toast.makeText(secret.this, "ǝpnɐlɔ", Toast.LENGTH_SHORT);
+                    Toast toaster6 = Toast.makeText(secret.this, "Claude", Toast.LENGTH_SHORT);
                     TextView view6 = toaster6.getView().findViewById(android.R.id.message);
                     if (view6 != null) view6.setGravity(Gravity.CENTER);
                     toaster6.show();
@@ -111,7 +111,7 @@ public class secret extends AppCompatActivity {
                     editor.putBoolean("lenvers", true);
                     editor.apply();
 
-                    Toast toast4 = Toast.makeText(secret.this, "Claude", Toast.LENGTH_SHORT);
+                    Toast toast4 = Toast.makeText(secret.this, "ǝpnɐlɔ", Toast.LENGTH_SHORT);
                     TextView view4 = toast4.getView().findViewById(android.R.id.message);
                     if (view4 != null) view4.setGravity(Gravity.CENTER);
                     toast4.show();
