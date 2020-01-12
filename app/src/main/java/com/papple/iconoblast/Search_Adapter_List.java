@@ -7,6 +7,7 @@ import android.content.res.ColorStateList;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,6 +81,9 @@ public class Search_Adapter_List extends RecyclerView.Adapter<Search_Adapter_Lis
             switch (currentItem.getText()) {
                 case "COUCOU LES COPAAAIIIINS !!! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(android.R.color.holo_orange_light)));
+                    break;
+                case "COUCOU C'EST NUMOUS, AVEC ADDICTIO !":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(android.R.color.holo_blue_light)));
                     break;
                 case "C'est parce que j'veux ken !!! (Étagère)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.Red1)));
@@ -200,6 +204,9 @@ public class Search_Adapter_List extends RecyclerView.Adapter<Search_Adapter_Lis
             switch (currentItem.getText()) {
                 case "COUCOU LES COPAAAIIIINS !!! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(android.R.color.holo_orange_dark)));
+                    break;
+                case "COUCOU C'EST NUMOUS, AVEC ADDICTIO !":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(android.R.color.holo_blue_dark)));
                     break;
                 case "C'est parce que j'veux ken !!! (Étagère)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dPurple)));

@@ -2,12 +2,14 @@ package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -62,8 +64,21 @@ public class AcceuilFragment extends Fragment {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
         }
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1 && answerA) {
+            getActivity().getWindow().setNavigationBarColor(ContextCompat.getColor(getContext(), android.R.color.white));
+            view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1 && answerB) {
+            getActivity().getWindow().setNavigationBarColor(ContextCompat.getColor(getContext(), R.color.dddlc));
+        }
+
         TextView text = view.findViewById(R.id.textView1);
         text.setOnClickListener(v -> playSound(R.raw.coucou_sound));
+        text.setOnLongClickListener(view1 -> {
+            playSound(R.raw.numous_addictio);
+            return true;
+        });
+
         return view;
     }
 

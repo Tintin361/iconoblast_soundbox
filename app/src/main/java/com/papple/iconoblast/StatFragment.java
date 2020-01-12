@@ -1,12 +1,14 @@
 package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -62,6 +64,14 @@ public class StatFragment extends Fragment {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
             cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
             getActivity().setTheme(R.style.DarkTheme2);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1 && answerA) {
+            getActivity().getWindow().setNavigationBarColor(ContextCompat.getColor(getContext(), android.R.color.white));
+            v.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1 && answerB) {
+            getActivity().getWindow().setNavigationBarColor(ContextCompat.getColor(getContext(), R.color.dddlc));
         }
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("Number", 0);

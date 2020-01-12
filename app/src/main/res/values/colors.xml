@@ -90,5 +90,8 @@
     <!-- CardView Colors -->
     <color name="cardViewColor">#424242</color>
 
+    <!-- Other Colors -->
+    <color name="whiteTheme">@android:color/white</color>
+
 
 </resources>

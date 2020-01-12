@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        app:cardCornerRadius="32dp">
+        app:cardCornerRadius="24dp">
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/nav_view"

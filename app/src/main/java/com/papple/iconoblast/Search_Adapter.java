@@ -93,6 +93,9 @@ public class Search_Adapter extends RecyclerView.Adapter<Search_Adapter.SearchVi
                 case "COUCOU LES COPAAAIIIINS !!! (Ico)":
                     SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(android.R.color.holo_orange_light)));
                     break;
+                case "COUCOU C'EST NUMOUS, AVEC ADDICTIO !":
+                    SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(android.R.color.holo_blue_light)));
+                    break;
                 case "C'est parce que j'veux ken !!! (Étagère)":
                     SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.Red1)));
                     break;
@@ -213,6 +216,9 @@ public class Search_Adapter extends RecyclerView.Adapter<Search_Adapter.SearchVi
             switch (currentItem.getSearchText()) {
                 case "COUCOU LES COPAAAIIIINS !!! (Ico)":
                     SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(android.R.color.holo_orange_dark)));
+                    break;
+                case "COUCOU C'EST NUMOUS, AVEC ADDICTIO !":
+                    SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(android.R.color.holo_blue_light)));
                     break;
                 case "C'est parce que j'veux ken !!! (Étagère)":
                     SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.dPurple)));

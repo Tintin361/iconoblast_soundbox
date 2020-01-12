@@ -2,10 +2,12 @@ package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -65,6 +67,14 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
             toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
         }
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1 && answerA) {
+            getWindow().setNavigationBarColor(ContextCompat.getColor(this, android.R.color.white));
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1 && answerB) {
+            getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.dddlc));
+        }
+
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_upward);
@@ -74,6 +84,7 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
             searchList = new ArrayList<>();
 
             searchList.add(new Search_Item_List_ListVersion("COUCOU LES COPAAAIIIINS !!! (Ico)"));
+            searchList.add(new Search_Item_List_ListVersion("COUCOU C'EST NUMOUS, AVEC ADDICTIO !"));
             searchList.add(new Search_Item_List_ListVersion("C'est parce que j'veux ken !!! (Étagère)"));
             searchList.add(new Search_Item_List_ListVersion("HAHA !!! (Étagère)"));
             searchList.add(new Search_Item_List_ListVersion("Donc tu devais peut-être… (Étagèrito)"));
@@ -143,6 +154,7 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
             searchList2 = new ArrayList<>();
 
             searchList2.add(new Search_Item_List(R.drawable.copain_image, "COUCOU LES COPAAAIIIINS !!! (Ico)"));
+            searchList2.add(new Search_Item_List(R.drawable.numous_addictio, "COUCOU C'EST NUMOUS, AVEC ADDICTIO !"));
             searchList2.add(new Search_Item_List(R.drawable.ken_image, "C'est parce que j'veux ken !!! (Étagère)"));
             searchList2.add(new Search_Item_List(R.drawable.haha_image, "HAHA !!! (Étagère)"));
             searchList2.add(new Search_Item_List(R.drawable.nue_image, "Donc tu devais peut-être… (Étagèrito)"));
@@ -248,6 +260,9 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
             switch (currentItem.getText()) {
                 case "COUCOU LES COPAAAIIIINS !!! (Ico)":
                     playSound(R.raw.coucou_sound);
+                    break;
+                case "COUCOU C'EST NUMOUS, AVEC ADDICTIO !":
+                    playSound(R.raw.numous_addictio);
                     break;
                 case "C'est parce que j'veux ken !!! (Étagère)":
                     playSound(R.raw.ken_sound);
@@ -369,6 +384,9 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
             switch (currentItem.getSearchText()) {
                 case "COUCOU LES COPAAAIIIINS !!! (Ico)":
                     playSound(R.raw.coucou_sound);
+                    break;
+                case "COUCOU C'EST NUMOUS, AVEC ADDICTIO !":
+                    playSound(R.raw.numous_addictio);
                     break;
                 case "C'est parce que j'veux ken !!! (Étagère)":
                     playSound(R.raw.ken_sound);

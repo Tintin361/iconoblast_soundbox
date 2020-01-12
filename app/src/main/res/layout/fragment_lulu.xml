@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="@dimen/marginBottomSize"
+            android:layout_marginBottom="11dp"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp">
 

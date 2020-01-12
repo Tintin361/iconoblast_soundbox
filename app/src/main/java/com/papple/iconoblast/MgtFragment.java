@@ -2,12 +2,14 @@ package com.papple.iconoblast;
 
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -74,6 +76,14 @@ public class MgtFragment extends Fragment implements Mgt_Adapter.OnItemClickList
         } else if (answerB) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
             cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1 && answerA) {
+            getActivity().getWindow().setNavigationBarColor(ContextCompat.getColor(getContext(), R.color.mgt));
+            view2.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1 && answerB) {
+            getActivity().getWindow().setNavigationBarColor(ContextCompat.getColor(getContext(), R.color.dddlc));
         }
 
         if (answerC) {
