@@ -84,6 +84,13 @@ public class AscunsFragment extends Fragment implements Ascuns_Adapter_List.OnIt
             getActivity().getWindow().setNavigationBarColor(ContextCompat.getColor(getContext(), R.color.dddlc));
         }
 
+        if (Build.VERSION.SDK_INT >= 28 && answerA) {
+            getActivity().setTheme(R.style.AppTheme_AscunsTheme);
+
+        } else if (Build.VERSION.SDK_INT >= 28 && answerB) {
+            getActivity().setTheme(R.style.DarkTheme2);
+        }
+
         if (answerC) {
             ascunsList = new ArrayList<>();
             ascunsList.add(new Ascuns_Item_List_ListVersion("SALUUUUUUT !!!!! (Ico)"));

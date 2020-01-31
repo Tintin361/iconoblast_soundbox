@@ -31,6 +31,8 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
     RecyclerView.LayoutManager mLayoutManager;
     ArrayList<Ddlc_Item_List_ListVersion> ddlcList;
     ArrayList<Ddlc_Item_List> ddlcList2;
+    boolean answerA;
+    boolean answerB;
 
     @Nullable
     @Override
@@ -63,8 +65,8 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
         cLayout.setBackgroundColor(getResources().getColor(R.color.ddlc));
 
-        boolean answerA = settings.getBoolean("questionA", false);
-        boolean answerB = settings.getBoolean("questionB", false);
+        answerA = settings.getBoolean("questionA", false);
+        answerB = settings.getBoolean("questionB", false);
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
 

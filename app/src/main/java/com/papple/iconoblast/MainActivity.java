@@ -13,6 +13,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 
+import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.cardview.widget.CardView;
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private long backPressedTime;
     private Toast toaster;
     private Boolean lenvers;
+    private FloatingActionMenu fabMenu;
+    private FloatingActionButton fabButton;
+    private FloatingActionButton hidButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
         boolean autoMajBoolean = settings.getBoolean("automaj", false);
+        boolean fabBoolean = settings.getBoolean("fabButton", false);
         lenvers = settings.getBoolean("lenvers", false);
 
         if (!answerA && !answerB) {
@@ -79,17 +85,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             app.start();
         }
 
-        if (answerA) {
-            setTheme(R.style.AppTheme_NoActionBar2);
-        } else if (answerB) {
-            setTheme(R.style.DarkTheme2);
-        }
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        fabMenu = findViewById(R.id.fabMenu);
+        fabButton = findViewById(R.id.shortButton);
+        hidButton = findViewById(R.id.hideButton);
+
+        if (fabBoolean && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            hidButton.setOnClickListener(view -> {
+                fabMenu.hideMenu(true);
+                editor.putBoolean("fabButton", false);
+                editor.apply();
+            });
+            fabButton.setOnClickListener(view -> Toast.makeText(this, "Tu as cliqué sur Add !", Toast.LENGTH_SHORT).show());
+
+        } else if (!fabBoolean) {
+            fabMenu.hideMenu(true);
+
+        } else {
+            fabMenu.hideMenu(true);
+
+        }
 
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -98,10 +117,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (answerA) {
             toolbar.setBackgroundResource(R.drawable.rounded_toolbar);
             navigationView.setBackgroundColor(getResources().getColor(android.R.color.white));
+            setTheme(R.style.AppTheme_MainTheme);
 
         } else if (answerB) {
             toolbar.setBackgroundResource(R.drawable.rounded_toolbar_dark);
             navigationView.setBackgroundColor(getResources().getColor(R.color.dddlc));
+            setTheme(R.style.DarkTheme2);
+
         }
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -456,6 +478,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent searchIntent = new Intent(MainActivity.this, Search_Activity.class);
                 startActivity(searchIntent);
                 customType(this, "bottom-to-up");
+                break;
         }
 
         return super.onOptionsItemSelected(item);

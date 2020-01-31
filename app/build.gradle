@@ -14,8 +14,8 @@ android {
         applicationId "com.papple.iconoblast"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 20
-        versionName "1.0.12"
+        versionCode 21
+        versionName "1.0.13"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.key
         multiDexEnabled true
@@ -56,6 +56,7 @@ dependencies {
     implementation 'com.github.mohammadatif:Animatoo:master'
     implementation 'androidx.browser:browser:1.2.0'
     implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.github.clans:fab:1.6.4'
     implementation project(path: ':libraries:intentanim')
     implementation project(path: ':libraries:appupdate')
     implementation 'com.google.gms:google-services:4.3.3'

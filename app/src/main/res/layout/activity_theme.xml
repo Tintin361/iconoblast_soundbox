@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginRight="8dp"
                 android:elevation="4dp"
                 app:cardCornerRadius="16dp">
@@ -228,10 +228,9 @@
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginTop="3dp"
+                    android:layout_marginTop="2dp"
                     android:layout_weight="1"
                     android:elevation="4dp"
-                    android:visibility="gone"
                     app:cardCornerRadius="16dp">
 
                     <LinearLayout
@@ -242,50 +241,41 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/majTextView"
+                            android:id="@+id/ButtonTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/maj"
+                            android:text="@string/buttonF"
                             android:textColor="@color/ascuns"
                             android:textSize="@dimen/titleText" />
-
-                        <TextView
-                            android:id="@+id/majTextUpdate"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:textSize="@dimen/buttonDefault"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/majupdate" />
 
                         <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:visibility="gone"
                             android:layout_marginTop="8dp">
 
                             <RadioButton
-                                android:id="@+id/auto"
+                                android:id="@+id/show"
                                 android:onClick="onCheckboxClick"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="@string/auto"
+                                android:text="@string/show"
                                 android:layout_marginStart="4dp"
-                                android:textSize="@dimen/radioButtonText2" />
+                                android:textSize="@dimen/radioButtonText" />
 
                             <RadioButton
-                                android:id="@+id/manuel"
+                                android:id="@+id/hidden"
                                 android:onClick="onCheckboxClick"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8sp"
+                                android:checked="true"
                                 android:gravity="center"
-                                android:text="@string/manuel"
+                                android:text="@string/hide"
                                 android:layout_marginStart="4dp"
-                                android:textSize="@dimen/radioButtonText2" />
+                                android:layout_marginBottom="4dp"
+                                android:textSize="@dimen/radioButtonText" />
 
                         </RadioGroup>
 

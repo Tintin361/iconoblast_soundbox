@@ -22,6 +22,8 @@ import com.jaeger.library.StatusBarUtil;
 
 public class AcceuilFragment extends Fragment {
     private MediaPlayer jaimeLesPlayer; // Oui, bon le manque d'inspi ça arrive à tout le monde...
+    boolean answerA;
+    boolean answerB;
 
     @Nullable
     @Override
@@ -35,8 +37,8 @@ public class AcceuilFragment extends Fragment {
         SharedPreferences settings = getActivity().getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
 
-        boolean answerA = settings.getBoolean("questionA", false);
-        boolean answerB = settings.getBoolean("questionB", false);
+        answerA = settings.getBoolean("questionA", false);
+        answerB = settings.getBoolean("questionB", false);
 
         Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
         AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
@@ -58,10 +60,12 @@ public class AcceuilFragment extends Fragment {
         if (answerA) {
             cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
             StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
+            getActivity().setTheme(R.style.AppTheme_MainTheme);
 
         } else if (answerB) {
             cLayout.setBackgroundColor(getResources().getColor(R.color.dddlc));
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));
+            getActivity().setTheme(R.style.DarkTheme2);
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1 && answerA) {

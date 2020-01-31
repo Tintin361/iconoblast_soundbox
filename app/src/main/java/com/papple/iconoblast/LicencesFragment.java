@@ -155,6 +155,9 @@ public class LicencesFragment extends Fragment {
         TextView circleText = v.findViewById(R.id.circleText);
         circleText.setOnClickListener(v8 -> apacheLicenceShow(circleText.getText()));
 
+        TextView fabText = v.findViewById(R.id.fabText);
+        fabText.setOnClickListener(v9 -> apacheLicenceShow(fabText.getText()));
+
         return v;
     }
 

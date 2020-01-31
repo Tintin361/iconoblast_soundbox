@@ -58,7 +58,7 @@ public class StatFragment extends Fragment {
         if (answerA) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(android.R.color.white));
             cLayout.setBackgroundColor(getResources().getColor(android.R.color.white));
-            getActivity().setTheme(R.style.AppTheme_NoActionBar2);
+            getActivity().setTheme(R.style.AppTheme_MainTheme);
 
         } else if (answerB) {
             StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.dddlc));

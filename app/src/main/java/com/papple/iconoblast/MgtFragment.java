@@ -1,5 +1,6 @@
 package com.papple.iconoblast;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Build;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,11 +34,15 @@ public class MgtFragment extends Fragment implements Mgt_Adapter.OnItemClickList
     RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<Mgt_Item_List_ListVersion> mgtList;
     private ArrayList<Mgt_Item_List> mgtList2;
+    boolean answerA;
+    boolean answerB;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view2 = inflater.inflate(R.layout.fragment_mgt, container, false);
+        final Context contextThemeWrapper = new ContextThemeWrapper(getActivity(), R.style.AppTheme_MgtTheme);
+        LayoutInflater localInflater = inflater.cloneInContext(contextThemeWrapper);
+        View view2 = localInflater.inflate(R.layout.fragment_mgt, container, false);
 
         if (getActivity() == null) {
             return view2;
@@ -64,8 +70,8 @@ public class MgtFragment extends Fragment implements Mgt_Adapter.OnItemClickList
 
         editor.apply();
 
-        boolean answerA = settings.getBoolean("questionA", false);
-        boolean answerB = settings.getBoolean("questionB", false);
+        answerA = settings.getBoolean("questionA", false);
+        answerB = settings.getBoolean("questionB", false);
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
 

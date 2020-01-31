@@ -8,7 +8,7 @@
     <string name="etagere">Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 1.0.12</string>
+    <string name="version" translatable="false">Version 1.0.13</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
@@ -22,6 +22,8 @@
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
     <string name="search_toolbar" translatable="false">No available</string>
+    <string name="addShortcut">Ajouter un raccourci</string>
+    <string name="close">Fermer</string>
 
     <!-- Toolbar -->
     <string name="settings">Paramètres</string>
@@ -65,6 +67,7 @@
     <string name="picasso">Picasso</string>
     <string name="animatoo">Animatoo</string>
     <string name="circle">RoundedImageView</string>
+    <string name="fab_plugin">Floating Action Button</string>
 
     <!-- Thème Activity -->
     <string name="themes">Thèmes</string>
@@ -78,6 +81,9 @@
     <string name="auto">Automatiquement</string>
     <string name="manuel">Manuellement</string>
     <string name="majupdate">Les MàJ reviendront lors de la sortie sur le Google Play Store !</string>
+    <string name="buttonF">FAB</string>
+    <string name="show">Afficher</string>
+    <string name="hide">Cacher</string>
 
     <!-- Easter Egg Activity -->
     <string name="code">Entrez un code secret</string>

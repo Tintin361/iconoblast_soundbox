@@ -1,78 +1,82 @@
 <?xml version="1.0"?>
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:fontFamily">@font/sniglet_regular</item>
-    </style>
-
+    <!-- White Theme -->
     <style name="AppTheme.MainTheme">
+        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:colorBackground">@color/white</item>
-        <item name="android:navigationBarColor">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 
     <!-- Variants -->
     <style name="AppTheme.DdlcTheme">
+        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:colorBackground">@color/ddlc</item>
-        <item name="android:navigationBarColor">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme.MgtTheme">
+        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:colorBackground">@color/mgt</item>
-        <item name="android:navigationBarColor">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme.DeltaruneTheme">
+        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:colorBackground">@color/deltarune</item>
-        <item name="android:navigationBarColor">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme.ZeldaTheme">
+        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:colorBackground">@color/zelda</item>
-        <item name="android:navigationBarColor">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme.AscunsTheme">
+        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:colorBackground">@color/ascuns</item>
-        <item name="android:navigationBarColor">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 
 
     <style name="AppTheme.NoActionBar">
+        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
         <item name="android:colorBackground">@color/white</item>
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
-        <item name="android:navigationBarColor">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 
+
+    <!-- Other -->
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 
+    <!-- Dark Theme -->
     <style name="DarkTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <item name="android:colorBackground">@color/dddlc</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -85,6 +89,7 @@
     </style>
 
     <style name="DarkTheme2" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <item name="android:colorBackground">@color/dddlc</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

@@ -30,6 +30,45 @@
                 android:elevation="4dp"
                 app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fabMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:menu_icon="@drawable/ic_add"
+                android:layout_gravity="end|bottom"
+                tools:ignore="contentDescription"
+                app:menu_colorNormal="@color/colorPrimary"
+                app:menu_colorPressed="@color/colorPrimary"
+                app:menu_fab_size="normal"
+                app:menu_showShadow="true"
+                app:menu_fab_label="@string/close"
+                app:menu_openDirection="up"
+                app:menu_backgroundColor="@android:color/transparent"
+                android:elevation="10dp">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/shortButton"
+                    app:fab_colorNormal="@color/colorPrimary"
+                    app:fab_colorPressed="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_label="@string/addShortcut"
+                    app:fab_size="mini"
+                    android:src="@drawable/ic_edit" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/hideButton"
+                    app:fab_colorNormal="@color/colorPrimary"
+                    app:fab_colorPressed="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_label="@string/hide"
+                    app:fab_size="mini"
+                    android:src="@drawable/ic_visibility_off" />
+
+            </com.github.clans.fab.FloatingActionMenu>
+
             <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"

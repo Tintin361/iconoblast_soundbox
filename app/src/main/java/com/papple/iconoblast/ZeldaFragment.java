@@ -86,6 +86,13 @@ public class ZeldaFragment extends Fragment implements Zelda_Adapter.OnItemClick
             getActivity().getWindow().setNavigationBarColor(ContextCompat.getColor(getContext(), R.color.dddlc));
         }
 
+        if (Build.VERSION.SDK_INT >= 28 && answerA) {
+            getActivity().setTheme(R.style.AppTheme_ZeldaTheme);
+
+        } else if (Build.VERSION.SDK_INT >= 28 && answerB) {
+            getActivity().setTheme(R.style.DarkTheme2);
+        }
+
         if (answerC) {
             zeldaList = new ArrayList<>();
             zeldaList.add(new Zelda_Item_List_ListVersion("Non, et tu t'amuse !!! (Ico)"));

@@ -33,7 +33,6 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         final View view = inflater.inflate(R.layout.fragment_deltarune, container, false);
 
         if (getActivity() == null) {
@@ -81,6 +80,13 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
 
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1 && answerB) {
             getActivity().getWindow().setNavigationBarColor(ContextCompat.getColor(getContext(), R.color.dddlc));
+        }
+
+        if (Build.VERSION.SDK_INT >= 28 && answerA) {
+            getActivity().setTheme(R.style.AppTheme_DeltaruneTheme);
+
+        } else if (Build.VERSION.SDK_INT >= 28 && answerB) {
+            getActivity().setTheme(R.style.DarkTheme2);
         }
 
         if (answerC) {
