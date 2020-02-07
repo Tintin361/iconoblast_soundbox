@@ -3,7 +3,7 @@
 
     <!-- White Theme -->
     <style name="AppTheme.MainTheme">
-        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">default</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
@@ -13,7 +13,7 @@
 
     <!-- Variants -->
     <style name="AppTheme.DdlcTheme">
-        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">default</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
@@ -22,7 +22,7 @@
     </style>
 
     <style name="AppTheme.MgtTheme">
-        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">default</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
@@ -31,7 +31,7 @@
     </style>
 
     <style name="AppTheme.DeltaruneTheme">
-        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">default</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
@@ -40,7 +40,7 @@
     </style>
 
     <style name="AppTheme.ZeldaTheme">
-        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">default</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
@@ -49,7 +49,7 @@
     </style>
 
     <style name="AppTheme.AscunsTheme">
-        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">default</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>
@@ -59,7 +59,7 @@
 
 
     <style name="AppTheme.NoActionBar">
-        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">default</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/sniglet_regular</item>

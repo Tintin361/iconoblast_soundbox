@@ -16,6 +16,10 @@
     <string name="delta">Deltarune</string>
     <string name="share">Partager l\'application</string>
 
+    <!-- Static Shortcut -->
+    <string name="searchLabel">Rechercher</string>
+    <string name="disableMGS">Ce raccourci est désactivé</string>
+
     <!-- Activity main -->
     <string name="text">COUCOU LES COPAINS ET LES COPINES !</string>
     <string name="text2">Bienvenue sur cette application soundbox Iconoblast non officielle (sans liens affiliés Instant Gaming).</string>
@@ -24,6 +28,9 @@
     <string name="search_toolbar" translatable="false">No available</string>
     <string name="addShortcut">Ajouter un raccourci</string>
     <string name="close">Fermer</string>
+
+    <!-- Dialog -->
+    <string name="dialogTitle">AJOUTER UN RACCOUCI</string>
 
     <!-- Toolbar -->
     <string name="settings">Paramètres</string>
@@ -68,6 +75,7 @@
     <string name="animatoo">Animatoo</string>
     <string name="circle">RoundedImageView</string>
     <string name="fab_plugin">Floating Action Button</string>
+    <string name="dialog_plugin">KAlertDialog</string>
 
     <!-- Thème Activity -->
     <string name="themes">Thèmes</string>

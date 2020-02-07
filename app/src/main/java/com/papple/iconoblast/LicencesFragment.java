@@ -158,6 +158,9 @@ public class LicencesFragment extends Fragment {
         TextView fabText = v.findViewById(R.id.fabText);
         fabText.setOnClickListener(v9 -> apacheLicenceShow(fabText.getText()));
 
+        TextView dialogText = v.findViewById(R.id.dialogText);
+        dialogText.setOnClickListener(v10 -> apacheLicenceShow(dialogText.getText()));
+
         return v;
     }
 

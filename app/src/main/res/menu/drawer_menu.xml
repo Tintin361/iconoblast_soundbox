@@ -21,11 +21,6 @@
             android:id="@+id/nav_stat"
             android:icon="@drawable/ic_stat"
             android:title="@string/stat" />
-        <item
-            android:id="@+id/share"
-            android:checkable="false"
-            android:icon="@drawable/ic_share"
-            android:title="@string/share" />
     </group>
 
     <item android:title="@string/icob">

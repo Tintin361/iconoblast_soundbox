@@ -1,5 +1,7 @@
 package com.papple.iconoblast;
 
+import android.annotation.SuppressLint;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ShortcutInfo;
@@ -18,6 +20,7 @@ import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -29,7 +32,11 @@ import android.text.Html;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,7 +46,7 @@ import com.github.javiersantos.appupdater.enums.UpdateFrom;
 
 import static maes.tech.intentanim.CustomIntent.customType;
 
-import java.util.Arrays;
+import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
@@ -49,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private FloatingActionMenu fabMenu;
     private FloatingActionButton fabButton;
     private FloatingActionButton hidButton;
+    private Boolean pinSupport;
+    private boolean answerA;
+    private boolean answerB;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,8 +66,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         SharedPreferences settings = getSharedPreferences("Answers", 0);
         SharedPreferences.Editor editor = settings.edit();
 
-        boolean answerA = settings.getBoolean("questionA", false);
-        boolean answerB = settings.getBoolean("questionB", false);
+        answerA = settings.getBoolean("questionA", false);
+        answerB = settings.getBoolean("questionB", false);
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
         boolean autoMajBoolean = settings.getBoolean("automaj", false);
@@ -85,22 +95,204 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             app.start();
         }
 
+        if (answerA) {
+            setTheme(R.style.AppTheme_MainTheme);
+        } else if (answerB) {
+            setTheme(R.style.DarkTheme2);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        if (Build.VERSION.SDK_INT >= 26) {
+            ShortcutManager sM = getSystemService(ShortcutManager.class);
+            pinSupport = sM.isRequestPinShortcutSupported();
+        }
+
         fabMenu = findViewById(R.id.fabMenu);
         fabButton = findViewById(R.id.shortButton);
         hidButton = findViewById(R.id.hideButton);
 
-        if (fabBoolean && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (fabBoolean && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && pinSupport) {
+
+            ShortcutManager sM = getSystemService(ShortcutManager.class);
+            Intent DdlcIntent = new Intent(this, MainActivity.class)
+                    .setAction("LOCATION_SHORTCUT")
+                    .putExtra("receive", "ddlc");
+
+            Intent MgtIntent = new Intent(this, MainActivity.class)
+                    .setAction("LOCATION_SHORTCUT")
+                    .putExtra("receive", "mgt");
+
+            Intent ZeldaIntent = new Intent(this, MainActivity.class)
+                    .setAction("LOCATION_SHORTCUT")
+                    .putExtra("receive", "zelda");
+
+            Intent AscunsIntent = new Intent(this, MainActivity.class)
+                    .setAction("LOCATION_SHORTCUT")
+                    .putExtra("receive", "ascuns");
+
+            Intent DeltaIntent = new Intent(this, MainActivity.class)
+                    .setAction("LOCATION_SHORTCUT")
+                    .putExtra("receive", "deltarune");
+
+            // Création des raccourcis
+            ShortcutInfo shortcut = new ShortcutInfo.Builder(this, "ddlc")
+                    .setShortLabel("Doki Doki Litterature Club")
+                    .setLongLabel("Doki Doki Litterature Club")
+                    .setDisabledMessage("Ce raccourci est désactivé.")
+                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_ddlc))
+                    .setIntent(DdlcIntent)
+                    .build();
+
+            ShortcutInfo shortcut2 = new ShortcutInfo.Builder(this, "mgt")
+                    .setShortLabel("Mad Games Tycoon")
+                    .setLongLabel("Mad Games Tycoon")
+                    .setDisabledMessage("Ce raccourci est désactivé.")
+                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_mgt))
+                    .setIntent(MgtIntent)
+                    .build();
+
+            ShortcutInfo shortcut3 = new ShortcutInfo.Builder(this, "zelda")
+                    .setShortLabel("Zelda")
+                    .setLongLabel("Zelda")
+                    .setDisabledMessage("Ce raccourci est désactivé.")
+                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_zelda))
+                    .setIntent(ZeldaIntent)
+                    .build();
+
+            ShortcutInfo shortcut4 = new ShortcutInfo.Builder(this, "ascuns")
+                    .setShortLabel("Ascuns")
+                    .setLongLabel("Ascuns")
+                    .setDisabledMessage("Ce raccourci est désactivé.")
+                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_ascuns_icon))
+                    .setIntent(AscunsIntent)
+                    .build();
+
+            ShortcutInfo shortcut5 = new ShortcutInfo.Builder(this, "deltarune")
+                    .setShortLabel("Deltarune")
+                    .setLongLabel("Deltarune")
+                    .setDisabledMessage("Ce raccourci est désactivé.")
+                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_deltarune))
+                    .setIntent(DeltaIntent)
+                    .build();
+
+
             hidButton.setOnClickListener(view -> {
                 fabMenu.hideMenu(true);
                 editor.putBoolean("fabButton", false);
                 editor.apply();
             });
-            fabButton.setOnClickListener(view -> Toast.makeText(this, "Tu as cliqué sur Add !", Toast.LENGTH_SHORT).show());
+
+            fabButton.setOnClickListener(view -> {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+                TextView title = new TextView(this);
+                title.setText(R.string.dialogTitle);
+                title.setGravity(Gravity.CENTER);
+                title.setTextSize(25);
+                title.setTextColor(ContextCompat.getColor(this, R.color.blue3));
+                builder.setCustomTitle(title);
+
+                @SuppressLint("InflateParams") final View customLayout = getLayoutInflater().inflate(R.layout.dialog_view, null);
+                builder.setView(customLayout);
+
+                builder.setNegativeButton("Annuler", (dialogInterface, i) -> dialogInterface.cancel());
+                builder.setPositiveButton("Ajouter", (dialogInterface, i) -> {
+                    RadioGroup radGroup = customLayout.findViewById(R.id.radGroup);
+                    RadioButton radio1 = customLayout.findViewById(R.id.rad1);
+                    RadioButton radio2 = customLayout.findViewById(R.id.rad2);
+                    RadioButton radio3 = customLayout.findViewById(R.id.rad3);
+                    RadioButton radio4 = customLayout.findViewById(R.id.rad4);
+                    RadioButton radio5 = customLayout.findViewById(R.id.rad5);
+
+                    if (radio1.isChecked() || radio2.isChecked() || radio3.isChecked() || radio4.isChecked() || radio5.isChecked()) {
+                        int radioID = radGroup.getCheckedRadioButtonId();
+                        View radioButton = radGroup.findViewById(radioID);
+                        int idx = radGroup.indexOfChild(radioButton);
+
+                        RadioButton r = (RadioButton) radGroup.getChildAt(idx);
+                        String selText = r.getText().toString();
+
+
+                        if (selText.equals("Doki Doki Litterature Club")) {
+                            sM.setDynamicShortcuts(Collections.singletonList(shortcut));
+
+                            ShortcutInfo pinShortInfo = new ShortcutInfo
+                                    .Builder(MainActivity.this, "ddlc")
+                                    .build();
+                            Intent pinnedShortcutCallbackIntent = sM.createShortcutResultIntent(pinShortInfo);
+
+                            PendingIntent successCB = PendingIntent.getBroadcast(MainActivity.this, 0, pinnedShortcutCallbackIntent, 0);
+                            sM.requestPinShortcut(pinShortInfo, successCB.getIntentSender());
+
+                        } else if (selText.equals("Mad Games Tycoon")) {
+                            sM.setDynamicShortcuts(Collections.singletonList(shortcut2));
+
+                            ShortcutInfo pinShortInfo = new ShortcutInfo
+                                    .Builder(MainActivity.this, "mgt")
+                                    .build();
+                            Intent pinnedShortcutCallbackIntent = sM.createShortcutResultIntent(pinShortInfo);
+
+                            PendingIntent successCB = PendingIntent.getBroadcast(MainActivity.this, 0, pinnedShortcutCallbackIntent, 0);
+                            sM.requestPinShortcut(pinShortInfo, successCB.getIntentSender());
+
+                        } else if (selText.equals("Deltarune")) {
+                            sM.setDynamicShortcuts(Collections.singletonList(shortcut5));
+
+                            ShortcutInfo pinShortInfo = new ShortcutInfo
+                                    .Builder(MainActivity.this, "deltarune")
+                                    .build();
+                            Intent pinnedShortcutCallbackIntent = sM.createShortcutResultIntent(pinShortInfo);
+
+                            PendingIntent successCB = PendingIntent.getBroadcast(MainActivity.this, 0, pinnedShortcutCallbackIntent, 0);
+                            sM.requestPinShortcut(pinShortInfo, successCB.getIntentSender());
+
+                        } else if (selText.equals("Zelda")) {
+                            sM.setDynamicShortcuts(Collections.singletonList(shortcut3));
+
+                            ShortcutInfo pinShortInfo = new ShortcutInfo
+                                    .Builder(MainActivity.this, "zelda")
+                                    .build();
+                            Intent pinnedShortcutCallbackIntent = sM.createShortcutResultIntent(pinShortInfo);
+
+                            PendingIntent successCB = PendingIntent.getBroadcast(MainActivity.this, 0, pinnedShortcutCallbackIntent, 0);
+                            sM.requestPinShortcut(pinShortInfo, successCB.getIntentSender());
+
+                        } else if (selText.equals("Ascuns")) {
+                            sM.setDynamicShortcuts(Collections.singletonList(shortcut4));
+
+                            ShortcutInfo pinShortInfo = new ShortcutInfo
+                                    .Builder(MainActivity.this, "ascuns")
+                                    .build();
+                            Intent pinnedShortcutCallbackIntent = sM.createShortcutResultIntent(pinShortInfo);
+
+                            PendingIntent successCB = PendingIntent.getBroadcast(MainActivity.this, 0, pinnedShortcutCallbackIntent, 0);
+                            sM.requestPinShortcut(pinShortInfo, successCB.getIntentSender());
+
+                        }
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                if (answerA) {
+                    dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg);
+                } else if (answerB) {
+                    dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark);
+                }
+                dialog.show();
+
+                Button b1 = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+                Button b2 = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
+
+                b1.setTextColor(ContextCompat.getColor(this, android.R.color.holo_green_light));
+                b1.setTextSize(15);
+                b2.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_light));
+                b2.setTextSize(15);
+            });
 
         } else if (!fabBoolean) {
             fabMenu.hideMenu(true);
@@ -136,77 +328,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-            ShortcutManager sManager = getSystemService(ShortcutManager.class);
-
-            Intent DdlcIntent = new Intent(this, MainActivity.class)
-                    .setAction("LOCATION_SHORTCUT")
-                    .putExtra("receive", "ddlc");
-
-            Intent MgtIntent = new Intent(this, MainActivity.class)
-                    .setAction("LOCATION_SHORTCUT")
-                    .putExtra("receive", "mgt");
-
-            Intent ZeldaIntent = new Intent(this, MainActivity.class)
-                    .setAction("LOCATION_SHORTCUT")
-                    .putExtra("receive", "zelda");
-
-            Intent AscunsIntent = new Intent(this, MainActivity.class)
-                    .setAction("LOCATION_SHORTCUT")
-                    .putExtra("receive", "ascuns");
-
-            Intent DeltaIntent = new Intent(this, MainActivity.class)
-                    .setAction("LOCATION_SHORTCUT")
-                    .putExtra("receive", "deltarune");
-
-            // Création des raccourcis + Annonce
-            ShortcutInfo shortcut = new ShortcutInfo.Builder(this, "ddlc")
-                    .setShortLabel("Doki Doki Litterature Club")
-                    .setLongLabel("Doki Doki Litterature Club")
-                    .setDisabledMessage("Ce raccourci est désactivé.")
-                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_ddlc))
-                    .setRank(1)
-                    .setIntent(DdlcIntent)
-                    .build();
-
-            ShortcutInfo shortcut2 = new ShortcutInfo.Builder(this, "mgt")
-                    .setShortLabel("Mad Games Tycoon")
-                    .setLongLabel("Mad Games Tycoon")
-                    .setDisabledMessage("Ce raccourci est désactivé.")
-                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_mgt))
-                    .setRank(2)
-                    .setIntent(MgtIntent)
-                    .build();
-
-            ShortcutInfo shortcut3 = new ShortcutInfo.Builder(this, "zelda")
-                    .setShortLabel("Zelda")
-                    .setLongLabel("Zelda")
-                    .setDisabledMessage("Ce raccourci est désactivé.")
-                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_zelda))
-                    .setRank(4)
-                    .setIntent(ZeldaIntent)
-                    .build();
-
-            ShortcutInfo shortcut4 = new ShortcutInfo.Builder(this, "ascuns")
-                    .setShortLabel("Ascuns")
-                    .setLongLabel("Ascuns")
-                    .setDisabledMessage("Ce raccourci est désactivé.")
-                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_ascuns_icon))
-                    .setRank(5)
-                    .setIntent(AscunsIntent)
-                    .build();
-
-            ShortcutInfo shortcut5 = new ShortcutInfo.Builder(this, "deltarune")
-                    .setShortLabel("Deltarune")
-                    .setLongLabel("Deltarune")
-                    .setDisabledMessage("Ce raccourci est désactivé.")
-                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_deltarune))
-                    .setRank(3)
-                    .setIntent(DeltaIntent)
-                    .build();
-
-            assert sManager != null;
-            sManager.setDynamicShortcuts(Arrays.asList(shortcut, shortcut2, shortcut3, shortcut4, shortcut5));
-
             String string = getIntent().getStringExtra("receive");
 
             if (string != null) {
@@ -442,9 +563,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.versionId:
                 openDialog();
                 break;
-            case R.id.share:
-                shareMenu();
-                break;
         }
         drawer.closeDrawer(GravityCompat.START);
         editor1.apply();
@@ -484,15 +602,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
-    public void openDialog() {
-        new AlertDialog.Builder(this)
-                .setTitle("Redirection sur Google Play Store")
-                .setMessage("Vous allez être redirigé(e) sur Google Play Store, la page va s'ouvrir dans l'application.")
-                .setPositiveButton("Ok", (dialog, which) -> launchPlayTabs())
-                .setNegativeButton("Annuler", null)
-                .show();
-    }
-
     public void openContactDialog() {
         contact_dialog dialog2 = new contact_dialog();
         dialog2.show(getSupportFragmentManager(), "contact_dialog");
@@ -523,27 +632,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         startActivity(intent);
     }
 
-    public void shareMenu() {
-        new AlertDialog.Builder(this)
-                .setTitle(Html.fromHtml("<font color='#ff1500'>Partager l'application</font>"))
-                .setMessage("Vous pouvez partager l'application Iconoblast! avec vos amis via Google Drive ou Github.")
-                .setPositiveButton(Html.fromHtml("<font color='#18A462'>Google Drive</font>"), (dialog, which) -> {
-                    String url = "https://drive.google.com/drive/folders/1_YurNp0Pzzck8gWpGLNeD9GH0IBYK0LL?usp=sharing";
+    public void openDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                .setTitle(Html.fromHtml("<font color='#ff1500'>Redirection sur Google Play Store</font>"))
+                .setMessage("Vous allez être redirigé(e) sur Google Play Store, la page va s'ouvrir dans l'application.")
+                .setPositiveButton(Html.fromHtml("<font color='#18A462'>Ok</font>"), (dialog, which) -> launchPlayTabs())
+                .setNegativeButton(Html.fromHtml("<font color='#F15135'>Annuler</font>"), (dialog, which) -> dialog.cancel());
+        AlertDialog dialog = builder.create();
 
-                    Intent sharringIntent = new Intent(Intent.ACTION_SEND);
-                    sharringIntent.putExtra(Intent.EXTRA_TEXT, url);
-                    sharringIntent.setType("text/plain");
-                    startActivity(Intent.createChooser(sharringIntent, "Partager l'application"));
-                })
-                .setNegativeButton(Html.fromHtml("<font color='#F15135'>Github</font>"), (dialog, which) -> {
-                    String url = "https://github.com/Tintin361/iconoblast_soundbox/releases";
+        if (answerA) {
+            dialog.getWindow().getDecorView().setBackgroundResource(R.drawable.dialog_bg);
+        } else if (answerB) {
+            dialog.getWindow().getDecorView().setBackgroundResource(R.drawable.dialog_bg_dark);
+        }
 
-                    Intent sharringIntent = new Intent(Intent.ACTION_SEND);
-                    sharringIntent.putExtra(Intent.EXTRA_TEXT, url);
-                    sharringIntent.setType("text/plain");
-                    startActivity(Intent.createChooser(sharringIntent, "Partager l'application"));
-                })
-                .setNeutralButton("Annuler", (dialogInterface, i) -> dialogInterface.cancel())
-                .show();
+        dialog.show();
+
     }
 }
