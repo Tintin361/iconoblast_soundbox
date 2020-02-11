@@ -77,7 +77,7 @@
         </menu>
     </item>
 
-    <item android:title="@string/icoc">
+    <item android:title="@string/iconoclaste">
         <menu>
             <group android:checkableBehavior="single">
                 <item
@@ -95,18 +95,6 @@
                     android:id="@+id/nav_ascuns"
                     android:icon="@drawable/ic_video"
                     android:title="@string/ascuns" />
-            </group>
-        </menu>
-    </item>
-
-    <item android:title="@string/communicate">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/report"
-                    android:checkable="false"
-                    android:icon="@drawable/ic_feedback"
-                    android:title="@string/bug" />
             </group>
         </menu>
     </item>

@@ -58,6 +58,26 @@
                     android:src="@drawable/ic_edit" />
 
                 <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/shareButton"
+                    app:fab_colorNormal="@color/colorPrimary"
+                    app:fab_colorPressed="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_label="@string/share"
+                    app:fab_size="mini"
+                    android:src="@drawable/ic_share_white" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/bugButton"
+                    app:fab_colorNormal="@color/colorPrimary"
+                    app:fab_colorPressed="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_label="@string/bug"
+                    app:fab_size="mini"
+                    android:src="@drawable/ic_feedback" />
+
+                <com.github.clans.fab.FloatingActionButton
                     android:id="@+id/hideButton"
                     app:fab_colorNormal="@color/colorPrimary"
                     app:fab_colorPressed="@color/colorPrimary"

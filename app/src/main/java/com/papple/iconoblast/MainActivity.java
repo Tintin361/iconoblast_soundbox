@@ -20,6 +20,7 @@ import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ShareCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -28,7 +29,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.text.Html;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private boolean answerA;
     private boolean answerB;
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -180,13 +181,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setIntent(DeltaIntent)
                     .build();
 
-
-            hidButton.setOnClickListener(view -> {
-                fabMenu.hideMenu(true);
-                editor.putBoolean("fabButton", false);
-                editor.apply();
-            });
-
             fabButton.setOnClickListener(view -> {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -280,6 +274,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 AlertDialog dialog = builder.create();
                 if (answerA) {
                     dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg);
+
                 } else if (answerB) {
                     dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark);
                 }
@@ -292,17 +287,84 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 b1.setTextSize(15);
                 b2.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_light));
                 b2.setTextSize(15);
+
             });
 
         } else if (!fabBoolean) {
-            fabMenu.hideMenu(true);
-
-        } else {
-            fabMenu.hideMenu(true);
+            fabButton.hideButtonInMenu(true);
 
         }
 
+        hidButton.setOnClickListener(view5 -> {
+            fabMenu.hideMenu(true);
+            editor.putBoolean("fabButton", false);
+            editor.apply();
+        });
+
+        FloatingActionButton shareButton = findViewById(R.id.shareButton);
+        shareButton.setOnClickListener(view2 -> {
+            String url = "https://play.google.com/store/apps/details?id=com.papple.iconoblast&gl=FR";
+            ShareCompat.IntentBuilder.from(this)
+                    .setType("text/plain")
+                    .setChooserTitle("Partager l'application")
+                    .setText(url)
+                    .startChooser();
+        });
+
+        FloatingActionButton bugButton = findViewById(R.id.bugButton);
+        bugButton.setOnClickListener(view3 -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+            TextView title = new TextView(this);
+            title.setText(R.string.bug);
+            title.setGravity(Gravity.CENTER);
+            title.setTextSize(25);
+            title.setTextColor(ContextCompat.getColor(this, R.color.blue3));
+            builder.setCustomTitle(title);
+
+            @SuppressLint("InflateParams") final View customLayout = getLayoutInflater().inflate(R.layout.dialog_model, null);
+            TextView textView = customLayout.findViewById(R.id.placeholderText);
+            textView.setText("Vous pouvez signaler un bug via la page Google Play Store ou par E-Mail.");
+            builder.setView(customLayout);
+
+            builder.setNeutralButton("Annuler", (dialogInterface, i) -> dialogInterface.cancel());
+            builder.setPositiveButton("Google Play", (dialogInterface, i) -> {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                String url = "https://play.google.com/store/apps/details?id=com.papple.iconoblast&gl=FR";
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            });
+            builder.setNegativeButton("Mail", (dialogInterface, i) -> {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("message/rfc822");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"tintin361official@gmail.com"});
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Bug - Iconoblast !");
+                startActivity(Intent.createChooser(intent, "Choisissez un client E-Mail."));
+            });
+
+
+            AlertDialog dialog = builder.create();
+            if (answerA) {
+                dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg);
+            } else if (answerB) {
+                dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark);
+            }
+            dialog.show();
+
+            Button b1 = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+            Button b2 = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
+            Button b3 = dialog.getButton(AlertDialog.BUTTON_NEUTRAL);
+
+            b1.setTextColor(ContextCompat.getColor(this, android.R.color.holo_green_light));
+            b1.setTextSize(15);
+            b2.setTextColor(ContextCompat.getColor(this, android.R.color.holo_blue_light));
+            b2.setTextSize(15);
+            b3.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_light));
+            b3.setTextSize(15);
+        });
+
         drawer = findViewById(R.id.drawer_layout);
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -485,6 +547,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setItemTextColor(csl);
             navigationView.setItemIconTintList(cls1);
         }
+
     }
 
     @Override
@@ -557,12 +620,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 ascunsNumber = ascunsNumber + 1;
                 editor1.putInt("ascuns", ascunsNumber);
                 break;
-            case R.id.report:
-                openContactDialog();
-                break;
-            case R.id.versionId:
-                openDialog();
-                break;
         }
         drawer.closeDrawer(GravityCompat.START);
         editor1.apply();
@@ -602,11 +659,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
-    public void openContactDialog() {
-        contact_dialog dialog2 = new contact_dialog();
-        dialog2.show(getSupportFragmentManager(), "contact_dialog");
-    }
-
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -623,30 +675,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
             backPressedTime = System.currentTimeMillis();
         }
-    }
-
-    public void launchPlayTabs() {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        String url = "https://play.google.com/store/apps/details?id=com.papple.iconoblast&gl=FR";
-        intent.setData(Uri.parse(url));
-        startActivity(intent);
-    }
-
-    public void openDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this)
-                .setTitle(Html.fromHtml("<font color='#ff1500'>Redirection sur Google Play Store</font>"))
-                .setMessage("Vous allez être redirigé(e) sur Google Play Store, la page va s'ouvrir dans l'application.")
-                .setPositiveButton(Html.fromHtml("<font color='#18A462'>Ok</font>"), (dialog, which) -> launchPlayTabs())
-                .setNegativeButton(Html.fromHtml("<font color='#F15135'>Annuler</font>"), (dialog, which) -> dialog.cancel());
-        AlertDialog dialog = builder.create();
-
-        if (answerA) {
-            dialog.getWindow().getDecorView().setBackgroundResource(R.drawable.dialog_bg);
-        } else if (answerB) {
-            dialog.getWindow().getDecorView().setBackgroundResource(R.drawable.dialog_bg_dark);
-        }
-
-        dialog.show();
-
     }
 }

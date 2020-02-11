@@ -4,17 +4,19 @@
     <string name="app" translatable="false">APPLICATION</string>
     <string name="icob" translatable="false">ICONOBLAST !</string>
     <string name="icoc" translatable="false">Iconoclaste</string>
+    <string name="iconoclaste">ICONOCLASTE</string>
     <string name="icoetetagere">Ico &amp; Étagère</string>
     <string name="etagere">Étagère</string>
     <string name="other">AUTRES</string>
     <string name="communicate">COMMUNIQUER</string>
-    <string name="version" translatable="false">Version 1.0.13</string>
+    <string name="version" translatable="false">Version 1.0.14</string>
     <string name="easter" translatable="false">Easter Egg</string>
     <string name="descriptionImage">Logo de la chaîne et de l\'application Iconoblast !</string>
     <string name="des" translatable="false">Logo Youtube</string>
     <string name="stat">Statistiques</string>
     <string name="delta">Deltarune</string>
     <string name="share">Partager l\'application</string>
+    <string name="loading">Chargement&#8230;</string>
 
     <!-- Static Shortcut -->
     <string name="searchLabel">Rechercher</string>
@@ -48,7 +50,7 @@
     <string name="amour" translatable="false">Amour Sucré</string>
     <string name="marioMaker" translatable="false">Super Mario Maker 1 et 2</string>
     <string name="sonic" translatable="false">Sonic the Hedgehog</string>
-    <string name="pokemon" translatable="false">Pokémon Let\s Go Pikachu</string>
+    <string name="pokemon" translatable="false">Pokémon</string>
     <string name="versus" translatable="false">Iconoblast ! - Versus</string>
     <string name="zelda" translatable="false">Zelda</string>
     <string name="ascuns" translatable="false">Ascuns</string>
@@ -88,7 +90,6 @@
     <string name="design">Affichage</string>
     <string name="auto">Automatiquement</string>
     <string name="manuel">Manuellement</string>
-    <string name="majupdate">Les MàJ reviendront lors de la sortie sur le Google Play Store !</string>
     <string name="buttonF">FAB</string>
     <string name="show">Afficher</string>
     <string name="hide">Cacher</string>
