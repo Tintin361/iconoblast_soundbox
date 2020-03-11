@@ -28,18 +28,22 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageView
+                <com.makeramen.roundedimageview.RoundedImageView
                     android:id="@+id/imageView"
-                    android:layout_width="145dp"
-                    android:layout_height="130dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_gravity="center"
-                    android:scaleType="centerCrop"
                     android:contentDescription="@string/descriptionLulu"
-                    android:src="@drawable/pp_lucina" />
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lucina_pp"
+                    app:riv_corner_radius="95dp"
+                    app:riv_border_width="4dp"
+                    app:riv_border_color="@color/Black"
+                    app:riv_mutate_background="true" />
 
                 <TextView
                     android:id="@+id/textView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:padding="5dp"
@@ -58,15 +62,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="11dp"
+            android:layout_marginBottom="15dp"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/lulu2"
                 android:gravity="center"
+                android:layout_gravity="center"
                 android:textColor="@color/zelda"
                 android:textSize="@dimen/text" />
 
@@ -99,7 +104,7 @@
 
                 <TextView
                     android:id="@+id/luluTextView2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:padding="5dp"
