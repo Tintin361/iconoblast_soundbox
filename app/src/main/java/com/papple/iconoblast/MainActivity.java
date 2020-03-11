@@ -40,10 +40,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.javiersantos.appupdater.AppUpdater;
-import com.github.javiersantos.appupdater.enums.Display;
-import com.github.javiersantos.appupdater.enums.UpdateFrom;
-
 import static maes.tech.intentanim.CustomIntent.customType;
 
 import java.util.Collections;
@@ -83,17 +79,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (!answerC && !answerD) {
             editor.putBoolean("questionC", true).apply();
-        }
-
-        editor.putBoolean("automaj", false);
-        editor.apply();
-
-        if (autoMajBoolean) {
-            AppUpdater app = new AppUpdater(MainActivity.this)
-                    .setUpdateFrom(UpdateFrom.GITHUB)
-                    .setGitHubUserAndRepo("Tintin361", "iconoblast_soundbox")
-                    .setDisplay(Display.NOTIFICATION);
-            app.start();
         }
 
         if (answerA) {
@@ -140,6 +125,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setAction("LOCATION_SHORTCUT")
                     .putExtra("receive", "deltarune");
 
+            Intent GalaxyIntent = new Intent(this, MainActivity.class)
+                    .setAction("LOCATION_SHORTCUT")
+                    .putExtra("receive", "mariogalaxy");
+
             // Création des raccourcis
             ShortcutInfo shortcut = new ShortcutInfo.Builder(this, "ddlc")
                     .setShortLabel("Doki Doki Litterature Club")
@@ -181,6 +170,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setIntent(DeltaIntent)
                     .build();
 
+            ShortcutInfo shortcut6 = new ShortcutInfo.Builder(this, "mariogalaxy")
+                    .setShortLabel("Mario Galaxy")
+                    .setLongLabel("Super Mario Galaxy")
+                    .setDisabledMessage("Ce raccourci est désactivé.")
+                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_mario_galaxy))
+                    .setIntent(GalaxyIntent)
+                    .build();
+
             fabButton.setOnClickListener(view -> {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -202,8 +199,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     RadioButton radio3 = customLayout.findViewById(R.id.rad3);
                     RadioButton radio4 = customLayout.findViewById(R.id.rad4);
                     RadioButton radio5 = customLayout.findViewById(R.id.rad5);
+                    RadioButton radio6 = customLayout.findViewById(R.id.rad6);
 
-                    if (radio1.isChecked() || radio2.isChecked() || radio3.isChecked() || radio4.isChecked() || radio5.isChecked()) {
+                    if (radio1.isChecked() || radio2.isChecked() || radio3.isChecked() || radio4.isChecked() || radio5.isChecked() || radio6.isChecked()) {
                         int radioID = radGroup.getCheckedRadioButtonId();
                         View radioButton = radGroup.findViewById(radioID);
                         int idx = radGroup.indexOfChild(radioButton);
@@ -267,6 +265,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             PendingIntent successCB = PendingIntent.getBroadcast(MainActivity.this, 0, pinnedShortcutCallbackIntent, 0);
                             sM.requestPinShortcut(pinShortInfo, successCB.getIntentSender());
 
+                        } else if (selText.equals("Super Mario Galaxy")) {
+                            sM.setDynamicShortcuts(Collections.singletonList(shortcut6));
+
+                            ShortcutInfo pinShortInfo = new ShortcutInfo
+                                    .Builder(MainActivity.this, "mariogalaxy")
+                                    .build();
+                            Intent pinnedShortcutCallbackIntent = sM.createShortcutResultIntent(pinShortInfo);
+
+                            PendingIntent successCB = PendingIntent.getBroadcast(MainActivity.this, 0, pinnedShortcutCallbackIntent, 0);
+                            sM.requestPinShortcut(pinShortInfo, successCB.getIntentSender());
                         }
                     }
                 });
@@ -398,6 +406,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editor.putBoolean("aFrag", false);
                         editor.putBoolean("sFrag", false);
                         editor.putBoolean("dFrag", true);
+                        editor.putBoolean("marioGalaxyFrag", false);
                         editor.putBoolean("deltaFrag", false);
                         editor.putBoolean("mFrag", false);
                         editor.putBoolean("zFrag", false);
@@ -408,6 +417,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editor.putBoolean("aFrag", false);
                         editor.putBoolean("sFrag", false);
                         editor.putBoolean("dFrag", false);
+                        editor.putBoolean("marioGalaxyFrag", false);
                         editor.putBoolean("deltaFrag", false);
                         editor.putBoolean("mFrag", true);
                         editor.putBoolean("zFrag", false);
@@ -418,6 +428,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editor.putBoolean("aFrag", false);
                         editor.putBoolean("sFrag", false);
                         editor.putBoolean("dFrag", false);
+                        editor.putBoolean("marioGalaxyFrag", false);
                         editor.putBoolean("mFrag", false);
                         editor.putBoolean("deltaFrag", false);
                         editor.putBoolean("zFrag", true);
@@ -428,6 +439,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editor.putBoolean("aFrag", false);
                         editor.putBoolean("sFrag", false);
                         editor.putBoolean("dFrag", false);
+                        editor.putBoolean("marioGalaxyFrag", false);
                         editor.putBoolean("mFrag", false);
                         editor.putBoolean("deltaFrag", false);
                         editor.putBoolean("zFrag", false);
@@ -438,8 +450,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editor.putBoolean("aFrag", false);
                         editor.putBoolean("sFrag", false);
                         editor.putBoolean("dFrag", false);
+                        editor.putBoolean("marioGalaxyFrag", false);
                         editor.putBoolean("mFrag", false);
                         editor.putBoolean("deltaFrag", true);
+                        editor.putBoolean("zFrag", false);
+                        editor.putBoolean("asFrag", false);
+                        editor.apply();
+                        break;
+                    case "mariogalaxy":
+                        editor.putBoolean("aFrag", false);
+                        editor.putBoolean("sFrag", false);
+                        editor.putBoolean("dFrag", false);
+                        editor.putBoolean("marioGalaxyFrag", true);
+                        editor.putBoolean("mFrag", false);
+                        editor.putBoolean("deltaFrag", false);
                         editor.putBoolean("zFrag", false);
                         editor.putBoolean("asFrag", false);
                         editor.apply();
@@ -453,6 +477,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         boolean ddlcFrag = settings.getBoolean("dFrag", false);
         boolean mgtFrag = settings.getBoolean("mFrag", false);
         boolean deltaFrag = settings.getBoolean("deltaFrag", false);
+        boolean galaxyFrag = settings.getBoolean("marioGalaxyFrag", false);
         boolean zeldaFrag = settings.getBoolean("zFrag", false);
         boolean ascunsfrag = settings.getBoolean("asFrag", false);
 
@@ -465,6 +490,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (deltaFrag) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DeltaruneFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_delta);
+        } else if (galaxyFrag) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MarioGalaxyFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_mario_galaxy);
         } else if (zeldaFrag) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ZeldaFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_zelda);
@@ -587,6 +615,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_yoshi:
                 Toast.makeText(this, "Bébé de MERDE !!!", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_mario_galaxy:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MarioGalaxyFragment()).commit();
+                item.setChecked(true);
+                int smgNumber = sharedPreferences.getInt("mariogalaxy", 0);
+                smgNumber = smgNumber + 1;
+                editor1.putInt("mariogalaxy", smgNumber);
                 break;
             case R.id.nav_bloodborn:
                 Toast.makeText(this, "Go to the LEFT, to the LEFT !", Toast.LENGTH_SHORT).show();

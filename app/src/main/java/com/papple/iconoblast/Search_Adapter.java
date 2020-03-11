@@ -195,6 +195,21 @@ public class Search_Adapter extends RecyclerView.Adapter<Search_Adapter.SearchVi
                 case "KRISEUH ! (Ico)":
                     SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.blue4)));
                     break;
+                case "Ça rime avec... (Étagère.exe)":
+                    SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.pink1)));
+                    break;
+                case "Pute, pute... (Étagère)":
+                    SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.pink2)));
+                    break;
+                case "C'est parti ! (Ico)":
+                    SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.red2)));
+                    break;
+                case "I'm cumming !!! (Ico)":
+                    SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.red3)));
+                    break;
+                case "NOOOOOOOOOON ! (Ico)":
+                    SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.orange2)));
+                    break;
                 case "Non, et tu t'amuse !!! (Ico)":
                     SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.Red1)));
                     break;
@@ -318,6 +333,21 @@ public class Search_Adapter extends RecyclerView.Adapter<Search_Adapter.SearchVi
                     break;
                 case "KRISEUH ! (Ico)":
                     SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.dBlue4)));
+                    break;
+                case "Ça rime avec... (Étagère.exe)":
+                    SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.dYellow)));
+                    break;
+                case "Pute, pute... (Étagère)":
+                    SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.dOrange)));
+                    break;
+                case "C'est parti ! (Ico)":
+                    SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.dRed)));
+                    break;
+                case "I'm cumming !!! (Ico)":
+                    SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.dRed2)));
+                    break;
+                case "NOOOOOOOOOON ! (Ico)":
+                    SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.dPurple3)));
                     break;
                 case "Non, et tu t'amuse !!! (Ico)":
                     SearchViewHolder.searchCardView.setCardBackgroundColor(ColorStateList.valueOf(SearchViewHolder.searchCardView.getResources().getColor(R.color.dBlue)));

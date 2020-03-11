@@ -184,6 +184,21 @@ public class Search_Adapter_List extends RecyclerView.Adapter<Search_Adapter_Lis
                 case "KRISEUH ! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.blue4)));
                     break;
+                case "Ça rime avec... (Étagère.exe)":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.pink1)));
+                    break;
+                case "Pute, pute... (Étagère)":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.pink2)));
+                    break;
+                case "C'est parti ! (Ico)":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.red2)));
+                    break;
+                case "I'm cumming !!! (Ico)":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.red3)));
+                    break;
+                case "NOOOOOOOOOON ! (Ico)":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dPurple3)));
+                    break;
                 case "Non, et tu t'amuse !!! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.Red1)));
                     break;
@@ -306,6 +321,21 @@ public class Search_Adapter_List extends RecyclerView.Adapter<Search_Adapter_Lis
                     break;
                 case "KRISEUH ! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dBlue4)));
+                    break;
+                case "Ça rime avec... (Étagère.exe)":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dYellow)));
+                    break;
+                case "Pute, pute... (Étagère)":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dOrange)));
+                    break;
+                case "C'est parti ! (Ico)":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dRed)));
+                    break;
+                case "I'm cumming !!! (Ico)":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dRed2)));
+                    break;
+                case "NOOOOOOOOOON ! (Ico)":
+                    SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dPurple3)));
                     break;
                 case "Non, et tu t'amuse !!! (Ico)":
                     SearchViewHolder.sButton.setSupportBackgroundTintList(ColorStateList.valueOf(SearchViewHolder.sButton.getResources().getColor(R.color.dBlue)));

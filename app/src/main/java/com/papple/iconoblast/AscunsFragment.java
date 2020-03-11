@@ -53,6 +53,7 @@ public class AscunsFragment extends Fragment implements Ascuns_Adapter_List.OnIt
         editor.putBoolean("aFrag", false);
         editor.putBoolean("sFrag", false);
         editor.putBoolean("dFrag", false);
+        editor.putBoolean("marioGalaxyFrag", false);
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", false);
         editor.putBoolean("asFrag", true);

@@ -17,6 +17,9 @@
     <string name="delta">Deltarune</string>
     <string name="share">Partager l\'application</string>
     <string name="loading">Chargement&#8230;</string>
+    <string name="plus">+</string>
+    <string name="moins">-</string>
+    <string name="zero">0</string>
 
     <!-- Static Shortcut -->
     <string name="searchLabel">Rechercher</string>
@@ -46,6 +49,7 @@
     <string name="mgt" translatable="false">Mad Games Tycoon</string>
     <string name="sMgt" translatable="false">MGT</string>
     <string name="yoshi" translatable="false">Yoshi\'s Island</string>
+    <string name="marioGalaxy">Super Mario Galaxy</string>
     <string name="bloodborn" translatable="false">Bloodborn</string>
     <string name="amour" translatable="false">Amour Sucré</string>
     <string name="marioMaker" translatable="false">Super Mario Maker 1 et 2</string>
@@ -102,6 +106,7 @@
     <string name="statDdlc" translatable="false">Doki Doki Litterature Club:</string>
     <string name="statMGT" translatable="false">Mad Games Tycoon:</string>
     <string name="statZelda" translatable="false">Zelda:</string>
+    <string name="statSMG" translatable="false">Mario Galaxy:</string>
     <string name="statAscuns" translatable="false">Ascuns:</string>
     <string name="statDELTA">Deltarune:</string>
     <string name="value" translatable="false">0</string>

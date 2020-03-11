@@ -54,6 +54,7 @@ public class ZeldaFragment extends Fragment implements Zelda_Adapter.OnItemClick
         editor.putBoolean("aFrag",false);
         editor.putBoolean("sFrag", false);
         editor.putBoolean("dFrag", false);
+        editor.putBoolean("marioGalaxyFrag", false);
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", true);
         editor.putBoolean("asFrag", false);

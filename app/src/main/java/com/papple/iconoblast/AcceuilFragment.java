@@ -49,6 +49,7 @@ public class AcceuilFragment extends Fragment {
         editor.putBoolean("aFrag", true);
         editor.putBoolean("sFrag", false);
         editor.putBoolean("dFrag", false);
+        editor.putBoolean("marioGalaxyFrag", false);
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", false);
         editor.putBoolean("asFrag", false);

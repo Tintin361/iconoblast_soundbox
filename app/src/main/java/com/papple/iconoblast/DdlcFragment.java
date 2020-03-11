@@ -55,6 +55,7 @@ public class DdlcFragment extends Fragment implements Ddlc_Adapter_List.OnItemCl
         editor.putBoolean("aFrag", false);
         editor.putBoolean("sFrag", false);
         editor.putBoolean("dFrag", true);
+        editor.putBoolean("marioGalaxyFrag", false);
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", false);
         editor.putBoolean("asFrag", false);

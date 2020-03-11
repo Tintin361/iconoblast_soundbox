@@ -51,6 +51,7 @@ public class DeltaruneFragment extends Fragment implements Deltarune_Adapter.OnI
         editor.putBoolean("aFrag", false);
         editor.putBoolean("sFrag", false);
         editor.putBoolean("dFrag", false);
+        editor.putBoolean("marioGalaxyFrag", false);
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", false);
         editor.putBoolean("asFrag", false);

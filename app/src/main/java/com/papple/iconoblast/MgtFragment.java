@@ -63,6 +63,7 @@ public class MgtFragment extends Fragment implements Mgt_Adapter.OnItemClickList
         editor.putBoolean("aFrag", false);
         editor.putBoolean("sFrag", false);
         editor.putBoolean("dFrag", false);
+        editor.putBoolean("marioGalaxyFrag", false);
         editor.putBoolean("mFrag", true);
         editor.putBoolean("zFrag", false);
         editor.putBoolean("asFrag", false);

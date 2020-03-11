@@ -34,7 +34,6 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
     ArrayList<Search_Item_List> searchList2;
     SharedPreferences settings;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +44,6 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
         boolean answerB = settings.getBoolean("questionB", false);
         boolean answerC = settings.getBoolean("questionC", false);
         boolean answerD = settings.getBoolean("questionD", false);
-
 
         if (answerA) {
             setTheme(R.style.AppTheme_NoActionBar);
@@ -118,6 +116,11 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
             searchList.add(new Search_Item_List_ListVersion("TOUCH MY COCK !!! (Ico et Étagère)"));
             searchList.add(new Search_Item_List_ListVersion("Guerriers Delta !!! (Ico et Étagère)"));
             searchList.add(new Search_Item_List_ListVersion("KRISEUH ! (Ico)"));
+            searchList.add(new Search_Item_List_ListVersion("Ça rime avec... (Étagère.exe)"));
+            searchList.add(new Search_Item_List_ListVersion("Pute, pute... (Étagère)"));
+            searchList.add(new Search_Item_List_ListVersion("C'est parti ! (Ico)"));
+            searchList.add(new Search_Item_List_ListVersion("I'm cumming !!! (Ico)"));
+            searchList.add(new Search_Item_List_ListVersion("NOOOOOOOOOON ! (Ico)"));
             searchList.add(new Search_Item_List_ListVersion("Non, et tu t'amuse !!! (Ico)"));
             searchList.add(new Search_Item_List_ListVersion("Qu'est-ce que j'aimerais ... (Ico)"));
             searchList.add(new Search_Item_List_ListVersion("ZELDA !!! (Ico)"));
@@ -188,6 +191,11 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
             searchList2.add(new Search_Item_List(R.drawable.touch_my_cock, "TOUCH MY COCK !!! (Ico et Étagère)"));
             searchList2.add(new Search_Item_List(R.drawable.guerriers_delta, "Guerriers Delta !!! (Ico et Étagère)"));
             searchList2.add(new Search_Item_List(R.drawable.kriseuh, "KRISEUH ! (Ico)"));
+            searchList2.add(new Search_Item_List(R.drawable.rime_image, "Ça rime avec... (Étagère.exe)"));
+            searchList2.add(new Search_Item_List(R.drawable.put_image, "Pute, pute... (Étagère)"));
+            searchList2.add(new Search_Item_List(R.drawable.parti_image, "C'est parti ! (Ico)"));
+            searchList2.add(new Search_Item_List(R.drawable.cumming_image, "I'm cumming !!! (Ico)"));
+            searchList2.add(new Search_Item_List(R.drawable.nooon_image, "NOOOOOOOOOON ! (Ico)"));
             searchList2.add(new Search_Item_List(R.drawable.amuse_image, "Non, et tu t'amuse !!! (Ico)"));
             searchList2.add(new Search_Item_List(R.drawable.main_image, "Qu'est-ce que j'aimerais ... (Ico)"));
             searchList2.add(new Search_Item_List(R.drawable.zelda_image, "ZELDA !!! (Ico)"));
@@ -363,6 +371,21 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
                 case "KRISEUH ! (Ico)":
                     playSound(R.raw.kris_sound);
                     break;
+                case "Ça rime avec... (Étagère.exe)":
+                    playSound(R.raw.rime_sound);
+                    break;
+                case "Pute, pute... (Étagère)":
+                    playSound(R.raw.put_sound);
+                    break;
+                case "C'est parti ! (Ico)":
+                    playSound(R.raw.parti_sound);
+                    break;
+                case "I'm cumming !!! (Ico)":
+                    playSound(R.raw.cumming_sound);
+                    break;
+                case "NOOOOOOOOOON ! (Ico)":
+                    playSound(R.raw.nooon_sound);
+                    break;
                 case "Non, et tu t'amuse !!! (Ico)":
                     playSound(R.raw.amuse_sound);
                     break;
@@ -486,6 +509,21 @@ public class Search_Activity extends AppCompatActivity implements Search_Adapter
                     break;
                 case "KRISEUH ! (Ico)":
                     playSound(R.raw.kris_sound);
+                    break;
+                case "Ça rime avec... (Étagère.exe)":
+                    playSound(R.raw.rime_sound);
+                    break;
+                case "Pute, pute... (Étagère)":
+                    playSound(R.raw.put_sound);
+                    break;
+                case "C'est parti ! (Ico)":
+                    playSound(R.raw.parti_sound);
+                    break;
+                case "I'm cumming !!! (Ico)":
+                    playSound(R.raw.cumming_sound);
+                    break;
+                case "NOOOOOOOOOON ! (Ico)":
+                    playSound(R.raw.nooon_sound);
                     break;
                 case "Non, et tu t'amuse !!! (Ico)":
                     playSound(R.raw.amuse_sound);

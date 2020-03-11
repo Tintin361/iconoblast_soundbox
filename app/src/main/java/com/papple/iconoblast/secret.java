@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -149,25 +150,8 @@ public class secret extends AppCompatActivity {
                 if (view4 != null) view4.setGravity(Gravity.CENTER);
                 toaster4.show();
 
-
             }
         });
-    }
-
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        EditText editText = findViewById(R.id.editText);
-        String editTextValue = editText.getText().toString();
-
-        SharedPreferences prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString("VALUE", editTextValue);
-
-        editor.apply();
-
     }
 
     @Override

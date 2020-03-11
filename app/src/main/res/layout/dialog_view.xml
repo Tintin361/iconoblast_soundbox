@@ -39,6 +39,14 @@
             android:textSize="@dimen/radioButtonText" />
 
         <RadioButton
+            android:id="@+id/rad6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/marioGalaxy"
+            android:textSize="@dimen/radioButtonText" />
+
+        <RadioButton
             android:id="@+id/rad4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

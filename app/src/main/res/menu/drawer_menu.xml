@@ -39,6 +39,10 @@
                     android:icon="@drawable/ic_game"
                     android:title="@string/delta" />
                 <item
+                    android:id="@+id/nav_mario_galaxy"
+                    android:icon="@drawable/ic_game"
+                    android:title="@string/marioGalaxy" />
+                <item
                     android:id="@+id/nav_yoshi"
                     android:checkable="false"
                     android:icon="@drawable/ic_game"

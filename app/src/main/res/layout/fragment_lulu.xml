@@ -35,7 +35,7 @@
                     android:layout_gravity="center"
                     android:scaleType="centerCrop"
                     android:contentDescription="@string/descriptionLulu"
-                    android:src="@drawable/pp_kor1" />
+                    android:src="@drawable/pp_lucina" />
 
                 <TextView
                     android:id="@+id/textView"

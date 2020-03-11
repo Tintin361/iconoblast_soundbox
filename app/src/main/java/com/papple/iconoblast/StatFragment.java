@@ -39,9 +39,11 @@ public class StatFragment extends Fragment {
         editor.putBoolean("aFrag", false);
         editor.putBoolean("sFrag", true);
         editor.putBoolean("dFrag", false);
+        editor.putBoolean("marioGalaxyFrag", false);
         editor.putBoolean("mFrag", false);
         editor.putBoolean("zFrag", false);
         editor.putBoolean("asFrag", false);
+        editor.putBoolean("deltaFrag", false);
         editor.apply();
 
         CoordinatorLayout cLayout = getActivity().findViewById(R.id.coordinationLayout);
@@ -52,6 +54,7 @@ public class StatFragment extends Fragment {
         TextView ddlcText = v.findViewById(R.id.valueDdlc);
         TextView mgtText = v.findViewById(R.id.valueMgt);
         TextView zeldaText = v.findViewById(R.id.valueZelda);
+        TextView marioGalaxyText = v.findViewById(R.id.valueMarioGalaxy);
         TextView ascunsText = v.findViewById(R.id.valueAscuns);
         TextView deltaText = v.findViewById(R.id.valueDelta);
 
@@ -86,6 +89,10 @@ public class StatFragment extends Fragment {
         int deltaNumber = sharedPreferences.getInt("deltarune", 0);
         String deltaString = String.valueOf(deltaNumber);
         deltaText.setText(deltaString);
+
+        int marioGalaxyNumber = sharedPreferences.getInt("mariogalaxy", 0);
+        String marioNumber = String.valueOf(marioGalaxyNumber);
+        deltaText.setText(marioNumber);
 
         int zeldaNumber = sharedPreferences.getInt("zelda", 0);
         String zeldaString = String.valueOf(zeldaNumber);
